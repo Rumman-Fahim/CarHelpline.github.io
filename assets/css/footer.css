@@ -1,0 +1,183 @@
+/* ================================================================================== Footer */
+footer {
+    font-size: var(--ratio);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+    position: relative;
+    padding: 0 var(--mainContainerPadding);
+    margin-top: 9em;
+}
+/* ------------------------------------------------------------------ Circles */
+footer .circle {
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+footer .circle:nth-child(1) {
+    background-image: url('../images/circles/circle3.png');
+    width: 7em;
+    height: 7em;
+    right: -3.5em;  top: -6em;
+}
+footer .circle:nth-child(2) {
+    background-image: url('../images/circles/circle5.png');
+    width: 5em;
+    height: 5em;
+    transform: rotate(180deg);
+    right: 0;  top: 70%;
+}
+
+footer .circle:nth-child(3) {
+    background-image: url('../images/circles/circle4.png');
+    width: 6em;
+    height: 6em;
+    left: -3em;  top: -6em;
+}
+
+footer .circle:nth-child(4) {
+    background-image: url('../images/circles/circle3.png');
+    width: 15em;
+    height: 15em;
+    left: -7.5em;  top: 30%;
+}
+
+footer .circle:nth-child(5) {
+    background-image: url('../images/circles/circle4.png');
+    width: 4em;
+    height: 4em;
+    right: 20%;  top: 70%;
+}
+
+footer .circle:nth-child(6) {
+    background-image: url('../images/circles/circle4.png');
+    width: 4em;
+    height: 4em;
+    left: 30%;  bottom: -5em;
+    z-index: -1;
+}
+/* ------------------------------------------------------------------ Controls */
+.hideAfter1122AndShowAfter { display: block; margin-top: 2em;}
+.showAfter1122AndHideAfter { display: none;}
+.after1024 { display: none;}
+.before1024 { display: block;}
+/* ------------------------------------------------------------------ Box */
+footer .box {
+    font-size: 1em;
+    width: fit-content;
+    max-width: 15em;
+    margin: 1em;
+}
+/* ................................................. Heading */
+footer .box .heading {
+    font-weight: 600;
+    font-size: 1em;
+}
+/* ................................................. Body */
+footer .box .body {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+footer .box .body a {
+    font-size: 1em;
+    margin: 0.5em 0;  
+    display: block;  
+    cursor: pointer;
+}
+footer .box .body div {
+    font-size: 1em;
+    margin: 0.5em 0;  
+}
+footer .box .body a:hover {
+    color: var(--accentColor);
+}
+/* ................................................. Logo */
+footer .logo {
+    grid-area: logo;
+    font-size: 1em;
+    position: relative;
+    z-index: 3;
+    width: fit-content;
+    margin: 1em 0;
+}
+footer .logo .logo-img {
+    width: 8em;
+    height: 8em;
+    font-size: 1em;
+    background-image: url("../images/logo.svg");
+}
+footer .logo .socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+footer .logo .socials .img {
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 1em;
+    margin-right: 0.5em;
+}
+footer .logo .socials .img:nth-child(1) { background-image: url("../images/socials/facebook.svg");}
+footer .logo .socials .img:nth-child(2) { background-image: url("../images/socials/instagram.svg");}
+footer .logo .socials .img:nth-child(3) { background-image: url("../images/socials/linkdin.svg");}
+footer .logo .socials .img:nth-child(4) { background-image: url("../images/socials/twitter.svg"); margin-right: 0;}
+/* ================================================================================== Page End */
+.page-end {
+    background-color: var(--secondaryColor);
+    color: white;
+    padding: 2em var(--mainContainerPadding);
+    text-align: center;
+    font-size: var(--ratio);
+}
+/* ========================================================================================== */
+/*                                            Screens                                         */
+/* ========================================================================================== */
+@media screen and (max-width: 1122px) {
+    .hideAfter1122AndShowAfter { display: none;}
+    .showAfter1122AndHideAfter { display: block;}
+}
+@media screen and (max-width: 817px) {
+    .hideAfter1122AndShowAfter { display: block;}
+    .showAfter1122AndHideAfter { display: none;}
+}
+@media screen and (max-width: 768px) {
+    footer {
+        margin-top: 5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .after1024 { display: block;}
+    .before1024 { display: none;}
+    footer {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 3em;
+        position: relative;
+        padding: 0 var(--mainContainerPadding);
+    }
+    footer .circle:nth-child(1) {
+        right: -3.5em;  top: 20%;
+    }
+    footer .circle:nth-child(2) {
+        right: 0;  top: 70%;
+    }
+    footer .circle:nth-child(3) {
+        left: -3em;  top: -6em;
+    }
+    footer .circle:nth-child(4) {
+        left: -7.5em;  top: 30%;
+        display: none;
+    }
+    footer .circle:nth-child(5) {
+        right: 20%;  top: 55%;
+    }
+    footer .circle:nth-child(6) {
+        left: 30%;  bottom: -5em;
+        z-index: -1;
+    }
+    footer .logo { width: 8em; }
+}
