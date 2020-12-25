@@ -49,7 +49,7 @@ img {
     height: inherit;
 	margin: 0; padding: 0;
 }
-.img-box img {
+.img img {
     object-fit: contain; 
 	width: 100%; 
     height: 100%;
@@ -135,14 +135,13 @@ button.lg-btn {
     display: flex;
     align-items: center;
 }
-.icon-box.withBorder {
-    padding: 0.5em 0.75em;
-    border: 0.1em solid rgb(151, 151, 151);
-    border-radius: 0.4em;
-}
 .icon-box .icon {
+    min-width: 1.5em;
     width: 1.5em;
+    max-width: 1.5em;
+    min-height: 1.5em;
     height: 1.5em;
+    max-height: 1.5em;
     font-size: 1em;
     margin-right: 1em;
     background-size: contain;
@@ -151,6 +150,33 @@ button.lg-btn {
 }
 .icon-box .txt {
     font-size: 1em;
+}
+
+/* ICON BOX WITH BORDER */
+.icon-box.withBorder {
+    padding: 0.5em 0.75em;
+    border: 0.1em solid rgb(151, 151, 151);
+    border-radius: 0.4em;
+}
+
+/* ICON BOX COLUMN */
+.icon-box-col {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+.icon-box-col .icon {
+    width: 5em;
+    height: 5em;
+    font-size: 1em;
+}
+.icon-box-col .txt {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 0.5em;
+    min-height: fit-content;
 }
 /* ========================================================================================== */
 /*                                            Screens                                         */
