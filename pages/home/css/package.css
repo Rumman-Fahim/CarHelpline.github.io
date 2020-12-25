@@ -134,8 +134,7 @@
 /* ................................................. Box */
 .package .content .item-container .grid-2 .img-box {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
     font-size: 1em;
@@ -147,6 +146,7 @@
     grid-area: iconImg;
     margin-right: 1em;
     font-size: 1em;
+    align-self: flex-end;
 }
 .package .content .item-container .grid-2 .img-box .img img {
     object-fit: contain;
@@ -156,7 +156,7 @@
 .package .content .item-container .grid-2 .img-box .heading {
     grid-area: heading;
     height: fit-content;
-    align-self: center;
+    align-self: flex-end;
     width: calc(100% - 5em);
     font-size: 1.1em;
     font-weight: 600;
@@ -198,5 +198,8 @@
     .package .content .item-container .grid-2 {
         grid-template-columns: 1fr;
         font-size: 1em;
+    }
+    .package .content .item-container .grid-2 .img-box .body {
+        margin-top: 0.75em;
     }
 }
