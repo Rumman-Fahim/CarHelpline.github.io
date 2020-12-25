@@ -1,0 +1,218 @@
+.package {
+    font-size: var(--ratio);
+    width: 100%;
+}
+
+/* ================================================================================== Content */
+.package .content {
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    font-size: 1em;
+    padding-left: 0.5em;
+    margin-top: 2em;
+}
+/* ------------------------------------------------------------------ Text Container */
+.package .content .text-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 1em;
+    height: fit-content;
+}
+/* ................................................. Title */
+.package .content .text-container .section-title {
+    font-size: 1.9em;
+    text-align: left;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 0;
+}
+/* ................................................. Body */
+.package .content .text-container .body {
+    height: fit-content;
+    width: fit-content;
+    margin: 2em 0;
+    font-size: 1em;
+}
+/* ................................................. List */
+.package .content .text-container .list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    font-size: 1em;
+}
+.package .content .text-container .list span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Last Child */
+.package .content .text-container .list span:last-child{
+    margin-bottom: 0;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Icons */
+.package .content .text-container .list span i {
+    color: var(--accentColor);
+    font-size: 1.8em;
+    margin-right: 0.5em
+}
+/* ------------------------------------------------------------------ Items Container */
+.package .content .item-container {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    justify-content: center;
+}
+/* ------------------------------------------------------------------ Carousel */
+#packCarousel {
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 2.25em;
+    font-size: 1em;
+}
+/* ................................................. Indicators */
+#packCarousel .carousel-indicators {
+    padding: 0;
+    height: fit-content;
+    bottom: -0.75em;
+    font-size: 1em;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dots */
+#packCarousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: 1em;
+}
+/* ................................................. Carousel Contemt */
+#packCarousel .carousel-inner {
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+}
+#packCarousel .carousel-inner .carousel-item {
+    height: 100%;
+    width: 100%;
+    padding-right: 0.8em;
+    font-size: 1em;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Image */
+#packCarousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    font-size: 1em;
+}
+/* ------------------------------------------------------------------ Icon Grid 4 */
+.package .content .item-container .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+    align-items: start;
+    justify-items: center;
+    font-size: max(0.9vw,0.8em);
+}
+/* ................................................. Box */
+.package .content .item-container .grid-4 .img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}   
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Img */
+.package .content .item-container .grid-4 .img-box .img {
+    width: 5em;
+    height: 5em;
+    font-size: 1em;
+}
+.package .content .item-container .grid-4 .img-box .img img { 
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Heading */
+.package .content .item-container .grid-4 .img-box .txt {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 0.5em;
+    min-height: fit-content;
+}
+/* ------------------------------------------------------------------ Image Container Grid 2 */
+.package .content .item-container .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    font-size: max(0.9vw,0.85em);
+}
+/* ................................................. Box */
+.package .content .item-container .grid-2 .img-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 1em;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Img */
+.package .content .item-container .grid-2 .img-box .img {
+    width: 3em;
+    height: 3em;
+    grid-area: iconImg;
+    margin-right: 1em;
+    font-size: 1em;
+}
+.package .content .item-container .grid-2 .img-box .img img {
+    object-fit: contain;
+    font-size: 1em;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Heading */
+.package .content .item-container .grid-2 .img-box .heading {
+    grid-area: heading;
+    height: fit-content;
+    align-self: center;
+    width: calc(100% - 5em);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Body */
+.package .content .item-container .grid-2 .img-box .body {
+    grid-area: bdy;
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    font-weight: 300;
+}
+/* ========================================================================================== */
+/*                                            Screens                                         */
+/* ========================================================================================== */
+@media screen and (max-width: 1024px) {
+    .package .content { grid-template-columns: 1fr; margin-top: 3em;}
+    #packCarousel { padding-bottom: 2.75em; }
+}
+@media screen and (max-width: 768px) {
+    .package .content .item-container .grid-2 { font-size: 1em; }
+}
+@media screen and (max-width: 425px) {
+    .package .content { margin-top: 2em;}
+    #packCarousel { padding-bottom: 3em; }
+    #packCarousel .carousel-inner .carousel-item { padding-right: 0.48em; }
+    .package .content .item-container .grid-4 {
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: max(2.75vw, 0.85em);
+    }
+    .package .content .item-container .grid-2 {
+        grid-template-columns: 1fr;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,86 @@
+.landing.section {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* ================================================================================== Circles */
+.landing .circle {
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.landing .circle:nth-child(1) {
+    background-image: url('../../../assets/images/circles/circle1.svg');
+    width: 7.5em;
+    height: 15em;
+    right: 0;  top: 40%;
+}
+.landing .circle:nth-child(2) {
+    background-image: url('../../../assets/images/circles/circle4.png');
+    width: 5em;
+    height: 5em;
+    right: -2.5em;  top: 15%;
+}
+.landing .circle:nth-child(3) {
+    background-image: url('../../../assets/images/circles/circle5.png');
+    width: 7em;
+    height: 7em;
+    left: 0em;  top: 30%;
+}
+.landing .circle:nth-child(4) {
+    background-image: url('../../../assets/images/circles/circle2.svg');
+    width: 7em;
+    height: 7em;
+    left: 0;  top: 75%;
+}
+.landing .circle:nth-child(5) {
+    background-image: url('../../../assets/images/circles/circle4.png');
+    width: 4em;
+    height: 4em;
+    right: calc(50% - 35em);  top: 70%;
+}
+.landing .circle:nth-child(6) {
+    background-image: url('../../../assets/images/circles/circle4.png');
+    width: 3em;
+    height: 3em;
+    left: calc(50% - 20em);  top: 65%;
+}
+
+/* ================================================================================== section-title */
+.landing .section-title {
+    font-weight: 600;
+    line-height: initial;
+    text-align: center;
+    margin-top: 2em;
+    width: min(23em, 100%);
+}
+/* ================================================================================== Image */
+.landing .img-container { 
+    font-size: 1em; 
+    width: min(45em, 100%); 
+    position: relative; 
+    z-index: 3;
+}
+/* ========================================================================================== */
+/*                                            Screens                                         */
+/* ========================================================================================== */
+@media screen and (max-width: 1120px) {
+    .landing .section-title { margin-top: 3em; }
+}
+@media screen and (max-width: 768px) {
+    .landing .section-title { font-size: max(5.5vw, 2.1em); }
+    .landing button { margin: 2em 0 3em 0; }
+    .landing .circle:nth-child(5),
+    .landing .circle:nth-child(6) {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .landing .circle { display: none; }
+    .landing .section-title { margin-top: 4em; }
+}
