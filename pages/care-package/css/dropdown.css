@@ -28,5 +28,33 @@
     max-height: 0;
     transition: max-height 1s linear;
     overflow: hidden;
-    padding-top: 0;
+}
+.packages-box .checks-container .dropdown-content.custom-carousel {
+    height: fit-content;
+    padding-right: max(2vw, 0.75em);
+    padding-left: max(2vw, 0.75em);
+}
+.packages-box .checks-container .dropdown-content.custom-carousel .navigation-container {
+    box-shadow: none;
+    padding: 0;
+    border-bottom: 0.075em solid #8a8a8a52;
+    border-top: 0.075em solid #8a8a8a52;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 2.5em 0 1.25em 0;
+}
+.packages-box .checks-container .dropdown-content.custom-carousel .navigation-container .tab-container {
+    justify-content: start;
+    padding: 0;
+}
+.packages-box .checks-container .dropdown-content.custom-carousel .navigation-container .tab-container .tab {
+    margin-right: 4em;
+}
+.packages-box .checks-container .dropdown-content.custom-carousel .navigation-container .tab-container .tab:last-child {
+    margin-right: 0;
+}
+.packages-box .checks-container .dropdown-content.custom-carousel .content-container {
+    padding: 0;
+    margin: 0;
+    margin-bottom: max(2vw, 0.75em);
 }

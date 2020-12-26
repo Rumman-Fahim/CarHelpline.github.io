@@ -1,0 +1,32 @@
+.dropdown-content.custom-carousel .content.faqs .item-details {
+    margin: 2.5em 0;
+    padding: 2em;
+    box-shadow: none;
+    border-radius: 1em;
+    font-size: var(--ratio);
+    background-color: white;
+
+}
+.dropdown-content.custom-carousel .content.faqs .item-details:first-child {margin-top: 0;}
+.dropdown-content.custom-carousel .content.faqs .item-details .heading {
+    margin-bottom: 0;
+    grid-template-columns: 1fr 0.75em;
+}
+.dropdown-content.custom-carousel .content.faqs .item-details .heading span { color: black; position: relative;}
+
+.dropdown-content.custom-carousel .content.faqs .item-details .heading .arrows {
+    width: 1em;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.dropdown-content.custom-carousel .content.faqs .item-details .info-container {
+    display: block;
+    padding: 0;
+    padding-top: 1em;
+}
+@media screen and (max-width: 500px) {
+    .dropdown-content.custom-carousel .content.faqs .item-details .info-container {
+        font-size: 12px;
+    }
+}
