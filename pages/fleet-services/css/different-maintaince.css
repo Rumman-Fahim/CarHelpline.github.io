@@ -1,0 +1,58 @@
+.different-maintaince {
+    font-size: var(--ratio);
+    padding: 0 var(--mainContainerPadding);
+    margin-top: 6em;
+}
+.different-maintaince.first {
+    margin-top: max(7vw, 4em);
+}
+
+.different-maintaince .info-container {
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    grid-template-areas: 'img txt1' 'img txt2';
+    margin-top: 3em;
+    gap: 3em;
+}
+.different-maintaince:nth-child(odd) .info-container { grid-template-areas: 'txt1 img' 'txt2 img'; }
+.different-maintaince .info-container .img { grid-area: img;}
+.different-maintaince .info-container .txt-container:nth-child(1) { grid-area: txt1;}
+.different-maintaince .info-container .txt-container:nth-child(2) { grid-area: txt2;}
+
+.different-maintaince .info-container .img {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+}
+.different-maintaince .info-container .txt-container {
+    padding: 1.5em;
+    box-shadow: var(--shadow);
+    border-radius: 0.5em;
+}
+.different-maintaince .info-container .txt-container .heading {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1440px) {
+    .different-maintaince .info-container {
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+        grid-template-areas: 'img txt1' 'txt2 txt2';
+    }
+    .different-maintaince:nth-child(odd) .info-container { grid-template-areas: 'txt1 txt1' 'txt2 img'; }
+}
+@media screen and (max-width: 1024px) {
+    .different-maintaince .info-container {
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+        grid-template-areas: 'img img' 'txt1 txt2';
+    }
+    .different-maintaince:nth-child(odd) .info-container { grid-template-areas: 'img img' 'txt1 txt2'; }
+}
+@media screen and (max-width: 768px) {
+    .different-maintaince .info-container {
+        grid-template-columns: minmax(0,1fr);
+        grid-template-areas: 'img' 'txt1' 'txt2';
+    }
+    .different-maintaince:nth-child(odd) .info-container { grid-template-areas: 'img' 'txt1' 'txt2'; }
+}
