@@ -1,0 +1,32 @@
+.packages-box .checks-container {
+    height: fit-content;
+}
+.packages-box .checks-container .dropdown-arrow-btn {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: calc(50% - 1em);
+    bottom: -1em;
+    cursor: pointer;
+    background-image: url("../../../assets/images/design-icons/arrow-circle-red.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+.packages-box .checks-container .dropdown-arrow-btn.up {
+    transform: rotate(180deg);
+}
+.packages-box .checks-container .dropdown-arrow-btn.up ~ .dropdown-content {
+    max-height: 150em;
+    transition: max-height 1s linear;
+}
+.packages-box .checks-container .dropdown-content {
+    font-size: 1em;
+    width: 100%;
+    background-color: #F5F5F5;
+    max-height: 0;
+    transition: max-height 1s linear;
+    overflow: hidden;
+    padding-top: 0;
+}
