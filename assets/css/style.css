@@ -264,6 +264,7 @@ button.lg-btn {
     color: white;
 }
 
+
 /* ALL ITEMS */
 .item-details-title {
     margin-top: 2.5em;
@@ -322,6 +323,33 @@ button.lg-btn {
     padding-top: 1em;
     font-size: 1em;
 }
+
+
+/* View More Link */
+.view-more {
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.1em;
+    color: var(--accentColor) !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1em;
+    cursor: pointer;
+    padding: 0;
+}
+.view-more .icon {
+    font-size: 1em;
+    color: var(--accentColor);
+    margin-left: 0.5em;
+    background-image: url('../images/design-icons/arrow-red.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 1em;
+}
+.view-more.black { color: black !important;}
+.view-more.black .icon { background-image: url('../images/design-icons/arrow-black.svg'); }
 /* ================================================================================== 1 */
 /* ------------------------------------------------------------------ 2 */
 /* ................................................. 3 */
