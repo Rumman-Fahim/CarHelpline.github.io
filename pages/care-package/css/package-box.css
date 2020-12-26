@@ -1,9 +1,6 @@
 .packages-box {
     width: 100%;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: max(3vw, 1em);
     box-shadow: var(--shadow);
     border-radius: 1em;
     position: relative;
@@ -116,6 +113,7 @@
     flex-wrap: wrap;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
+    margin-top: 3em;
 }
 .packages-box .checks-container .icon-box {
     margin: 0.5em;
