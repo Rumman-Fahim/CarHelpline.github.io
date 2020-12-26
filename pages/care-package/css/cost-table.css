@@ -1,0 +1,21 @@
+.dropdown-content.custom-carousel .content.cost-breakup table {
+    width: 100%;
+}
+.dropdown-content.custom-carousel .content.cost-breakup table tr {
+    font-size: 1em;
+}
+.dropdown-content.custom-carousel .content.cost-breakup table tr:nth-child(odd) th,
+.dropdown-content.custom-carousel .content.cost-breakup table tr:nth-child(odd) td { background-color: white;}
+.dropdown-content.custom-carousel .content.cost-breakup table tr th {
+    padding: 0.5em;
+   
+}
+.dropdown-content.custom-carousel .content.cost-breakup table tr td{
+    padding: 0.5em;
+}
+.dropdown-content.custom-carousel .content.cost-breakup table tr th:nth-child(1) { border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;}
+.dropdown-content.custom-carousel .content.cost-breakup table tr th:nth-child(4) { border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;}
+
+.dropdown-content.custom-carousel .content.cost-breakup table tr td:nth-child(1) { border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;}
+.dropdown-content.custom-carousel .content.cost-breakup table tr td:nth-child(4) { border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;}
+

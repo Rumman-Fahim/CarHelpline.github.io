@@ -1,70 +1,70 @@
-let currentActiveTab = 0;
-let tabContainer= document.querySelector(".tab-container");
-let tabs = document.querySelectorAll(".custom-filter .tab");
-let contents = document.querySelectorAll(".custom-filter .content");
-let arrowLHS = document.querySelector(".custom-filter .arrow-btn.lhs");
-let arrowRHS = document.querySelector(".custom-filter .arrow-btn.rhs");
+let currentActiveTabFilter = 0;
+let tabContainerFilter= document.querySelector(".custom-filter .tab-container-filter");
+let tabsFilter = document.querySelectorAll(".custom-filter .tab-filter");
+let contentsFilter = document.querySelectorAll(".custom-filter .content-filter");
+let arrowLHSFilter = document.querySelector(".custom-filter .arrow-btn-filter.lhs");
+let arrowRHSFilter = document.querySelector(".custom-filter .arrow-btn-filter.rhs");
 
 
 // ============================================================================== START
-startCarouselProcess();
-errorCheckForActiveTab();
+startFilterProcess();
+errorCheckForActiveTabFilter();
 
 // ============================================================================== CAROUSEL PROCESS
-function startCarouselProcess() {
-    highlightActiveTab(scrollToActiveTab);
+function startFilterProcess() {
+    highlightActiveTabFilter(scrollToActiveTabFilter);
 }
-function highlightActiveTab(cb1) {
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove("active");
+function highlightActiveTabFilter(cb1) {
+    for (var i = 0; i < tabsFilter.length; i++) {
+        tabsFilter[i].classList.remove("active");
     }
-    tabs[currentActiveTab].classList.add("active");
+    tabsFilter[currentActiveTabFilter].classList.add("active");
     cb1();
 }
-function scrollToActiveTab() {
-    tabContainer.scrollLeft =  tabs[currentActiveTab].offsetLeft;
-    for (var i = 0; i < contents.length; i++) {
-        if (contents[i].getAttribute("name") == currentActiveTab) {
-            contents[i].classList.add('display');
+function scrollToActiveTabFilter() {
+    tabContainerFilter.scrollLeft =  tabsFilter[currentActiveTabFilter].offsetLeft;
+    for (var i = 0; i < contentsFilter.length; i++) {
+        if (contentsFilter[i].getAttribute("name") == currentActiveTabFilter) {
+            contentsFilter[i].classList.add('display');
         } else {
-            contents[i].classList.remove('display');
+            contentsFilter[i].classList.remove('display');
         }
     }
 }
-// ============================================================================== HANDLING CAROUSEL VIA TABS
-for (var i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click",setCurrentActiveTab);
+// ============================================================================== HANDLING CAROUSEL VIA TABSFilter
+for (var i = 0; i < tabsFilter.length; i++) {
+    tabsFilter[i].addEventListener("click",setCurrentActiveTabFilter);
 }
 
-function setCurrentActiveTab(event) {
-    currentActiveTab = event.currentTarget.getAttribute("name");
-    startCarouselProcess();
+function setCurrentActiveTabFilter(event) {
+    currentActiveTabFilter = event.currentTarget.getAttribute("name");
+    startFilterProcess();
 }
 
 // ============================================================================== HANDLING CAROUSEL VIA ARROWS
-arrowLHS.addEventListener("click",onClickingLeftArrow);
-arrowRHS.addEventListener("click",onClickingRightArrow);
+arrowLHSFilter.addEventListener("click",onClickingLeftArrow);
+arrowRHSFilter.addEventListener("click",onClickingRightArrow);
 
-function errorCheckForActiveTab() {
-    if (currentActiveTab >= tabs.length - 1) {
-        currentActiveTab = tabs.length - 1;
-        arrowRHS.classList.add("disabled")
-    } else if (currentActiveTab <= 0 ) {
-        currentActiveTab = 0;
-        arrowLHS.classList.add("disabled")
+function errorCheckForActiveTabFilter() {
+    if (currentActiveTabFilter >= tabsFilter.length - 1) {
+        currentActiveTabFilter = tabsFilter.length - 1;
+        arrowRHSFilter.classList.add("disabled")
+    } else if (currentActiveTabFilter <= 0 ) {
+        currentActiveTabFilter = 0;
+        arrowLHSFilter.classList.add("disabled")
     } else {
-        arrowRHS.classList.remove("disabled")
-        arrowLHS.classList.remove("disabled")
+        arrowRHSFilter.classList.remove("disabled")
+        arrowLHSFilter.classList.remove("disabled")
     }
 }
 function onClickingLeftArrow() {
-    currentActiveTab--;
-    errorCheckForActiveTab();
-    startCarouselProcess();
+    currentActiveTabFilter--;
+    errorCheckForActiveTabFilter();
+    startFilterProcess();
 }
 function onClickingRightArrow() {
-    ++currentActiveTab;
-    errorCheckForActiveTab();
-    startCarouselProcess();
+    ++currentActiveTabFilter;
+    errorCheckForActiveTabFilter();
+    startFilterProcess();
 }
 

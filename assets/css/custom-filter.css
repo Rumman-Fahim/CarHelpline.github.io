@@ -14,7 +14,7 @@
 }
 
 /* ------------------------------------------------------------------ Arrow */
-.custom-filter > .navigation-container .arrow-btn {
+.custom-filter > .navigation-container .arrow-btn-filter {
     width: 2em;
     height: 2em;
     font-size: 1em;
@@ -22,14 +22,14 @@
     cursor: pointer;
     background-image: url("../images/design-icons/arrow-circle-red.svg");
 }
-.custom-filter > .navigation-container .arrow-btn.lhs { transform: rotate(90deg); }
-.custom-filter > .navigation-container .arrow-btn.rhs { transform: rotate(-90deg); }
+.custom-filter > .navigation-container .arrow-btn-filter.lhs { transform: rotate(90deg); }
+.custom-filter > .navigation-container .arrow-btn-filter.rhs { transform: rotate(-90deg); }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Disabled Arrow */
-.custom-filter > .navigation-container .arrow-btn.disabled {
+.custom-filter > .navigation-container .arrow-btn-filter.disabled {
     opacity: 0.6;
 }
 /* ------------------------------------------------------------------ Tab Container */
-.custom-filter > .navigation-container .tab-container {
+.custom-filter > .navigation-container .tab-container-filter {
     width: 100%;
     font-size: 1em;
     padding: 1.5em;
@@ -38,7 +38,7 @@
     justify-content: space-evenly;
 }
 /* ................................................. Tab */
-.custom-filter > .navigation-container .tab-container .tab {
+.custom-filter > .navigation-container .tab-container-filter .tab-filter {
     min-width: fit-content;
     width: fit-content;
     max-width: fit-content;
@@ -55,7 +55,7 @@
     border-bottom: 0.15em solid transparent;
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++ Active Tab */
-.custom-filter > .navigation-container .tab-container .tab.active {
+.custom-filter > .navigation-container .tab-container-filter .tab-filter.active {
     color: var(--accentColor);
     border-bottom: 0.15em solid var(--accentColor);
 }
@@ -66,7 +66,7 @@
     font-size: 1em;
 }
 /* ................................................. Content */
-.custom-filter > .content-container .content {
+.custom-filter > .content-container > .content-filter {
     min-width: 100%;
     width: 100%;
     max-width: 100%;
@@ -74,7 +74,7 @@
     transform: scale(0);
     transition: transform 400ms ease 0ms;
 }
-.custom-filter > .content-container .content.display {
+.custom-filter > .content-container > .content-filter.display {
     transform: scale(1);
     transition: transform 400ms ease 0ms;
     position: relative;
@@ -86,10 +86,10 @@
     .custom-filter > .navigation-container {
         padding: 0 calc(var(--mainContainerPadding) * 0.5);
     }
-    .custom-filter > .navigation-container .arrow-btn {
+    .custom-filter > .navigation-container .arrow-btn-filter {
         display: block;
     }
-    .custom-filter > .navigation-container .tab-container {
+    .custom-filter > .navigation-container .tab-container-filter {
         width: calc(100% - 2em - 2em);
         justify-content: space-between;
         overflow: scroll;
