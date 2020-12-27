@@ -303,9 +303,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         z-index: 9999;
         transition: left 0.5s ease-out;
         background-color: var(--secondaryColor);
-        overflow-y: scroll; /* has to be scroll, not auto */
-        -webkit-overflow-scrolling: touch;
-        min-height: 100% !important;
+        transform: translate3d(0px,0px,0px)
     }
     nav .nav-bar > .link {
         width: 100%;
