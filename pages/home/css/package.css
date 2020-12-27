@@ -90,7 +90,7 @@
     height: fit-content;
     bottom: -0.75em;
     font-size: 1em;
-    z-index: -1;
+    z-index: -4;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dots */
 #packCarousel .carousel-indicators li {

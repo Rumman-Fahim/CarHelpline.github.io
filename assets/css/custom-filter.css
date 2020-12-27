@@ -99,7 +99,5 @@
     }
 }
 @media screen and (max-width: 768px) {
-    .custom-filter > .navigation-container {
-        margin-bottom: 0;
-    }
+    
 }

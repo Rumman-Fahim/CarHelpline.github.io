@@ -1,4 +1,4 @@
-let currentActiveTab = 0;
+let currentActiveTab = -1;
 let tabContainer= document.querySelector(".tab-container");
 let tabs = document.querySelectorAll(".custom-carousel .tab");
 let contentMovableWrapper = document.querySelector(".custom-carousel .moving-wrapper");
@@ -7,10 +7,21 @@ let hasUserClickedOnTab = false;
 let arrowLHS = document.querySelector(".custom-carousel .arrow-btn.lhs");
 let arrowRHS = document.querySelector(".custom-carousel .arrow-btn.rhs");
 
+autoContentSlideShow();
 
-// ============================================================================== START
-startCarouselProcess();
-errorCheckForActiveTab();
+// ============================================================================== AUTO SLIDE SHOW
+function autoContentSlideShow() {
+    if (!hasUserClickedOnTab) {
+        currentActiveTab++
+        if (currentActiveTab >= tabs.length - 1) {
+            currentActiveTab = 0;
+        }
+        startCarouselProcess();
+        setTimeout(()=>{
+            autoContentSlideShow();
+        }, 4000);
+    }
+}
 
 // ============================================================================== CAROUSEL PROCESS
 function startCarouselProcess() {
@@ -65,12 +76,14 @@ function errorCheckForActiveTab() {
         arrowLHS.classList.remove("disabled")
     }
 }
+
 function onClickingLeftArrow() {
     hasUserClickedOnTab = true;
     currentActiveTab--;
     errorCheckForActiveTab();
     startCarouselProcess();
 }
+
 function onClickingRightArrow() {
     hasUserClickedOnTab = true;
     ++currentActiveTab;
