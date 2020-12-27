@@ -305,6 +305,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         background-color: var(--secondaryColor);
         overflow-y: scroll; /* has to be scroll, not auto */
         -webkit-overflow-scrolling: touch;
+        min-height: 100% !important;
     }
     nav .nav-bar > .link {
         width: 100%;
