@@ -49,6 +49,36 @@
             <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
         </div>
     </div>
+    <div class="modal-container" id="modal">
+        <div class="content-container" id="modalContent">
+            <div class="img"><img src="../../assets/images/modal/contact-us.svg" alt=""></div>
+            <form onsubmit="onclickCloseModal()">
+                <div class="cross" onclick="onclickCloseModal()"><img src="../../assets/images/modal/cross.svg" alt=""></div>
+                <div class="txt">
+                    <div class="section-title">Contact Us</div>
+                    <div class="body">Feel free to get in touch with us and our insurance agent will assist you soon!</div>
+                </div>
+                <div class="input-box">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter  your name here">
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter you email here....">
+                    <p>Please use a real email address so that we can get back to you.</p>
+                </div>
+                <div class="input-box">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Enter your subject here">
+                </div>
+                <div class="input-box">
+                    <label>Message</label>
+                    <textarea placeholder="Describe in detail"></textarea>
+                </div>
+                <input type="submit" class="modal-btn" value="Submit">
+            </form>
+        </div>
+    </div>
 
     <!-- Nav -->
     <nav id="nav">

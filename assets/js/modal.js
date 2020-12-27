@@ -1,10 +1,10 @@
-let flagModal = false;
-let modal = document.getElementById("modal");
+
 let phoneModal = document.getElementById("phoneModal");
 let phoneModalContent = document.getElementById("phoneModalContent");
 
-let flagPhoneModal = false;
-let fixModalHeight;
+let modal = document.getElementById("modal");
+let modalContent = document.getElementById("modalContent");
+
 function openPhoneModal() {
     flagPhoneModal = true;
     phoneModal.style.display = "flex";
@@ -46,4 +46,18 @@ function enableScrolling(){
 }
 function preventDefault(e){
     e.preventDefault();
+}
+
+
+function onclickCloseModal() {
+    modal.style.display = "none";
+    modal.style.opacity = "0";
+    enableScrolling();
+}
+
+function onclickDisplayModal() {
+    modal.style.display = "flex";
+    modal.style.height = window.innerHeight + "px";
+    modal.style.opacity = "1";
+    disableScrolling();
 }
