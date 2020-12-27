@@ -17,7 +17,8 @@
     font-size: var(--ratio);
     transition: all 0.5ms ease-in;
     transform:translate3d(0px, 0, 0);
-    -webkit-transform:translate3d(0px, 0, 0)
+    -webkit-transform:translate3d(0px, 0, 0);
+    -webkit-transform: translateZ(0);
 }
 .modal-container::before {
     content: '';
@@ -26,7 +27,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: red;
+    background-color: black;
     opacity: 0.3;
     z-index: -1;
 }
