@@ -9,6 +9,9 @@ function openPhoneModal() {
     flagPhoneModal = true;
     phoneModal.style.display = "flex";
     phoneModal.style.maxHeight = window.innerHeight + "px";
+    phoneModal.style.minHeight = window.innerHeight + "px";
+    phoneModal.style.height = window.innerHeight + "px";
+
     phoneModal.style.opacity = "1";
     setTimeout(()=>{ 
         phoneModalContent.style.bottom = "0";
@@ -31,9 +34,15 @@ window.addEventListener("scroll", function() {
     if (st > lastScrollTop){
         // downscroll code
         phoneModal.style.bottom = "0px !important";
+        phoneModal.style.maxHeight = window.innerHeight + "px";
+        phoneModal.style.minHeight = window.innerHeight + "px";
+        phoneModal.style.height = window.innerHeight + "px";
     } else {
         // upscroll code
         phoneModal.style.bottom = "0px !important";
+        phoneModal.style.maxHeight = window.innerHeight + "px";
+        phoneModal.style.minHeight = window.innerHeight + "px";
+        phoneModal.style.height = window.innerHeight + "px";
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
  }, false);
