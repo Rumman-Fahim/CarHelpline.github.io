@@ -8,19 +8,14 @@ let fixModalHeight;
 function openPhoneModal() {
     flagPhoneModal = true;
     phoneModal.style.display = "flex";
+    phoneModal.style.bottom = "0px !important";
     phoneModal.style.maxHeight = window.innerHeight + "px";
     phoneModal.style.minHeight = window.innerHeight + "px";
     phoneModal.style.height = window.innerHeight + "px";
-
     phoneModal.style.opacity = "1";
     setTimeout(()=>{ 
         phoneModalContent.style.bottom = "0";
     }, 100);
-    fixModalHeight = window.setTimeout(()=>{
-        phoneModal.style.maxHeight = window.innerHeight + "px";
-        phoneModal.style.minHeight = window.innerHeight + "px";
-        phoneModal.style.height = window.innerHeight + "px";
-    }, 50);
 }
 
 function closePhoneModal() {
@@ -30,62 +25,13 @@ function closePhoneModal() {
         phoneModal.style.display = "none";
         phoneModal.style.maxHeight = 0 + "px";
         phoneModal.style.opacity = "0";
-        clearTimeout(fixModalHeight);
     }, 500);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-var body = document.body,
-    html = document.documentElement;
-// window.addEventListener("scroll", function() {
-//     var st = window.pageYOffset || document.documentElement.scrollTop; 
-//     if (st > lastScrollTop){
-//         // downscroll code
-//         phoneModal.style.bottom = "0px !important";
-        
-//     } else {
-//         // upscroll code
-//         phoneModal.style.bottom = "0px !important";
-//         phoneModal.style.maxHeight = window.innerHeight + "px";
-//         phoneModal.style.minHeight = window.innerHeight + "px";
-//         phoneModal.style.height = window.innerHeight + "px";
-//     }
-//     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-//  }, false);
- 
-
-
-
-
-
-
-
-
-
-
-
-
-onclickCloseModal();
-
-function onclickDisplayModal() {
-    flagModal = true;
-    modal.style.display = "flex";
-    modal.style.opacity = "1";
-    modal.style.maxHeight = window.innerHeight + "px";
-}
-function onclickCloseModal() {
-    flagModal = false;
-    modal.style.display = "none";
-    modal.style.opacity = "0";
-    modal.style.maxHeight = 0 + "px";
-}
+window.addEventListener("scroll", function() {
+    phoneModal.style.bottom = "0px !important";
+    phoneModal.style.maxHeight = window.innerHeight + "px";
+    phoneModal.style.minHeight = window.innerHeight + "px";
+    phoneModal.style.height = window.innerHeight + "px";
+    phoneModalContent.style.bottom = "0";
+ }, false);
