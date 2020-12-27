@@ -32,16 +32,18 @@ window.addEventListener("scroll", function() {
         // downscroll code
         // phoneModal.style.bottom = "0px";
         // phoneModal.style.bottom = window.innerHeight + "px"; NO
-        var height = Math.max( body.scrollHeight, body.offsetHeight, 
-            html.clientHeight, html.scrollHeight, html.offsetHeight );
-            phoneModal.style.height = height + "px";
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        phoneModal.style.height = height + "px";
+        console.log(height);
+        // phoneModal.style.bottom = window.innerHeight + "px"; NO
     } else {
         // upscroll code
         // phoneModal.style.bottom = "0px";
         // phoneModal.style.bottom = window.innerHeight + "px"; NO
-        var height = Math.max( body.scrollHeight, body.offsetHeight, 
-            html.clientHeight, html.scrollHeight, html.offsetHeight );
-            phoneModal.style.height = height + "px";
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        phoneModal.style.height = height + "px";
+        console.log(height);
+        // phoneModal.style.bottom = window.innerHeight + "px"; NO
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
  }, false);
