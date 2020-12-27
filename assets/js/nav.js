@@ -25,11 +25,11 @@ closeNavbarBtn.addEventListener("click",collapseNavbar);
 
 function expandNavbar() {
     navbar.classList.add("expand");
-    // navbar.style.height = window.innerHeight + 'px';
+    navbar.style.height = window.innerHeight + 'px';
 }
 function collapseNavbar() {
     navbar.classList.remove("expand");
-    // navbar.style.height = window.innerHeight + 'px';
+    navbar.style.height = window.innerHeight + 'px';
 }
 
 // ====================================================================================== Dropdown Submenus

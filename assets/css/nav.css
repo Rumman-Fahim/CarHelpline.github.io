@@ -299,10 +299,10 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         position: absolute;
         left: -100%;
         top: 0;
-        z-index: 9999;
+        z-index: 9999 !important;
         transition: left 0.5s ease-out;
         height: max-content;
-        background-color: red;
+        background-color: var(--primaryColor);
     }
     nav .nav-bar > .link {
         width: 100%;
