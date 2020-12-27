@@ -35,13 +35,13 @@ function disableScrolling(){
     x = window.scrollX;
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
-    document.getElementById("mainBody").setAttribute("scroll","no");
+    document.querySelector("body").setAttribute("scroll","no");
     disableScroll();
 }
 
 function enableScrolling(){
     window.onscroll=function(){};
-    document.getElementById("mainBody").setAttribute("scroll","yes");
+    document.querySelector("body").setAttribute("scroll","yes");
     enableScroll();
 }
 
