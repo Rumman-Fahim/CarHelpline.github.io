@@ -27,6 +27,7 @@ html { overflow-x: hidden !important}
 body { 
 	margin: 0;  
     overflow-x: hidden !important; 
+    position: relative;
 }
 a,a:hover, a:visited, a:link, a:active { 
 	text-decoration: none; 
