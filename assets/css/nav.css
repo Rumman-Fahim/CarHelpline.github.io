@@ -85,7 +85,7 @@ nav .nav-bar {
     z-index: 9999;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
-nav .nav-bar.expand { left: 0; max-height: 200em;}
+nav .nav-bar.expand { left: 0;}
 /* ------------------------------------------------------------------ Navbar Collapse State Elements */
 nav .nav-bar .header {
     padding: 1em 2em 1.5em 2em;
@@ -291,9 +291,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
     /* Navbar */
     nav .nav-bar {
         overflow: scroll;
-        -webkit-overflow-scrolling: touch;
         width: 50%;
-        max-height: 200em;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
@@ -303,6 +301,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         top: 0;
         z-index: 9999;
         transition: left 0.5s ease-out;
+        height: max-content;
         background-color: red;
     }
     nav .nav-bar > .link {
