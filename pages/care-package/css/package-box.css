@@ -90,6 +90,7 @@
     background-color: #FFE2D9;
     padding: 0.75em;
     border: 0.15em dashed var(--accentColor);
+    margin: 1.25em 0 1.5em 0;
 }
 .packages-box .info-container .txt-container .icon-container {
     grid-column: 1 / span 2;

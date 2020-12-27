@@ -2,7 +2,6 @@ let accordianHeading = document.querySelectorAll("#all-items-accordian .heading"
 let isAccordianExpanded = [];
 let currentlyExpandedAccordian = 0;
 
-toggleArrow(currentlyExpandedAccordian);
 
 for (let i = 0; i < accordianHeading.length; i++) {
     accordianHeading[i].addEventListener("click", () => {
@@ -10,6 +9,9 @@ for (let i = 0; i < accordianHeading.length; i++) {
     });
     isAccordianExpanded[i] = false;
 }
+
+toggleArrow(currentlyExpandedAccordian);
+
 
 function toggleArrow(index) {
     if (currentlyExpandedAccordian != index) {

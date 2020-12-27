@@ -88,7 +88,13 @@ nav .nav-bar .nav-bar-wrapper {
     z-index: 9999;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
-nav .nav-bar.expand { left: 0;}
+nav .nav-bar.expand { 
+    left: 0; 
+    background-color: rgba(0, 0, 0, 0.288);
+    -webkit-transition: background-color 4s linear, left 0.3s;
+    -ms-transition: background-color 4s linear, left 0.3s;
+    transition: background-color 4s linear, left 0.3s;
+}
 /* ------------------------------------------------------------------ Navbar Collapse State Elements */
 nav .nav-bar .nav-bar-wrapper .header {
     padding: 1em 2em 1.5em 2em;
@@ -301,16 +307,20 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         position: relative;
         left: -100%;
         top: -4em;
-        background-color: var(--secondaryColor);
         z-index: 9999;
+        -webkit-transition: background-color 0s linear, left 0.3s;
+        -ms-transition: background-color 0s linear, left 0.3s;
+        transition: background-color 0s linear, left 0.3s;
     }
     nav .nav-bar .nav-bar-wrapper {
-        width: 100%;
+        width: 50%;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         padding: 1em 0;
         position: absolute;
+        background-color: var(--secondaryColor);
+        height: 100%;
     }
     nav .nav-bar .nav-bar-wrapper > .link {
         width: 100%;

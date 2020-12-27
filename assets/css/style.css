@@ -286,10 +286,9 @@ button.lg-btn {
     align-items: center;
 }
 .item-details .heading .img {
-    width: 1.5em;
-    height: 1.5em;
+    /* width: 2em;
+    height: 2em; */
     font-size: 1em;
-    
 }
 .item-details .heading .img:nth-child(1) { margin-bottom: 0.5em; }
 .item-details .heading span { color: black; position: relative; padding-right: 1em;}
@@ -321,6 +320,7 @@ button.lg-btn {
     gap: 3em;
     padding-left: 0.8em;
     font-size: 1em;
+    margin-top: 2em;
 }
 
 

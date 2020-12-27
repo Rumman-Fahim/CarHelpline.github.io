@@ -1,6 +1,8 @@
 .dropdown-content.custom-carousel .content.description .heading {
     font-size: 1.25em;
     font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 .dropdown-content.custom-carousel .content.description .symptoms {
     display: flex;

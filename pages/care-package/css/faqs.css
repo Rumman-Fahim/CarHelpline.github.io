@@ -11,6 +11,7 @@
 .dropdown-content.custom-carousel .content.faqs .item-details .heading {
     margin-bottom: 0;
     grid-template-columns: 1fr 0.75em;
+    font-size: 1.1em;
 }
 .dropdown-content.custom-carousel .content.faqs .item-details .heading span { color: black; position: relative;}
 
@@ -24,6 +25,7 @@
     display: block;
     padding: 0;
     padding-top: 1em;
+    margin-top: 0;
 }
 @media screen and (max-width: 500px) {
     .dropdown-content.custom-carousel .content.faqs .item-details .info-container {
