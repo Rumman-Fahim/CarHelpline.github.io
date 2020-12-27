@@ -46,6 +46,7 @@
     bottom: -100%;
     transition: 0.5s;
     position: relative;
+    display: none;
 }
 .modal-container#phoneModal .content-container > * {
     margin-top: 1.5em;

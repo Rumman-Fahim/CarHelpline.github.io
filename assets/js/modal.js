@@ -30,10 +30,10 @@ window.addEventListener("scroll", function() {
     var st = window.pageYOffset || document.documentElement.scrollTop; 
     if (st > lastScrollTop){
         // downscroll code
-        phoneModal.style.bottom = "-200px";
+        phoneModal.style.bottom = "0px !important";
     } else {
         // upscroll code
-        phoneModal.style.bottom = "0px";
+        phoneModal.style.bottom = "0px !important";
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
  }, false);
