@@ -340,6 +340,9 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         box-shadow: none;
     }
     nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .body { color: white; }
+    nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
+        display: none;
+    }
 }
 @media screen and (max-width: 768px) {
     nav .nav-bar { width: 100%; }

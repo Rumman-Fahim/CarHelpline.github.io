@@ -29,11 +29,6 @@ body {
     overflow-x: hidden !important; 
     position: relative;
 }
-body.modalIsOpen {
-    height: 100vh;
-    overflow-y: hidden;
-    padding-left: -100%;
-}
 a,a:hover, a:visited, a:link, a:active { 
 	text-decoration: none; 
     padding: 0;

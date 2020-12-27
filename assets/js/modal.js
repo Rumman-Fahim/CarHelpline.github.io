@@ -16,7 +16,6 @@ function openPhoneModal() {
     setTimeout(()=>{ 
         phoneModalContent.style.bottom = "0";
     }, 100);
-    // fixModalHeight = setInterval(fixPhoneModalHeight, 50);
     disableScrolling()
 }
 
@@ -31,19 +30,6 @@ function closePhoneModal() {
     }, 500);
     enableScrolling();
 }
-
-// window.addEventListener("scroll", function() {
-//     fixPhoneModalHeight();
-//  });
-
-// function fixPhoneModalHeight() {
-//     phoneModal.style.bottom = "0px !important";
-//     phoneModal.style.maxHeight = window.innerHeight + "px";
-//     phoneModal.style.minHeight = window.innerHeight + "px";
-//     phoneModal.style.height = window.innerHeight + "px";
-//     phoneModalContent.style.bottom = "0";
-// }
-
 
 function disableScrolling(){
     x = window.scrollX;
