@@ -11,23 +11,22 @@ nav {
     align-items: center;
     flex-wrap: initial;
     overflow: initial;
-    background-color: red;
 }
 /* ================================================================================== Logo */
-nav .logo-container {
+nav > .logo-container {
     position: fixed;
     top: 1.5em;
     left: 1em;
 }
 /* ------------------------------------------------------------------ Logo Image */
-nav .logo-container #nav-logo {
+nav > .logo-container #nav-logo {
     width: 8.5em;
     height: 9em;
     font-size: 1em;
     background-image: url("../images/logo.svg");
 }
 /* ------------------------------------------------------------------ Logo Text */
-nav .logo-container #nav-title {
+nav > .logo-container #nav-title {
     width: fit-content;
     height: fit-content;
     font-size: 1.25em;
@@ -76,6 +75,9 @@ nav .phone {
 
 /* ================================================================================== Navbar */
 nav .nav-bar {
+   position: relative;
+}
+nav .nav-bar .nav-bar-wrapper {
     width: fit-content;
     font-size: 1em;
     padding: 0.25em 0;
@@ -84,12 +86,11 @@ nav .nav-bar {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    max-height: 200em;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
 nav .nav-bar.expand { left: 0;}
 /* ------------------------------------------------------------------ Navbar Collapse State Elements */
-nav .nav-bar .header {
+nav .nav-bar .nav-bar-wrapper .header {
     padding: 1em 2em 1.5em 2em;
     font-size: 1em;
     border-bottom: 0.1em solid #FFFFFF;
@@ -97,7 +98,7 @@ nav .nav-bar .header {
     margin-bottom: 1em;
     display: none;
 }
-nav .nav-bar .header .title {
+nav .nav-bar .nav-bar-wrapper .header .title {
     font-size: 20px;
     font-weight: 600;
     color: white;
@@ -106,24 +107,26 @@ nav .nav-bar .header .title {
     align-items: center;
     justify-content: space-between;
 }
-nav .nav-bar .header .close {
+nav .nav-bar .nav-bar-wrapper .header .close {
     width: 0.65em;
     height: 0.65em;
     background-image: url("../images/design-icons/close.svg");
     cursor: pointer;
 }
-nav .nav-bar .header .icon-box {
+nav .nav-bar .nav-bar-wrapper .header .icon-box {
     color: white;
     margin-top: 1em;
 }
-nav .nav-bar .header .icon-box .icon {
+nav .nav-bar .nav-bar-wrapper .header .icon-box .icon {
     background-image: url("../images/design-icons/email-nav.svg");
 }
-nav .nav-bar .header .icon-box .text {
+nav .nav-bar .nav-bar-wrapper .header .icon-box .text {
     font-size: 14px;
+    width: 100%;
+    background-color: red !important;
 }
 /* ------------------------------------------------------------------ Links */
-nav .nav-bar > .link {
+nav .nav-bar .nav-bar-wrapper > .link {
     width: fit-content;
     font-size: 1em;
     padding: 0.25em 0;
@@ -134,7 +137,7 @@ nav .nav-bar > .link {
     color: white;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Active Link */
-nav .nav-bar > .link.active::after {
+nav .nav-bar .nav-bar-wrapper > .link.active::after {
     content: '';
     width: 100%;
     height: 2px;
@@ -146,7 +149,7 @@ nav .nav-bar > .link.active::after {
 }
 
 /* ================================================================================== Dropdown */
-nav .nav-bar > .link.navbar-dropdown {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown {
     width: fit-content;
     font-size: 1em;
     display: flex;
@@ -154,7 +157,7 @@ nav .nav-bar > .link.navbar-dropdown {
     justify-content: flex-start;
 }
 /* ------------------------------------------------------------------ Button */
-nav .nav-bar > .link.navbar-dropdown > .toggle-btn {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .toggle-btn {
     width: fit-content;
     color: white;
     text-align: left;
@@ -163,14 +166,14 @@ nav .nav-bar > .link.navbar-dropdown > .toggle-btn {
     justify-content: space-between;
     align-items: center;
 }
-nav .nav-bar > .link.navbar-dropdown > .toggle-btn .img-center {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .toggle-btn .img-center {
     width: 1em;
     height: 1em;
     margin-left: 1em;
     background-image: url("../images/design-icons/dropdown-white.svg");
 }
 /* ------------------------------------------------------------------ sub-menu */
-nav .nav-bar > .link.navbar-dropdown .sub-menu {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu {
     width: 38em;
     height: fit-content;
     font-size: 1em;
@@ -185,7 +188,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu {
     transition: max-height 0.2s ease-out;
 }
 /* ................................................. Triangle */
-nav .nav-bar > .link.navbar-dropdown .sub-menu .triangle {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .triangle {
     width: 0;
     height: 0;
     font-size: 1em;
@@ -197,7 +200,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .triangle {
     z-index: 100;
 }
 /* ................................................. Links Container */
-nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container {
     height: fit-content;
     width: fit-content;
     font-size: 1em;
@@ -213,7 +216,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container {
     grid-template-columns: 1fr;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Links */
-nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container .link {
     height: fit-content;
     width: fit-content;
     font-size: 1em;
@@ -222,13 +225,13 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link {
     align-items: center;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Links Text */
-nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .body {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container .link .body {
     height: fit-content;
     width: fit-content;
     font-size: 1em;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Links Icon */
-nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
+nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container .link .icon {
     width: 1.5em;
     height: 1.5em;
     font-size: 1em;
@@ -264,19 +267,20 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
 /* ========================================================================================== */
 @media screen and (max-width: 1200px) {
     nav .logo-container { left: 1em; }
-    nav .nav-bar > .link { font-size: 0.95em; margin: 0 0.75em; }
+    nav .nav-bar .nav-bar-wrapper > .link { font-size: 0.95em; margin: 0 0.75em; }
 }
 /* When Navbar Collapses */
 @media screen and (max-width: 1120px) {
     nav {
         flex-wrap: wrap;
-        padding: 0 1em;
+        padding: 0;
         height: 4em;
         justify-content: space-between;
+        width: 100%;
     }
     /* Element To Display */
-    nav .phone { display: flex;}
-    nav .toggle-btn { display: flex; }
+    nav .phone { display: flex; margin-right: 1em;}
+    nav .toggle-btn { display: flex; margin-left: 1em;}
     nav .logo-container {
         top: 0.75em;
         left: calc(50% - (5.5em * 0.5));
@@ -289,49 +293,53 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         display: none;
     }
     nav .logo-container #nav-title { display: block; }
-    nav .nav-bar .header { display: block}
+    nav .nav-bar .nav-bar-wrapper .header { display: block}
     /* Navbar */
     nav .nav-bar {
         overflow: scroll;
-        width: 50%;
+        width: 100%;
+        position: relative;
+        left: -100%;
+        top: -4em;
+        background-color: var(--secondaryColor);
+        z-index: 9999;
+    }
+    nav .nav-bar .nav-bar-wrapper {
+        width: 100%;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         padding: 1em 0;
         position: absolute;
-        left: -100%;
-        top: 0;
-        z-index: 9999;
-        transition: left 0.5s ease-out;
-        background-color: var(--secondaryColor);
-        transform: translate3d(0px,0px,0px)
     }
-    nav .nav-bar > .link {
+    nav .nav-bar .nav-bar-wrapper > .link {
         width: 100%;
         padding: 0.4em 2em;
         margin: 0.25em 0;
         font-size: 16px
     }
-    nav .nav-bar > .link.active::after { width: 5em; }
+    nav .nav-bar .nav-bar-wrapper > .link.active::after { width: 5em; }
     /* Dropdown */
-    nav .nav-bar > .link.navbar-dropdown {
-        width: 100%;
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown {
+        width: calc(100% - 3em);
         align-items: flex-start;
+        padding-left: 1em;
+        padding-right: 0;
     }
-    nav .nav-bar > .link.navbar-dropdown > .toggle-btn {
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown > .toggle-btn {
         padding: 0;
         width: 100%;
         font-size: 16px
     }
-    nav .nav-bar > .link.navbar-dropdown .sub-menu {
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu {
         width: 100%;
         color: white;
         position: relative;
         left: 0;
         top: 0;
     }
-    nav .nav-bar > .link.navbar-dropdown .sub-menu .triangle { display: none; }
-    nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container {
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .triangle { display: none; }
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container {
         width: 100%;
         font-size: 14px;
         padding: 0;
@@ -342,14 +350,12 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         border-bottom-right-radius: 0;
         box-shadow: none;
     }
-    nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .body { color: white; }
-    nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
-        display: none;
-    }
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container .link .body { color: white; margin-left: 1.5em;}
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container .link .icon { display: none; }
 }
 @media screen and (max-width: 768px) {
     nav .nav-bar { width: 100%; }
 }
 @media screen and (max-width: 425px) {
-    nav .nav-bar > .link.navbar-dropdown > .toggle-btn { padding: 0 0.225em; }
+    nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown > .toggle-btn { padding: 0 0.225em; }
 }

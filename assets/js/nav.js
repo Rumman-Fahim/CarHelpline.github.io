@@ -25,24 +25,11 @@ closeNavbarBtn.addEventListener("click",collapseNavbar);
 
 function expandNavbar() {
     navbar.classList.add("expand");
-    navbar.style.height = window.innerHeight + 'px';
-
-    x = window.scrollX;
-    y = window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-    document.querySelector("body").setAttribute("scroll","no");
-    document.querySelector("body").addEventListener('touchmove', preventDefault, { passive: false });
+    navbar.style.minHeight = window.innerHeight + 'px';
 }
 function collapseNavbar() {
     navbar.classList.remove("expand");
-    navbar.style.height = window.innerHeight + 'px';
-    window.onscroll=function(){};
-    document.querySelector("body").setAttribute("scroll","yes");
-    document.querySelector("body").removeEventListener('touchmove', preventDefault, { passive: false });
-}
-
-function preventDefault(e){
-    e.preventDefault();
+    navbar.style.minHeight = window.innerHeight + 'px';
 }
 
 // ====================================================================================== Dropdown Submenus
@@ -57,7 +44,9 @@ function toggleDropdownSubmenu(dropdown) {
     if (content.style.maxHeight){
         content.style.maxHeight = null;
     } else {
-        collapseAllDropdownSubmenu();
+        if (window.innerWidth > navbarCollapsePoint) {
+            collapseAllDropdownSubmenu();
+        }
         content.style.maxHeight = content.scrollHeight + "px";
     }
 }
