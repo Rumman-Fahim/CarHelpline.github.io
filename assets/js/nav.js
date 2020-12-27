@@ -48,7 +48,7 @@ function toggleDropdownSubmenu(dropdown) {
             collapseAllDropdownSubmenu();
         }
         content.style.maxHeight = content.scrollHeight + "px";
-        navbar.style.height = window.innerHeight + content.scrollHeight + 'px';
+        navbar.style.maxHeight = window.innerHeight + content.scrollHeight + 'px';
     }
 }
 
