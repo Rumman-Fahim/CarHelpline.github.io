@@ -65,8 +65,8 @@ function preventDefault(e){
 }
 
 function disableScroll(){
-    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
 }
 function enableScroll(){
-    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
+    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
 }

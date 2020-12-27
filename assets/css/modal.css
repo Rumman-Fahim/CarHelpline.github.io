@@ -27,7 +27,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: pink;
+    background-color: blue;
     opacity: 0.3;
     z-index: -1;
 }
