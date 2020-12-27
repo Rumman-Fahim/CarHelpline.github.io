@@ -24,7 +24,8 @@ function closePhoneModal() {
         phoneModal.style.opacity = "0";
     }, 500);
 }
-
+var body = document.body,
+    html = document.documentElement;
 window.addEventListener("scroll", function() {
     var st = window.pageYOffset || document.documentElement.scrollTop; 
     if (st > lastScrollTop){
