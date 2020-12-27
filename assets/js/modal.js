@@ -4,7 +4,7 @@ let phoneModal = document.getElementById("phoneModal");
 let phoneModalContent = document.getElementById("phoneModalContent");
 
 let flagPhoneModal = false;
-
+let fixModalHeight;
 function openPhoneModal() {
     flagPhoneModal = true;
     phoneModal.style.display = "flex";
@@ -16,6 +16,11 @@ function openPhoneModal() {
     setTimeout(()=>{ 
         phoneModalContent.style.bottom = "0";
     }, 100);
+    fixModalHeight = window.setTimeout(()=>{
+        phoneModal.style.maxHeight = window.innerHeight + "px";
+        phoneModal.style.minHeight = window.innerHeight + "px";
+        phoneModal.style.height = window.innerHeight + "px";
+    }, 50);
 }
 
 function closePhoneModal() {
@@ -25,27 +30,38 @@ function closePhoneModal() {
         phoneModal.style.display = "none";
         phoneModal.style.maxHeight = 0 + "px";
         phoneModal.style.opacity = "0";
+        clearTimeout(fixModalHeight);
     }, 500);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 var body = document.body,
     html = document.documentElement;
-window.addEventListener("scroll", function() {
-    var st = window.pageYOffset || document.documentElement.scrollTop; 
-    if (st > lastScrollTop){
-        // downscroll code
-        phoneModal.style.bottom = "0px !important";
-        phoneModal.style.maxHeight = window.innerHeight + "px";
-        phoneModal.style.minHeight = window.innerHeight + "px";
-        phoneModal.style.height = window.innerHeight + "px";
-    } else {
-        // upscroll code
-        phoneModal.style.bottom = "0px !important";
-        phoneModal.style.maxHeight = window.innerHeight + "px";
-        phoneModal.style.minHeight = window.innerHeight + "px";
-        phoneModal.style.height = window.innerHeight + "px";
-    }
-    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
- }, false);
+// window.addEventListener("scroll", function() {
+//     var st = window.pageYOffset || document.documentElement.scrollTop; 
+//     if (st > lastScrollTop){
+//         // downscroll code
+//         phoneModal.style.bottom = "0px !important";
+        
+//     } else {
+//         // upscroll code
+//         phoneModal.style.bottom = "0px !important";
+//         phoneModal.style.maxHeight = window.innerHeight + "px";
+//         phoneModal.style.minHeight = window.innerHeight + "px";
+//         phoneModal.style.height = window.innerHeight + "px";
+//     }
+//     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+//  }, false);
  
 
 
