@@ -56,6 +56,7 @@ for (var i = 0; i < tabs.length; i++) {
 }
 
 function setCurrentActiveTab(event) {
+    hasUserClickedOnTab = true;
     currentActiveTab = event.currentTarget.getAttribute("name");
     startCarouselProcess();
 }
