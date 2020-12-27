@@ -36,23 +36,14 @@ function disableScrolling(){
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
     document.querySelector("body").setAttribute("scroll","no");
-    disableScroll();
+    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
 }
 
 function enableScrolling(){
     window.onscroll=function(){};
     document.querySelector("body").setAttribute("scroll","yes");
-    enableScroll();
+    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
 }
-
-
 function preventDefault(e){
     e.preventDefault();
-}
-
-function disableScroll(){
-    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
-}
-function enableScroll(){
-    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
 }
