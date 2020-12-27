@@ -11,7 +11,7 @@ nav {
     align-items: center;
     flex-wrap: initial;
     overflow: initial;
-    /* background-color: red; */
+    background-color: red;
 }
 /* ================================================================================== Logo */
 nav .logo-container {
