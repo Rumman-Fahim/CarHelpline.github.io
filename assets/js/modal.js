@@ -17,8 +17,7 @@ function openPhoneModal() {
         phoneModalContent.style.bottom = "0";
     }, 100);
     fixModalHeight = setInterval(fixPhoneModalHeight, 50);
-    $('body').addClass('stop-scrolling')
-    $('body').bind('touchmove', function(e){e.preventDefault()})
+    disableScrolling()
 }
 
 function closePhoneModal() {
@@ -30,18 +29,30 @@ function closePhoneModal() {
         phoneModal.style.opacity = "0";
         clearInterval(fixModalHeight);
     }, 500);
-    $('body').removeClass('stop-scrolling')
-    $('body').unbind('touchmove')
+    enableScrolling();
 }
 
-window.addEventListener("scroll", function() {
-    fixPhoneModalHeight();
- });
+// window.addEventListener("scroll", function() {
+//     fixPhoneModalHeight();
+//  });
 
-function fixPhoneModalHeight() {
-    phoneModal.style.bottom = "0px !important";
-    phoneModal.style.maxHeight = window.innerHeight + "px";
-    phoneModal.style.minHeight = window.innerHeight + "px";
-    phoneModal.style.height = window.innerHeight + "px";
-    phoneModalContent.style.bottom = "0";
+// function fixPhoneModalHeight() {
+//     phoneModal.style.bottom = "0px !important";
+//     phoneModal.style.maxHeight = window.innerHeight + "px";
+//     phoneModal.style.minHeight = window.innerHeight + "px";
+//     phoneModal.style.height = window.innerHeight + "px";
+//     phoneModalContent.style.bottom = "0";
+// }
+
+
+function disableScrolling(){
+    x = window.scrollX;
+    y = window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+    document.getElementById("mainBody").setAttribute("scroll","no");
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+    document.getElementById("mainBody").setAttribute("scroll","yes");
 }

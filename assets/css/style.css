@@ -3,10 +3,6 @@
 @import "footer.css"; 
 @import "modal.css"; 
 
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-  }
 :root {
     /* Padding */
     --mainContainerPadding: 14vw;
@@ -32,6 +28,11 @@ body {
 	margin: 0;  
     overflow-x: hidden !important; 
     position: relative;
+}
+body.modalIsOpen {
+    height: 100vh;
+    overflow-y: hidden;
+    padding-left: -100%;
 }
 a,a:hover, a:visited, a:link, a:active { 
 	text-decoration: none; 
