@@ -32,7 +32,7 @@ function closePhoneModal() {
 
 window.addEventListener("scroll", function() {
     fixPhoneModalHeight();
- }, false);
+ });
 
 function fixPhoneModalHeight() {
     phoneModal.style.bottom = "0px !important";
