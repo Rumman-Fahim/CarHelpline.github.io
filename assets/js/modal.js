@@ -16,7 +16,7 @@ function openPhoneModal() {
     setTimeout(()=>{ 
         phoneModalContent.style.bottom = "0";
     }, 100);
-    fixModalHeight = setInterval(fixPhoneModalHeight, 50);
+    // fixModalHeight = setInterval(fixPhoneModalHeight, 50);
     disableScrolling()
 }
 
@@ -65,8 +65,8 @@ function preventDefault(e){
 }
 
 function disableScroll(){
-    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
+    document.getElementById("mainBody").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function enableScroll(){
-    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
+    document.getElementById("mainBody").removeEventListener('touchmove', preventDefault, { passive: false });
 }
