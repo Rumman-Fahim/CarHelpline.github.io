@@ -17,6 +17,8 @@ function openPhoneModal() {
         phoneModalContent.style.bottom = "0";
     }, 100);
     fixModalHeight = setInterval(fixPhoneModalHeight, 50);
+    $('body').addClass('stop-scrolling')
+    $('body').bind('touchmove', function(e){e.preventDefault()})
 }
 
 function closePhoneModal() {
@@ -28,6 +30,8 @@ function closePhoneModal() {
         phoneModal.style.opacity = "0";
         clearInterval(fixModalHeight);
     }, 500);
+    $('body').removeClass('stop-scrolling')
+    $('body').unbind('touchmove')
 }
 
 window.addEventListener("scroll", function() {

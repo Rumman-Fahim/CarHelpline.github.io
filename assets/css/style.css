@@ -3,6 +3,10 @@
 @import "footer.css"; 
 @import "modal.css"; 
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 :root {
     /* Padding */
     --mainContainerPadding: 14vw;
