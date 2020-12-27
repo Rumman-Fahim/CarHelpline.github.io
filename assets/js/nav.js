@@ -31,14 +31,14 @@ function expandNavbar() {
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
     document.querySelector("body").setAttribute("scroll","no");
-    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
+    document.querySelector("body").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function collapseNavbar() {
     navbar.classList.remove("expand");
     navbar.style.height = window.innerHeight + 'px';
     window.onscroll=function(){};
     document.querySelector("body").setAttribute("scroll","yes");
-    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
+    document.querySelector("body").removeEventListener('touchmove', preventDefault, { passive: false });
 }
 
 function preventDefault(e){
