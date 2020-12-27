@@ -268,7 +268,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
 @media screen and (max-width: 1120px) {
     nav {
         flex-wrap: wrap;
-        padding: 0 1em;
+        padding: 0 0;
         height: 4em;
         justify-content: space-between;
     }
@@ -296,9 +296,9 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         justify-content: flex-start;
         flex-direction: column;
         padding: 1em 0;
-        position: absolute;
+        position: relative;
         left: -100%;
-        top: 0;
+        top: -0.75em;
         z-index: 9999;
         transition: left 0.5s ease-out;
         background-color: var(--secondaryColor);
