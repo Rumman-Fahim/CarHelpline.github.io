@@ -27,7 +27,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: orange;
     opacity: 0.3;
     z-index: -1;
 }

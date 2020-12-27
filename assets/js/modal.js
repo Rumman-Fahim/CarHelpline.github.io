@@ -50,9 +50,23 @@ function disableScrolling(){
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
     document.getElementById("mainBody").setAttribute("scroll","no");
+    disableScroll();
 }
 
 function enableScrolling(){
     window.onscroll=function(){};
     document.getElementById("mainBody").setAttribute("scroll","yes");
+    enableScroll();
+}
+
+
+function preventDefault(e){
+    e.preventDefault();
+}
+
+function disableScroll(){
+    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+}
+function enableScroll(){
+    document.body.removeEventListener('touchmove', preventDefault, { passive: false });
 }
