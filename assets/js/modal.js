@@ -50,13 +50,13 @@ function disableScrolling(){
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
     document.getElementById("mainBody").setAttribute("scroll","no");
-    disableScroll();
+    // disableScroll();
 }
 
 function enableScrolling(){
     window.onscroll=function(){};
     document.getElementById("mainBody").setAttribute("scroll","yes");
-    enableScroll();
+    // enableScroll();
 }
 
 
