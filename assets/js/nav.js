@@ -44,12 +44,8 @@ function toggleDropdownSubmenu(dropdown) {
     if (content.style.maxHeight){
         content.style.maxHeight = null;
     } else {
-        if (window.innerWidth > navbarCollapsePoint) {
-            collapseAllDropdownSubmenu();
-        }
+        collapseAllDropdownSubmenu();
         content.style.maxHeight = content.scrollHeight + "px";
-        // navbar.style.maxHeight = window.innerHeight + content.scrollHeight + 'px';
-        navbar.style.height = "fit-content";
     }
 }
 
