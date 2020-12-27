@@ -291,7 +291,9 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
     /* Navbar */
     nav .nav-bar {
         overflow: scroll;
+        -webkit-overflow-scrolling: touch;
         width: 50%;
+        max-height: 200em;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
@@ -301,7 +303,7 @@ nav .nav-bar > .link.navbar-dropdown .sub-menu .links-container .link .icon {
         top: 0;
         z-index: 9999;
         transition: left 0.5s ease-out;
-        background-color: var(--secondaryColor);
+        background-color: red;
     }
     nav .nav-bar > .link {
         width: 100%;
