@@ -304,6 +304,7 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         left: -100%;
         top: -4em;
         z-index: 9999;
+        background-color: var(--secondaryColor);
     }
     nav .nav-bar .nav-bar-wrapper {
         width: 100%;
@@ -312,8 +313,6 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         flex-direction: column;
         padding: 1em 0;
         position: absolute;
-        background-color: var(--secondaryColor);
-        height: 100%;
     }
     nav .nav-bar .nav-bar-wrapper > .link {
         width: 100%;
