@@ -90,10 +90,6 @@ nav .nav-bar .nav-bar-wrapper {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
 nav .nav-bar.expand { 
     left: 0; 
-    background-color: rgba(0, 0, 0, 0.288);
-    -webkit-transition: background-color 4s linear, left 0.3s;
-    -ms-transition: background-color 4s linear, left 0.3s;
-    transition: background-color 4s linear, left 0.3s;
 }
 /* ------------------------------------------------------------------ Navbar Collapse State Elements */
 nav .nav-bar .nav-bar-wrapper .header {
@@ -308,12 +304,9 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         left: -100%;
         top: -4em;
         z-index: 9999;
-        -webkit-transition: background-color 0s linear, left 0.3s;
-        -ms-transition: background-color 0s linear, left 0.3s;
-        transition: background-color 0s linear, left 0.3s;
     }
     nav .nav-bar .nav-bar-wrapper {
-        width: 50%;
+        width: 100%;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
