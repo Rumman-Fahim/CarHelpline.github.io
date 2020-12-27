@@ -11,6 +11,7 @@ nav {
     align-items: center;
     flex-wrap: initial;
     overflow: initial;
+    background-color: red;
 }
 /* ================================================================================== Logo */
 nav .logo-container {
@@ -83,6 +84,7 @@ nav .nav-bar {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    max-height: 200em;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
 nav .nav-bar.expand { left: 0;}
