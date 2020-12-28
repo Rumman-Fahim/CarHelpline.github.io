@@ -25,7 +25,7 @@ closeNavbarBtn.addEventListener("click",collapseNavbar);
 
 function expandNavbar() {
     navbar.classList.add("expand");
-    navbar.style.minHeight = window.innerHeight + 'px';
+    navbar.style.minHeight = window.innerHeight + 100 + 'px';
     x = window.scrollX;
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
