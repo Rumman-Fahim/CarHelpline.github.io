@@ -138,8 +138,11 @@ nav .nav-bar .nav-bar-wrapper .header .icon-box {
     color: white;
     margin-top: 1em;
 }
-nav .nav-bar .nav-bar-wrapper .header .icon-box .icon {
+nav .nav-bar .nav-bar-wrapper .header .icon-box:nth-child(2) .icon {
     background-image: url("../images/design-icons/email-nav.svg");
+}
+nav .nav-bar .nav-bar-wrapper .header .icon-box:nth-child(3) .icon {
+    background-image: url("../images/design-icons/phone-nav-header.svg");
 }
 nav .nav-bar .nav-bar-wrapper .header .icon-box .txt {
     font-size: 16px;
