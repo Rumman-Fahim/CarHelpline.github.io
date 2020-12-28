@@ -91,7 +91,9 @@
     font-size: max(1vw,0.8em);
     width: 10em;
     font-size: 1em;
+    transform: scale(1);
 }
+
 /* ------------------------------------------------------------------ Removing Car Boxes */
 .solution .car-container .car-box.hideAfter1440px { display: block;}
 .solution .car-container .car-box.hideAfter940px { display: block;}
@@ -104,6 +106,9 @@
 }
 .solution .car-container .car-box .icon img {
     object-fit: contain;
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    opacity: 0.3;
 }
 .solution .car-container .car-box button{
     background-color: white;
@@ -115,7 +120,23 @@
     color: darkgray;
     border-radius: 2em;
     font-size: 1em;
+    cursor: initial;
 }
+.solution .car-container .car-box:hover {
+    transform: scale(1.1);
+}
+.solution .car-container .car-box:hover .icon img {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+    opacity: 1;
+}
+.solution .car-container .car-box:hover button{
+    background-color: var(--accentColor);
+    border: 2px solid var(--accentColor);
+    color: white;
+    font-weight: 400;
+}
+
 /* ================================================================================== Button */
 .solution > button {
     margin-top: 4em;

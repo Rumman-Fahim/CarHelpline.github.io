@@ -397,6 +397,11 @@ button.lg-btn {
     .popular-items .icon-container .icon-box-col.withShadow {
         padding: 1.5vw 1.5em max(4vw,1.6em) 1.5em;
     }
+    .item-details-title {
+        margin-top: 2.5em;
+        margin-bottom: 1em;
+        padding: 0 8vw;
+    }
 }
 @media screen and (max-width: 550px) {
     .popular-items .icon-container {

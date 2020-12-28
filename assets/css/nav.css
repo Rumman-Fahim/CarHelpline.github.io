@@ -90,6 +90,8 @@ nav .nav-bar .nav-bar-wrapper {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Expand Navbar */
 nav .nav-bar.expand { 
     left: 0; 
+    background-color: rgba(0, 0, 0, 0.185);
+    transition: background-color 2s ease-in,  left 0.25s;
 }
 /* ------------------------------------------------------------------ Navbar Collapse State Elements */
 nav .nav-bar .nav-bar-wrapper .header {
@@ -108,6 +110,23 @@ nav .nav-bar .nav-bar-wrapper .header .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1.25em;
+}
+nav .nav-bar .nav-bar-wrapper .header .title .logo-text {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 0.65em);
+}
+nav .nav-bar .nav-bar-wrapper .header .title .logo-text .logoImg {
+    width: 3em;
+    height: 3em;
+    background-image: url("../images/logo.svg");
+    margin-right: 0.5em;
+}
+nav .nav-bar .nav-bar-wrapper .header .title .logo-text span {
+    position: relative;
+    font-size: 1em;
 }
 nav .nav-bar .nav-bar-wrapper .header .close {
     width: 0.65em;
@@ -304,15 +323,18 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         left: -100%;
         top: -4em;
         z-index: 9999;
-        background-color: var(--secondaryColor);
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 2s ease-in,  left 0.25s;
     }
     nav .nav-bar .nav-bar-wrapper {
-        width: 100%;
+        width: 80%;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         padding: 1em 0;
         position: absolute;
+        min-height: 100%;
+        background-color: var(--secondaryColor);
     }
     nav .nav-bar .nav-bar-wrapper > .link {
         width: 100%;
@@ -360,4 +382,7 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
 }
 @media screen and (max-width: 425px) {
     nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown > .toggle-btn { padding: 0 0.225em; }
+    nav .nav-bar .nav-bar-wrapper .header .title .logo-text {
+        font-size: max(5vw, 0.7em);
+    }
 }

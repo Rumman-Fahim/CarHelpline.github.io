@@ -5,6 +5,16 @@ let phoneModalContent = document.getElementById("phoneModalContent");
 let modal = document.getElementById("modal");
 let modalContent = document.getElementById("modalContent");
 
+
+modal.addEventListener("click",(e)=>{
+    if(e.target !== e.currentTarget) return;
+    onclickCloseModal();
+});
+phoneModal.addEventListener("click",(e)=>{
+    if(e.target !== e.currentTarget) return;
+    closePhoneModal();
+});
+
 function openPhoneModal() {
     flagPhoneModal = true;
     phoneModal.style.display = "flex";
@@ -18,6 +28,7 @@ function openPhoneModal() {
     }, 100);
     disableScrolling()
 }
+
 
 function closePhoneModal() {
     flagPhoneModal = false;

@@ -58,3 +58,9 @@
     margin: 0;
     margin-bottom: max(2vw, 0.75em);
 }
+
+@media screen and (max-width: 500px) {
+    .packages-box .checks-container .dropdown-content.custom-carousel .navigation-container .tab-container .tab {
+        margin-right: 1em;
+    }
+}

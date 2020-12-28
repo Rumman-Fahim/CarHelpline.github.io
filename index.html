@@ -15,6 +15,7 @@
     <!-- Common Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom-carousel.css">
+    <link rel="stylesheet" href="assets/css/form-dropdown.css">
 
     <!-- CSS Files specific to this page -->
     <link rel="stylesheet" href="pages/home/css/landing.css">
@@ -79,7 +80,18 @@
                 </div>
                 <div class="input-box category">
                     <label>Select Category</label>
-                    <input type="text" placeholder="Enter your subject here">
+                    <div class="form-dropdown-container">
+                        <div class="selectedOption" onclick="toggleFormDropdown()">
+                            <div id="selectedOption">Select category</div>
+                            <div class="img"><img src="assets/images/design-icons/dropdown-black.svg" alt=""></div>
+                        </div>
+                        <div class="form-dropdown" id="form-dropdown">
+                            <div class="form-dropdown-option">Car Insurance</div>
+                            <div class="form-dropdown-option">Travel Insurance</div>
+                            <div class="form-dropdown-option">Roadside Coverage</div>
+                            <div class="form-dropdown-option">Car Tracker</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="input-box">
                     <label>Message (if any)</label>
@@ -115,7 +127,10 @@
                 <!-- Navbar Collapse State Elements -->
                 <div class="header">
                     <div class="title">
-                        <span>CarHelpline</span>
+                        <div class="logo-text">
+                            <div class="logoImg img-center"></div>
+                            <span>CarHelpline</span>
+                        </div>
                         <div class="close img-center" id="btn-close-navbar"></div>
                     </div>
                     <div class="icon-box">
@@ -1008,5 +1023,6 @@
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/custom-carousel.js"></script>
+    <script src="assets/js/form-dropdown.js"></script>
 </body>
 </html>
