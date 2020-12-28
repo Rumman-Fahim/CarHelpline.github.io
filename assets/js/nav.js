@@ -25,19 +25,19 @@ closeNavbarBtn.addEventListener("click",collapseNavbar);
 
 function expandNavbar() {
     navbar.classList.add("expand");
-    navbar.style.minHeight = window.innerHeight + 100 + 'px';
+    navbar.style.minHeight = window.innerHeight + 'px';
     x = window.scrollX;
     y = window.scrollY;
     window.onscroll=function(){window.scrollTo(x, y);};
     document.querySelector("body").setAttribute("scroll","no");
-    // document.querySelector("body").addEventListener('touchmove', preventDefault, { passive: false });
+    document.querySelector("body").addEventListener('touchmove', preventDefault, { passive: false });
 }
 function collapseNavbar() {
     navbar.classList.remove("expand");
     navbar.style.minHeight = window.innerHeight + 'px';
     window.onscroll=function(){};
     document.querySelector("body").setAttribute("scroll","yes");
-    // document.querySelector("body").removeEventListener('touchmove', preventDefault, { passive: false });
+    document.querySelector("body").removeEventListener('touchmove', preventDefault, { passive: false });
 }
 
 // ====================================================================================== Dropdown Submenus
