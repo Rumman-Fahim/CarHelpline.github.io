@@ -141,10 +141,9 @@ nav .nav-bar .nav-bar-wrapper .header .icon-box {
 nav .nav-bar .nav-bar-wrapper .header .icon-box .icon {
     background-image: url("../images/design-icons/email-nav.svg");
 }
-nav .nav-bar .nav-bar-wrapper .header .icon-box .text {
-    font-size: 14px;
+nav .nav-bar .nav-bar-wrapper .header .icon-box .txt {
+    font-size: 16px;
     width: 100%;
-    background-color: red !important;
 }
 /* ------------------------------------------------------------------ Links */
 nav .nav-bar .nav-bar-wrapper > .link {
