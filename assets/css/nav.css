@@ -117,6 +117,7 @@ nav .nav-bar .nav-bar-wrapper .header .title .logo-text {
     display: flex;
     align-items: center;
     width: calc(100% - 0.65em);
+    background-color: pink;
 }
 nav .nav-bar .nav-bar-wrapper .header .title .logo-text .logoImg {
     width: 3em;
