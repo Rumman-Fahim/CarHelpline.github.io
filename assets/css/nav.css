@@ -42,7 +42,7 @@ nav > .toggle-btn {
     font-size: 1.2em;
     color: white;
     width: 1.5em;
-    height: 16px;
+    height: 14px;
     margin-top: -0.75em;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +146,7 @@ nav .nav-bar .nav-bar-wrapper .header .icon-box:nth-child(3) .icon {
     background-image: url("../images/design-icons/phone-nav-header.svg");
 }
 nav .nav-bar .nav-bar-wrapper .header .icon-box .txt {
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
 }
 /* ------------------------------------------------------------------ Links */
@@ -343,7 +343,7 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
         width: 100%;
         padding: 0.4em 2em;
         margin: 0.25em 0;
-        font-size: 16px
+        font-size: 14px
     }
     nav .nav-bar .nav-bar-wrapper > .link.active::after { width: 5em; }
     /* Dropdown */
@@ -356,7 +356,7 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
     nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown > .toggle-btn {
         padding: 0;
         width: 100%;
-        font-size: 16px
+        font-size: 14px
     }
     nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu {
         width: 100%;

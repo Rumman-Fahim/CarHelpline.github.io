@@ -5,11 +5,12 @@ let phoneModalContent = document.getElementById("phoneModalContent");
 let modal = document.getElementById("modal");
 let modalContent = document.getElementById("modalContent");
 
-
-modal.addEventListener("click",(e)=>{
-    if(e.target !== e.currentTarget) return;
-    onclickCloseModal();
-});
+if (modal != null) {
+    modal.addEventListener("click",(e)=>{
+        if(e.target !== e.currentTarget) return;
+        onclickCloseModal();
+    });
+}
 phoneModal.addEventListener("click",(e)=>{
     if(e.target !== e.currentTarget) return;
     closePhoneModal();
@@ -37,7 +38,6 @@ function closePhoneModal() {
         phoneModal.style.display = "none";
         phoneModal.style.maxHeight = 0 + "px";
         phoneModal.style.opacity = "0";
-        clearInterval(fixModalHeight);
     }, 500);
     enableScrolling();
 }
