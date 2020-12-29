@@ -1,4 +1,5 @@
 let navbarCollapsePoint = 1120;
+
 // ====================================================================================== Show Logo when at top, else show title
 window.addEventListener("scroll", function() {
     var st = window.pageYOffset || document.documentElement.scrollTop; 
@@ -39,7 +40,10 @@ function collapseNavbar() {
     document.querySelector("body").setAttribute("scroll","yes");
     // document.querySelector("body").removeEventListener('touchmove', preventDefault, { passive: false });
 }
-
+navbar.addEventListener("click",(e)=>{
+    if(e.target !== e.currentTarget) return;
+    collapseNavbar();
+});
 // ====================================================================================== Dropdown Submenus
 let navbarDropdowns = document.querySelectorAll(".navbar-dropdown .toggle-btn")
 
