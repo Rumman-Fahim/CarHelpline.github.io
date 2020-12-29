@@ -5,12 +5,13 @@ nav {
     background-color: var(--secondaryColor);
     border-bottom: 0.6em solid var(--accentColor);
     position: fixed;
-    z-index: 10;
+    z-index: 9999;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: initial;
     overflow: initial;
+
 }
 /* ================================================================================== Logo */
 nav > .logo-container {
