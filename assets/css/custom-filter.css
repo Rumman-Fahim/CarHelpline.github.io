@@ -19,6 +19,7 @@
     margin-bottom: 3em;
     border-top-left-radius: 1.5em;
     border-top-right-radius: 1.5em;
+    margin-top: -2em;
 }
 /* ------------------------------------------------------------------ Arrow */
 .custom-filter > .navigation-container .arrow-btn-filter {

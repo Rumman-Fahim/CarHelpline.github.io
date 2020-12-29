@@ -53,6 +53,10 @@
 }
 .features .features-container .feature-box .body span { color: var(--accentColor); }
 
+.features .features-container .forced-edge {
+    color: transparent;
+    display: none;
+}
 @media screen and (max-width: 1024px) {
     .features {
         margin-right: 0;
@@ -60,7 +64,7 @@
         padding: 0 var(--mainContainerPadding)
     }
     .features.gray {
-        padding: 4em 0;
+        padding: 8vw 0;
         border-radius: 0;
         box-shadow: none;
     }
@@ -76,14 +80,19 @@
         padding: 1em 0;
         gap: 0;
     }
+    .features .features-container .forced-edge { display: block; }
     .features.gray .features-container .feature-box {
         min-width: 25em;
         width: 25em;
         max-width: 25em;
         height: auto;
         margin-right: 2em;
+        margin-left: 1em;
     }
-    .features.gray .features-container .feature-box:last-child { margin-right: 0;}
+    .features.gray .features-container .feature-box:nth-last-child(2) {
+        margin-left: 0;
+        margin-right: 0.75em;
+    }
 }
 @media screen and (max-width: 768px) {
     .features > .section-title,.features > .body { text-align: left;}
