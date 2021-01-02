@@ -1,0 +1,40 @@
+.how-to {
+
+}
+.how-to .section-title,
+.how-to .body {
+    text-align: center;
+}
+
+.how-to .steps-container {
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4em;
+    margin-top: 2em;
+}
+.how-to .steps-container .step {
+    font-size: 1em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.how-to .steps-container .step .img {
+    width: 7em;
+    height: 7em;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+.how-to .steps-container .step .body {
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .how-to .steps-container {
+        font-size: 1em;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4em;
+        margin-top: 2em;
+    }
+}

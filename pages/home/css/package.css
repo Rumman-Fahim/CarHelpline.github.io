@@ -205,11 +205,17 @@
     font-size: 0.95em;
     font-weight: 300;
 }
+.package .content > a {
+    grid-column: 1 / span 2;
+}
 /* ========================================================================================== */
 /*                                            Screens                                         */
 /* ========================================================================================== */
 @media screen and (max-width: 1024px) {
     .package .content { grid-template-columns: 1fr; margin-top: 3em;}
+    .package .content > a {
+        grid-column: initial;
+    }
     #packCarousel .carousel-inner {
         padding: 1.3em 0.5em;
     }
