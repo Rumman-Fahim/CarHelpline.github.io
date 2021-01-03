@@ -55,6 +55,26 @@
     position: relative;
 }
 .modal-container#modal .content-container .img img { object-fit: cover;}
+.modal-container#modal .content-container .contact-info-container {
+    position: absolute;
+    left: calc(50% - (15em * 0.5));
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+}
+.modal-container#modal .content-container .contact-info-container button {
+    background-color: black;
+    margin-bottom: 2em;
+}
+.modal-container#modal .content-container .contact-info-container .icon-box {
+    color: white;
+    margin-bottom: 1em;
+}
+.modal-container#modal .content-container .contact-info-container .icon-box:last-child { margin-bottom: 0;}
+
 .modal-container#modal .content-container form {
     width: 100%;
     height: 100%;
@@ -145,6 +165,20 @@
 }
 
 @media screen and (max-width: 1024px)  {
+    .modal-container#modal .content-container .contact-info-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(255, 255, 255, .15);  
+        backdrop-filter: blur(1em);
+        width: 100%;
+        height: 100%;
+    }
+    .modal-container#modal .content-container .contact-info-container .icon-box {
+        color: black;
+        margin-bottom: 1em;
+    }
+    
     .modal-container#modal {
         padding: 1em;
     }

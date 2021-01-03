@@ -35,4 +35,5 @@
 }
 .faqs #faqs .card .collapse .body {
     width: calc(100% - 2em);
+    padding-left: 1em;
 }

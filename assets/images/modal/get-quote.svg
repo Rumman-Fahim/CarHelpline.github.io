@@ -12,9 +12,9 @@
       <stop offset="1" stop-color="#fbfbfb"/>
     </linearGradient>
   </defs>
-  <g id="Group_6350" data-name="Group 6350" transform="translate(-4922 10140)">
+  <g id="Group_6348" data-name="Group 6348" transform="translate(-4922 10140)">
     <rect id="Rectangle_445" data-name="Rectangle 445" width="711" height="1192" transform="translate(4922 -10140)" fill="url(#linear-gradient)"/>
-    <g id="Group_5994" data-name="Group 5994" transform="translate(4594.465 -9888.165)" opacity="0.67" style="mix-blend-mode: luminosity;isolation: isolate">
+    <g id="Group_5994" data-name="Group 5994" transform="translate(4594.465 -10043.165)" opacity="0.67" style="mix-blend-mode: luminosity;isolation: isolate">
       <circle id="Ellipse_111" data-name="Ellipse 111" cx="23.53" cy="23.53" r="23.53" transform="translate(391.535 336.449)" fill="#cfe5ff"/>
       <g id="Group_5972" data-name="Group 5972" transform="translate(437.002 308.103)">
         <path id="Path_7050" data-name="Path 7050" d="M451.756,314.214c-4.2-1.123-10.8-11.712-16.248-12.192s-12.035,5.934-17.6,1.893-6.075-21.408-12.44-24.876-11.12.419-13.557-3.669.726-18.012-4.972-22.926-10.363-3.28-11.491-7.577,2.269-11.1-2.328-17.527-6.349-14.654.522-10.822,13.009,8.679,19.923,7.137,5.657,10.29,10.574,13.089,12.221-1.934,16.2.569,4.3,15.871,7.636,17.134,16.628-8,22.857-5.41-1.393,19.46,5.271,21.983,14.774,5.715,14.774,5.715Z" transform="translate(-369.072 -215.54)" fill="#b8e3c2"/>
