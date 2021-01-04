@@ -1,21 +1,26 @@
 let navbarCollapsePoint = 1120;
-
+let scrollNavLogo = false;
+const getLastItem = thePath => thePath.substring(thePath.lastIndexOf('/') + 1)
 // ====================================================================================== Show Logo when at top, else show title
-window.addEventListener("scroll", function() {
-    var st = window.pageYOffset || document.documentElement.scrollTop; 
-    var navBottom = 5 * 16; 
-    if (window.innerWidth <= navbarCollapsePoint) {
-        if (st <= navBottom){
-            document.getElementById("nav-logo").style.display = "block";
-            document.getElementById("nav-title").style.display = "none";
-        } else {
-            document.getElementById("nav-logo").style.display = "none";
-            document.getElementById("nav-title").style.display = "block";
-        }
-    } 
-    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
- }, false);
- 
+if (getLastItem(window.location.href) == "index.html") {
+    window.addEventListener("scroll", function() {
+        var st = window.pageYOffset || document.documentElement.scrollTop; 
+        var navBottom = 5 * 16; 
+        if (window.innerWidth <= navbarCollapsePoint) {
+            if (st <= navBottom){
+                document.getElementById("nav-logo").style.display = "block";
+                document.getElementById("nav-title").style.display = "none";
+            } else {
+                document.getElementById("nav-logo").style.display = "none";
+                document.getElementById("nav-title").style.display = "block";
+            }
+        } 
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+     }, false);
+} else {
+    document.getElementById("nav-logo").style.display = "none";
+    document.getElementById("nav-title").style.display = "block";
+}
 // ====================================================================================== Toggle Navbar
 let openNavbarBtn = document.getElementById("btn-open-navbar");
 let closeNavbarBtn = document.getElementById("btn-close-navbar");

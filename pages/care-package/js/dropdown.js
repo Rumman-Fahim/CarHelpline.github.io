@@ -46,8 +46,8 @@ let contentMovableWrapper = document.getElementsByClassName("moving-wrapper");
 let contents = document.getElementsByClassName("content");;
 let tabs = document.getElementsByClassName("tab");
 let hasUserClickedOnTab = false;
-let arrowLHS = document.getElementsByClassName("lhs");
-let arrowRHS = document.getElementsByClassName("rhs");
+let arrowLHS = document.getElementsByClassName("lhsDropdownCarousel");
+let arrowRHS = document.getElementsByClassName("rhsDropdownCarousel");
 for (let i = 0; i < dropdownCrousel.length; i++) {
     currentActiveCarouselTab[i] = 0;
 }
@@ -114,6 +114,9 @@ function setFuncFroAllArrows() {
         arrowLHS[i].addEventListener("click",onClickingLeftArrow);
         arrowRHS[i].addEventListener("click",onClickingRightArrow);
     }
+    console.log(arrowLHS.length);
+    console.log(arrowRHS.length);
+    console.log(dropdownCrousel.length);
 }
 setFuncFroAllArrows();
 function errorCheckForActiveTab() {
