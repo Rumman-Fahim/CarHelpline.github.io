@@ -1,0 +1,16 @@
+.landing-with-header .txt-container.gray {
+    margin: 0;
+    padding: 5em var(--mainContainerPadding);
+    background-image: url("../../../assets/images/page-insurance/bg.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+}
+@media screen and (max-width: 768px){
+    .landing-with-header .txt-container.gray {
+        margin: 0;
+        padding: var(--mainContainerPadding);
+        background-position: 0 3em;
+    }
+}

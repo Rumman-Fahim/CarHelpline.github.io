@@ -166,13 +166,7 @@
 
 @media screen and (max-width: 1024px)  {
     .modal-container#modal .content-container .contact-info-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: rgba(255, 255, 255, .15);  
-        backdrop-filter: blur(1em);
-        width: 100%;
-        height: 100%;
+        display: none;
     }
     .modal-container#modal .content-container .contact-info-container .icon-box {
         color: black;
