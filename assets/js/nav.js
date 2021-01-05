@@ -2,25 +2,37 @@ let navbarCollapsePoint = 1120;
 let scrollNavLogo = false;
 const getLastItem = thePath => thePath.substring(thePath.lastIndexOf('/') + 1)
 // ====================================================================================== Show Logo when at top, else show title
-if (getLastItem(window.location.href) == "index.html") {
-    window.addEventListener("scroll", function() {
-        var st = window.pageYOffset || document.documentElement.scrollTop; 
-        var navBottom = 5 * 16; 
-        if (window.innerWidth <= navbarCollapsePoint) {
-            if (st <= navBottom){
-                document.getElementById("nav-logo").style.display = "block";
-                document.getElementById("nav-title").style.display = "none";
-            } else {
-                document.getElementById("nav-logo").style.display = "none";
-                document.getElementById("nav-title").style.display = "block";
-            }
-        } 
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-     }, false);
-} else {
+window.addEventListener('resize', handleTypeOfLogoShown);
+handleTypeOfLogoShown();
+function handleNavLogoImgOnScroll() {
+    var st = window.pageYOffset || document.documentElement.scrollTop; 
+    var navBottom = 5 * 16; 
+    if (window.innerWidth <= navbarCollapsePoint) {
+        if (st <= navBottom){
+            showOnlyNavLogo();
+        } else {
+            showOnlyNavTitle();
+        }
+    } 
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}
+
+function handleTypeOfLogoShown() {
+    if (window.innerWidth <= navbarCollapsePoint) {
+        showOnlyNavTitle();
+    } else {
+        showOnlyNavLogo();
+    }
+}
+function showOnlyNavTitle() {
     document.getElementById("nav-logo").style.display = "none";
     document.getElementById("nav-title").style.display = "block";
 }
+function showOnlyNavLogo() {
+    document.getElementById("nav-logo").style.display = "block";
+    document.getElementById("nav-title").style.display = "none";
+}
+
 // ====================================================================================== Toggle Navbar
 let openNavbarBtn = document.getElementById("btn-open-navbar");
 let closeNavbarBtn = document.getElementById("btn-close-navbar");

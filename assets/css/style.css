@@ -263,6 +263,10 @@ button.lg-btn {
     border: 0.15em solid var(--accentColor);
     color: white;
 }
+.popular-items .icon-container .icon-box-col:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 
 /* ALL ITEMS */

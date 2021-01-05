@@ -270,14 +270,14 @@ nav .nav-bar .nav-bar-wrapper > .link.navbar-dropdown .sub-menu .links-container
 .navbar-dropdown:nth-child(2) .link:nth-child(5) .icon { background-image: url("../images/navbar/icon5.svg");}
 .navbar-dropdown:nth-child(2) .link:nth-child(6) .icon { background-image: url("../images/navbar/icon6.svg");}
 
-.navbar-dropdown:nth-child(3) .link:nth-child(1) .icon { background-image: url("../images/navbar/icon7.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(2) .icon { background-image: url("../images/navbar/icon8.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(3) .icon { background-image: url("../images/navbar/icon9.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(4) .icon { background-image: url("../images/navbar/icon10.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(5) .icon { background-image: url("../images/navbar/icon11.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(6) .icon { background-image: url("../images/navbar/icon12.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(7) .icon { background-image: url("../images/navbar/icon13.svg");}
-.navbar-dropdown:nth-child(3) .link:nth-child(8) .icon { background-image: url("../images/navbar/icon14.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(1) .icon { background-image: url("../images/service-icons/icon1.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(2) .icon { background-image: url("../images/service-icons/icon2.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(3) .icon { background-image: url("../images/service-icons/icon7.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(4) .icon { background-image: url("../images/service-icons/icon3.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(5) .icon { background-image: url("../images/service-icons/icon5.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(6) .icon { background-image: url("../images/service-icons/icon4.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(7) .icon { background-image: url("../images/service-icons/icon6.svg");}
+.navbar-dropdown:nth-child(3) .link:nth-child(8) .icon { background-image: url("../images/service-icons/icon8.svg");}
 
 .navbar-dropdown:nth-child(5) .link:nth-child(1) .icon { background-image: url("../images/navbar/icon15.svg");}
 .navbar-dropdown:nth-child(5) .link:nth-child(2) .icon { background-image: url("../images/navbar/icon16.svg");}
