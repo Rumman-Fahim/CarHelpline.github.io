@@ -86,3 +86,101 @@ function collapseAllDropdownSubmenu() {
     }
 }
 document.getElementById("nav").addEventListener("mouseleave",collapseAllDropdownSubmenu);
+
+let phoneModal = document.getElementById("phoneModal");
+let phoneModalContent = document.getElementById("phoneModalContent");
+
+let modal = document.getElementById("modal");
+let modalContent = document.getElementById("modalContent");
+
+if (modal != null) {
+    modal.addEventListener("click",(e)=>{
+        if(e.target !== e.currentTarget) return;
+        onclickCloseModal();
+    });
+}
+phoneModal.addEventListener("click",(e)=>{
+    if(e.target !== e.currentTarget) return;
+    closePhoneModal();
+});
+
+function openPhoneModal() {
+    flagPhoneModal = true;
+    phoneModal.style.display = "flex";
+    phoneModal.style.bottom = "0px !important";
+    phoneModal.style.maxHeight = window.innerHeight + "px";
+    phoneModal.style.minHeight = window.innerHeight + "px";
+    phoneModal.style.height = window.innerHeight + "px";
+    phoneModal.style.opacity = "1";
+    setTimeout(()=>{ 
+        phoneModalContent.style.bottom = "0";
+    }, 100);
+    disableScrolling()
+}
+
+
+function closePhoneModal() {
+    flagPhoneModal = false;
+    phoneModalContent.style.bottom = "-100em";
+    setTimeout(()=>{ 
+        phoneModal.style.display = "none";
+        phoneModal.style.maxHeight = 0 + "px";
+        phoneModal.style.opacity = "0";
+    }, 500);
+    enableScrolling();
+}
+
+function disableScrolling(){
+    x = window.scrollX;
+    y = window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+    document.querySelector("body").setAttribute("scroll","no");
+    phoneModal.addEventListener('touchmove', preventDefault, { passive: false });
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+    document.querySelector("body").setAttribute("scroll","yes");
+    phoneModal.removeEventListener('touchmove', preventDefault, { passive: false });
+}
+function preventDefault(e){
+    e.preventDefault();
+}
+
+
+function onclickCloseModal() {
+    modal.style.display = "none";
+    modal.style.opacity = "0";
+    enableScrolling();
+}
+
+function onclickDisplayModal() {
+    modal.style.display = "flex";
+    modal.style.height = window.innerHeight + "px";
+    modal.style.opacity = "1";
+    disableScrolling();
+}
+let accordianHeading = document.querySelectorAll("#all-items-accordian .heading")
+let isAccordianExpanded = [];
+let currentlyExpandedAccordian = 0;
+for (let i = 0; i < accordianHeading.length; i++) {
+    accordianHeading[i].addEventListener("click", () => {
+        toggleArrow(i);
+    });
+    isAccordianExpanded[i] = false;
+}
+toggleArrow(currentlyExpandedAccordian);
+function toggleArrow(index) {
+    if (currentlyExpandedAccordian != index) {
+        accordianHeading[currentlyExpandedAccordian].classList.remove("up");
+        isAccordianExpanded[currentlyExpandedAccordian] = false; 
+        currentlyExpandedAccordian = index;
+    }
+    if (!isAccordianExpanded[currentlyExpandedAccordian]) {
+        accordianHeading[currentlyExpandedAccordian].classList.add("up"); 
+        isAccordianExpanded[currentlyExpandedAccordian] = true;
+    } else {
+        accordianHeading[currentlyExpandedAccordian].classList.remove("up"); 
+        isAccordianExpanded[currentlyExpandedAccordian] = false;
+    }
+}
