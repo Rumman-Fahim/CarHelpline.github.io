@@ -1,3 +1,30 @@
+.different-options .options-container {
+    font-size: 1.1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+.different-options .options-container .option {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    border-bottom: 0.05em solid #b9b9b96c;
+    padding: 1em 0.5em;
+}
+.different-options .options-container .option .img {
+    margin-right: 0.5em;
+    height: 1.875em;
+    width: 3em;
+    font-size: 1em;
+}
+.different-options .options-container .option .txt {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .different-options .options-container { grid-template-columns: minmax(0, 1fr); }
+}
+
 .map {
     font-size: var(--ratio);
     margin: 0 var(--mainContainerPadding);
@@ -9,18 +36,15 @@
     align-items: center;
     margin-bottom: 4em;
 }
-/* ================================================================================== Text Container */
 .map .txt-container {
     font-size: 1em;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5em;
 }
-/* ------------------------------------------------------------------ Section Title */
 .map .txt-container .section-title {
     margin-bottom: 0.6em;
 }
-/* ------------------------------------------------------------------ Body */
 .map .txt-container .body.lg {
     font-size: 1.15em;
 }
@@ -31,7 +55,6 @@
     color: var(--accentColor);
     font-size: 1em;
 }
-/* ------------------------------------------------------------------ Icon Container */
 .map .txt-container .icon-container {
     font-size: 1em;
     display: flex;
@@ -42,21 +65,17 @@
     height: 1.75em;
     margin-right: 0.5em;
 }
-/* ------------------------------------------------------------------ Down Container */
 .map .txt-container .download {
     font-size: 1em;
 }
-/* ................................................. Text */
 .map .txt-container .download .body {
     font-weight: 400;
     font-size: 1.25em;
 }
-/* ................................................. Button Container */
 .map .txt-container .download .btn-container {
     font-size: 1em;
     margin-top: 0.75em;
 }
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Button */
 .map .txt-container .download .btn-container button {
     background-color: transparent;
     border-radius: 0;
@@ -72,13 +91,9 @@
     height: 100%;
     object-fit: contain;
 }
-/* ================================================================================== Map Container */
 .map .map-container {
     font-size: 1em;
 }
-/* ========================================================================================== */
-/*                                            Screens                                         */
-/* ========================================================================================== */
 @media screen and (max-width: 1024px) {
     .map {
         grid-template-columns: 1fr;
@@ -94,3 +109,4 @@
         height: fit-content;
     }
 }
+
