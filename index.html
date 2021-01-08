@@ -1,1012 +1,1189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- For Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 3 Links -->
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <script src="./jquery.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    
-    <title>Home</title> 
 
-    <!-- Common Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/custom-carousel.css">
-    <link rel="stylesheet" href="assets/css/form-dropdown.css">
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 3 Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Home</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="assets/css/style.min.css">
+        <link rel="stylesheet" href="assets/css/custom-carousel.min.css">
+        <link rel="stylesheet" href="assets/css/form-dropdown.min.css">
+        <!-- Specific Style -->
+        <link rel="stylesheet" href="pages/home/home.min.css">
+    </head>
 
-    <!-- CSS Files specific to this page -->
-    <link rel="stylesheet" href="pages/home/home.css">
-</head>
-<body>
-    <!-- Modals -->
-    <div class="modal-container" id="phoneModal">
-        <div class="content-container" id="phoneModalContent">
-            <div class="heading">
-                <span>Support</span>
-                <div class="img img-center" onclick="closePhoneModal()"></div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Privacy Policy</div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Terms & Conditions</div>
-            </div>
-            <div class="gray-line"></div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">(03) 111-681-111</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">0312-3952100</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">support@carhelpline.pk</div>
-            </div>
-            <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
-        </div>
-    </div>
-    <div class="modal-container" id="modal">
-        <div class="content-container" id="modalContent">
-            <div class="img">
-                <img src="assets/images/modal/get-quote.svg" alt="">
-                <div class="contact-info-container">
-                    <button>Contact us</button>
-                    <div class="icon-box">
-                        <div class="icon"><img src="assets/images/modal/mail.svg" alt=""></div>
-                        <div class="txt">Info@carHelpline.com</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="assets/images/modal/phone.svg" alt=""></div>
-                        <div class="txt">(03) 111-681-111</div>
-                    </div>
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
                 </div>
-            </div>
-            <form onsubmit="onclickCloseModal()">
-                <div class="cross" onclick="onclickCloseModal()"><img src="assets/images/modal/cross.svg" alt=""></div>
-                <div class="txt">
-                    <div class="section-title">Get a Quote</div>
-                    <div class="body">Feel free to get in touch with us and our insurance agent will assist you soon!</div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
                 </div>
-                <div class="input-box">
-                    <label>Name</label>
-                    <input type="text" placeholder="Enter your full name">
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
                 </div>
-                <div class="input-box">
-                    <label>Email Address</label>
-                    <input type="text" placeholder="Enter your email address">
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
                 </div>
-                <div class="input-box mobile">
-                    <label>Mobile Number</label>
-                    <input type="text" placeholder="Enter your mobile number">
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
                 </div>
-                <div class="input-box category">
-                    <label>Select Category</label>
-                    <div class="form-dropdown-container">
-                        <div class="selectedOption" onclick="toggleFormDropdown()">
-                            <div id="selectedOption">Select category</div>
-                            <div class="img"><img src="assets/images/design-icons/dropdown-black.svg" alt=""></div>
-                        </div>
-                        <div class="form-dropdown" id="form-dropdown">
-                            <div class="form-dropdown-option">Car Insurance</div>
-                            <div class="form-dropdown-option">Travel Insurance</div>
-                            <div class="form-dropdown-option">Roadside Coverage</div>
-                            <div class="form-dropdown-option">Car Tracker</div>
-                        </div>
-                    </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
                 </div>
-                <div class="input-box">
-                    <label>Message (if any)</label>
-                    <textarea placeholder="Describe in detail"></textarea>
-                </div>
-                <input type="submit" class="modal-btn" value="Submit">
-            </form>
-        </div>
-    </div>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <!-- Toggle Btn -->
-        <div class="toggle-btn" id="btn-open-navbar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
-
-        <!-- Nav Logo -->
-        <a href="#" class="logo-container">
-            <div id="nav-logo" class="img-center" style="display: block;"></div>
-            <div id="nav-title" style="display: none;">CarHelpline</div>
-        </a>
-
-        <!-- Phone Icon -->
-        <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
-        
-        <!-- Navbar -->
-        <div class="nav-bar" id="navbar">
-            <div class="nav-bar-wrapper">
-                <!-- Navbar Collapse State Elements -->
-                <div class="header">
-                    <div class="title">
-                        <div class="logo-text" onclick="location.href='#'">
-                            <div class="logoImg img-center"></div>
-                            <span>CarHelpline</span>
-                        </div>
-                        <div class="close img-center" id="btn-close-navbar"></div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">Hello@carHelpline.com</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">(03) 111-681-111</div>
-                    </div>
-                    
-                </div>
-                <!-- Links -->
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Car Repairs
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical System</div>
-                            </a>
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical System</div>
-                            </a>
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Inspection & Diagnostic</div>
-                            </a>
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Heading & Air Conditioning</div>
-                            </a>
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">General Maintenance</div>
-                            </a>
-                            <a class="link" href="pages/car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Exterior & Body Parts</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Roadside Assistance
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical Breakdown</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical Breakdown</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Towing</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Battery Replacement</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Key Lockout</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Flat Tyre</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Out of Fuel</div>
-                            </a>
-                            <a class="link" href="pages/roadside-assistance/inner-pages/rsa-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Female Scooty</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="pages/care-package/care-package.html">Car Care Packages</a>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Insurance Services
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Insurance</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Takaful (Islamic)</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Travel Insurance</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Health Insurance</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Tracker</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Corporate Insurancel</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Microinsurance</div>
-                            </a>
-                            <a class="link" href="pages/insurance-service/inner-pages/insurance-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Roadside Coverage</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="pages/fleet-services/fleet-services.html">Fleet Services</a>
-                <a class="link" href="pages/contact-us/contact-us.html">Contact Us</a>
-            </div>        
-        </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <div class="landing section" id="landing-section">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="section-title">
-            <span>Roadside Assistance & Car Repair. </span>
-            Simplified 24/7 Mobile Mechanics Near Me
-        </div>
-        
-        <button class="lg-btn" onclick="onclickDisplayModal()">Get a Quote</button>
-        
-        <div class="img-container">
-            <img src="assets/images/page-home/landing.svg">
-        </div>
-    </div>
-
-    <!-- Car Care Package Section -->
-    <div class="package custom-carousel">
-        <div class="navigation-container blue">
-            <div class="arrow-btn lhs img-center"></div>
-            <div class="tab-container">
-                <div class="tab" name="0">Car Repairs</div>
-                <div class="tab" name="1">Roadside Assistance</div>
-                <div class="tab" name="2">Car Care Packages</div>
-                <div class="tab" name="3">Insurance Services</div>
-                <div class="tab" name="4">Fleet Services</div>
-            </div>
-            <div class="navigation-border"></div>
-            <div class="arrow-btn img-center rhs"></div>
-        </div>
-        
-        <div class="content-container">
-            <div class="moving-wrapper">
-                <div class="content">
-                    <div class="text-container">
-                        <div class="headingSpace sm"> <span>Car Care</span> Packges</div>
-                        <div class="body">Quickly and easily launch your favorite applications on your own nuutok Enterprise servers.</div>
-                        <div class="list">
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Virtualization and decentralized private cloud</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">10X accelerated business applications and simplified VM management</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Centralized application management for multiple remote sites</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Turnkey applications in a flash</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-container">
-                        <div id="packCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ul class="carousel-indicators">
-                              <li data-target="#packCarousel" data-slide-to="0" class="active"></li>
-                              <li data-target="#packCarousel" data-slide-to="1"></li>
-                              <li data-target="#packCarousel" data-slide-to="2"></li>
-                            </ul>
-                            <!-- The slideshow -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="assets/images/page-home/package-carousel-1.svg">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/images/page-home/package-carousel-2.svg">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/images/page-home/package-carousel-3.svg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="view-more" href="pages/car-repairs/car-repairs.html">
-                        <div>View all </div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="text-container">
-                        <div class="headingSpace sm"> <span>Roadside</span> Assist</div>
-                        <div class="body">Quickly and easily launch your favorite applications on your own nuutok Enterprise servers.</div>
-                        <div class="list">
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Virtualization and decentralized private cloud</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">10X accelerated business applications and simplified VM management</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Centralized application management for multiple remote sites</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Turnkey applications in a flash</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-container">
-                        <div class="grid-4">
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon1.svg" alt=""></div>
-                                <div class="txt">Mechanical Breakdown</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon2.svg" alt=""></div>
-                                <div class="txt">Electric Breakdown</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon3.svg" alt=""></div>
-                                <div class="txt">Car Towing</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon4.svg" alt=""></div>
-                                <div class="txt">Battery Replacement</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon5.svg" alt=""></div>
-                                <div class="txt">Key Lockout</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon6.svg" alt=""></div>
-                                <div class="txt">Flat Tyre</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon7.svg" alt=""></div>
-                                <div class="txt">Out of Fuel</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon8.svg" alt=""></div>
-                                <div class="txt">Female Scooty</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="view-more" href="pages/roadside-assistance/landing-page/roadside-assistance.html">
-                        <div>View all </div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="text-container">
-                        <div class="headingSpace sm"> <span>Repair</span> Services</div>
-                        <div class="body">Quickly and easily launch your favorite applications on your own nuutok Enterprise servers.</div>
-                        <div class="list">
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Virtualization and decentralized private cloud</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">10X accelerated business applications and simplified VM management</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Centralized application management for multiple remote sites</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Turnkey applications in a flash</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-container">
-                        <div class="grid-4">
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon9.svg" alt=""></div>
-                                <div class="txt">Replace Front Brake Pads</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon10.svg" alt=""></div>
-                                <div class="txt">Synthetic Oil Change</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon11.svg" alt=""></div>
-                                <div class="txt">Replace Starter Motor</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon12.svg" alt=""></div>
-                                <div class="txt">Replace Fuel Pump</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon13.svg" alt=""></div>
-                                <div class="txt">Replace Timing Belt</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon14.svg" alt=""></div>
-                                <div class="txt">Replace Spark Plugs</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon15.svg" alt=""></div>
-                                <div class="txt">Replace Alternator</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon16.svg" alt=""></div>
-                                <div class="txt">Check Engine Light Diagnosis</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="view-more" href="pages/care-package/care-package.html">
-                        <div>View all </div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="text-container">
-                        <div class="headingSpace sm"> <span>Insurance</span> Services</div>
-                        <div class="body">Quickly and easily launch your favorite applications on your own nuutok Enterprise servers.</div>
-                        <div class="list">
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Virtualization and decentralized private cloud</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">10X accelerated business applications and simplified VM management</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Centralized application management for multiple remote sites</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Turnkey applications in a flash</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-container">
-                        <div class="grid-4">
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon17.svg" alt=""></div>
-                                <div class="txt">Car Insurance</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon18.svg" alt=""></div>
-                                <div class="txt">Takaful (Islamic)</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon19.svg" alt=""></div>
-                                <div class="txt">Travel Insurance</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon20.svg" alt=""></div>
-                                <div class="txt">Health Insurance</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon21.svg" alt=""></div>
-                                <div class="txt">Car Tracker</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon22.svg" alt=""></div>
-                                <div class="txt">Corporate Insurance</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon23.svg" alt=""></div>
-                                <div class="txt">Microinsurance</div>
-                            </div>
-                            <div class="icon-box-col">
-                                <div class="icon"><img src="assets/images/service-icons/icon24.svg" alt=""></div>
-                                <div class="txt"> Roadside Coverage</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="view-more" href="pages/insurance-service/landing-page/insurance-service.html">
-                        <div>View all </div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="text-container">
-                        <div class="headingSpace sm"> <span>Fleet</span> Services</div>
-                        <div class="body">Quickly and easily launch your favorite applications on your own nuutok Enterprise servers.</div>
-                        <div class="list">
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Virtualization and decentralized private cloud</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">10X accelerated business applications and simplified VM management</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Centralized application management for multiple remote sites</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg" alt=""></div>
-                                <div class="txt">Turnkey applications in a flash</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-container">
-                        <div class="grid-2">
-                            <div class="img-box">
-                                <div class="img"><img src="assets/images/service-icons/icon25.svg" alt=""></div>
-                                <div class="heading">ANY SIZE FLEET</div>
-                                <div class="body">We’ve got you covered no matter your fleet size. Each of our mobile vans can install 32 tires per day.</div>
-                            </div>
-                            <div class="img-box">
-                                <div class="img"><img src="assets/images/service-icons/icon26.svg" alt=""></div>
-                                <div class="heading">ON LOCATION</div>
-                                <div class="body">We come to you. No need to drive your vehicles anywhere.</div>
-                            </div>
-                            <div class="img-box">
-                                <div class="img"><img src="assets/images/service-icons/icon27.svg" alt=""></div>
-                                <div class="heading">ANY SIZE FLEET</div>
-                                <div class="body">We’ve got you covered no matter your fleet size. Each of our mobile vans can install 32 tires per day.</div>
-                            </div>
-                            <div class="img-box">
-                                <div class="img"><img src="assets/images/service-icons/icon28.svg" alt=""></div>
-                                <div class="heading">SATISFACTION GUARANTEED</div>
-                                <div class="body">ASAP Tire offers free inspection and re-balancing up to 30 days after your original installation date.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="view-more" href="pages/fleet-services/fleet-services.html">
-                        <div>View all </div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
             </div>
         </div>
-    </div>
-
-    <!-- Services Section -->
-    <div class="services section">
-        <div class="section-title">Our Most <span>Popular Packages</span></div>
-        <div class="box-container">
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
+        <div class="modal-container center-modal" name='0'>
+            <div class="content-container">
+                <div class="img">
+                    <img src="assets/images/modal/get-quote.svg" alt="">
+                    <div class="contact-info-container">
+                        <button>Contact us</button>
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/images/modal/mail.svg" alt=""></div>
+                            <div class="txt">Info@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/images/modal/phone.svg" alt=""></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img"><div class="sale">50%</div></div>
-                <div class="text-container">
-                    <div class="title">Doorstep Express Car Service</div>
-                    <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                    <button>Book Now</button>
-                    <div class="price">Rs. 00</div>
-                </div>
+                <form onsubmit="onclickCloseActiveModal()">
+                    <div class="cross" onclick="onclickCloseActiveModal()"><img src="assets/images/modal/cross.svg"
+                            alt="">
+                    </div>
+                    <div class="txt">
+                        <div class="section-title">Get a Quote</div>
+                        <div class="body">Feel free to get in touch with us and our insurance agent will assist you
+                            soon!</div>
+                    </div>
+                    <div class="input-box">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="input-box">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter your email address">
+                    </div>
+                    <div class="input-box mobile">
+                        <label>Mobile Number</label>
+                        <input type="text" placeholder="Enter your mobile number">
+                    </div>
+                    <div class="input-box category">
+                        <label>Select Category</label>
+                        <div class="form-dropdown-container">
+                            <div class="selectedOption" onclick="toggleFormDropdown()">
+                                <div id="selectedOption">Select category</div>
+                                <div class="img"><img src="assets/images/design-icons/dropdown-black.svg" alt=""></div>
+                            </div>
+                            <div class="form-dropdown" id="form-dropdown">
+                                <div class="form-dropdown-option">Car Insurance</div>
+                                <div class="form-dropdown-option">Travel Insurance</div>
+                                <div class="form-dropdown-option">Roadside Coverage</div>
+                                <div class="form-dropdown-option">Car Tracker</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label>Message (if any)</label>
+                        <textarea placeholder="Describe in detail"></textarea>
+                    </div>
+                    <input type="submit" class="modal-btn" value="Submit">
+                </form>
             </div>
         </div>
-        <a class="view-more" href="pages/care-package/care-package.html">
-            <div>View all </div>
-            <div class="icon"></div>
-        </a>
-    </div>
-
-    <!-- Solutions Section -->
-    <div class="solution">
-        <div class="solutions-container">
-            <div class="text-container">
-                <div class="heading">CarHelpline Fleet Solutions</div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem</p>
-                    <p>Call our fleet maintenance specialists</p>
+        <div class="modal-container center-modal bookNowModal" name='1'>
+            <div class="content-container">
+                <div class="img">
+                    <img src="assets/images/modal/get-quote.svg" alt="">
+                    <div class="contact-info-container">
+                        <button>Contact Us</button>
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/images/modal/mail.svg" alt=""></div>
+                            <div class="txt">Info@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="assets/images/modal/phone.svg" alt=""></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="phone">(03) 111-681-111</div>
-                <button onclick="location.href='pages/fleet-services/fleet-services.html'">Learn More</button>
+                <form onsubmit="onclickCloseActiveModal()">
+                    <div class="cross" onclick="onclickCloseActiveModal()"><img src="assets/images/modal/cross.svg"
+                            alt="">
+                    </div>
+                    <div class="txt">
+                        <div class="section-title">Book Now</div>
+                        <div class="body">Feel free to get in touch with us and our insurance agent will assist you
+                            soon!</div>
+                    </div>
+                    <div class="input-box name">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="input-box mobile">
+                        <label>Car Make and Model</label>
+                        <input type="text" placeholder="e.g Toyota 2009">
+                    </div>
+                    <div class="input-box category">
+                        <label>Mobile Number</label>
+                        <input type="text" placeholder="Enter your mobile number">
+                    </div>
+                    <div class="input-box mobile">
+                        <label>Place of Service</label>
+                        <div class="form-dropdown-container">
+                            <div class="selectedOption" onclick="toggleFormDropdown2()">
+                                <div id="selectedOption2">Select an option</div>
+                                <div class="img"><img src="assets/images/design-icons/dropdown-black.svg" alt=""></div>
+                            </div>
+                            <div class="form-dropdown" id="form-dropdown2">
+                                <div class="form-dropdown-option2">Home</div>
+                                <div class="form-dropdown-option2">Office</div>
+                                <div class="form-dropdown-option2">Workshop</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box category">
+                        <label>City</label>
+                        <div class="form-dropdown-container">
+                            <div class="selectedOption" onclick="toggleFormDropdown3()">
+                                <div id="selectedOption3">Select a city</div>
+                                <div class="img"><img src="assets/images/design-icons/dropdown-black.svg" alt=""></div>
+                            </div>
+                            <div class="form-dropdown" id="form-dropdown3">
+                                <div class="form-dropdown-option3">Lahore</div>
+                                <div class="form-dropdown-option3">Islamabad</div>
+                                <div class="form-dropdown-option3">Faisalabad</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box serviceDate">
+                        <label for="serviceDate">Time & Date of service</label>
+                        <input type="date" id="serviceDate" name="serviceDate" placeholder="Enter your mobile number">
+
+                    </div>
+                    <input type="submit" class="modal-btn" value="Submit">
+                </form>
             </div>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Nav Logo -->
+            <a href="#" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
+
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='#'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
+                    </div>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="pages/car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="pages/roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="pages/care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="pages/insurance-service/inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="pages/fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="pages/contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing section" id="landing-section">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="section-title">
+                <span>Roadside Assistance & Car Repair. </span>
+                Simplified 24/7 Mobile Mechanics Near Me
+            </div>
+
+            <button class="lg-btn" onclick="onclickDisplayThisModal(0)">Get a Quote</button>
+
             <div class="img-container">
-                <img src="assets/images/page-home/fleet-circle.png" alt="">
-            </div>
-        </div>
-        <div class="section-title" style="text-align: center;">We Service Most Car <span>Makes & Models</span></div>
-        <div class="car-container">
-            <div class="car-box">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-1.png" alt=""></div>
-                <button>Honda</button>
-            </div>
-            <div class="car-box">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-2.png" alt=""></div>
-                <button>HYUNDAI</button>
-            </div>
-            <div class="car-box">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-3.png" alt=""></div>
-                <button>NISSAN</button>
-            </div>
-            <div class="car-box">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-4.png" alt=""></div>
-                <button>TOYOTA</button>
-            </div>
-            <div class="car-box hideAfter615px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-5.png" alt=""></div>
-                <button>VOLKSWAGEN</button>
-            </div>
-            <div class="car-box hideAfter615px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-6.png" alt=""></div>
-                <button>BMW</button>
-            </div>
-            <div class="car-box hideAfter940px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-7.png" alt=""></div>
-                <button>Mercedes</button>
-            </div>
-            <div class="car-box hideAfter940px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-8.png" alt=""></div>
-                <button>JEEP</button>
-            </div>
-            <div class="car-box hideAfter1440px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-9.png" alt=""></div>
-                <button>KIA</button>
-            </div>
-            <div class="car-box hideAfter1440px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-10.png" alt=""></div>
-                <button>ACURA</button>
-            </div>
-            <div class="car-box hideAfter1440px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-11.png" alt=""></div>
-                <button>CHEVROLET</button>
-            </div>
-            <div class="car-box hideAfter1440px">
-                <div class="icon"><img src="assets/images/car-model/img/car-model-12.png" alt=""></div>
-                <button>FORD</button>
-            </div>
-        </div>
-        <button class="lg-btn" onclick="location.href='pages/car-models/car-models.html'">See All car makes</button>
-    </div>
-
-    <!-- Reviews Section -->
-    <div class="review-container">
-        <div class="business-box">
-            <div class="heading"><span>CarHelpline</span> contributes to business success</div>
-            <div class="icon-container">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-        </div>
-    
-        <div class="carousel-container before768 carousel slide" data-ride="carousel" id="review1">
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#review1" data-slide-to="0" class="active"></li>
-                <li data-target="#review1" data-slide-to="1"></li>
-            </ul>
-    
-            <!-- The slideshow -->
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet</div>
-                            <div class="body">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet</div>
-                            <div class="body">
-                                tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>                            
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet</div>
-                            <div class="body">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet</div>
-                            <div class="body">
-                                tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>                            
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="carousel-container after768 carousel slide" data-ride="carousel" id="review2">
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#review2" data-slide-to="0" class="active"></li>
-                <li data-target="#review2" data-slide-to="1"></li>
-                <li data-target="#review2" data-slide-to="2"></li>
-                <li data-target="#review2" data-slide-to="3"></li>
-            </ul>
-    
-            <!-- The slideshow -->
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet</div>
-                            <div class="body">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</div>
-                            <div class="body">
-                                tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</div>
-                            <div class="body">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="customer-reviews">
-                        <div class="review-box">
-                            <div class="img-container"><img src="assets/images/page-home/review-user.png" alt=""></div>
-                            <div class="name">B.Ahmed Butt</div>
-                            <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</div>
-                            <div class="body">
-                                tempor invidunt ut labore et dStet clita kasd  Lorem ipsum dolor sit amet, consetetur sadips.
-                            </div>
-                            <div class="rating">
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                                <div class="star img-center"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Download Section -->
-    <div class="download-section">
-        <div class="img-container"></div>
-        <div class="text-container">
-            <div class="heading">Download <span>CarHelpline App</span></div>
-            <div class="body">Choose and book a seamless car service experience  and get upto Rs 500 off with the CarHelpline App</div>
-        </div>
-        <div class="usable-elements-container">
-            <div class="phone-box">
-                <div class="fixed">+92</div>
-                <input type="number" placeholder="Your phone number">
-                <button>Get app link</button>
-            </div>
-            <div class="app-container">
-                <a class="app img"><img src="assets/images/design-icons/apple-btn.svg" alt=""></a>
-                <a class="app img"><img src="assets/images/design-icons/android-btn.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer> 
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="logo after1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
+                <img src="assets/images/page-home/landing.svg">
             </div>
         </div>
 
-        <div class="box">
-            <div class="heading">Rhetorik</div>
-            <div class="body">
-                <a>Home</a>
-                <a href="pages/cities/cities.html">Cities</a>
-                <a href="pages/insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                <a href="pages/roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                <a>Careers</a>
-                <a>Contact Us</a>
-                <a>Request a Demo</a>
-                <a>Resources & blogs</a>
+        <!-- Car Care Package Section -->
+        <div class="package custom-carousel">
+            <div class="navigation-container blue">
+                <div class="arrow-btn lhs img-center"></div>
+                <div class="tab-container">
+                    <div class="tab" name="0">Car Repairs</div>
+                    <div class="tab" name="1">Roadside Assistance</div>
+                    <div class="tab" name="2">Car Care Packages</div>
+                    <div class="tab" name="3">Insurance Services</div>
+                    <div class="tab" name="4">Fleet Services</div>
+                </div>
+                <div class="navigation-border"></div>
+                <div class="arrow-btn img-center rhs"></div>
+            </div>
+
+            <div class="content-container">
+                <div class="moving-wrapper">
+                    <div class="content">
+                        <div class="text-container">
+                            <div class="heading"> <span>Car Care</span> Packges</div>
+                            <div class="body">Quickly and easily launch your favorite applications on your own nuutok
+                                Enterprise servers.</div>
+                            <div class="list">
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Virtualization and decentralized private cloud</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">10X accelerated business applications and simplified VM management
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Centralized application management for multiple remote sites</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Turnkey applications in a flash</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div id="packCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#packCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#packCarousel" data-slide-to="1"></li>
+                                    <li data-target="#packCarousel" data-slide-to="2"></li>
+                                </ul>
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/images/page-home/package-carousel-1.svg">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/page-home/package-carousel-2.svg">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/page-home/package-carousel-3.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="view-more" href="pages/car-repairs/car-repairs.html">
+                            <div>View all </div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="text-container">
+                            <div class="heading"> <span>Roadside</span> Assist</div>
+                            <div class="body">Quickly and easily launch your favorite applications on your own nuutok
+                                Enterprise servers.</div>
+                            <div class="list">
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Virtualization and decentralized private cloud</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">10X accelerated business applications and simplified VM management
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Centralized application management for multiple remote sites</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Turnkey applications in a flash</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div class="grid-4">
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon1.svg" alt=""></div>
+                                    <div class="txt">Mechanical Breakdown</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon2.svg" alt=""></div>
+                                    <div class="txt">Electric Breakdown</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon3.svg" alt=""></div>
+                                    <div class="txt">Car Towing</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon4.svg" alt=""></div>
+                                    <div class="txt">Battery Replacement</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon5.svg" alt=""></div>
+                                    <div class="txt">Key Lockout</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon6.svg" alt=""></div>
+                                    <div class="txt">Flat Tyre</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon7.svg" alt=""></div>
+                                    <div class="txt">Out of Fuel</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon8.svg" alt=""></div>
+                                    <div class="txt">Female Scooty</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="view-more" href="pages/roadside-assistance/landing-page/roadside-assistance.html">
+                            <div>View all </div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="text-container">
+                            <div class="heading"> <span>Repair</span> Services</div>
+                            <div class="body">Quickly and easily launch your favorite applications on your own nuutok
+                                Enterprise servers.</div>
+                            <div class="list">
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Virtualization and decentralized private cloud</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">10X accelerated business applications and simplified VM management
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Centralized application management for multiple remote sites</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Turnkey applications in a flash</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div class="grid-4">
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon9.svg" alt=""></div>
+                                    <div class="txt">Replace Front Brake Pads</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon10.svg" alt=""></div>
+                                    <div class="txt">Synthetic Oil Change</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon11.svg" alt=""></div>
+                                    <div class="txt">Replace Starter Motor</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon12.svg" alt=""></div>
+                                    <div class="txt">Replace Fuel Pump</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon13.svg" alt=""></div>
+                                    <div class="txt">Replace Timing Belt</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon14.svg" alt=""></div>
+                                    <div class="txt">Replace Spark Plugs</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon15.svg" alt=""></div>
+                                    <div class="txt">Replace Alternator</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon16.svg" alt=""></div>
+                                    <div class="txt">Check Engine Light Diagnosis</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="view-more" href="pages/care-package/care-package.html">
+                            <div>View all </div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="text-container">
+                            <div class="heading"> <span>Insurance</span> Services</div>
+                            <div class="body">Quickly and easily launch your favorite applications on your own nuutok
+                                Enterprise servers.</div>
+                            <div class="list">
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Virtualization and decentralized private cloud</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">10X accelerated business applications and simplified VM management
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Centralized application management for multiple remote sites</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Turnkey applications in a flash</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div class="grid-4">
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon17.svg" alt=""></div>
+                                    <div class="txt">Car Insurance</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon18.svg" alt=""></div>
+                                    <div class="txt">Takaful (Islamic)</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon19.svg" alt=""></div>
+                                    <div class="txt">Travel Insurance</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon20.svg" alt=""></div>
+                                    <div class="txt">Health Insurance</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon21.svg" alt=""></div>
+                                    <div class="txt">Car Tracker</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon22.svg" alt=""></div>
+                                    <div class="txt">Corporate Insurance</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon23.svg" alt=""></div>
+                                    <div class="txt">Microinsurance</div>
+                                </div>
+                                <div class="icon-box-col">
+                                    <div class="icon"><img src="assets/images/service-icons/icon24.svg" alt=""></div>
+                                    <div class="txt"> Roadside Coverage</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="view-more" href="pages/insurance-service/landing-page/insurance-service.html">
+                            <div>View all </div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="text-container">
+                            <div class="heading"> <span>Fleet</span> Services</div>
+                            <div class="body">Quickly and easily launch your favorite applications on your own nuutok
+                                Enterprise servers.</div>
+                            <div class="list">
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Virtualization and decentralized private cloud</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">10X accelerated business applications and simplified VM management
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Centralized application management for multiple remote sites</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon img"><img src="assets/images/design-icons/tick-circle-red.svg"
+                                            alt=""></div>
+                                    <div class="txt">Turnkey applications in a flash</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div class="grid-2">
+                                <div class="img-box">
+                                    <div class="img"><img src="assets/images/service-icons/icon25.svg" alt=""></div>
+                                    <div class="heading">ANY SIZE FLEET</div>
+                                    <div class="body">We’ve got you covered no matter your fleet size. Each of our
+                                        mobile vans can install 32 tires per day.</div>
+                                </div>
+                                <div class="img-box">
+                                    <div class="img"><img src="assets/images/service-icons/icon26.svg" alt=""></div>
+                                    <div class="heading">ON LOCATION</div>
+                                    <div class="body">We come to you. No need to drive your vehicles anywhere.</div>
+                                </div>
+                                <div class="img-box">
+                                    <div class="img"><img src="assets/images/service-icons/icon27.svg" alt=""></div>
+                                    <div class="heading">ANY SIZE FLEET</div>
+                                    <div class="body">We’ve got you covered no matter your fleet size. Each of our
+                                        mobile vans can install 32 tires per day.</div>
+                                </div>
+                                <div class="img-box">
+                                    <div class="img"><img src="assets/images/service-icons/icon28.svg" alt=""></div>
+                                    <div class="heading">SATISFACTION GUARANTEED</div>
+                                    <div class="body">ASAP Tire offers free inspection and re-balancing up to 30 days
+                                        after your original installation date.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="view-more" href="pages/fleet-services/fleet-services.html">
+                            <div>View all </div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Solutions</div>
-            <div class="body">
-                <a>For Sales Professionals</a>
-                <a>For Marketing Leaders</a>
-                <a>For Marketing & Demand Gen</a>
-                <a>Professionals</a>
-                <a>For Recruitment Professionals</a>
-                <a>For Sales & Marketing Operations</a>
+
+        <!-- Services Section -->
+        <div class="services section">
+            <div class="section-title">Our Most <span>Popular Packages</span></div>
+            <div class="box-container">
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <div class="sale">50%</div>
+                    </div>
+                    <div class="text-container">
+                        <div class="title">Doorstep Express Car Service</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
+                        <button onclick="onclickDisplayThisModal(1)">Book Now</button>
+                        <div class="price">Rs. 00</div>
+                    </div>
+                </div>
+            </div>
+            <a class="view-more" href="pages/care-package/care-package.html">
+                <div>View all </div>
+                <div class="icon"></div>
+            </a>
+        </div>
+
+        <!-- Solutions Section -->
+        <div class="solution">
+            <div class="solutions-container">
+                <div class="text-container">
+                    <div class="heading">CarHelpline Fleet Solutions</div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem</p>
+                        <p>Call our fleet maintenance specialists</p>
+                    </div>
+                    <div class="phone">(03) 111-681-111</div>
+                    <button onclick="location.href='pages/fleet-services/fleet-services.html'">Learn More</button>
+                </div>
+                <div class="img-container">
+                    <img src="assets/images/page-home/fleet-circle.png" alt="">
+                </div>
+            </div>
+            <div class="section-title" style="text-align: center;">We Service Most Car <span>Makes & Models</span></div>
+            <div class="car-container">
+                <div class="car-box">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-1.png" alt=""></div>
+                    <button>Honda</button>
+                </div>
+                <div class="car-box">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-2.png" alt=""></div>
+                    <button>HYUNDAI</button>
+                </div>
+                <div class="car-box">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-3.png" alt=""></div>
+                    <button>NISSAN</button>
+                </div>
+                <div class="car-box">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-4.png" alt=""></div>
+                    <button>TOYOTA</button>
+                </div>
+                <div class="car-box hideAfter615px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-5.png" alt=""></div>
+                    <button>VOLKSWAGEN</button>
+                </div>
+                <div class="car-box hideAfter615px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-6.png" alt=""></div>
+                    <button>BMW</button>
+                </div>
+                <div class="car-box hideAfter940px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-7.png" alt=""></div>
+                    <button>Mercedes</button>
+                </div>
+                <div class="car-box hideAfter940px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-8.png" alt=""></div>
+                    <button>JEEP</button>
+                </div>
+                <div class="car-box hideAfter1440px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-9.png" alt=""></div>
+                    <button>KIA</button>
+                </div>
+                <div class="car-box hideAfter1440px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-10.png" alt=""></div>
+                    <button>ACURA</button>
+                </div>
+                <div class="car-box hideAfter1440px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-11.png" alt=""></div>
+                    <button>CHEVROLET</button>
+                </div>
+                <div class="car-box hideAfter1440px">
+                    <div class="icon"><img src="assets/images/car-model/img/car-model-12.png" alt=""></div>
+                    <button>FORD</button>
+                </div>
+            </div>
+            <button class="lg-btn" onclick="location.href='pages/car-models/car-models.html'">See All car makes</button>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="review-container">
+            <div class="business-box">
+                <div class="heading"><span>CarHelpline</span> contributes to business success</div>
+                <div class="icon-container">
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <div class="carousel-container before768 carousel slide" data-ride="carousel" id="review1">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#review1" data-slide-to="0" class="active"></li>
+                    <li data-target="#review1" data-slide-to="1"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet</div>
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet</div>
+                                <div class="body">
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet</div>
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet</div>
+                                <div class="body">
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-container after768 carousel slide" data-ride="carousel" id="review2">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#review2" data-slide-to="0" class="active"></li>
+                    <li data-target="#review2" data-slide-to="1"></li>
+                    <li data-target="#review2" data-slide-to="2"></li>
+                    <li data-target="#review2" data-slide-to="3"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet</div>
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy.</div>
+                                <div class="body">
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy.</div>
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="customer-reviews">
+                            <div class="review-box">
+                                <div class="img-container"><img src="assets/images/page-home/review-user.png" alt="">
+                                </div>
+                                <div class="name">B.Ahmed Butt</div>
+                                <div class="sub-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                    nonumy.</div>
+                                <div class="body">
+                                    tempor invidunt ut labore et dStet clita kasd Lorem ipsum dolor sit amet, consetetur
+                                    sadips.
+                                </div>
+                                <div class="rating">
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                    <div class="star img-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Products</div>
-            <div class="body">
-                <a>NetFinder™</a>
-                <a>DataCliniq™</a>
-                <a>AMP™ - <br> Action Marketing Programs</a>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <div class="img-container"></div>
+            <div class="text-container">
+                <div class="heading">Download <span>CarHelpline App</span></div>
+                <div class="body">Choose and book a seamless car service experience and get upto Rs 500 off with the
+                    CarHelpline App</div>
             </div>
-            <div class="hideAfter1122AndShowAfter">
+            <div class="usable-elements-container">
+                <div class="phone-box">
+                    <div class="fixed">+92</div>
+                    <input type="number" placeholder="Your phone number">
+                    <button>Get app link</button>
+                </div>
+                <div class="app-container">
+                    <a class="app img"><img src="assets/images/design-icons/apple-btn.svg" alt=""></a>
+                    <a class="app img"><img src="assets/images/design-icons/android-btn.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="pages/cities/cities.html">Cities</a>
+                    <a href="pages/insurance-service/landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="pages/roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
                 <div class="heading">Useful Links</div>
                 <div class="body">
                     <a>NetFinder Login</a>
@@ -1015,48 +1192,30 @@
                     <a>Do not sell my personal info</a>
                 </div>
             </div>
-        </div>
-    
-        <div class="box">
-            <div class="heading">Latest Resources</div>
-            <div class="body">
-                <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence platform for global enterprise technology companies</div>
-                <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-            </div>
-        </div>
-        <div class="box showAfter1122AndHideAfter">
-            <div class="heading">Useful Links</div>
-            <div class="body">
-                <a>NetFinder Login</a>
-                <a>Privacy Policy</a>
-                <a>Data Privacy & GDPR</a>
-                <a>Do not sell my personal info</a>
-            </div>
-        </div>
 
-        <div class="logo before1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-             </div>
-        </div>
-    </footer>
-    <!-- Page End -->
-    <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
 
-    <!-- JavaScript -->
-    <script src="pages/home/home.js"></script>
-    <script src="assets/js/functions.js"></script>
-    <script src="assets/js/custom-carousel.js"></script>
-    <script src="assets/js/form-dropdown.js"></script>
-    <script>
-        window.addEventListener('scroll', handleNavLogoImgOnScroll, false);
-        window.addEventListener('load', handleNavLogoImgOnScroll);
-    </script>
-</body>
+        <!-- JavaScript -->
+        <script src="assets/js/script.min.js"></script>
+        <script src="assets/js/custom-carousel.min.js"></script>
+        <script src="assets/js/form-dropdown.min.js"></script>
+        <script>
+            window.addEventListener( 'scroll', handleNavLogoImgOnScroll, false );
+            window.addEventListener( 'load', handleNavLogoImgOnScroll );
+            document.getElementById( "landing-section" ).style.minHeight = window.innerHeight + "px";
+        </script>
+    </body>
+
 </html>

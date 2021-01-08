@@ -1,532 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- For Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Animate.js Link -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- WOW Animation Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <title>Fleet Services</title> 
 
-    <!-- Common Styles -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/custom-carousel.css">
-    <link rel="stylesheet" href="fleet.css">
-</head>
-<body>
-    <!-- Modals -->
-    <div class="modal-container" id="phoneModal">
-        <div class="content-container" id="phoneModalContent">
-            <div class="heading">
-                <span>Support</span>
-                <div class="img img-center" onclick="closePhoneModal()"></div>
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Fleet Service</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../assets/css/style.min.css">
+        <link rel="stylesheet" href="../../assets/css/custom-carousel.min.css">
+        <!-- Specific Style -->
+        <link rel="stylesheet" href="fleet-services.min.css">
+    </head>
+
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
+                </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
+                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
             </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Privacy Policy</div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Terms & Conditions</div>
-            </div>
-            <div class="gray-line"></div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">(03) 111-681-111</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">0312-3952100</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">support@carhelpline.pk</div>
-            </div>
-            <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
         </div>
-    </div>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <!-- Toggle Btn -->
-        <div class="toggle-btn" id="btn-open-navbar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-        <!-- Nav Logo -->
-        <a href="../../index.html" class="logo-container">
-            <div id="nav-logo" class="img-center" style="display: block;"></div>
-            <div id="nav-title" style="display: none;">CarHelpline</div>
-        </a>
+            <!-- Nav Logo -->
+            <a href="../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
 
-        <!-- Phone Icon -->
-        <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
-        
-        <!-- Navbar -->
-        <div class="nav-bar" id="navbar">
-            <div class="nav-bar-wrapper">
-                <!-- Navbar Collapse State Elements -->
-                <div class="header">
-                    <div class="title">
-                        <div class="logo-text" onclick="location.href='../../index.html'">
-                            <div class="logoImg img-center"></div>
-                            <span>CarHelpline</span>
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
                         </div>
-                        <div class="close img-center" id="btn-close-navbar"></div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
                     </div>
-                    <div class="icon-box">
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="#">Fleet Services</a>
+                    <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="img">
+                <img src="../../assets/images/header/lg/fleet.jpg" alt="">
+                <img src="../../assets/images/header/sm/fleet.jpg" alt="">
+            </div>
+            <div class="txt-container withImage">
+                <div>
+                    <div class="section-title">Fleet <span>Maintenance</span></div>
+                    <div class="body">Improve uptime and manage the entire maintenance lifecycle in one place share
+                        responsibility across team members and achieve your ideal fleet maintenance workflow. Track and
+                        manage every aspect of your fleet’s maintenance from reminders to reporting and ensure nothing
+                        slips through the cracks.</div>
+                </div>
+                <div class="img-box">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintaince -->
+        <div style="padding: 0 var(--mainContainerPadding); font-size: var(--ratio);">
+            <div class="section-title"><span>CarHelpine</span> is where <br class="removeAfter1024"> fleet maintenance
+                happens</div>
+        </div>
+        <div class="maintaince custom-carousel">
+            <div class="navigation-container">
+                <div class="arrow-btn lhs img-center"></div>
+                <div class="tab-container">
+                    <div class="tab" name="0">Automate Triggers</div>
+                    <div class="tab" name="1">Handle Efficiently</div>
+                    <div class="tab" name="2">Resolve & Reset</div>
+                    <div class="tab" name="3">Report & Improve</div>
+                </div>
+                <div class="arrow-btn img-center rhs"></div>
+            </div>
+            <div class="content-container">
+                <div class="moving-wrapper">
+                    <div class="content">
+                        <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
+                        <div class="list-container">
+                            <div></div>
+                            <div>
+                                <div class="section-title smSpace">Automate <span>Triggers</span></div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
+                                    <div class="txt">PM Reminders</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
+                                    <div class="txt">Inspections</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
+                                    <div class="txt">DTC & Engine Faults</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
+                                    <div class="txt">Recall Notices</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
+                                    <div class="txt">Repair Requestss</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
+                        <div class="list-container">
+                            <div></div>
+                            <div>
+                                <div class="section-title smSpace">Automate <span>Triggers</span></div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
+                                    <div class="txt">PM Reminders</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
+                                    <div class="txt">Inspections</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
+                                    <div class="txt">DTC & Engine Faults</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
+                                    <div class="txt">Recall Notices</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
+                                    <div class="txt">Repair Requestss</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
+                        <div class="list-container">
+                            <div></div>
+                            <div>
+                                <div class="section-title smSpace">Automate <span>Triggers</span></div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
+                                    <div class="txt">PM Reminders</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
+                                    <div class="txt">Inspections</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
+                                    <div class="txt">DTC & Engine Faults</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
+                                    <div class="txt">Recall Notices</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
+                                    <div class="txt">Repair Requestss</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
+                        <div class="list-container">
+                            <div></div>
+                            <div>
+                                <div class="section-title smSpace">Automate <span>Triggers</span></div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
+                                    <div class="txt">PM Reminders</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
+                                    <div class="txt">Inspections</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
+                                    <div class="txt">DTC & Engine Faults</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
+                                    <div class="txt">Recall Notices</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
+                                    <div class="txt">Repair Requestss</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Different Maintaince -->
+        <div class="different-maintaince section first">
+            <div class="section-title">Automated <span>Maintenance Alerts</span></div>
+            <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
+            <div class="info-container">
+                <div class="img"><img src="../../assets/images/page-fleet/maintaince-2.svg" alt=""></div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
                         <div class="icon"></div>
-                        <div class="txt">Hello@carHelpline.com</div>
-                    </div>
-                    <div class="icon-box">
+                    </a>
+                </div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
                         <div class="icon"></div>
-                        <div class="txt">(03) 111-681-111</div>
-                    </div>
-                    
-                </div>
-                <!-- Links -->
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Car Repairs
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical System</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical System</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Inspection & Diagnostic</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Heading & Air Conditioning</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">General Maintenance</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Exterior & Body Parts</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Roadside Assistance
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical Breakdown</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical Breakdown</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Towing</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Battery Replacement</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Key Lockout</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Flat Tyre</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Out of Fuel</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Female Scooty</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="../care-package/care-package.html">Car Care Packages</a>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Insurance Services
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Takaful (Islamic)</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Travel Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Health Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Tracker</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Corporate Insurancel</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Microinsurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Roadside Coverage</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="#">Fleet Services</a>
-                <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
-            </div>        
-        </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <div class="landing-with-header">
-        <div class="img">
-            <img src="../../assets/images/header/lg/fleet.jpg" alt="">
-            <img src="../../assets/images/header/sm/fleet.jpg" alt="">
-        </div>
-        <div class="txt-container withImage">
-            <div>
-                <div class="section-title">Fleet <span>Maintenance</span></div>
-                <div class="body">Improve uptime and manage the entire maintenance lifecycle in one place share responsibility across team members and achieve your ideal fleet maintenance workflow. Track and manage every aspect of your fleet’s maintenance from reminders to reporting and ensure nothing slips through the cracks.</div>
-            </div>
-            <div class="img-box">
-                <div class="img"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Maintaince -->
-    <div style="padding: 0 var(--mainContainerPadding); font-size: var(--ratio);">
-        <div class="section-title"><span>CarHelpine</span> is where <br class="removeAfter1024"> fleet maintenance happens</div>
-    </div>
-    <div class="maintaince custom-carousel">
-        <div class="navigation-container">
-            <div class="arrow-btn lhs img-center"></div>
-            <div class="tab-container">
-                <div class="tab" name="0">Automate Triggers</div>
-                <div class="tab" name="1">Handle Efficiently</div>
-                <div class="tab" name="2">Resolve & Reset</div>
-                <div class="tab" name="3">Report & Improve</div>
-            </div>
-            <div class="arrow-btn img-center rhs"></div>
-        </div>
-        <div class="content-container">
-            <div class="moving-wrapper">
-                <div class="content">
-                    <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
-                    <div class="list-container">
-                        <div></div>
-                        <div>
-                            <div class="section-title smSpace">Automate <span>Triggers</span></div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
-                                <div class="txt">PM Reminders</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
-                                <div class="txt">Inspections</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
-                                <div class="txt">DTC & Engine Faults</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
-                                <div class="txt">Recall Notices</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
-                                <div class="txt">Repair Requestss</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
-                    <div class="list-container">
-                        <div></div>
-                        <div>
-                            <div class="section-title smSpace">Automate <span>Triggers</span></div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
-                                <div class="txt">PM Reminders</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
-                                <div class="txt">Inspections</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
-                                <div class="txt">DTC & Engine Faults</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
-                                <div class="txt">Recall Notices</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
-                                <div class="txt">Repair Requestss</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
-                    <div class="list-container">
-                        <div></div>
-                        <div>
-                            <div class="section-title smSpace">Automate <span>Triggers</span></div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
-                                <div class="txt">PM Reminders</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
-                                <div class="txt">Inspections</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
-                                <div class="txt">DTC & Engine Faults</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
-                                <div class="txt">Recall Notices</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
-                                <div class="txt">Repair Requestss</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img"><img src="../../assets/images/page-fleet/maintaince-1.svg" alt=""></div>
-                    <div class="list-container">
-                        <div></div>
-                        <div>
-                            <div class="section-title smSpace">Automate <span>Triggers</span></div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-1.svg" alt=""></div>
-                                <div class="txt">PM Reminders</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-2.svg" alt=""></div>
-                                <div class="txt">Inspections</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-3.svg" alt=""></div>
-                                <div class="txt">DTC & Engine Faults</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-4.svg" alt=""></div>
-                                <div class="txt">Recall Notices</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-fleet/icon-5.svg" alt=""></div>
-                                <div class="txt">Repair Requestss</div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Different Maintaince -->
-    <div class="different-maintaince section first">
-        <div class="section-title">Automated <span>Maintenance Alerts</span></div>
-        <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
-        <div class="info-container">
-            <div class="img"><img src="../../assets/images/page-fleet/maintaince-2.svg" alt=""></div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
-            </div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="different-maintaince section">
-        <div class="section-title">Automated <span>Maintenance Alerts</span></div>
-        <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
-        <div class="info-container">
-            <div class="img"><img src="../../assets/images/page-fleet/maintaince-3.svg" alt=""></div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
-            </div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
+        <div class="different-maintaince section">
+            <div class="section-title">Automated <span>Maintenance Alerts</span></div>
+            <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
+            <div class="info-container">
+                <div class="img"><img src="../../assets/images/page-fleet/maintaince-3.svg" alt=""></div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
+                        <div class="icon"></div>
+                    </a>
+                </div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
+                        <div class="icon"></div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="different-maintaince section">
-        <div class="section-title">Automated <span>Maintenance Alerts</span></div>
-        <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
-        <div class="info-container">
-            <div class="img"><img src="../../assets/images/page-fleet/maintaince-4.svg" alt=""></div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
-            </div>
-            <div class="txt-container">
-                <div class="heading">Automatically generate preventative maintenance (PM) schedules based on manufacturer recommendations</div>
-                <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                <a class="view-more">
-                    <div>Learn More</div>
-                    <div class="icon"></div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Package Carousel -->
-    <div class="package custom-carousel-2 section">
-        <div class="arrow-btn lhs img-center"><img src="../../assets/images/design-icons/arrow-circle-gray.svg" alt=""></div>
-        <div class="content-container">
-            <div class="moving-wrapper">
-                <div class="content img">1<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">2<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">3<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">4<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">5<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">6<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">7<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">8<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">9<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-                <div class="content img">10<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
-            </div>
-        </div>
-        <div class="arrow-btn img-center rhs"><img src="../../assets/images/design-icons/arrow-circle-gray.svg" alt=""></div>
-    </div>
-
-    <!-- Joing Now Section -->
-    <div class="join section">
-        <div class="body">Ready to get started?</div>
-        <div class="section-title">Join hundred of fleets <br> running on <span>CarHelpline</span></div>
-        <div class="body">Questions? Call us at (03) 111-681-111 or email enquiry@carhelpline.pk</div>
-        <button class="lg-btn">Join Now</button>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="logo after1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
+        <div class="different-maintaince section">
+            <div class="section-title">Automated <span>Maintenance Alerts</span></div>
+            <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
+            <div class="info-container">
+                <div class="img"><img src="../../assets/images/page-fleet/maintaince-4.svg" alt=""></div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
+                        <div class="icon"></div>
+                    </a>
+                </div>
+                <div class="txt-container">
+                    <div class="heading">Automatically generate preventative maintenance (PM) schedules based on
+                        manufacturer recommendations</div>
+                    <div class="body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <a class="view-more">
+                        <div>Learn More</div>
+                        <div class="icon"></div>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="box">
-            <div class="heading">Rhetorik</div>
-            <div class="body">
-                <a>Home</a>
-                <a href="../cities/cities.html">Cities</a>
-                <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                <a>Careers</a>
-                <a>Contact Us</a>
-                <a>Request a Demo</a>
-                <a>Resources & blogs</a>
+        <!-- Package Carousel -->
+        <div class="package custom-carousel-2 section">
+            <div class="arrow-btn lhs img-center"><img src="../../assets/images/design-icons/arrow-circle-gray.svg"
+                    alt=""></div>
+            <div class="content-container">
+                <div class="moving-wrapper">
+                    <div class="content img">1<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">2<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">3<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">4<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">5<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">6<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">7<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">8<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">9<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                    <div class="content img">10<img src="../../assets/images/page-home/sponser-icon.png" alt=""></div>
+                </div>
             </div>
+            <div class="arrow-btn img-center rhs"><img src="../../assets/images/design-icons/arrow-circle-gray.svg"
+                    alt=""></div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Solutions</div>
-            <div class="body">
-                <a>For Sales Professionals</a>
-                <a>For Marketing Leaders</a>
-                <a>For Marketing & Demand Gen</a>
-                <a>Professionals</a>
-                <a>For Recruitment Professionals</a>
-                <a>For Sales & Marketing Operations</a>
-            </div>
+
+        <!-- Joing Now Section -->
+        <div class="join section">
+            <div class="body">Ready to get started?</div>
+            <div class="section-title">Join hundred of fleets <br> running on <span>CarHelpline</span></div>
+            <div class="body">Questions? Call us at (03) 111-681-111 or email enquiry@carhelpline.pk</div>
+            <button class="lg-btn">Join Now</button>
         </div>
-    
-        <div class="box">
-            <div class="heading">Products</div>
-            <div class="body">
-                <a>NetFinder™</a>
-                <a>DataCliniq™</a>
-                <a>AMP™ - <br> Action Marketing Programs</a>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
             </div>
-            <div class="hideAfter1122AndShowAfter">
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../cities/cities.html">Cities</a>
+                    <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
                 <div class="heading">Useful Links</div>
                 <div class="body">
                     <a>NetFinder Login</a>
@@ -535,43 +588,25 @@
                     <a>Do not sell my personal info</a>
                 </div>
             </div>
-        </div>
-    
-        <div class="box">
-            <div class="heading">Latest Resources</div>
-            <div class="body">
-                <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence platform for global enterprise technology companies</div>
-                <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-            </div>
-        </div>
-        <div class="box showAfter1122AndHideAfter">
-            <div class="heading">Useful Links</div>
-            <div class="body">
-                <a>NetFinder Login</a>
-                <a>Privacy Policy</a>
-                <a>Data Privacy & GDPR</a>
-                <a>Do not sell my personal info</a>
-            </div>
-        </div>
 
-        <div class="logo before1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-             </div>
-        </div>
-    </footer>
-    <!-- Page End -->
-    <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
 
-    <!-- JavaScript -->
-    <script src="../../assets/js/functions.js"></script>
-    <script src="../../assets/js/custom-carousel.js"></script>
-    <script src="package-carousel.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="../../assets/js/script.min.js"></script>
+        <script src="../../assets/js/custom-carousel.min.js"></script>
+        <script src="fleet-services.min.js"></script>
+    </body>
+
 </html>

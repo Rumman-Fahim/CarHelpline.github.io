@@ -1,531 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- For Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Animate.js Link -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- WOW Animation Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <title>Key Lockout</title> 
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/custom-filter.css">
-    <link rel="stylesheet" href="../../../assets/css/inner-pages.css">
-    <link rel="stylesheet" href="../../care-package/care-package.css">
-</head>
-<body>
-    <!-- Modals -->
-    <div class="modal-container" id="phoneModal">
-        <div class="content-container" id="phoneModalContent">
-            <div class="heading">
-                <span>Support</span>
-                <div class="img img-center" onclick="closePhoneModal()"></div>
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 3 Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Key Lockout</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../../assets/css/style.min.css">
+        <link rel="stylesheet" href="../../../assets/css/custom-filter.min.css">
+        <!-- Care Package Style -->
+        <link rel="stylesheet" href="../../care-package/care-package.min.css">
+        <!-- Specific Style -->
+        <link rel="stylesheet" href="../../../assets/css/inner-pages.min.css">
+    </head>
+
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
+                </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
+                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
             </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Privacy Policy</div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Terms & Conditions</div>
-            </div>
-            <div class="gray-line"></div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">(03) 111-681-111</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">0312-3952100</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">support@carhelpline.pk</div>
-            </div>
-            <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
         </div>
-    </div>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <!-- Toggle Btn -->
-        <div class="toggle-btn" id="btn-open-navbar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-        <!-- Nav Logo -->
-        <a href="../../../index.html" class="logo-container">
-            <div id="nav-logo" class="img-center" style="display: block;"></div>
-            <div id="nav-title" style="display: none;">CarHelpline</div>
-        </a>
+            <!-- Nav Logo -->
+            <a href="../../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
 
-        <!-- Phone Icon -->
-        <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
-        
-        <!-- Navbar -->
-        <div class="nav-bar" id="navbar">
-            <div class="nav-bar-wrapper">
-                <!-- Navbar Collapse State Elements -->
-                <div class="header">
-                    <div class="title">
-                        <div class="logo-text" onclick="location.href='../../../index.html'">
-                            <div class="logoImg img-center"></div>
-                            <span>CarHelpline</span>
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
                         </div>
-                        <div class="close img-center" id="btn-close-navbar"></div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
+                    </div>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="#">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../../care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="../../insurance-service/inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../../fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="../../contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="txt-container gray">
+                <div class="section-title">Car <span>Insurance</span></div>
+                <div class="body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at
+                    voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab
+                    distinctio! Accusamus doloribus fuga ducimus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus
+                    nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates!
+                    Tenetur, fugit reprehenderit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni
+                    consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt
+                    laboriosam distinctio aperiam ex aliquam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a
+                    inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque
+                    eveniet ad laudantium exercitationem debitis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio
+                    at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus
+                    doloremque tenetur dicta deleniti.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi,
+                    architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores
+                    laboriosam et debitis tempora quibusdam?
+                </div>
+            </div>
+        </div>
+
+        <!-- Package -->
+        <div style="padding: 0 var(--mainContainerPadding); font-size: var(--ratio);">
+            <div class="packages-box">
+                <div class="info-container">
+                    <div class="video-container">
+                        <div class="video"></div>
+                    </div>
+                    <div class="txt-container">
+                        <div class="name-box">
+                            <div class="heading">Battery Replacement</div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="../../../assets/images/page-package/icon-saved.svg" alt="">
+                                </div>
+                                <div class="txt">You Save Rs. 500</div>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div>Offer Price</div>
+                            <div class="section-title"><span>Rs. 1,000</span></div>
+                            <div>Rs. 1,500</div>
+                        </div>
+                        <div class="body">Expires in <br> 26 days 3 hrs 33 mins 31 secs</div>
+                        <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
+                        <div class="icon-container">
+                            <div class="icon-box">
+                                <div class="icon"><img src="../../../assets/images/page-package/icon-saved.svg" alt="">
+                                </div>
+                                <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="../../../assets/images/page-package/icon-truck.svg" alt="">
+                                </div>
+                                <div class="txt">Service @ Doorstep</div>
+                            </div>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="checks-container">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                        <div class="txt">Convenient Service at Doorstep</div>
                     </div>
                     <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">Hello@carHelpline.com</div>
+                        <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                        <div class="txt">Free Installation</div>
                     </div>
                     <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">(03) 111-681-111</div>
+                        <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                        <div class="txt">30 Mins Quick Service</div>
                     </div>
-                    
-                </div>
-                <!-- Links -->
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Car Repairs
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical System</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical System</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Inspection & Diagnostic</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Heading & Air Conditioning</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">General Maintenance</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Exterior & Body Parts</div>
-                            </a>
-                        </div>
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                        <div class="txt">Unmatched Price</div>
                     </div>
                 </div>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Roadside Assistance
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="rsa-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical Breakdown</div>
-                            </a>
-                            <a class="link" href="rsa-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical Breakdown</div>
-                            </a>
-                            <a class="link" href="rsa-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Towing</div>
-                            </a>
-                            <a class="link" href="rsa-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Battery Replacement</div>
-                            </a>
-                            <a class="link" href="rsa-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Key Lockout</div>
-                            </a>
-                            <a class="link" href="rsa-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Flat Tyre</div>
-                            </a>
-                            <a class="link" href="rsa-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Out of Fuel</div>
-                            </a>
-                            <a class="link" href="rsa-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Female Scooty</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="../../care-package/care-package.html">Car Care Packages</a>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Insurance Services
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Insurance</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Takaful (Islamic)</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Travel Insurance</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Health Insurance</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Tracker</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Corporate Insurancel</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Microinsurance</div>
-                            </a>
-                            <a class="link" href="../../insurance-service/inner-pages/insurance-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Roadside Coverage</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a class="link" href="../../fleet-services/fleet-services.html">Fleet Services</a>
-                <a class="link" href="../../contact-us/contact-us.html">Contact Us</a>
-            </div>        
-        </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <div class="landing-with-header">
-        <div class="txt-container gray">
-            <div class="section-title">Car <span>Insurance</span></div>
-            <div class="body">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab distinctio! Accusamus doloribus fuga ducimus.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates! Tenetur, fugit reprehenderit!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt laboriosam distinctio aperiam ex aliquam!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque eveniet ad laudantium exercitationem debitis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus doloremque tenetur dicta deleniti.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi, architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores laboriosam et debitis tempora quibusdam?
-            </div>
-        </div>
-    </div>
-
-    <!-- Package -->
-    <div style="padding: 0 var(--mainContainerPadding); font-size: var(--ratio);">
-        <div class="packages-box">
-            <div class="info-container">
-                <div class="video-container">
-                    <div class="video"></div>
-                </div>
-                <div class="txt-container">
-                    <div class="name-box">
-                        <div class="heading">Battery Replacement</div>
-                        <div class="icon-box">
-                            <div class="icon"><img src="../../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                            <div class="txt">You Save Rs. 500</div>
-                        </div>
-                    </div>
-                    <div class="price-box">
-                        <div>Offer Price</div>
-                        <div class="section-title"><span>Rs. 1,000</span></div>
-                        <div>Rs. 1,500</div>
-                    </div>
-                    <div class="body">Expires in <br> 26  days 3  hrs  33  mins  31  secs</div>
-                    <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
-                    <div class="icon-container">
-                        <div class="icon-box">
-                            <div class="icon"><img src="../../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                            <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
-                        </div>
-                        <div class="icon-box">
-                            <div class="icon"><img src="../../../assets/images/page-package/icon-truck.svg" alt=""></div>
-                            <div class="txt">Service @ Doorstep</div>
-                        </div>
-                    </div>
-                    <button>Add To Cart</button>
-                </div>
-            </div>
-            <div class="checks-container">
-                <div class="icon-box">
-                    <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                    <div class="txt">Convenient Service at Doorstep</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                    <div class="txt">Free Installation</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                    <div class="txt">30 Mins Quick Service</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"><img src="../../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                    <div class="txt">Unmatched Price</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Whats Covered -->
-    <div class="features section">
-        <div class="section-title">What’s Covered in <span>CarHelpline</span></div>
-        <div class="features-container">
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon1.svg" alt=""></div>
-                <div class="heading">Accidents</div>
-                <div class="body">Damages and losses that may arise out of accidents and collisions</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon2.svg" alt=""></div>
-                <div class="heading">Theft</div>
-                <div class="body">Covers for the losses incurred when your car is unfortunately stolen</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon3.svg" alt=""></div>
-                <div class="heading">Fire</div>
-                <div class="body">Damages and losses caused to your car due to an accidental fire</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon4.svg" alt=""></div>
-                <div class="heading">Natural Disasters</div>
-                <div class="body">Damages and losses to your car in case of natural calamities such as floods, cyclones, etc.</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon5.svg" alt=""></div>
-                <div class="heading">Add later</div>
-                <div class="body">If there is a car accident and unfortunately, it leads to death or disability of the owner</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="img"><img src="../../../assets/images/page-insurance/icon6.svg" alt=""></div>
-                <div class="heading">Third Party Losses</div>
-                <div class="body">In cases where your car causes damages and losses to someone else, their car or property.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add on covers -->
-    <div class="features section gray">
-        <div class="section-title">Add-on Covers with <span>CarHelpline</span></div>
-        <div class="body">Car insurance add-ons which you can buy with your car insurance policy</div>
-        <div class="features-container">
-            <div class="feature-box withShadow">
-                <div class="heading">Zero Depreciation Cover</div>
-                <div class="body">Ideal for cars less than 5 years old, <span>zero depreciation cover</span> allows you to nullify the depreciation charged on your car and its parts and gives you the full value of repairs, costs and replacements during a claim.</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="heading">Return to Invoice Cover</div>
-                <div class="body">In case of theft or damages beyond repair, <span>return to invoice add-on</span> gives you the benefit of getting back the complete amount of your car's invoice value, including the cost of registering a new vehicle and its road tax respectively.</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="heading">Return to Invoice Cover</div>
-                <div class="body">In case of theft or damages beyond repair, <span>return to invoice add-on</span> gives you the benefit of getting back the complete amount of your car's invoice value, including the cost of registering a new vehicle and its road tax respectively.</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="heading">Tyre Protect Cover</div>
-                <div class="body">Generally, tyre damage isn't covered in standard insurance unless the damage takes place during an accident. That's why this <span>tyre protect add-on</span> gives you the benefit to safeguard and cover for tyre damages such as tyre bursts, bulges or cuts during all other situations possible.</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="heading">Breakdown Assistance</div>
-                <div class="body">We all need a little help sometimes! Our <span>Breakdown Assistance Add-On</span> gives you the benefit of taking help whenever required, i.e assistance during car breakdowns at any time you'd like. The best part? It doesn't even count as a claim!</div>
-            </div>
-            <div class="feature-box withShadow">
-                <div class="heading">Consumable Cover</div>
-                <div class="body">A <span>consumable cover</span> gives your car an additional layer of protection. It covers the cost for all your car's nitty-gritties, such as the engine oils, screws, nuts and bolts, grease, etc in a situation of an accident.</div>
-            </div>
-            <div class="forced-edge">1</div>
-        </div>
-    </div>
-
-    <!-- How to -->
-    <div class="how-to section">
-        <div class="section-title">How to file a <span>Car Insurance Claim?</span></div>
-        <div class="body">After you buy or renew our car insurance plan, you live tension free as we have a 3-step, completely digital claims process!</div>
-        <div class="steps-container">
-            <div class="step">
-                <div class="number">01</div>
-                <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
-                <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque architecto quo! Cumque.</div>
-            </div>
-            <div class="step">
-                <div class="number">02</div>
-                <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
-                <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque architecto quo! Cumque.</div>
-            </div>
-            <div class="step">
-                <div class="number">03</div>
-                <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
-                <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque architecto quo! Cumque.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQS -->
-    <div class="faqs section">
-        <div class="section-title">FAQ's related to buying <span>Car Insurance Online</span></div>
-        <div class="body">Of course, you may have more questions related to renewing or buying car insurance only, so scroll down and find your question answered!</div>
-        <div id="faqs">
-            <div class="card">
-                <a data-toggle="collapse" href="#faqs-1">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Can I buy a standalone own damage car insurance policy for my vehicle?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-1" class="collapse show" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-2">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Can I buy a standalone own damage car insurance policy for my vehicle?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-2" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-3">
-                    <div class="tick">✓ </div> 
-                    <div class="body">How to renew your Car Insurance policy with Digit?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-3" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-4">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Which is a better car insurance, comprehensive car insurance or a third-party liability insurance?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-4" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-5">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Are passengers covered by car insurance?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-5" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-6">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Will my No Claim Bonus get migrated if I want to renew my car insurance with you?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-6" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-7">
-                    <div class="tick">✓ </div> 
-                    <div class="body">Can I select a garage of my choice for repairs?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-7" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a class="collapsed card-link" data-toggle="collapse" href="#faqs-8">
-                    <div class="tick">✓ </div> 
-                    <div class="body">What do I need to consider before renewing with an insurance company?</div>
-                    <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
-                </a>
-                <div id="faqs-8" class="collapse" data-parent="#faqs">
-                    <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="logo after1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
             </div>
         </div>
 
-        <div class="box">
-            <div class="heading">Rhetorik</div>
-            <div class="body">
-                <a>Home</a>
-                <a href="../../cities/cities.html">Cities</a>
-                <a href="../../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                <a href="../landing-page/roadside-assistance.html">Roadside Assistance</a>
-                <a>Careers</a>
-                <a>Contact Us</a>
-                <a>Request a Demo</a>
-                <a>Resources & blogs</a>
+        <!-- Whats Covered -->
+        <div class="features section">
+            <div class="section-title">What’s Covered in <span>CarHelpline</span></div>
+            <div class="features-container">
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon1.svg" alt=""></div>
+                    <div class="heading">Accidents</div>
+                    <div class="body">Damages and losses that may arise out of accidents and collisions</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon2.svg" alt=""></div>
+                    <div class="heading">Theft</div>
+                    <div class="body">Covers for the losses incurred when your car is unfortunately stolen</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon3.svg" alt=""></div>
+                    <div class="heading">Fire</div>
+                    <div class="body">Damages and losses caused to your car due to an accidental fire</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon4.svg" alt=""></div>
+                    <div class="heading">Natural Disasters</div>
+                    <div class="body">Damages and losses to your car in case of natural calamities such as floods,
+                        cyclones, etc.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon5.svg" alt=""></div>
+                    <div class="heading">Add later</div>
+                    <div class="body">If there is a car accident and unfortunately, it leads to death or disability of
+                        the owner</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="img"><img src="../../../assets/images/page-insurance/icon6.svg" alt=""></div>
+                    <div class="heading">Third Party Losses</div>
+                    <div class="body">In cases where your car causes damages and losses to someone else, their car or
+                        property.</div>
+                </div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Solutions</div>
-            <div class="body">
-                <a>For Sales Professionals</a>
-                <a>For Marketing Leaders</a>
-                <a>For Marketing & Demand Gen</a>
-                <a>Professionals</a>
-                <a>For Recruitment Professionals</a>
-                <a>For Sales & Marketing Operations</a>
+
+        <!-- Add on covers -->
+        <div class="features section gray">
+            <div class="section-title">Add-on Covers with <span>CarHelpline</span></div>
+            <div class="body">Car insurance add-ons which you can buy with your car insurance policy</div>
+            <div class="features-container">
+                <div class="feature-box withShadow">
+                    <div class="heading">Zero Depreciation Cover</div>
+                    <div class="body">Ideal for cars less than 5 years old, <span>zero depreciation cover</span> allows
+                        you to nullify the depreciation charged on your car and its parts and gives you the full value
+                        of repairs, costs and replacements during a claim.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Return to Invoice Cover</div>
+                    <div class="body">In case of theft or damages beyond repair, <span>return to invoice add-on</span>
+                        gives you the benefit of getting back the complete amount of your car's invoice value, including
+                        the cost of registering a new vehicle and its road tax respectively.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Return to Invoice Cover</div>
+                    <div class="body">In case of theft or damages beyond repair, <span>return to invoice add-on</span>
+                        gives you the benefit of getting back the complete amount of your car's invoice value, including
+                        the cost of registering a new vehicle and its road tax respectively.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Tyre Protect Cover</div>
+                    <div class="body">Generally, tyre damage isn't covered in standard insurance unless the damage takes
+                        place during an accident. That's why this <span>tyre protect add-on</span> gives you the benefit
+                        to safeguard and cover for tyre damages such as tyre bursts, bulges or cuts during all other
+                        situations possible.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Breakdown Assistance</div>
+                    <div class="body">We all need a little help sometimes! Our <span>Breakdown Assistance Add-On</span>
+                        gives you the benefit of taking help whenever required, i.e assistance during car breakdowns at
+                        any time you'd like. The best part? It doesn't even count as a claim!</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Consumable Cover</div>
+                    <div class="body">A <span>consumable cover</span> gives your car an additional layer of protection.
+                        It covers the cost for all your car's nitty-gritties, such as the engine oils, screws, nuts and
+                        bolts, grease, etc in a situation of an accident.</div>
+                </div>
+                <div class="forced-edge">1</div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Products</div>
-            <div class="body">
-                <a>NetFinder™</a>
-                <a>DataCliniq™</a>
-                <a>AMP™ - <br> Action Marketing Programs</a>
+
+        <!-- How to -->
+        <div class="how-to section">
+            <div class="section-title">How to file a <span>Car Insurance Claim?</span></div>
+            <div class="body">After you buy or renew our car insurance plan, you live tension free as we have a 3-step,
+                completely digital claims process!</div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="number">01</div>
+                    <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+                    <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque
+                        architecto quo! Cumque.</div>
+                </div>
+                <div class="step">
+                    <div class="number">02</div>
+                    <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+                    <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque
+                        architecto quo! Cumque.</div>
+                </div>
+                <div class="step">
+                    <div class="number">03</div>
+                    <div class="body bold">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+                    <div class="body">Voluptas reprehenderit nesciunt repellat explicabo quod exercitationem eaque
+                        architecto quo! Cumque.</div>
+                </div>
             </div>
-            <div class="hideAfter1122AndShowAfter">
+        </div>
+
+        <!-- FAQS -->
+        <div class="faqs section">
+            <div class="section-title">FAQ's related to buying <span>Car Insurance Online</span></div>
+            <div class="body">Of course, you may have more questions related to renewing or buying car insurance only,
+                so scroll down and find your question answered!</div>
+            <div id="faqs">
+                <div class="card">
+                    <a data-toggle="collapse" href="#faqs-1">
+                        <div class="tick">✓ </div>
+                        <div class="body">Can I buy a standalone own damage car insurance policy for my vehicle?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-1" class="collapse show" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-2">
+                        <div class="tick">✓ </div>
+                        <div class="body">Can I buy a standalone own damage car insurance policy for my vehicle?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-2" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-3">
+                        <div class="tick">✓ </div>
+                        <div class="body">How to renew your Car Insurance policy with Digit?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-3" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-4">
+                        <div class="tick">✓ </div>
+                        <div class="body">Which is a better car insurance, comprehensive car insurance or a third-party
+                            liability insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-4" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-5">
+                        <div class="tick">✓ </div>
+                        <div class="body">Are passengers covered by car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-5" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-6">
+                        <div class="tick">✓ </div>
+                        <div class="body">Will my No Claim Bonus get migrated if I want to renew my car insurance with
+                            you?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-6" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-7">
+                        <div class="tick">✓ </div>
+                        <div class="body">Can I select a garage of my choice for repairs?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-7" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#faqs-8">
+                        <div class="tick">✓ </div>
+                        <div class="body">What do I need to consider before renewing with an insurance company?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt=""></div>
+                    </a>
+                    <div id="faqs-8" class="collapse" data-parent="#faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../../cities/cities.html">Cities</a>
+                    <a href="../../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="../landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
                 <div class="heading">Useful Links</div>
                 <div class="body">
                     <a>NetFinder Login</a>
@@ -534,41 +610,23 @@
                     <a>Do not sell my personal info</a>
                 </div>
             </div>
-        </div>
-    
-        <div class="box">
-            <div class="heading">Latest Resources</div>
-            <div class="body">
-                <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence platform for global enterprise technology companies</div>
-                <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-            </div>
-        </div>
-        <div class="box showAfter1122AndHideAfter">
-            <div class="heading">Useful Links</div>
-            <div class="body">
-                <a>NetFinder Login</a>
-                <a>Privacy Policy</a>
-                <a>Data Privacy & GDPR</a>
-                <a>Do not sell my personal info</a>
-            </div>
-        </div>
 
-        <div class="logo before1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-             </div>
-        </div>
-    </footer>
-    <!-- Page End -->
-    <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
 
-    <!-- JavaScript -->
-    <script src="../../../assets/js/functions.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="../../../assets/js/script.min.js"></script>
+    </body>
+
 </html>

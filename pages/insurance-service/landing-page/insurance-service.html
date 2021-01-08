@@ -1,358 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- For Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Animate.js Link -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- WOW Animation Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <title>Insurance Service</title> 
 
-    <!-- Common Styles -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../home/home.css">
-</head>
-<body>
-    <!-- Modals -->
-    <div class="modal-container" id="phoneModal">
-        <div class="content-container" id="phoneModalContent">
-            <div class="heading">
-                <span>Support</span>
-                <div class="img img-center" onclick="closePhoneModal()"></div>
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Insurance Service</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../../assets/css/style.min.css">
+        <!-- Home Page Style -->
+        <link rel="stylesheet" href="../../home/home.min.css">
+    </head>
+
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
+                </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
+                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
             </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Privacy Policy</div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Terms & Conditions</div>
-            </div>
-            <div class="gray-line"></div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">(03) 111-681-111</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">0312-3952100</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">support@carhelpline.pk</div>
-            </div>
-            <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
         </div>
-    </div>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <!-- Toggle Btn -->
-        <div class="toggle-btn" id="btn-open-navbar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-        <!-- Nav Logo -->
-        <a href="../../../index.html" class="logo-container">
-            <div id="nav-logo" class="img-center" style="display: block;"></div>
-            <div id="nav-title" style="display: none;">CarHelpline</div>
-        </a>
+            <!-- Nav Logo -->
+            <a href="../../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
 
-        <!-- Phone Icon -->
-        <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
-        
-        <!-- Navbar -->
-        <div class="nav-bar" id="navbar">
-            <div class="nav-bar-wrapper">
-                <!-- Navbar Collapse State Elements -->
-                <div class="header">
-                    <div class="title">
-                        <div class="logo-text" onclick="location.href='../../../index.html'">
-                            <div class="logoImg img-center"></div>
-                            <span>CarHelpline</span>
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
                         </div>
-                        <div class="close img-center" id="btn-close-navbar"></div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">Hello@carHelpline.com</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">(03) 111-681-111</div>
-                    </div>
-                    
-                </div>
-                <!-- Links -->
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Car Repairs
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical System</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical System</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Inspection & Diagnostic</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Heading & Air Conditioning</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">General Maintenance</div>
-                            </a>
-                            <a class="link" href="../../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Exterior & Body Parts</div>
-                            </a>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
                         </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Roadside Assistance
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical Breakdown</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical Breakdown</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Towing</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Battery Replacement</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Key Lockout</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Flat Tyre</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Out of Fuel</div>
-                            </a>
-                            <a class="link" href="../../roadside-assistance/inner-pages/rsa-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Female Scooty</div>
-                            </a>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="../../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <a class="link" href="../../care-package/care-package.html">Car Care Packages</a>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Insurance Services
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../inner-pages/insurance-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Insurance</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Takaful (Islamic)</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Travel Insurance</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Health Insurance</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Tracker</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Corporate Insurancel</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Microinsurance</div>
-                            </a>
-                            <a class="link" href="../inner-pages/insurance-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Roadside Coverage</div>
-                            </a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <a class="link" href="../../care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="../inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../../fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="../../contact-us/contact-us.html">Contact Us</a>
                 </div>
-                <a class="link" href="../../fleet-services/fleet-services.html">Fleet Services</a>
-                <a class="link" href="../../contact-us/contact-us.html">Contact Us</a>
-            </div>        
-        </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <div class="landing-with-header">
-        <div class="img">
-            <img src="../../../assets/images/header/lg/car-repairs.svg" alt="">
-            <img src="../../../assets/images/header/sm/car-repair.jpg" alt="">
-        </div>
-        <div class="txt-container gray">
-            <div class="section-title">We Service Most Car <span>Makes & Model</span></div>
-            <div class="body">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab distinctio! Accusamus doloribus fuga ducimus.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates! Tenetur, fugit reprehenderit!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt laboriosam distinctio aperiam ex aliquam!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque eveniet ad laudantium exercitationem debitis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus doloremque tenetur dicta deleniti.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum atque eligendi eos vero laudantium, recusandae expedita doloremque neque maiores iusto adipisci molestias cupiditate tempora necessitatibus, libero, asperiores quidem natus?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In eos natus sint nobis sit libero harum enim fuga est molestiae esse, dolore voluptas, commodi neque nihil corporis officia quia veritatis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi, architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores laboriosam et debitis tempora quibusdam?
             </div>
-        </div>
-    </div>
+        </nav>
 
-    <!-- Popular Services Section -->
-    <div class="popular-items">
-        <div class="section-title">Most Popular Car Repair <span>Services Near Me</span></div>
-        <div class="icon-container">
-            <a href="../inner-pages/insurance-1.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon15.svg" alt=""></div>
-                <div class="txt">Car Insurance</div>
-            </a>
-            <a href="../inner-pages/insurance-2.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon16.svg" alt=""></div>
-                <div class="txt">Takaful (Islamic)</div>
-            </a>
-            <a href="../inner-pages/insurance-3.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon17.svg" alt=""></div>
-                <div class="txt">Travel Insurance</div>
-            </a>
-            <a href="../inner-pages/insurance-4.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon18.svg" alt=""></div>
-                <div class="txt">Health Insurance</div>
-            </a>
-            <a href="../inner-pages/insurance-5.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon19.svg" alt=""></div>
-                <div class="txt">Car Tracker</div>
-            </a>
-            <a href="../inner-pages/insurance-6.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon20.svg" alt=""></div>
-                <div class="txt">Corporate Insurance</div>
-            </a>
-            <a href="../inner-pages/insurance-7.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon21.svg" alt=""></div>
-                <div class="txt">Microinsurance</div>
-            </a>
-            <a href="../inner-pages/insurance-8.html" class="icon-box-col withShadow">
-                <div class="icon"><img src="../../../assets/images/navbar/icon22.svg" alt=""></div>
-                <div class="txt">Roadside Coverage</div>
-            </a>
-        </div>
-    </div>
-
-    <!-- Download Section -->
-    <div class="download-section">
-        <div class="img-container"></div>
-        <div class="text-container">
-            <div class="heading">Download <span>CarHelpline App</span></div>
-            <div class="body">Choose and book a seamless car service experience  and get upto Rs 500 off with the CarHelpline App</div>
-        </div>
-        <div class="usable-elements-container">
-            <div class="phone-box">
-                <div class="fixed">+92</div>
-                <input type="number" placeholder="Your phone number">
-                <button>Get app link</button>
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="img">
+                <img src="../../../assets/images/header/lg/insurance-service.jpg" alt="">
+                <img src="../../../assets/images/header/sm/insurance-service.jpg" alt="">
             </div>
-            <div class="app-container">
-                <a class="app img"><img src="../../../assets/images/design-icons/apple-btn.svg" alt=""></a>
-                <a class="app img"><img src="../../../assets/images/design-icons/android-btn.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="logo after1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
+            <div class="txt-container gray">
+                <div class="section-title">We Service Most Car <span>Makes & Model</span></div>
+                <div class="body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at
+                    voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab
+                    distinctio! Accusamus doloribus fuga ducimus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus
+                    nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates!
+                    Tenetur, fugit reprehenderit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni
+                    consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt
+                    laboriosam distinctio aperiam ex aliquam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a
+                    inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque
+                    eveniet ad laudantium exercitationem debitis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio
+                    at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus
+                    doloremque tenetur dicta deleniti.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum atque eligendi eos vero
+                    laudantium, recusandae expedita doloremque neque maiores iusto adipisci molestias cupiditate tempora
+                    necessitatibus, libero, asperiores quidem natus?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In eos natus sint nobis sit libero harum
+                    enim fuga est molestiae esse, dolore voluptas, commodi neque nihil corporis officia quia veritatis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi,
+                    architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores
+                    laboriosam et debitis tempora quibusdam?
+                </div>
             </div>
         </div>
 
-        <div class="box">
-            <div class="heading">Rhetorik</div>
-            <div class="body">
-                <a>Home</a>
-                <a href="../../cities/cities.html">Cities</a>
-                <a href="#">Insurance Services</a>
-                <a href="../../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                <a>Careers</a>
-                <a>Contact Us</a>
-                <a>Request a Demo</a>
-                <a>Resources & blogs</a>
+        <!-- Popular Services Section -->
+        <div class="popular-items">
+            <div class="section-title">Most Popular Car Repair <span>Services Near Me</span></div>
+            <div class="icon-container">
+                <a href="../inner-pages/insurance-1.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon15.svg" alt=""></div>
+                    <div class="txt">Car Insurance</div>
+                </a>
+                <a href="../inner-pages/insurance-2.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon16.svg" alt=""></div>
+                    <div class="txt">Takaful (Islamic)</div>
+                </a>
+                <a href="../inner-pages/insurance-3.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon17.svg" alt=""></div>
+                    <div class="txt">Travel Insurance</div>
+                </a>
+                <a href="../inner-pages/insurance-4.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon18.svg" alt=""></div>
+                    <div class="txt">Health Insurance</div>
+                </a>
+                <a href="../inner-pages/insurance-5.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon19.svg" alt=""></div>
+                    <div class="txt">Car Tracker</div>
+                </a>
+                <a href="../inner-pages/insurance-6.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon20.svg" alt=""></div>
+                    <div class="txt">Corporate Insurance</div>
+                </a>
+                <a href="../inner-pages/insurance-7.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon21.svg" alt=""></div>
+                    <div class="txt">Microinsurance</div>
+                </a>
+                <a href="../inner-pages/insurance-8.html" class="icon-box-col withShadow">
+                    <div class="icon"><img src="../../../assets/images/navbar/icon22.svg" alt=""></div>
+                    <div class="txt">Roadside Coverage</div>
+                </a>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Solutions</div>
-            <div class="body">
-                <a>For Sales Professionals</a>
-                <a>For Marketing Leaders</a>
-                <a>For Marketing & Demand Gen</a>
-                <a>Professionals</a>
-                <a>For Recruitment Professionals</a>
-                <a>For Sales & Marketing Operations</a>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <div class="img-container"></div>
+            <div class="text-container">
+                <div class="heading">Download <span>CarHelpline App</span></div>
+                <div class="body">Choose and book a seamless car service experience and get upto Rs 500 off with the
+                    CarHelpline App</div>
+            </div>
+            <div class="usable-elements-container">
+                <div class="phone-box">
+                    <div class="fixed">+92</div>
+                    <input type="number" placeholder="Your phone number">
+                    <button>Get app link</button>
+                </div>
+                <div class="app-container">
+                    <a class="app img"><img src="../../../assets/images/design-icons/apple-btn.svg" alt=""></a>
+                    <a class="app img"><img src="../../../assets/images/design-icons/android-btn.svg" alt=""></a>
+                </div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Products</div>
-            <div class="body">
-                <a>NetFinder™</a>
-                <a>DataCliniq™</a>
-                <a>AMP™ - <br> Action Marketing Programs</a>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
             </div>
-            <div class="hideAfter1122AndShowAfter">
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../../cities/cities.html">Cities</a>
+                    <a href="#">Insurance Services</a>
+                    <a href="../../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
                 <div class="heading">Useful Links</div>
                 <div class="body">
                     <a>NetFinder Login</a>
@@ -361,41 +400,23 @@
                     <a>Do not sell my personal info</a>
                 </div>
             </div>
-        </div>
-    
-        <div class="box">
-            <div class="heading">Latest Resources</div>
-            <div class="body">
-                <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence platform for global enterprise technology companies</div>
-                <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-            </div>
-        </div>
-        <div class="box showAfter1122AndHideAfter">
-            <div class="heading">Useful Links</div>
-            <div class="body">
-                <a>NetFinder Login</a>
-                <a>Privacy Policy</a>
-                <a>Data Privacy & GDPR</a>
-                <a>Do not sell my personal info</a>
-            </div>
-        </div>
 
-        <div class="logo before1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-             </div>
-        </div>
-    </footer>
-    <!-- Page End -->
-    <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
 
-    <!-- JavaScript -->
-    <script src="../../../assets/js/functions.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="../../../assets/js/script.min.js"></script>
+    </body>
+
 </html>

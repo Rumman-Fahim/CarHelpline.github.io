@@ -1,1096 +1,1432 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- For Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Animate.js Link -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- WOW Animation Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <title>Care Package</title> 
 
-    <!-- Common Styles -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/custom-carousel.css">
-    <link rel="stylesheet" href="../../assets/css/custom-filter.css">
-    <link rel="stylesheet" href="care-package.css">
-</head>
-<body>
-    <!-- Modals -->
-    <div class="modal-container" id="phoneModal">
-        <div class="content-container" id="phoneModalContent">
-            <div class="heading">
-                <span>Support</span>
-                <div class="img img-center" onclick="closePhoneModal()"></div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Privacy Policy</div>
-            </div>
-            <div class="icon-box">
-                <div class="icon"></div>
-                <div class="txt">Terms & Conditions</div>
-            </div>
-            <div class="gray-line"></div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">(03) 111-681-111</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">0312-3952100</div>
-            </div>
-            <div class="icon-box withBorder">
-                <div class="icon"></div>
-                <div class="txt">support@carhelpline.pk</div>
-            </div>
-            <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 3 Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Care Package</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../assets/css/style.min.css">
+        <link rel="stylesheet" href="../../assets/css/custom-carousel.min.css">
+        <link rel="stylesheet" href="../../assets/css/custom-filter.min.css">
+        <!-- Specific Style -->
+        <link rel="stylesheet" href="care-package.min.css">
+    </head>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <!-- Toggle Btn -->
-        <div class="toggle-btn" id="btn-open-navbar">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
-
-        <!-- Nav Logo -->
-        <a href="../../index.html" class="logo-container">
-            <div id="nav-logo" class="img-center" style="display: block;"></div>
-            <div id="nav-title" style="display: none;">CarHelpline</div>
-        </a>
-
-        <!-- Phone Icon -->
-        <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
-        
-        <!-- Navbar -->
-        <div class="nav-bar" id="navbar">
-            <div class="nav-bar-wrapper">
-                <!-- Navbar Collapse State Elements -->
-                <div class="header">
-                    <div class="title">
-                        <div class="logo-text" onclick="location.href='../../index.html'">
-                            <div class="logoImg img-center"></div>
-                            <span>CarHelpline</span>
-                        </div>
-                        <div class="close img-center" id="btn-close-navbar"></div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">Hello@carHelpline.com</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"></div>
-                        <div class="txt">(03) 111-681-111</div>
-                    </div>
-                    
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
                 </div>
-                <!-- Links -->
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Car Repairs
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical System</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical System</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Inspection & Diagnostic</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Heading & Air Conditioning</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">General Maintenance</div>
-                            </a>
-                            <a class="link" href="../car-repairs/car-repairs.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Exterior & Body Parts</div>
-                            </a>
-                        </div>
-                    </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
                 </div>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Roadside Assistance
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Mechanical Breakdown</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Electrical Breakdown</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Towing</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Battery Replacement</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Key Lockout</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Flat Tyre</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Out of Fuel</div>
-                            </a>
-                            <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Female Scooty</div>
-                            </a>
-                        </div>
-                    </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
                 </div>
-                <a class="link" href="#">Car Care Packages</a>
-                <div class="link navbar-dropdown">
-                    <div class="toggle-btn">
-                        Insurance Services
-                        <div class="img-center"></div>
-                    </div>
-                    <div class="sub-menu">
-                        <div class="triangle"></div>
-                        <div class="links-container">
-                            <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Takaful (Islamic)</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Travel Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Health Insurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Car Tracker</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Corporate Insurancel</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Microinsurance</div>
-                            </a>
-                            <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
-                                <div class="icon img-center"></div>
-                                <div class="body">Roadside Coverage</div>
-                            </a>
-                        </div>
-                    </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
                 </div>
-                <a class="link" href="../fleet-services/fleet-services.html">Fleet Services</a>
-                <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
-            </div>        
-        </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <div class="landing-with-header">
-        <div class="img">
-            <img src="../../assets/images/header/lg/package.svg" alt="">
-            <img src="../../assets/images/header/sm/car-package.jpg" alt="">
-        </div>
-    </div>
-
-    <!-- Car Care Package Section -->
-    <div class="package custom-filter">
-        <div class="navigation-container blue">
-            <div class="arrow-btn-filter lhs img-center"></div>
-            <div class="tab-container-filter">
-                <div class="tab-filter" name="0">Periodic Services</div>
-                <div class="tab-filter" name="1">Detaing & Painting</div>
-                <div class="tab-filter" name="2">Batteries</div>
-                <div class="tab-filter" name="3">Car Wash & Car Detailing</div>
-                <div class="tab-filter" name="4">AC Service & Repair</div>
-                <div class="tab-filter" name="5">Tyers & Wheel Care</div>
-            </div>
-            <div class="navigation-border"></div>
-            <div class="arrow-btn-filter img-center rhs"></div>
-        </div>
-        
-        <div class="content-container">
-            <div class="content-filter packages-box" name="0">
-                <div class="info-container">
-                    <div class="video-container">
-                        <div class="video"></div>
-                    </div>
-                    <div class="txt-container">
-                        <div class="name-box">
-                            <div class="heading">Battery Replacement</div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">You Save Rs. 500</div>
-                            </div>
-                        </div>
-                        <div class="price-box">
-                            <div>Offer Price</div>
-                            <div class="section-title"><span>Rs. 1,000</span></div>
-                            <div>Rs. 1,500</div>
-                        </div>
-                        <div class="body">Expires in <br> 26  days 3  hrs  33  mins  31  secs</div>
-                        <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
-                        <div class="icon-container">
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt=""></div>
-                                <div class="txt">Service @ Doorstep</div>
-                            </div>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
                 </div>
-                <div class="checks-container">
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Convenient Service at Doorstep</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Free Installation</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">30 Mins Quick Service</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Unmatched Price</div>
-                    </div>
-                    <div class="dropdown-arrow-btn"></div>
-                    <div class="dropdown-content custom-carousel">
-                        <div class="navigation-container">
-                            <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
-                            <div class="tab-container" name="1">
-                                <div class="tab" name="0">Description</div>
-                                <div class="tab" name="1">FAQ</div>
-                                <div class="tab" name="2">Cost Breakup</div>
-                                <div class="tab" name="3">Reviews</div>
-                            </div>
-                            <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
-                        </div>
-                        <div class="content-container">
-                            <div class="moving-wrapper">
-                                <div class="content description">
-                                    <div class="body">
-                                        <p>Battery is the lifeline of any car.Without a battery, your car simply isn't functional. One of the most inconvenient things in life is when your car battery suddenly dies unexpectedly! This can delay you to work or make you miss an important appointment!</p>
-                                        <p>It is one of the components that inevitably needs to be replaced every 4 or 5 years or so.</p>
-                                        <p>However, depending on your driving habits, some car batteries may last a much shorter or longer period of time.The battery lasts longer if the vehicle is driven daily and the battery is kept fully charged. When the vehicle is parked for extended periods of time, the battery deteriorates sooner.</p>
-                                        <p>Knowing when to replace your car battery can be tricky, but there are symptoms to look out for that can act as warning signs, indicating your battery may be on its last leg.</p>
-                                        <p>Book a Battery Replacement service with Pitstop to ensure your car runs smoothly and without any problems.</p>
-                                    </div>
-                                    <div class="heading">Symptoms For Battery Replacement</div>
-                                    <div class="symptoms">
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Dashboard Lights And Warnings</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Loss Of Charge</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Problem Starting The Car</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">3 Years Plus Age Of Your Battery</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or Other Issues Like Dim Or Dull Illumination Of Interior Lights Or Headlight</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content faqs">
-                                    <div id="all-items-accordian" class="all-items-accordian">
-                                        <div class="item-details">
-                                            <a class="heading" data-toggle="collapse" href="#s1">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s1" class="collapse show" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s2">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s2" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s3">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s3" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s4">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s4" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content cost-breakup">
-                                    <table>
-                                        <tr>
-                                            <th>Brand</th>
-                                            <th>Service</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Amaron</td>
-                                            <td>Battery</td>
-                                            <td>1</td>
-                                            <td>Rs. 00</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" style="text-align: right; padding: 2em;">Grand Total (Incl. of Taxes)</td>
-                                            <td style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">Rs. 00</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="content"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
                 </div>
-            </div>
-            <div class="content-filter packages-box" name="1">
-                <div class="info-container">
-                    <div class="video-container">
-                        <div class="video"></div>
-                    </div>
-                    <div class="txt-container">
-                        <div class="name-box">
-                            <div class="heading">Battery Replacement</div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">You Save Rs. 500</div>
-                            </div>
-                        </div>
-                        <div class="price-box">
-                            <div>Offer Price</div>
-                            <div class="section-title"><span>Rs. 1,000</span></div>
-                            <div>Rs. 1,500</div>
-                        </div>
-                        <div class="body">Expires in <br> 26  days 3  hrs  33  mins  31  secs</div>
-                        <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
-                        <div class="icon-container">
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt=""></div>
-                                <div class="txt">Service @ Doorstep</div>
-                            </div>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
-                <div class="checks-container">
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Convenient Service at Doorstep</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Free Installation</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">30 Mins Quick Service</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Unmatched Price</div>
-                    </div>
-                    <div class="dropdown-arrow-btn"></div>
-                    <div class="dropdown-content custom-carousel">
-                        <div class="navigation-container">
-                            <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
-                            <div class="tab-container">
-                                <div class="tab" name="0">Description</div>
-                                <div class="tab" name="1">FAQ</div>
-                                <div class="tab" name="2">Cost Breakup</div>
-                                <div class="tab" name="3">Reviews</div>
-                            </div>
-                            <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
-                        </div>
-                        <div class="content-container">
-                            <div class="moving-wrapper">
-                                <div class="content description">
-                                    <div class="body">
-                                        <p>Battery is the lifeline of any car.Without a battery, your car simply isn't functional. One of the most inconvenient things in life is when your car battery suddenly dies unexpectedly! This can delay you to work or make you miss an important appointment!</p>
-                                        <p>It is one of the components that inevitably needs to be replaced every 4 or 5 years or so.</p>
-                                        <p>However, depending on your driving habits, some car batteries may last a much shorter or longer period of time.The battery lasts longer if the vehicle is driven daily and the battery is kept fully charged. When the vehicle is parked for extended periods of time, the battery deteriorates sooner.</p>
-                                        <p>Knowing when to replace your car battery can be tricky, but there are symptoms to look out for that can act as warning signs, indicating your battery may be on its last leg.</p>
-                                        <p>Book a Battery Replacement service with Pitstop to ensure your car runs smoothly and without any problems.</p>
-                                    </div>
-                                    <div class="heading">Symptoms For Battery Replacement</div>
-                                    <div class="symptoms">
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Dashboard Lights And Warnings</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Loss Of Charge</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Problem Starting The Car</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">3 Years Plus Age Of Your Battery</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or Other Issues Like Dim Or Dull Illumination Of Interior Lights Or Headlight</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content faqs">
-                                    <div id="all-items-accordian" class="all-items-accordian">
-                                        <div class="item-details">
-                                            <a class="heading" data-toggle="collapse" href="#s1">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s1" class="collapse show" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s2">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s2" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s3">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s3" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s4">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s4" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content cost-breakup">
-                                    <table>
-                                        <tr>
-                                            <th>Brand</th>
-                                            <th>Service</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Amaron</td>
-                                            <td>Battery</td>
-                                            <td>1</td>
-                                            <td>Rs. 00</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" style="text-align: right; padding: 2em;">Grand Total (Incl. of Taxes)</td>
-                                            <td style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">Rs. 00</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="content"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-filter packages-box" name="2">
-                <div class="info-container">
-                    <div class="video-container">
-                        <div class="video"></div>
-                    </div>
-                    <div class="txt-container">
-                        <div class="name-box">
-                            <div class="heading">Battery Replacement</div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">You Save Rs. 500</div>
-                            </div>
-                        </div>
-                        <div class="price-box">
-                            <div>Offer Price</div>
-                            <div class="section-title"><span>Rs. 1,000</span></div>
-                            <div>Rs. 1,500</div>
-                        </div>
-                        <div class="body">Expires in <br> 26  days 3  hrs  33  mins  31  secs</div>
-                        <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
-                        <div class="icon-container">
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt=""></div>
-                                <div class="txt">Service @ Doorstep</div>
-                            </div>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
-                <div class="checks-container">
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Convenient Service at Doorstep</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Free Installation</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">30 Mins Quick Service</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Unmatched Price</div>
-                    </div>
-                    <div class="dropdown-arrow-btn"></div>
-                    <div class="dropdown-content custom-carousel">
-                        <div class="navigation-container">
-                            <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
-                            <div class="tab-container">
-                                <div class="tab" name="0">Description</div>
-                                <div class="tab" name="1">FAQ</div>
-                                <div class="tab" name="2">Cost Breakup</div>
-                                <div class="tab" name="3">Reviews</div>
-                            </div>
-                            <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
-                        </div>
-                        <div class="content-container">
-                            <div class="moving-wrapper">
-                                <div class="content description">
-                                    <div class="body">
-                                        <p>Battery is the lifeline of any car.Without a battery, your car simply isn't functional. One of the most inconvenient things in life is when your car battery suddenly dies unexpectedly! This can delay you to work or make you miss an important appointment!</p>
-                                        <p>It is one of the components that inevitably needs to be replaced every 4 or 5 years or so.</p>
-                                        <p>However, depending on your driving habits, some car batteries may last a much shorter or longer period of time.The battery lasts longer if the vehicle is driven daily and the battery is kept fully charged. When the vehicle is parked for extended periods of time, the battery deteriorates sooner.</p>
-                                        <p>Knowing when to replace your car battery can be tricky, but there are symptoms to look out for that can act as warning signs, indicating your battery may be on its last leg.</p>
-                                        <p>Book a Battery Replacement service with Pitstop to ensure your car runs smoothly and without any problems.</p>
-                                    </div>
-                                    <div class="heading">Symptoms For Battery Replacement</div>
-                                    <div class="symptoms">
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Dashboard Lights And Warnings</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Loss Of Charge</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Problem Starting The Car</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">3 Years Plus Age Of Your Battery</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or Other Issues Like Dim Or Dull Illumination Of Interior Lights Or Headlight</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content faqs">
-                                    <div id="all-items-accordian" class="all-items-accordian">
-                                        <div class="item-details">
-                                            <a class="heading" data-toggle="collapse" href="#s1">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s1" class="collapse show" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s2">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s2" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s3">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s3" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s4">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s4" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content cost-breakup">
-                                    <table>
-                                        <tr>
-                                            <th>Brand</th>
-                                            <th>Service</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Amaron</td>
-                                            <td>Battery</td>
-                                            <td>1</td>
-                                            <td>Rs. 00</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" style="text-align: right; padding: 2em;">Grand Total (Incl. of Taxes)</td>
-                                            <td style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">Rs. 00</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="content"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-filter packages-box" name="0">
-                <div class="info-container">
-                    <div class="video-container">
-                        <div class="video"></div>
-                    </div>
-                    <div class="txt-container">
-                        <div class="name-box">
-                            <div class="heading">Battery Replacement</div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">You Save Rs. 500</div>
-                            </div>
-                        </div>
-                        <div class="price-box">
-                            <div>Offer Price</div>
-                            <div class="section-title"><span>Rs. 1,000</span></div>
-                            <div>Rs. 1,500</div>
-                        </div>
-                        <div class="body">Expires in <br> 26  days 3  hrs  33  mins  31  secs</div>
-                        <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
-                        <div class="icon-container">
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt=""></div>
-                                <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
-                            </div>
-                            <div class="icon-box">
-                                <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt=""></div>
-                                <div class="txt">Service @ Doorstep</div>
-                            </div>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
-                <div class="checks-container">
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Convenient Service at Doorstep</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Free Installation</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">30 Mins Quick Service</div>
-                    </div>
-                    <div class="icon-box">
-                        <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                        <div class="txt">Unmatched Price</div>
-                    </div>
-                    <div class="dropdown-arrow-btn"></div>
-                    <div class="dropdown-content custom-carousel">
-                        <div class="navigation-container">
-                            <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
-                            <div class="tab-container">
-                                <div class="tab" name="0">Description</div>
-                                <div class="tab" name="1">FAQ</div>
-                                <div class="tab" name="2">Cost Breakup</div>
-                                <div class="tab" name="3">Reviews</div>
-                            </div>
-                            <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
-                        </div>
-                        <div class="content-container">
-                            <div class="moving-wrapper">
-                                <div class="content description">
-                                    <div class="body">
-                                        <p>Battery is the lifeline of any car.Without a battery, your car simply isn't functional. One of the most inconvenient things in life is when your car battery suddenly dies unexpectedly! This can delay you to work or make you miss an important appointment!</p>
-                                        <p>It is one of the components that inevitably needs to be replaced every 4 or 5 years or so.</p>
-                                        <p>However, depending on your driving habits, some car batteries may last a much shorter or longer period of time.The battery lasts longer if the vehicle is driven daily and the battery is kept fully charged. When the vehicle is parked for extended periods of time, the battery deteriorates sooner.</p>
-                                        <p>Knowing when to replace your car battery can be tricky, but there are symptoms to look out for that can act as warning signs, indicating your battery may be on its last leg.</p>
-                                        <p>Book a Battery Replacement service with Pitstop to ensure your car runs smoothly and without any problems.</p>
-                                    </div>
-                                    <div class="heading">Symptoms For Battery Replacement</div>
-                                    <div class="symptoms">
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Dashboard Lights And Warnings</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Loss Of Charge</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Problem Starting The Car</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">3 Years Plus Age Of Your Battery</div>
-                                        </div>
-                                        <div class="icon-box">
-                                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
-                                            <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or Other Issues Like Dim Or Dull Illumination Of Interior Lights Or Headlight</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content faqs">
-                                    <div id="all-items-accordian" class="all-items-accordian">
-                                        <div class="item-details">
-                                            <a class="heading" data-toggle="collapse" href="#s1">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s1" class="collapse show" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s2">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s2" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s3">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s3" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s4">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s4" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="item-details">
-                                            <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                                                <span>How long will the service take to complete?</span>
-                                                <div class="arrows img"><img src="../../assets/images/design-icons/dropdown-red.svg" alt=""></div>
-                                            </a>
-                                            <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                                                <div class="info-container">
-                                                    <div class="body">Common symptoms for battery replacement of your Maruti Suzuki Alto Petrol: Dashboard lights and warnings Loss of charge Problem starting the Maruti Suzuki Alto Petrol 3 years plus age of your battery Electrical Issue-windows are not working properly, or other issues like dim or dull illumination of interior lights or headlights</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content cost-breakup">
-                                    <table>
-                                        <tr>
-                                            <th>Brand</th>
-                                            <th>Service</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Amaron</td>
-                                            <td>Battery</td>
-                                            <td>1</td>
-                                            <td>Rs. 00</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" style="text-align: right; padding: 2em;">Grand Total (Incl. of Taxes)</td>
-                                            <td style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">Rs. 00</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="content"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="logo after1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
-               <div class="img img-center"></div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
             </div>
         </div>
 
-        <div class="box">
-            <div class="heading">Rhetorik</div>
-            <div class="body">
-                <a>Home</a>
-                <a href="../cities/cities.html">Cities</a>
-                <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                <a>Careers</a>
-                <a>Contact Us</a>
-                <a>Request a Demo</a>
-                <a>Resources & blogs</a>
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Nav Logo -->
+            <a href="../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
+
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
+                    </div>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="../car-repairs/car-repairs.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="#">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="img">
+                <img src="../../assets/images/header/lg/package.svg" alt="">
+                <img src="../../assets/images/header/sm/car-package.jpg" alt="">
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Solutions</div>
-            <div class="body">
-                <a>For Sales Professionals</a>
-                <a>For Marketing Leaders</a>
-                <a>For Marketing & Demand Gen</a>
-                <a>Professionals</a>
-                <a>For Recruitment Professionals</a>
-                <a>For Sales & Marketing Operations</a>
+
+        <!-- Car Care Package Section -->
+        <div class="package custom-filter">
+            <div class="navigation-container blue">
+                <div class="arrow-btn-filter lhs img-center"></div>
+                <div class="tab-container-filter">
+                    <div class="tab-filter" name="0">Periodic Services</div>
+                    <div class="tab-filter" name="1">Detaing & Painting</div>
+                    <div class="tab-filter" name="2">Batteries</div>
+                    <div class="tab-filter" name="3">Car Wash & Car Detailing</div>
+                    <div class="tab-filter" name="4">AC Service & Repair</div>
+                    <div class="tab-filter" name="5">Tyers & Wheel Care</div>
+                </div>
+                <div class="navigation-border"></div>
+                <div class="arrow-btn-filter img-center rhs"></div>
+            </div>
+
+            <div class="content-container">
+                <div class="content-filter packages-box" name="0">
+                    <div class="info-container">
+                        <div class="video-container">
+                            <div class="video"></div>
+                        </div>
+                        <div class="txt-container">
+                            <div class="name-box">
+                                <div class="heading">Battery Replacement</div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">You Save Rs. 500</div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <div>Offer Price</div>
+                                <div class="section-title"><span>Rs. 1,000</span></div>
+                                <div>Rs. 1,500</div>
+                            </div>
+                            <div class="body">Expires in <br> 26 days 3 hrs 33 mins 31 secs</div>
+                            <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
+                            <div class="icon-container">
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt="">
+                                    </div>
+                                    <div class="txt">Service @ Doorstep</div>
+                                </div>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="checks-container">
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Convenient Service at Doorstep</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Free Installation</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">30 Mins Quick Service</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Unmatched Price</div>
+                        </div>
+                        <div class="dropdown-arrow-btn"></div>
+                        <div class="dropdown-content custom-carousel">
+                            <div class="navigation-container">
+                                <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
+                                <div class="tab-container" name="1">
+                                    <div class="tab" name="0">Description</div>
+                                    <div class="tab" name="1">FAQ</div>
+                                    <div class="tab" name="2">Cost Breakup</div>
+                                    <div class="tab" name="3">Reviews</div>
+                                </div>
+                                <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
+                            </div>
+                            <div class="content-container">
+                                <div class="moving-wrapper">
+                                    <div class="content description">
+                                        <div class="body">
+                                            <p>Battery is the lifeline of any car.Without a battery, your car simply
+                                                isn't functional. One of the most inconvenient things in life is when
+                                                your car battery suddenly dies unexpectedly! This can delay you to work
+                                                or make you miss an important appointment!</p>
+                                            <p>It is one of the components that inevitably needs to be replaced every 4
+                                                or 5 years or so.</p>
+                                            <p>However, depending on your driving habits, some car batteries may last a
+                                                much shorter or longer period of time.The battery lasts longer if the
+                                                vehicle is driven daily and the battery is kept fully charged. When the
+                                                vehicle is parked for extended periods of time, the battery deteriorates
+                                                sooner.</p>
+                                            <p>Knowing when to replace your car battery can be tricky, but there are
+                                                symptoms to look out for that can act as warning signs, indicating your
+                                                battery may be on its last leg.</p>
+                                            <p>Book a Battery Replacement service with Pitstop to ensure your car runs
+                                                smoothly and without any problems.</p>
+                                        </div>
+                                        <div class="heading">Symptoms For Battery Replacement</div>
+                                        <div class="symptoms">
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Dashboard Lights And Warnings</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Loss Of Charge</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Problem Starting The Car</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">3 Years Plus Age Of Your Battery</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or
+                                                    Other Issues Like Dim Or Dull Illumination Of Interior Lights Or
+                                                    Headlight</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content faqs">
+                                        <div id="all-items-accordian" class="all-items-accordian">
+                                            <div class="item-details">
+                                                <a class="heading" data-toggle="collapse" href="#s1">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s1" class="collapse show" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s2">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s2" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s3">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s3" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s4">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s4" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content cost-breakup">
+                                        <table>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <th>Service</th>
+                                                <th>Quantity</th>
+                                                <th>Total</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Amaron</td>
+                                                <td>Battery</td>
+                                                <td>1</td>
+                                                <td>Rs. 00</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right; padding: 2em;">Grand Total
+                                                    (Incl. of Taxes)</td>
+                                                <td
+                                                    style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                                                    Rs. 00</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-filter packages-box" name="1">
+                    <div class="info-container">
+                        <div class="video-container">
+                            <div class="video"></div>
+                        </div>
+                        <div class="txt-container">
+                            <div class="name-box">
+                                <div class="heading">Battery Replacement</div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">You Save Rs. 500</div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <div>Offer Price</div>
+                                <div class="section-title"><span>Rs. 1,000</span></div>
+                                <div>Rs. 1,500</div>
+                            </div>
+                            <div class="body">Expires in <br> 26 days 3 hrs 33 mins 31 secs</div>
+                            <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
+                            <div class="icon-container">
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt="">
+                                    </div>
+                                    <div class="txt">Service @ Doorstep</div>
+                                </div>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="checks-container">
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Convenient Service at Doorstep</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Free Installation</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">30 Mins Quick Service</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Unmatched Price</div>
+                        </div>
+                        <div class="dropdown-arrow-btn"></div>
+                        <div class="dropdown-content custom-carousel">
+                            <div class="navigation-container">
+                                <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
+                                <div class="tab-container">
+                                    <div class="tab" name="0">Description</div>
+                                    <div class="tab" name="1">FAQ</div>
+                                    <div class="tab" name="2">Cost Breakup</div>
+                                    <div class="tab" name="3">Reviews</div>
+                                </div>
+                                <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
+                            </div>
+                            <div class="content-container">
+                                <div class="moving-wrapper">
+                                    <div class="content description">
+                                        <div class="body">
+                                            <p>Battery is the lifeline of any car.Without a battery, your car simply
+                                                isn't functional. One of the most inconvenient things in life is when
+                                                your car battery suddenly dies unexpectedly! This can delay you to work
+                                                or make you miss an important appointment!</p>
+                                            <p>It is one of the components that inevitably needs to be replaced every 4
+                                                or 5 years or so.</p>
+                                            <p>However, depending on your driving habits, some car batteries may last a
+                                                much shorter or longer period of time.The battery lasts longer if the
+                                                vehicle is driven daily and the battery is kept fully charged. When the
+                                                vehicle is parked for extended periods of time, the battery deteriorates
+                                                sooner.</p>
+                                            <p>Knowing when to replace your car battery can be tricky, but there are
+                                                symptoms to look out for that can act as warning signs, indicating your
+                                                battery may be on its last leg.</p>
+                                            <p>Book a Battery Replacement service with Pitstop to ensure your car runs
+                                                smoothly and without any problems.</p>
+                                        </div>
+                                        <div class="heading">Symptoms For Battery Replacement</div>
+                                        <div class="symptoms">
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Dashboard Lights And Warnings</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Loss Of Charge</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Problem Starting The Car</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">3 Years Plus Age Of Your Battery</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or
+                                                    Other Issues Like Dim Or Dull Illumination Of Interior Lights Or
+                                                    Headlight</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content faqs">
+                                        <div id="all-items-accordian" class="all-items-accordian">
+                                            <div class="item-details">
+                                                <a class="heading" data-toggle="collapse" href="#s1">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s1" class="collapse show" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s2">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s2" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s3">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s3" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s4">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s4" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content cost-breakup">
+                                        <table>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <th>Service</th>
+                                                <th>Quantity</th>
+                                                <th>Total</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Amaron</td>
+                                                <td>Battery</td>
+                                                <td>1</td>
+                                                <td>Rs. 00</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right; padding: 2em;">Grand Total
+                                                    (Incl. of Taxes)</td>
+                                                <td
+                                                    style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                                                    Rs. 00</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-filter packages-box" name="2">
+                    <div class="info-container">
+                        <div class="video-container">
+                            <div class="video"></div>
+                        </div>
+                        <div class="txt-container">
+                            <div class="name-box">
+                                <div class="heading">Battery Replacement</div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">You Save Rs. 500</div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <div>Offer Price</div>
+                                <div class="section-title"><span>Rs. 1,000</span></div>
+                                <div>Rs. 1,500</div>
+                            </div>
+                            <div class="body">Expires in <br> 26 days 3 hrs 33 mins 31 secs</div>
+                            <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
+                            <div class="icon-container">
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt="">
+                                    </div>
+                                    <div class="txt">Service @ Doorstep</div>
+                                </div>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="checks-container">
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Convenient Service at Doorstep</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Free Installation</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">30 Mins Quick Service</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Unmatched Price</div>
+                        </div>
+                        <div class="dropdown-arrow-btn"></div>
+                        <div class="dropdown-content custom-carousel">
+                            <div class="navigation-container">
+                                <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
+                                <div class="tab-container">
+                                    <div class="tab" name="0">Description</div>
+                                    <div class="tab" name="1">FAQ</div>
+                                    <div class="tab" name="2">Cost Breakup</div>
+                                    <div class="tab" name="3">Reviews</div>
+                                </div>
+                                <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
+                            </div>
+                            <div class="content-container">
+                                <div class="moving-wrapper">
+                                    <div class="content description">
+                                        <div class="body">
+                                            <p>Battery is the lifeline of any car.Without a battery, your car simply
+                                                isn't functional. One of the most inconvenient things in life is when
+                                                your car battery suddenly dies unexpectedly! This can delay you to work
+                                                or make you miss an important appointment!</p>
+                                            <p>It is one of the components that inevitably needs to be replaced every 4
+                                                or 5 years or so.</p>
+                                            <p>However, depending on your driving habits, some car batteries may last a
+                                                much shorter or longer period of time.The battery lasts longer if the
+                                                vehicle is driven daily and the battery is kept fully charged. When the
+                                                vehicle is parked for extended periods of time, the battery deteriorates
+                                                sooner.</p>
+                                            <p>Knowing when to replace your car battery can be tricky, but there are
+                                                symptoms to look out for that can act as warning signs, indicating your
+                                                battery may be on its last leg.</p>
+                                            <p>Book a Battery Replacement service with Pitstop to ensure your car runs
+                                                smoothly and without any problems.</p>
+                                        </div>
+                                        <div class="heading">Symptoms For Battery Replacement</div>
+                                        <div class="symptoms">
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Dashboard Lights And Warnings</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Loss Of Charge</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Problem Starting The Car</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">3 Years Plus Age Of Your Battery</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or
+                                                    Other Issues Like Dim Or Dull Illumination Of Interior Lights Or
+                                                    Headlight</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content faqs">
+                                        <div id="all-items-accordian" class="all-items-accordian">
+                                            <div class="item-details">
+                                                <a class="heading" data-toggle="collapse" href="#s1">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s1" class="collapse show" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s2">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s2" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s3">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s3" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s4">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s4" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content cost-breakup">
+                                        <table>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <th>Service</th>
+                                                <th>Quantity</th>
+                                                <th>Total</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Amaron</td>
+                                                <td>Battery</td>
+                                                <td>1</td>
+                                                <td>Rs. 00</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right; padding: 2em;">Grand Total
+                                                    (Incl. of Taxes)</td>
+                                                <td
+                                                    style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                                                    Rs. 00</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-filter packages-box" name="0">
+                    <div class="info-container">
+                        <div class="video-container">
+                            <div class="video"></div>
+                        </div>
+                        <div class="txt-container">
+                            <div class="name-box">
+                                <div class="heading">Battery Replacement</div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">You Save Rs. 500</div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <div>Offer Price</div>
+                                <div class="section-title"><span>Rs. 1,000</span></div>
+                                <div>Rs. 1,500</div>
+                            </div>
+                            <div class="body">Expires in <br> 26 days 3 hrs 33 mins 31 secs</div>
+                            <div class="body coupon">Use Coupon : BATTERY10 To Get The Offer</div>
+                            <div class="icon-container">
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-saved.svg" alt="">
+                                    </div>
+                                    <div class="txt">Use Coupon <span>'BATTERY10'</span> to Get The Offer</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><img src="../../assets/images/page-package/icon-truck.svg" alt="">
+                                    </div>
+                                    <div class="txt">Service @ Doorstep</div>
+                                </div>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="checks-container">
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Convenient Service at Doorstep</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Free Installation</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">30 Mins Quick Service</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../assets/images/page-package/icon-tick.svg" alt=""></div>
+                            <div class="txt">Unmatched Price</div>
+                        </div>
+                        <div class="dropdown-arrow-btn"></div>
+                        <div class="dropdown-content custom-carousel">
+                            <div class="navigation-container">
+                                <div class="arrow-btn lhs lhsDropdownCarousel img-center"></div>
+                                <div class="tab-container">
+                                    <div class="tab" name="0">Description</div>
+                                    <div class="tab" name="1">FAQ</div>
+                                    <div class="tab" name="2">Cost Breakup</div>
+                                    <div class="tab" name="3">Reviews</div>
+                                </div>
+                                <div class="arrow-btn img-center rhs rhsDropdownCarousel"></div>
+                            </div>
+                            <div class="content-container">
+                                <div class="moving-wrapper">
+                                    <div class="content description">
+                                        <div class="body">
+                                            <p>Battery is the lifeline of any car.Without a battery, your car simply
+                                                isn't functional. One of the most inconvenient things in life is when
+                                                your car battery suddenly dies unexpectedly! This can delay you to work
+                                                or make you miss an important appointment!</p>
+                                            <p>It is one of the components that inevitably needs to be replaced every 4
+                                                or 5 years or so.</p>
+                                            <p>However, depending on your driving habits, some car batteries may last a
+                                                much shorter or longer period of time.The battery lasts longer if the
+                                                vehicle is driven daily and the battery is kept fully charged. When the
+                                                vehicle is parked for extended periods of time, the battery deteriorates
+                                                sooner.</p>
+                                            <p>Knowing when to replace your car battery can be tricky, but there are
+                                                symptoms to look out for that can act as warning signs, indicating your
+                                                battery may be on its last leg.</p>
+                                            <p>Book a Battery Replacement service with Pitstop to ensure your car runs
+                                                smoothly and without any problems.</p>
+                                        </div>
+                                        <div class="heading">Symptoms For Battery Replacement</div>
+                                        <div class="symptoms">
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Dashboard Lights And Warnings</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Loss Of Charge</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Problem Starting The Car</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">3 Years Plus Age Of Your Battery</div>
+                                            </div>
+                                            <div class="icon-box">
+                                                <div class="icon"><img
+                                                        src="../../assets/images/page-package/icon-tick.svg" alt="">
+                                                </div>
+                                                <div class="txt">Electrical Issue-Windows Aren't Working Properly, Or
+                                                    Other Issues Like Dim Or Dull Illumination Of Interior Lights Or
+                                                    Headlight</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content faqs">
+                                        <div id="all-items-accordian" class="all-items-accordian">
+                                            <div class="item-details">
+                                                <a class="heading" data-toggle="collapse" href="#s1">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s1" class="collapse show" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s2">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s2" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s3">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s3" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s4">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s4" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-details">
+                                                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                                                    <span>How long will the service take to complete?</span>
+                                                    <div class="arrows img"><img
+                                                            src="../../assets/images/design-icons/dropdown-red.svg"
+                                                            alt=""></div>
+                                                </a>
+                                                <div id="s5" class="collapse" data-parent="#all-items-accordian">
+                                                    <div class="info-container">
+                                                        <div class="body">Common symptoms for battery replacement of
+                                                            your Maruti Suzuki Alto Petrol: Dashboard lights and
+                                                            warnings Loss of charge Problem starting the Maruti Suzuki
+                                                            Alto Petrol 3 years plus age of your battery Electrical
+                                                            Issue-windows are not working properly, or other issues like
+                                                            dim or dull illumination of interior lights or headlights
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content cost-breakup">
+                                        <table>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <th>Service</th>
+                                                <th>Quantity</th>
+                                                <th>Total</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Amaron</td>
+                                                <td>Battery</td>
+                                                <td>1</td>
+                                                <td>Rs. 00</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" style="text-align: right; padding: 2em;">Grand Total
+                                                    (Incl. of Taxes)</td>
+                                                <td
+                                                    style="border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                                                    Rs. 00</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="box">
-            <div class="heading">Products</div>
-            <div class="body">
-                <a>NetFinder™</a>
-                <a>DataCliniq™</a>
-                <a>AMP™ - <br> Action Marketing Programs</a>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
             </div>
-            <div class="hideAfter1122AndShowAfter">
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../cities/cities.html">Cities</a>
+                    <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
                 <div class="heading">Useful Links</div>
                 <div class="body">
                     <a>NetFinder Login</a>
@@ -1099,44 +1435,26 @@
                     <a>Do not sell my personal info</a>
                 </div>
             </div>
-        </div>
-    
-        <div class="box">
-            <div class="heading">Latest Resources</div>
-            <div class="body">
-                <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence platform for global enterprise technology companies</div>
-                <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-            </div>
-        </div>
-        <div class="box showAfter1122AndHideAfter">
-            <div class="heading">Useful Links</div>
-            <div class="body">
-                <a>NetFinder Login</a>
-                <a>Privacy Policy</a>
-                <a>Data Privacy & GDPR</a>
-                <a>Do not sell my personal info</a>
-            </div>
-        </div>
 
-        <div class="logo before1024">
-            <!-- new -->
-            <div class="logo-img img-center"></div>
-            <div class="socials">
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-                <div class="img img-center"></div>
-             </div>
-        </div>
-    </footer>
-    <!-- Page End -->
-    <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
-    
-    <!-- JavaScript -->
-    <script src="../../assets/js/functions.js"></script>
-    <script src="../../assets/js/custom-filter.js"></script>
-    <script> hasUserClickedOnTab = true; </script>
-    <script src="care-package.js"></script>
-</body>
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+
+        <!-- JavaScript -->
+        <script src="../../assets/js/script.min.js"></script>
+        <script src="../../assets/js/custom-filter.min.js"></script>
+        <script> hasUserClickedOnTab = true; </script>
+        <script src="care-package.min.js"></script>
+    </body>
+
 </html>
