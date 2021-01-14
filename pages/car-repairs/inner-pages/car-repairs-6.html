@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 3 Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Car Repair Inner Page Title</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../../assets/css/style.min.css">
+        <!-- Specific Style -->
+        <link rel="stylesheet" href="../../../assets/css/inner-pages.min.css">
+        <link rel="stylesheet" href="../inner-page.css">
+    </head>
+
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
+                </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
+                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Nav Logo -->
+            <a href="../../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
+
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
+                    </div>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="car-repairs-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="car-repairs-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="car-repairs-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="car-repairs-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="car-repairs-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="#">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="../../roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../../care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="#">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../../fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="../../contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="txt-container gray">
+                <div class="section-title">Inspection <span>& Diagnostic</span> </div>
+                <div class="body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at
+                    voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab
+                    distinctio! Accusamus doloribus fuga ducimus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus
+                    nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates!
+                    Tenetur, fugit reprehenderit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni
+                    consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt
+                    laboriosam distinctio aperiam ex aliquam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a
+                    inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque
+                    eveniet ad laudantium exercitationem debitis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio
+                    at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus
+                    doloremque tenetur dicta deleniti.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi,
+                    architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores
+                    laboriosam et debitis tempora quibusdam?
+                </div>
+            </div>
+        </div>
+
+        <!-- Package -->
+        <div class="package section">
+            <div class="section-title">Popular Brake <span>Related Services</span></div>
+            <div class="body">Our mobile mechanics offer services 7 days a week. Upfront and transparent pricing.</div>
+            <div class="packages-box">
+                <div class="video-container">
+                    <div class="video"></div>
+                </div>
+                <div class="txt-container">
+                    <div class="price-box">
+                        <div class="price">
+                            <div class="heading">Rs. 1,000</div>
+                            <div class="body">Dealer price</div>
+                        </div>
+                        <div class="price">
+                            <div class="heading">Rs. 700</div>
+                            <div class="body">Your price</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-box">
+                        <div class="img"><img src="../../../assets/images/design-icons/arrow-circle-red.svg" alt="">
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="body">Hello !</div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../../assets/images/design-icons/circle-tick-red.svg" alt="">
+                            </div>
+                            <div class="txt">Online Booking</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../../assets/images/design-icons/circle-tick-red.svg" alt="">
+                            </div>
+                            <div class="txt">Mechanic comes to you</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../../assets/images/design-icons/circle-tick-red.svg" alt="">
+                            </div>
+                            <div class="txt">12-month / 12k-mile warranty</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"><img src="../../../assets/images/design-icons/circle-tick-red.svg" alt="">
+                            </div>
+                            <div class="txt">Free 50 point safety inspection</div>
+                        </div>
+                    </div>
+                    <div class="car-icon">
+                        <div class="img"><img src="../../../assets/images/design-icons/car-repair.svg" alt=""></div>
+                    </div>
+                    <div class="body">Our mobile mechanics are available in Pakistan</div>
+                    <button>SCHEDULE A MECHANIC</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="landing-with-header">
+            <div class="txt-container">
+                <div class="section-title">What Are <span>Brake Pads And Rotors?</span></div>
+                <div class="body">
+                    Depending on what kind of car you have, it may utilize between 4 - 8 brake pads. When you step on
+                    the brake pedal, your car's master cylinder sends fluid under pressure to the brake calipers (which
+                    hold the brake pads). The caliper presses the brake pad against the brake rotor, causing friction
+                    that slows down the car. During normal usage of the brakes, brake pads wear out and become thinner.
+                    If the thickness of brake pads is less than a quarter of an inch, it is time to change the pads.
+                    Depending on where you drive, brake pads usually last between 35,000 - 40,000 kilometers. Some
+                    vehicles (e.g. BMW’s, Mercedes', etc) are equipped with a low-pad-warning system to notify you when
+                    is the right time to have your brake pads replaced.
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Signs -->
+        <div class="features common-signs section">
+            <div class="section-title">Common Signs And Symptoms That You Need To Replace <span>Your Brake Pads And
+                    Rotors</span></div>
+            <div class="features-container">
+                <div class="feature-box withShadow">
+                    <div class="heading">Zero Depreciation Cover</div>
+                    <div class="body">Ideal for cars less than 5 years old, zero depreciation cover allows you to
+                        nullify the depreciation charged on your car
+                        and its parts and gives you the full value of repairs, costs and replacements during a claim.
+                    </div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Return to Invoice Cover</div>
+                    <div class="body">In case of theft or damages beyond repair, return to invoice add-on gives you the
+                        benefit of getting back the complete
+                        amount of your car's invoice value, including the cost of registering a new vehicle and its road
+                        tax respectively.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Return to Invoice Cover</div>
+                    <div class="body">In case of theft or damages beyond repair, return to invoice add-on gives you the
+                        benefit of getting back the complete
+                        amount of your car's invoice value, including the cost of registering a new vehicle and its road
+                        tax respectively.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Tyre Protect Cover</div>
+                    <div class="body">Generally, tyre damage isn't covered in standard insurance unless the damage takes
+                        place during an accident. That's why this tyre protect add-on gives you the benefit to safeguard
+                        and cover for tyre damages such as tyre bursts, bulges or cuts during all other situations
+                        possible.</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Breakdown Assistance</div>
+                    <div class="body">We all need a little help sometimes! Our Breakdown Assistance Add-On gives you the
+                        benefit of taking help whenever required, i.e assistance during car breakdowns at any time you'd
+                        like. The best part? It doesn't even count as a claim!</div>
+                </div>
+                <div class="feature-box withShadow">
+                    <div class="heading">Consumable Cover</div>
+                    <div class="body">A consumable cover gives your car an additional layer of protection. It covers the
+                        cost for all your car's nitty-gritties, such as the engine oils, screws, nuts and bolts, grease,
+                        etc in a situation of an accident.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Importance -->
+        <div class="importance section">
+            <div class="section-title">How Important Is <span>This Service?</span></div>
+            <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
+            <div class="importance-container">
+                <div class="txt-container">
+                    <div id="slider-indicator"></div>
+                    <div class="box slider-btn">
+                        <div class="body">Conversational forms</div>
+                        <div class="body">with conversational forms generate leads without any additional cost. forms
+                            can be easily integrated to your chats at
+                            any point of the conversation.</div>
+                    </div>
+                    <div class="box slider-btn">
+                        <div class="body">Conversational forms</div>
+                        <div class="body">with conversational forms generate leads without any additional cost. forms
+                            can be easily integrated to your chats at
+                            any point of the conversation.</div>
+                    </div>
+                    <div class="box slider-btn">
+                        <div class="body">Conversational forms</div>
+                        <div class="body">with conversational forms generate leads without any additional cost. forms
+                            can be easily integrated to your chats at
+                            any point of the conversation.</div>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <div class="movable-wrapper" id="slider-wrapper">
+                        <div class="img slider-box"><img src="../../../assets/images/importance-1.svg" alt=""></div>
+                        <div class="img slider-box"><img src="../../../assets/images/importance-1.svg" alt=""></div>
+                        <div class="img slider-box"><img src="../../../assets/images/importance-1.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQS -->
+        <div class="car-repairs-faqs section gray">
+            <div class="section-title">FAQ's related to buying <span>Car Insurance Online</span></div>
+            <div id="car-repairs-faqs">
+                <div class="card">
+                    <a data-toggle="collapse" href="#car-repairs-faqs-1">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-1" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-2">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-2" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-3">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-3" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-4">
+                        <div class="body">Why do I need car insurance??</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-4" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-5">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-5" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-6">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-6" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-7">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-7" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#car-repairs-faqs-8">
+                        <div class="body">Why do I need car insurance?</div>
+                        <div class="img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                    </a>
+                    <div id="car-repairs-faqs-8" class="collapse" data-parent="#car-repairs-faqs">
+                        <div class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi beatae
+                            numquam cum aperiam adipisci tempora, iusto explicabo corrupti quid.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Services -->
+        <div style="padding: 0 var(--mainContainerPadding); font-size: var(--ratio)">
+            <div class="section-title">Popular Brake <span>Related Services</span></div>
+        </div>
+        <div id="all-items-accordian1" class="all-items-accordian type1">
+            <div class="item-details">
+                <a class="heading" data-toggle="collapse" href="#s1">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon1.svg" alt=""></div>
+                        <div class="txt">Mechanical System</div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon2.svg" alt=""></div>
+                        <div class="txt">Electrical System</div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon3.svg" alt=""></div>
+                        <div class="txt">Inspection & Diagnostic</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                </a>
+                <div id="s1" class="collapse show" data-parent="#all-items-accordian1">
+                    <div class="info-container">
+                        <div class="info Mechanical-System">
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                        </div>
+                        <div class="info Electrical-System">
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                        </div>
+                        <div class="info Inspection-Diagnostic">
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="heading" data-toggle="collapse" href="#s2">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon4.svg" alt=""></div>
+                        <div class="txt">Heading & Air Conditioning</div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon5.svg" alt=""></div>
+                        <div class="txt">General Maintenance</div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon6.svg" alt=""></div>
+                        <div class="txt">Exterior & Body Parts</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt=""></div>
+                </a>
+                <div id="s2" class="collapse" data-parent="#all-items-accordian1">
+                    <div class="info-container">
+                        <div class="info Mechanical-System">
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                            <div>Axle Shaft Seal Replacement</div>
+                        </div>
+                        <div class="info Electrical-System">
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                            <div>CV Axle Shaft Assembly Replacement</div>
+                        </div>
+                        <div class="info Inspection-Diagnostic">
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                            <div>Clutch Fluid Replacement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="all-items-accordian2" class="all-items-accordian type2">
+            <div class="item-details">
+                <a class="heading" data-toggle="collapse" href="#s1">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon1.svg" alt=""></div>
+                        <div class="txt">Mechanical System</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s1" class="collapse show" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="collapsed heading" data-toggle="collapse" href="#s2">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon2.svg" alt=""></div>
+                        <div class="txt">Electrical System</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s2" class="collapse" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="collapsed heading" data-toggle="collapse" href="#s3">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon3.svg" alt=""></div>
+                        <div class="txt">Inspection & Diagnostic</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s3" class="collapse" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="collapsed heading" data-toggle="collapse" href="#s4">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon4.svg" alt=""></div>
+                        <div class="txt">Heading & Air Conditioning</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s4" class="collapse" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                        <div>Axle Shaft Seal Replacement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="collapsed heading" data-toggle="collapse" href="#s5">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon5.svg" alt=""></div>
+                        <div class="txt">General Maintenance</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s5" class="collapse" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                        <div>CV Axle Shaft Assembly Replacement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-details">
+                <a class="collapsed heading" data-toggle="collapse" href="#s6">
+                    <div class="icon-box">
+                        <div class="icon"><img src="../../../assets/images/navbar/icon6.svg" alt=""></div>
+                        <div class="txt">Exterior & Body Parts</div>
+                    </div>
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    </div>
+                </a>
+                <div id="s6" class="collapse" data-parent="#all-items-accordian2">
+                    <div class="info-container">
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                        <div>Clutch Fluid Replacement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../../cities/cities.html">Cities</a>
+                    <a href="../landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="../../roadside-assistance/landing-page/roadside-assistance.html">Roadside
+                        Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing
+                        intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
+                <div class="heading">Useful Links</div>
+                <div class="body">
+                    <a>NetFinder Login</a>
+                    <a>Privacy Policy</a>
+                    <a>Data Privacy & GDPR</a>
+                    <a>Do not sell my personal info</a>
+                </div>
+            </div>
+
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+
+        <!-- JavaScript -->
+        <script src="../../../assets/js/script.min.js"></script>
+        <script src="../../../assets/js/custom-slider.js"></script>
+    </body>
+
+</html>
