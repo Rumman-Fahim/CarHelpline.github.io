@@ -115,7 +115,7 @@
 #all-items-accordian1 .item-details .heading .icon-box .icon {
     width: 2em;
 }
-#all-items-accordian1 .item-details .heading .arrows {
+.item-details .heading .arrows {
     width: 1.05em;
     height: 1.05em;
     font-size: 1em;
@@ -123,9 +123,10 @@
     justify-content: center;
     align-items: center;
     transform: rotate(0deg);
+    transition: transform 0.1s ease-in;
 }
-#all-items-accordian1 .item-details .heading.up .arrows {
-    transform: rotate(180deg);
+.item-details .heading[aria-expanded=true] .arrows {
+    transform: rotate(45deg);
 }
 #all-items-accordian1 .item-details .info-container {
     display: grid;
@@ -183,9 +184,10 @@
 
 .car-repairs-faqs {
     background-color: #F5F5F5;
-    padding: 3em var(--mainContainerPadding) 4em var(--mainContainerPadding);
+    padding: min(6em, var(--mainContainerPadding)) var(--mainContainerPadding);
+    margin-top: 6em;
 }
-.car-repairs-faqs .section-title { text-align: center;}
+.car-repairs-faqs .section-title { text-align: center;  margin-top: 0;}
 
 .car-repairs-faqs #car-repairs-faqs {
     font-size: 1em;
@@ -215,6 +217,11 @@
     width: 1em;
     height: fit-content;
     font-size: 1em;
+    transform: rotate(0deg);
+    transition: transform 0.1s ease-in;
+}
+.car-repairs-faqs #car-repairs-faqs .card > a[aria-expanded=true] .img {
+    transform: rotate(45deg);
 }
 .car-repairs-faqs #car-repairs-faqs .card .collapse .body {
     padding-right: 1em;
@@ -236,12 +243,19 @@
 .features.common-signs {
     margin-right: 0;
     margin-left: 0;
-    padding: 4em var(--mainContainerPadding);
+    padding: min(6em, var(--mainContainerPadding)) var(--mainContainerPadding);
     background-image: url('../../assets/images/features-bg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: none !important;
+    overflow: hidden;
 }
+.features.common-signs .section-title {  margin-top: 0;}
+
+
+
+
 .package.section .packages-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -249,6 +263,7 @@
     box-shadow: var(--shadow);
     padding: min(2em, var(--mainContainerPadding));
     border-radius: 1em;
+    margin-top: 2em;
 }
 .package.section .packages-box .video-container {
     height: 30em;
@@ -308,10 +323,12 @@
     color: gray;
     text-align: center;
 }
+.package.section .packages-box .txt-container .price-box .price:nth-child(1) .heading { color: var(--black); text-decoration: line-through;}
 .package.section .packages-box .txt-container .price-box .price:nth-child(2) .heading { color: var(--accentColor); }
 .package.section .packages-box .txt-container .price-box .price .body {
     color: gray;
     text-align: center;
+    text-transform: uppercase;
 }
 .package.section .packages-box .txt-container .dropdown-box { 
     position: relative;
@@ -320,19 +337,59 @@
     margin-bottom: 1.5rem;
 }
 .package.section .packages-box .txt-container .dropdown-box .img { 
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.75em;
+    height: 1.75em;
     font-size: 1em;
     position: absolute;
-    left: calc(50% - (1.5em * 0.5));
-    transform: translateY(-50%);
+    left: calc(50% - (1.75em * 0.5));
+    bottom: calc(-1.75em * 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.package.section .packages-box .txt-container .dropdown-box  .bottom-text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    transform: translateY(180%);
+    font-size: 1em;
+    font-weight: 400;
 }
 .package.section .packages-box .txt-container .dropdown-box .dropdown-content { 
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.25s ease-in;
+}
+.package.section .packages-box .txt-container .dropdown-box .dropdown-content .body { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1em;
+}
+.package.section .packages-box .txt-container .dropdown-box .dropdown-content .body .task {
+    text-align: left;
+}
+.package.section .packages-box .txt-container .dropdown-box .dropdown-content .body .price {
+    text-align: right;
+}
+.package.section .packages-box .txt-container .dropdown-box .dropdown-content .body .total {
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-top: 0.05em solid #70707036;
+    margin-top: 0.75em;
+    grid-column: 1 / span 2;
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+}
+.package.section .packages-box .txt-container .dropdown-box .dropdown-content .body .total span:last-child {
+    color: var(--accentColor);
 }
 .package.section .packages-box .txt-container .icon-container { 
     font-size: 1em;
+    margin-top: 2em;
 }
 .package.section .packages-box .txt-container .icon-container .icon-box { 
     margin: 1em 0;
@@ -345,14 +402,14 @@
     margin-bottom: 1rem;
 }
 .package.section .packages-box .txt-container .car-icon .img { 
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     font-size: 1em;
     position: absolute;
-    left: calc(50% - (3em * 0.5));
+    left: calc(50% - (4em * 0.5));
     transform: translateY(-67.5%);
     background-color: white;
-    padding: 0.5em;
+    padding: 0.5em 0.25em 0.5em 0.75em;
 }
 .package.section .packages-box .txt-container > button { 
     align-self: center;
