@@ -276,10 +276,23 @@
                         </div>
                     </div>
                     <div class="dropdown-box">
-                        <div class="img"><img src="../../../assets/images/design-icons/arrow-circle-red.svg" alt="">
+                        <div class="img" id="dropdownToggleBtn">
+                            <img src="../../../assets/images/design-icons/arrow-circle-red.svg" alt="">
                         </div>
-                        <div class="dropdown-content">
-                            <div class="body">Hello !</div>
+                        <div class="bottom-text">CarHelpline Benefits</div>
+                        <div class="dropdown-content" id="carRepairDropdown">
+                            <div class="body">
+                                <div class="task">Labour</div>
+                                <div class="price">$110.99</div>
+                                <div class="task">Parts</div>
+                                <div class="price">$129.78</div>
+                                <div class="task">Tax</div>
+                                <div class="price">$10.74</div>
+                                <div class="total">
+                                    <span>Total</span>
+                                    <span>$254.48</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="icon-container">
@@ -331,8 +344,10 @@
 
         <!-- Common Signs -->
         <div class="features common-signs section">
-            <div class="section-title">Common Signs And Symptoms That You Need To Replace <span>Your Brake Pads And
-                    Rotors</span></div>
+            <div class="section-title">
+                Common Signs And Symptoms That You Need To Replace
+                <span>Your Brake Pads And Rotors</span>
+            </div>
             <div class="features-container">
                 <div class="feature-box withShadow">
                     <div class="heading">Zero Depreciation Cover</div>
@@ -603,7 +618,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon1.svg" alt=""></div>
                         <div class="txt">Mechanical System</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s1" class="collapse show" data-parent="#all-items-accordian2">
@@ -623,7 +638,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon2.svg" alt=""></div>
                         <div class="txt">Electrical System</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s2" class="collapse" data-parent="#all-items-accordian2">
@@ -643,7 +658,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon3.svg" alt=""></div>
                         <div class="txt">Inspection & Diagnostic</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s3" class="collapse" data-parent="#all-items-accordian2">
@@ -663,7 +678,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon4.svg" alt=""></div>
                         <div class="txt">Heading & Air Conditioning</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s4" class="collapse" data-parent="#all-items-accordian2">
@@ -683,7 +698,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon5.svg" alt=""></div>
                         <div class="txt">General Maintenance</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s5" class="collapse" data-parent="#all-items-accordian2">
@@ -703,7 +718,7 @@
                         <div class="icon"><img src="../../../assets/images/navbar/icon6.svg" alt=""></div>
                         <div class="txt">Exterior & Body Parts</div>
                     </div>
-                    <div class="arrows img"><img src="../../../assets/images/design-icons/arrow-gray.svg" alt="">
+                    <div class="arrows img"><img src="../../../assets/images/design-icons/gray-plus.svg" alt="">
                     </div>
                 </a>
                 <div id="s6" class="collapse" data-parent="#all-items-accordian2">
@@ -820,6 +835,7 @@
         <!-- JavaScript -->
         <script src="../../../assets/js/script.min.js"></script>
         <script src="../../../assets/js/custom-slider.js"></script>
+        <script src="../inner-pages.js"></script>
     </body>
 
 </html>
