@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- For Responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Animate.js Link -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- WOW Animation Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <title>Cities</title>
+        <!-- Common Styles -->
+        <link rel="stylesheet" href="../../assets/css/style.min.css">
+        <link rel="stylesheet" href="../../assets/css/banner.min.css">
+        <link rel="stylesheet" href="../../assets/css/custom-carousel.min.css">
+        <link rel="stylesheet" href="download-now.css">
+    </head>
+
+    <body>
+        <!-- Modals -->
+        <div class="modal-container" id="phoneModal">
+            <div class="content-container" id="phoneModalContent">
+                <div class="heading">
+                    <span>Support</span>
+                    <div class="img img-center" onclick="closePhoneModal()"></div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Privacy Policy</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"></div>
+                    <div class="txt">Terms & Conditions</div>
+                </div>
+                <div class="gray-line"></div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">(03) 111-681-111</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">0312-3952100</div>
+                </div>
+                <div class="icon-box withBorder">
+                    <div class="icon"></div>
+                    <div class="txt">support@carhelpline.pk</div>
+                </div>
+                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <!-- Toggle Btn -->
+            <div class="toggle-btn" id="btn-open-navbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Nav Logo -->
+            <a href="../../index.html" class="logo-container">
+                <div id="nav-logo" class="img-center" style="display: block;"></div>
+                <div id="nav-title" style="display: none;">CarHelpline</div>
+            </a>
+
+            <!-- Phone Icon -->
+            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+
+            <!-- Navbar -->
+            <div class="nav-bar" id="navbar">
+                <div class="nav-bar-wrapper">
+                    <!-- Navbar Collapse State Elements -->
+                    <div class="header">
+                        <div class="title">
+                            <div class="logo-text" onclick="location.href='../../index.html'">
+                                <div class="logoImg img-center"></div>
+                                <span>CarHelpline</span>
+                            </div>
+                            <div class="close img-center" id="btn-close-navbar"></div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">Hello@carHelpline.com</div>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <div class="txt">(03) 111-681-111</div>
+                        </div>
+
+                    </div>
+                    <!-- Links -->
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Car Repairs
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical System</div>
+                                </a>
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Inspection & Diagnostic</div>
+                                </a>
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Heading & Air Conditioning</div>
+                                </a>
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">General Maintenance</div>
+                                </a>
+                                <a class="link" href="../car-repairs/inner-pages/car-repairs-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Exterior & Body Parts</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Roadside Assistance
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Mechanical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Electrical Breakdown</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Towing</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Battery Replacement</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Key Lockout</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Flat Tyre</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Out of Fuel</div>
+                                </a>
+                                <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Female Scooty</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../care-package/care-package.html">Car Care Packages</a>
+                    <div class="link navbar-dropdown">
+                        <div class="toggle-btn">
+                            Insurance Services
+                            <div class="img-center"></div>
+                        </div>
+                        <div class="sub-menu">
+                            <div class="triangle"></div>
+                            <div class="links-container">
+                                <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Takaful (Islamic)</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Travel Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Health Insurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Car Tracker</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Corporate Insurancel</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Microinsurance</div>
+                                </a>
+                                <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
+                                    <div class="icon img-center"></div>
+                                    <div class="body">Roadside Coverage</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link" href="../fleet-services/fleet-services.html">Fleet Services</a>
+                    <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Landing Section -->
+        <div class="landing-with-header">
+            <div class="img">
+                <img src="../../assets/images/header/lg/cities.svg" alt="">
+                <img src="../../assets/images/header/sm/cities.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="package custom-carousel">
+            <div class="navigation-container blue">
+                <div class="arrow-btn lhs img-center"></div>
+                <div class="tab-container">
+                    <div class="tab" name="0">Car Repairs</div>
+                    <div class="tab" name="1">Roadside Assistance</div>
+                    <div class="tab" name="2">Car Care Packages</div>
+                    <div class="tab" name="3">Insurance Services</div>
+                    <div class="tab" name="4">FleetServices</div>
+                    <div class="tab" name="5">Miscellaneous</div>
+                </div>
+                <div class="navigation-border"></div>
+                <div class="arrow-btn img-center rhs"></div>
+            </div>
+
+            <div class="content-container">
+                <div class="moving-wrapper">
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="img"><img src="../../assets/files/file-1/file-1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="heading">Digit Private Car Policy</div>
+                                <a target=”_blank” href="../../assets/files/file-1/file-1.pdf"
+                                    download="pdf-file">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="txt-container">
+                <div class="section-title">Got questions?</div>
+                <div class="body">Customer support is our highest priority. We're here to answer all your questions via
+                    our Support Docs, Video Demos, and 24/7 Live Chat.</div>
+            </div>
+            <div class="img-container">
+                <div class="img-box">
+                    <div class="img"><img src="../../assets/images/banner-1.svg" alt=""></div>
+                    <a href="">Watch a Demo</a>
+                </div>
+                <div class="img-box">
+                    <div class="img"><img src="../../assets/images/banner-2.svg" alt=""></div>
+                    <a href="">Get in Touch</a>
+                </div>
+                <div class="img-box">
+                    <div class="img"><img src="../../assets/images/banner-3.svg" alt=""></div>
+                    <a href="">Start Chat</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="logo after1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Rhetorik</div>
+                <div class="body">
+                    <a>Home</a>
+                    <a href="../cities/cities.html">Cities</a>
+                    <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
+                    <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                    <a>Request a Demo</a>
+                    <a>Resources & blogs</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Solutions</div>
+                <div class="body">
+                    <a>For Sales Professionals</a>
+                    <a>For Marketing Leaders</a>
+                    <a>For Marketing & Demand Gen</a>
+                    <a>Professionals</a>
+                    <a>For Recruitment Professionals</a>
+                    <a>For Sales & Marketing Operations</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Products</div>
+                <div class="body">
+                    <a>NetFinder™</a>
+                    <a>DataCliniq™</a>
+                    <a>AMP™ - <br> Action Marketing Programs</a>
+                </div>
+                <div class="hideAfter1122AndShowAfter">
+                    <div class="heading">Useful Links</div>
+                    <div class="body">
+                        <a>NetFinder Login</a>
+                        <a>Privacy Policy</a>
+                        <a>Data Privacy & GDPR</a>
+                        <a>Do not sell my personal info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="heading">Latest Resources</div>
+                <div class="body">
+                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
+                        platform for global enterprise technology companies</div>
+                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
+                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
+                </div>
+            </div>
+            <div class="box showAfter1122AndHideAfter">
+                <div class="heading">Useful Links</div>
+                <div class="body">
+                    <a>NetFinder Login</a>
+                    <a>Privacy Policy</a>
+                    <a>Data Privacy & GDPR</a>
+                    <a>Do not sell my personal info</a>
+                </div>
+            </div>
+
+            <div class="logo before1024">
+                <!-- new -->
+                <div class="logo-img img-center"></div>
+                <div class="socials">
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                    <div class="img img-center"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Page End -->
+        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
+
+        <!-- JavaScript -->
+        <script src="../../assets/js/script.min.js"></script>
+        <script src="../../assets/js/custom-carousel.min.js"></script>
+    </body>
+
+</html>
