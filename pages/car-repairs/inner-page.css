@@ -1,3 +1,74 @@
+.how-it-works {
+    font-size: var(--ratio);
+    background-color: white;
+    padding: min(4em, var(--mainContainerPadding)) var(--mainContainerPadding) min(5em, calc(var(--mainContainerPadding) + 1em)) var(--mainContainerPadding);
+}
+.how-it-works .section-title {
+    text-align: center;
+}
+.how-it-works .box-container {
+    font-size: 1em;
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+}   
+.how-it-works .box-container .box {
+    background-color: white;
+    position: relative;
+    padding:  4em 1.5em 3em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: var(--shadow);
+}
+.how-it-works .box-container .box .img {
+    width: 5em;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    left: calc(50% - (5em * 0.5));
+}
+.how-it-works .box-container .box .heading {
+    font-size: 1.25em;
+    text-align: center;
+}
+.how-it-works .box-container .box .body {
+    text-align: center;
+    margin-top: 0.5em;
+}
+.how-it-works button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3em;
+}
+@media screen and (max-width: 1024px) {
+    .how-it-works .box-container .box:nth-child(1) { grid-column: 1 / span 2;}
+    .how-it-works .box-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 5.5em 3em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .how-it-works .box-container .box:nth-child(1) { grid-column: initial;}
+    .how-it-works .box-container {
+        grid-template-columns: 1fr;
+        gap: 5.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .importance.section .section-title,
 .importance.section > .body { text-align: center;}
 .importance.section .importance-container {

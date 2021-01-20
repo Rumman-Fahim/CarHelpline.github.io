@@ -1,0 +1,157 @@
+.win {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'txtCon imgCon';
+    gap: 3em;
+    background-image: url('../../assets/images/page-home/fleet-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+.win .text-container {
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    grid-area: txtCon;
+}
+.win .text-container .body {
+    margin: 2em 0 2.5em 0;
+}
+.win .img {
+    grid-area: imgCon;
+}
+@media screen and (max-width: 768px) {
+    .win {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'imgCon''txtCon';
+        padding-top: min(6em, var(--mainContainerPadding));
+        padding-bottom: min(6em, var(--mainContainerPadding));
+    }
+    .win .text-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .win .text-container > * {text-align: center;}
+    .win .img {
+        grid-area: imgCon;
+        width: min(30em, 100%);
+        justify-self: center;
+    }
+}
+
+
+
+
+.earning {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7em;
+}
+.earning .section-title {
+    text-align: center;
+    width: min(800px, 100%);
+}
+.earning .img {
+    width: 20em;
+    height: fit-content;
+    font-size: 1em;
+}
+
+
+
+
+
+
+.how-it-works {
+    font-size: var(--ratio);
+    background-color: #f5f5f5;
+    padding: min(4em, var(--mainContainerPadding)) var(--mainContainerPadding) min(5em, calc(var(--mainContainerPadding) + 1em)) var(--mainContainerPadding);
+}
+.how-it-works .section-title {
+    text-align: center;
+}
+.how-it-works .box-container {
+    font-size: 1em;
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+}   
+.how-it-works .box-container .box {
+    background-color: white;
+    position: relative;
+    padding:  4em 1.5em 3em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: var(--shadow);
+}
+.how-it-works .box-container .box::after {
+    content: '';
+    width: 100%;
+    height: 0.5em;
+    position: absolute;
+    background-image: url('../../assets/images/design-icons/border-line.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 9;
+    left: 0;
+    bottom: 0.5em;
+}
+.how-it-works .box-container .box .img {
+    width: 5em;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    left: calc(50% - (5em * 0.5));
+}
+.how-it-works .box-container .box .heading {
+    font-size: 1.25em;
+    text-align: center;
+}
+.how-it-works .box-container .box .body {
+    text-align: center;
+    margin-top: 0.5em;
+}
+@media screen and (max-width: 1024px) {
+    .how-it-works .box-container .box:nth-child(1) { grid-column: 1 / span 2;}
+    .how-it-works .box-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 5.5em 3em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .how-it-works .box-container .box:nth-child(1) { grid-column: initial;}
+    .how-it-works .box-container {
+        grid-template-columns: 1fr;
+        gap: 5.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.txt-container {
+    text-align: center;
+}
+.txt-container > div {
+    width: 100%;
+    text-align: center;
+}
+.txt-container button {
+    margin-top: 1.25em;
+}
+
+
