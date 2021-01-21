@@ -73,7 +73,7 @@
     }
     .banner .img-container .img-box { flex-shrink: 0; position: relative; }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 525px) {
     .banner .img-container {
         justify-content: space-between;
     }
@@ -84,5 +84,9 @@
         position: relative;
         opacity: 0;
     }
-    .banner .img-container .img-box { margin: 0 0.75em; }
+    .banner .img-container .img-box { 
+        margin: 0 0.75em;
+        width: 50em;
+        height: 50em;
+    }
 }

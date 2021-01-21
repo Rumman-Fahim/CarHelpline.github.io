@@ -25,24 +25,27 @@
     .win {
         grid-template-columns: 1fr;
         grid-template-areas: 'imgCon''txtCon';
-        padding-top: min(6em, var(--mainContainerPadding));
-        padding-bottom: min(6em, var(--mainContainerPadding));
+        padding-top: min(2em, var(--mainContainerPadding));
+        padding-bottom: min(2em, var(--mainContainerPadding));
+        align-items: center;
+        justify-items: center;
     }
     .win .text-container {
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-    .win .text-container > * {text-align: center;}
     .win .img {
         grid-area: imgCon;
-        width: min(30em, 100%);
-        justify-self: center;
+        width: min(20em, 100%);
     }
 }
-
+@media screen and (max-width: 425px) {
+    .win {
+        grid-template-areas: 'txtCon';
+    }
+    .win .img {
+        display: none;
+    }
+}
 
 
 

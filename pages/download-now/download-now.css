@@ -7,15 +7,16 @@
 }
 .content .file-box {
     font-size: 1em;
-    padding: 1.5em;
+    padding: 2em;
     box-shadow: var(--shadow);
     display: flex;
     border-radius: 0.5em;
+    min-height: 12.5em;
 }
 .content .file-box .img {
     font-size: 1em;
-    width: 5em;
-    height: fit-content;
+    width: fit-content;
+    height: 100%;
     border: 0.1em solid lightgray;
     overflow: hidden;
     grid-row: 1 / span 2;
@@ -42,19 +43,25 @@
     font-size: 1em;
     border-radius: 2.5em;
     width: fit-content;
+    margin-top: 2em;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
     .content {
         grid-template-columns: minmax(0,1fr) minmax(0,1fr);
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .content {
         grid-template-columns: minmax(0,1fr);
         justify-items: center;
     }
     .content .file-box {
-        max-width: 20em;
+        max-width: 30em;
+        height: 15em;
+    }
+    .content .file-box .img {
+        width: 8em;
+        height: fit-content;
     }
 }
 @media screen and (max-width: 425px) {
@@ -64,6 +71,27 @@
     }
     .content .file-box {
         max-width: initial;
+    }
+}
+@media screen and (max-width: 375px) {
+    .content .file-box {
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+    }
+    .content .file-box .img {
+        width: 8em;
+        height: fit-content;
+    }
+    .content .file-box .txt {
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 1.5em;
+    } 
+    .content .file-box .txt a {
+        margin-top: 0;
     }
 }
                        
