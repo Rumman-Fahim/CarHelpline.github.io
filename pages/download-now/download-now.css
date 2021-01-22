@@ -51,9 +51,13 @@
     }
 }
 @media screen and (max-width: 1024px) {
+    .custom-carousel {
+        margin-top: -2em;
+    }
     .content {
         grid-template-columns: minmax(0,1fr);
         justify-items: center;
+        margin-top: 2em;
     }
     .content .file-box {
         max-width: 30em;

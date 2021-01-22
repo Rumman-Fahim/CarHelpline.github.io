@@ -116,6 +116,10 @@
                 gap: 3em;
                 align-items: center;
                 margin-top: 3em;
+                height: min-content;
+                max-height: min-content;
+                min-height: min-content;
+                width: 100%;
             }
 
             .importance.section .importance-container .txt-container {
@@ -161,42 +165,120 @@
             .importance.section .importance-container .img-container {
                 font-size: 1em;
                 width: 100%;
-                height: max(60vw, 25em);
                 grid-area: imp_img;
-                overflow: hidden;
+                /* overflow: hidden; */
+                height: 100%;
+                position: relative;
+                box-shadow: var(--shadow);
             }
 
             .importance.section .importance-container .img-container .movable-wrapper {
                 display: inline-flex;
                 flex-direction: column;
+                height: inherit;
+                position: absolute;
             }
 
             .importance.section .importance-container .img-container .movable-wrapper .img {
                 flex-shrink: 0;
                 width: 100%;
-                height: max(60vw, 25em);
+                height: inherit;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .slider-navigation {
+                width: 100%;
+                background-color: pink;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                grid-area: navDots;
+            }
+
+            .slider-nav-dots {
+                width: 2em;
+                height: 2em;
+                border-radius: 2em;
+                background-color: gray;
+                margin: 1em 0.25em;
+                cursor: pointer;
+            }
+
+            .slider-btn-wrapper {
+                display: block;
             }
 
             @media screen and (max-width: 1024px) {
+                .slider-navigation {
+                    display: flex;
+                }
+
+                .slider-btn-wrapper {
+                    display: inline-flex;
+                }
+
+                .importance.section .importance-container .txt-container::after,
+                .importance.section .importance-container .txt-container #slider-indicator {
+                    display: none;
+                }
+
+                .importance.section .importance-container .txt-container {
+                    display: flex;
+                    /* grid-template-columns: 1fr 1fr 1fr; */
+                    /* gap: 3em; */
+                    position: relative;
+                    grid-area: imp_txt;
+                    width: inherit;
+                    box-sizing: content-box !important;
+                    overflow: hidden;
+                }
+
+                .importance.section .importance-container .txt-container .box {
+                    font-size: 1em;
+                    padding: 0;
+                    cursor: pointer;
+                    flex-shrink: 0;
+                    width: 100%;
+                    background-color: pink;
+                }
+
                 .importance.section .importance-container {
-                    grid-template-columns: 1fr;
-                    grid-template-areas: 'imp_img''imp_txt';
+                    grid-template-columns: minmax(0, 1fr);
+                    grid-template-areas: 'imp_txt''navDots''imp_img';
                     justify-items: center;
+                    width: 100%;
+                    position: relative;
                 }
 
                 .importance.section .importance-container .img-container {
-                    width: max(60vw, 20em);
-                    height: max(65vw, 25em);
+                    font-size: 1em;
+                    width: inherit;
+                    grid-area: imp_img;
+                    /* overflow: hidden; */
+                    height: 100%;
+                    position: relative;
+                    box-shadow: var(--shadow);
                 }
 
                 .importance.section .importance-container .img-container .movable-wrapper {
                     display: inline-flex;
                     flex-direction: row;
+                    position: relative;
+                    width: inherit;
                 }
 
                 .importance.section .importance-container .img-container .movable-wrapper .img {
-                    width: max(60vw, 20em);
-                    height: max(65vw, 25em);
+                    flex-shrink: 0;
+                    height: 100%;
+                    padding: 2em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         </style>
@@ -561,39 +643,127 @@
         <div class="importance section">
             <div class="section-title">How Important Is <span>This Service?</span></div>
             <div class="body">Surface critical reminders and notifications to the right people at the right time</div>
-            <div class="importance-container">
+            <div class="importance-container" id="slider">
                 <div class="txt-container">
                     <div id="slider-indicator"></div>
-                    <div class="box slider-btn">
-                        <div class="body">What is Travel Insurance?</div>
-                        <div class="body">As businesses move into the digital space, cybercrime is becoming more common,
-                            making it challenging for business owners to protect themselves from cyber-attacks. If
-                            hackers or cyber criminals infiltrate your business network, take over your website, hold
-                            data hostage, or steal sensitive client information, you can be held liable for the incident
-                            besides having to take care of the recovery costs.</div>
+                    <div class="slider-btn-wrapper" id="slider-btn-con">
+                        <div class="box slider-btn">
+                            <div class="body">What is Travel Insurance?</div>
+                            <div class="body">As businesses move into the digital space, cybercrime is becoming more
+                                common,
+                                making it challenging for business owners to protect themselves from cyber-attacks. If
+                                hackers or cyber criminals infiltrate your business network, take over your website,
+                                hold
+                                data hostage, or steal sensitive client information, you can be held liable for the
+                                incident
+                                besides having to take care of the recovery costs.</div>
+                        </div>
+                        <div class="box slider-btn">
+                            <div class="body">What is Travel Insurance?</div>
+                            <div class="body">As businesses move into the digital space, cybercrime is becoming more
+                                common,
+                                making it challenging for business owners to protect themselves from cyber-attacks. If
+                                hackers or cyber criminals infiltrate your business network, take over your website,
+                                hold
+                                data hostage, or steal sensitive client information, you can be held liable for the
+                                incident
+                                besides having to take care of the recovery costs.</div>
+                        </div>
+                        <div class="box slider-btn">
+                            <div class="body">What is Travel Insurance?</div>
+                            <div class="body">As businesses move into the digital space, cybercrime is becoming more
+                                common,
+                                making it challenging for business owners to protect themselves from cyber-attacks. If
+                                hackers or cyber criminals infiltrate your business network, take over your website,
+                                hold
+                                data hostage, or steal sensitive client information, you can be held liable for the
+                                incident
+                                besides having to take care of the recovery costs.</div>
+                        </div>
                     </div>
-                    <div class="box slider-btn">
-                        <div class="body">What is Travel Insurance?</div>
-                        <div class="body">As businesses move into the digital space, cybercrime is becoming more common,
-                            making it challenging for business owners to protect themselves from cyber-attacks. If
-                            hackers or cyber criminals infiltrate your business network, take over your website, hold
-                            data hostage, or steal sensitive client information, you can be held liable for the incident
-                            besides having to take care of the recovery costs.</div>
-                    </div>
-                    <div class="box slider-btn">
-                        <div class="body">What is Travel Insurance?</div>
-                        <div class="body">As businesses move into the digital space, cybercrime is becoming more common,
-                            making it challenging for business owners to protect themselves from cyber-attacks. If
-                            hackers or cyber criminals infiltrate your business network, take over your website, hold
-                            data hostage, or steal sensitive client information, you can be held liable for the incident
-                            besides having to take care of the recovery costs.</div>
-                    </div>
+                </div>
+                <div class="slider-navigation">
+                    <div class="slider-nav-dots"></div>
+                    <div class="slider-nav-dots"></div>
+                    <div class="slider-nav-dots"></div>
                 </div>
                 <div class="img-container">
                     <div class="movable-wrapper" id="slider-wrapper">
-                        <div class="img slider-box"><img src="../../../assets/images/explained.svg" alt=""></div>
-                        <div class="img slider-box"><img src="../../../assets/images/explained.svg" alt=""></div>
-                        <div class="img slider-box"><img src="../../../assets/images/explained.svg" alt=""></div>
+                        <div class="img slider-box">
+                            <div class="heading">What does it cover?</div>
+                            <div class="body">
+                                <p>Cyber Liability Insurance typically includes coverage for legal costs and damages
+                                    related to the following coverage areas:</p>
+                                <ul>
+                                    <li>Incident Response Cost: Coverage for the cost of access to a 24/7 cyber incident
+                                        response hotline and a dedicated team
+                                        to assist you in coordinating an incident response following a cybercrime.</li>
+                                    <li>Legal, Forensic, and Breach Management Costs: Coverage for legal advice,
+                                        notification fees, crisis management services,
+                                        and credit monitoring.</li>
+                                    <li>System Damage and Restoration Costs: Repairs and restoration of the software
+                                        systems damaged due to the cyber event.</li>
+                                    <li>Social Engineering (optional coverage): Coverage should an employee be tricked
+                                        into providing access to a system or
+                                        sending funds to a fraudulent bank account</li>
+                                </ul>
+                                <p>Cybercrime Insurance can be purchased in addition to Cyber Liability Insurance to
+                                    provide coverage for loss of funds due
+                                    to cybercrime, including phishing, hacking, or social engineering fraud. This policy
+                                    includes coverage for notification
+                                    costs, data restoration, and legal expenses.</p>
+                            </div>
+                        </div>
+                        <div class="img slider-box">
+                            <div class="heading">What does it cover?</div>
+                            <div class="body">
+                                <p>Cyber Liability Insurance typically includes coverage for legal costs and damages
+                                    related to the following coverage areas:</p>
+                                <ul>
+                                    <li>Incident Response Cost: Coverage for the cost of access to a 24/7 cyber incident
+                                        response hotline and a dedicated team
+                                        to assist you in coordinating an incident response following a cybercrime.</li>
+                                    <li>Legal, Forensic, and Breach Management Costs: Coverage for legal advice,
+                                        notification fees, crisis management services,
+                                        and credit monitoring.</li>
+                                    <li>System Damage and Restoration Costs: Repairs and restoration of the software
+                                        systems damaged due to the cyber event.</li>
+                                    <li>Social Engineering (optional coverage): Coverage should an employee be tricked
+                                        into providing access to a system or
+                                        sending funds to a fraudulent bank account</li>
+                                </ul>
+                                <p>Cybercrime Insurance can be purchased in addition to Cyber Liability Insurance to
+                                    provide coverage for loss of funds due
+                                    to cybercrime, including phishing, hacking, or social engineering fraud. This policy
+                                    includes coverage for notification
+                                    costs, data restoration, and legal expenses.</p>
+                            </div>
+                        </div>
+                        <div class="img slider-box">
+                            <div class="heading">What does it cover?</div>
+                            <div class="body">
+                                <p>Cyber Liability Insurance typically includes coverage for legal costs and damages
+                                    related to the following coverage areas:</p>
+                                <ul>
+                                    <li>Incident Response Cost: Coverage for the cost of access to a 24/7 cyber incident
+                                        response hotline and a dedicated team
+                                        to assist you in coordinating an incident response following a cybercrime.</li>
+                                    <li>Legal, Forensic, and Breach Management Costs: Coverage for legal advice,
+                                        notification fees, crisis management services,
+                                        and credit monitoring.</li>
+                                    <li>System Damage and Restoration Costs: Repairs and restoration of the software
+                                        systems damaged due to the cyber event.</li>
+                                    <li>Social Engineering (optional coverage): Coverage should an employee be tricked
+                                        into providing access to a system or
+                                        sending funds to a fraudulent bank account</li>
+                                </ul>
+                                <p>Cybercrime Insurance can be purchased in addition to Cyber Liability Insurance to
+                                    provide coverage for loss of funds due
+                                    to cybercrime, including phishing, hacking, or social engineering fraud. This policy
+                                    includes coverage for notification
+                                    costs, data restoration, and legal expenses.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -800,10 +970,12 @@
         <script src="../../../assets/js/script.min.js"></script>
         <script>
             let sliderBtns = document.getElementsByClassName( 'slider-btn' );
+            let sliderDots = document.getElementsByClassName( 'slider-nav-dots' );
             let sliderBoxes = document.getElementsByClassName( 'slider-box' );
             let sliderWrapper = document.getElementById( 'slider-wrapper' );
             let sliderIndicator = document.getElementById( 'slider-indicator' );
-
+            let sliderBtnBox = document.getElementById( 'slider-btn-con' )
+            let thisSlider = document.getElementById( 'slider' );
             // Be default 
             slideToBoxImg( 0 );
             sliderIndicatorToActiveBtn( 0 );
@@ -814,7 +986,12 @@
                     slideToBoxImg( i );
                     sliderIndicatorToActiveBtn( i );
                 } );
+                sliderDots[ i ].addEventListener( 'click', () => {
+                    slideToBoxImg( i );
+                    slideActiveBtnToActiveDot( i );
+                } );
             }
+
             function slideToBoxImg( index ) {
                 if ( window.innerWidth <= 1024 ) {
                     sliderWrapper.style.transform = `translateX(-${ index * sliderBoxes[ index ].offsetWidth }px)`;
@@ -825,6 +1002,11 @@
             function sliderIndicatorToActiveBtn( index ) {
                 sliderIndicator.style.top = `${ sliderBtns[ index ].offsetTop }px`;
                 sliderIndicator.style.height = `${ sliderBtns[ index ].offsetHeight }px`;
+            }
+            function slideActiveBtnToActiveDot( index ) {
+                // let width = index * sliderBtns[ index ].offsetWidth;
+                let width = index * 100
+                sliderBtnBox.style.transform = 'translateX(-' + width + '%)';
             }
         </script>
     </body>

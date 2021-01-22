@@ -71,7 +71,8 @@
         justify-content: center;
         position: relative;
     }
-    .banner .img-container .img-box { flex-shrink: 0; position: relative; }
+    .banner .img-container .img-box { flex-shrink: 0; position:
+         relative; }
 }
 @media screen and (max-width: 525px) {
     .banner .img-container {
@@ -86,7 +87,7 @@
     }
     .banner .img-container .img-box { 
         margin: 0 0.75em;
-        font-size: max(5vw,1.5em);
+        font-size: max(5.25vw,1.5em);
     }
      .banner .img-container .img-box a {
         font-size: 0.75em;
