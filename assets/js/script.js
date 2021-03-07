@@ -1,3 +1,19 @@
+document.addEventListener( "DOMContentLoaded", function () {
+	// Create anchor element. 
+	var a = document.createElement( 'a' );
+	// Create the text node for anchor element. 
+	var link = document.createTextNode( "" );
+	// Adding Class
+	a.className = "hover-whatsapp-btn";
+	// Append the text node to anchor element. 
+	a.appendChild( link );
+	// Set the href property. 
+	a.href = "https://api.whatsapp.com/send?phone=9203111681111";
+	// Append the anchor element to the body. 
+	document.body.appendChild( a );
+});
+
+
 let customFilter = document.querySelectorAll(".custom-filter");
 let customFilterActiveIndex = [];
 

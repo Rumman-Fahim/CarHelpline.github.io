@@ -83,6 +83,22 @@ body * {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
+.hover-whatsapp-btn{
+	width:4em;
+	height:4em;
+	position:fixed;
+	bottom:max(4vw,1em);
+	right:max(4vw,1em);
+	border-radius:4em;
+	z-index:999;
+	display:flex;
+	align-items:center;
+	justify-items:center; 
+	background-image: url("../images/whatsapp.svg"); 
+	background-repeat: no-repeat; 
+	background-size: contain;
+}
+
 .img {
 	font-size: 1em;
 }
@@ -109,6 +125,12 @@ body * {
 .section.first,
 .header.first {
 	margin-top: 5em;
+}
+@media screen and (max-width: 1100px) {
+.section.first,
+.header.first {
+	margin-top: 3em;
+}
 }
 .dropdown-box .menu {
 	max-height: 0;
