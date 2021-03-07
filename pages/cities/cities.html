@@ -1,495 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- For Responsiveness -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Animate.js Link -->
-        <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-        <!-- WOW Animation Link -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script>
-        <title>Cities</title>
-        <!-- Common Styles -->
-        <link rel="stylesheet" href="../../assets/css/style.min.css">
-        <!-- Home Page Style -->
-        <link rel="stylesheet" href="../home/home.min.css">
-        <!-- Specific Style -->
-        <link rel="stylesheet" href="cities.min.css">
-    </head>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Animate.js Link -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<!-- WOW Link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- Bootstap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Cities</title>
+	<!-- Common CSS -->
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+	<!-- Related CSS -->
+	<style>
+		.car-repairs.info-container.grid-4 {
+			grid-template-columns: repeat(8, minmax(0, 1fr));
+			font-size: 1em;
+			gap: 2em;
+		}
 
-    <body>
-        <!-- Modals -->
-        <div class="modal-container" id="phoneModal">
-            <div class="content-container" id="phoneModalContent">
-                <div class="heading">
-                    <span>Support</span>
-                    <div class="img img-center" onclick="closePhoneModal()"></div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"></div>
-                    <div class="txt">Privacy Policy</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"></div>
-                    <div class="txt">Terms & Conditions</div>
-                </div>
-                <div class="gray-line"></div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">(03) 111-681-111</div>
-                </div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">0312-3952100</div>
-                </div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">support@carhelpline.pk</div>
-                </div>
-                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
-            </div>
-        </div>
+		.car-repairs.info-container.grid-4 .info-box {
+			box-shadow: none;
+			font-size: max(1vw, 0.85em);
+			padding: 0;
+		}
 
-        <!-- Nav -->
-        <nav id="nav">
-            <!-- Toggle Btn -->
-            <div class="toggle-btn" id="btn-open-navbar">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+		.car-repairs.info-container.grid-4 .info-box .body {
+			font-size: 1em;
+		}
 
-            <!-- Nav Logo -->
-            <a href="../../index.html" class="logo-container">
-                <div id="nav-logo" class="img-center" style="display: block;"></div>
-                <div id="nav-title" style="display: none;">CarHelpline</div>
-            </a>
+		@media screen and (max-width: 1024px) {
+			.car-repairs.info-container.grid-4 {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+		}
 
-            <!-- Phone Icon -->
-            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+		@media screen and (max-width: 768px) {
+			.car-repairs.info-container.grid-4 {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+		}
+	</style>
+</head>
 
-            <!-- Navbar -->
-            <div class="nav-bar" id="navbar">
-                <div class="nav-bar-wrapper">
-                    <!-- Navbar Collapse State Elements -->
-                    <div class="header">
-                        <div class="title">
-                            <div class="logo-text" onclick="location.href='../../index.html'">
-                                <div class="logoImg img-center"></div>
-                                <span>CarHelpline</span>
-                            </div>
-                            <div class="close img-center" id="btn-close-navbar"></div>
-                        </div>
-                        <div class="icon-box">
-                            <div class="icon"></div>
-                            <div class="txt">Hello@carHelpline.com</div>
-                        </div>
-                        <div class="icon-box">
-                            <div class="icon"></div>
-                            <div class="txt">(03) 111-681-111</div>
-                        </div>
+<body>
 
-                    </div>
-                    <!-- Links -->
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Car Repairs
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Mechanical System</div>
-                                </a>
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Electrical System</div>
-                                </a>
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Inspection & Diagnostic</div>
-                                </a>
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Heading & Air Conditioning</div>
-                                </a>
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">General Maintenance</div>
-                                </a>
-                                <a class="link" href="../car-repairs/inner-pages/car-repairs-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Exterior & Body Parts</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Roadside Assistance
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Mechanical Breakdown</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Electrical Breakdown</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Towing</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Battery Replacement</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Key Lockout</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Flat Tyre</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Out of Fuel</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Female Scooty</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="link" href="../care-package/care-package.html">Car Care Packages</a>
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Insurance Services
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Takaful (Islamic)</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Travel Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Health Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Tracker</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Corporate Insurancel</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Microinsurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Roadside Coverage</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="link" href="../fleet-services/fleet-services.html">Fleet Services</a>
-                    <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
-                </div>
-            </div>
-        </nav>
+	<div class="modal-container" id="phoneModel">
+		<div class="content" data-wow-delay="0.5s">
+			<div class="header">
+				<div class="heading md"><span>Support</span></div>
+				<img onclick="closeModal('phoneModel')" src="../../assets/svgs/modal/cross.svg" alt="" />
+			</div>
+			<div class="info-container">
+				<div class="info">
+					<img src="../../assets/svgs/modal/privacy-policy.svg" alt="" />
+					<div class="body">Privacy Policy</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/terms-conditions.svg" alt="" />
+					<div class="body">Terms & Conditions</div>
+				</div>
+			</div>
+			<div class="info-container with-border">
+				<div class="info">
+					<img src="../../assets/svgs/modal/phone.svg" alt="" />
+					<div class="body">(03) 111 - 681 - 111</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/whatsapp.svg" alt="" />
+					<div class="body">0312 - 3952100</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/email.svg" alt="" />
+					<div class="body">support@carhelpline.pk</div>
+				</div>
+			</div>
+			<div class="body">
+				Our WhatsApp number cannot be used for calls. This is a chat only
+				number
+			</div>
+		</div>
+	</div>
+	<nav>
+		<a href="../../index.html" class="logo">
+			<img src="../../assets/svgs/nav/logo.svg" alt="" />
+		</a>
+		<div class="after-1100">
+			<img onclick="openNav()" src="../../assets/svgs/nav/toggle-btn.svg" alt="" class="toggle-btn" />
+			<div class="heading sm">CarHelpline</div>
+			<img onclick="openModal('phoneModel')" src="../../assets/svgs/nav/responsive-nav-phone.svg" alt="" class="headset" />
+		</div>
+		<div class="links-container" id="nav-menu">
+			<div class="after-1100">
+				<div class="logo">
+					<div onclick="window.location.href = '../../index.html'" style="cursor: pointer;">
+						<img src="../../assets/svgs/nav/logo.svg" alt="" />
+						<div class="heading sm">CarHelpline</div>
+					</div>
+					<img onclick="closeNav()" src="../../assets/svgs/nav/cross.svg" alt="" />
+				</div>
+				<div class="info-container">
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-email.svg" alt="" />
+						<div class="body">Hello@carHelpline.com</div>
+					</div>
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-phone.svg" alt="" />
+						<div class="body">(03) 111-681-111</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Car Repair</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../car-repairs/inner-pages/page-1.html">
+								<img src="../../assets/svgs/other-icons/icon-9.svg" alt="" />
+								<div class="body">Mechanical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-2.html">
+								<img src="../../assets/svgs/other-icons/icon-22.svg" alt="" />
+								<div class="body">Electrical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-3.html">
+								<img src="../../assets/svgs/other-icons/icon-inspection.svg" alt="" />
+								<div class="body">Inspection & Diagnostic</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-4.html">
+								<img src="../../assets/svgs/other-icons/icon-20.svg" alt="" />
+								<div class="body">Heading & Air Conditioning</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-5.html">
+								<img src="../../assets/svgs/other-icons/icon-16.svg" alt="" />
+								<div class="body">General Maintenance</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-6.html">
+								<img src="../../assets/svgs/other-icons/icon-4.svg" alt="" />
+								<div class="body">Exterior & Body Parts</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Roadside Assistance</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../roadside-assistance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-mechanical-breakdown.svg" alt="" />
+								<div class="body">Mechanical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-electric-breakdown.svg" alt="" />
+								<div class="body">Electrical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-car-towing.svg" alt="" />
+								<div class="body">Car Towing</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-battery-replacement.svg" alt="" />
+								<div class="body">Battery Replacement</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-key-lockout.svg" alt="" />
+								<div class="body">Key Lockout</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-flat-tyre.svg" alt="" />
+								<div class="body">Flat Tyre</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-out-of-fuel.svg" alt="" />
+								<div class="body">Out of Fuel</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-female-scooty.svg" alt="" />
+								<div class="body">Female Scooty</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../care-package/care-package.html">
+					<div class="body">Car Care Packages</div>
+				</a>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Insurance Services</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../insurance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/insurance/icon-car-insurance.svg" alt="" />
+								<div class="body">Car Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/insurance/icon-takaful.svg" alt="" />
+								<div class="body">Takaful (Islamic)</div>
+							</a>
+							<a href="../insurance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/insurance/icon-travel-insurance.svg" alt="" />
+								<div class="body">Travel Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/insurance/icon-health-insurance.svg" alt="" />
+								<div class="body">Health Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/insurance/icon-car-tracker.svg" alt="" />
+								<div class="body">Car Tracker</div>
+							</a>
+							<a href="../insurance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/insurance/icon-corporate-insurance.svg" alt="" />
+								<div class="body">Corporate Insurancel</div>
+							</a>
+							<a href="../insurance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/insurance/icon-micro-insurance.svg" alt="" />
+								<div class="body">Microinsurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/insurance/icon-roadside-coverage.svg" alt="" />
+								<div class="body">Roadside Coverage</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../fleet-services/fleet-services.html">
+					<div class="body">Fleet Services</div>
+				</a>
+				<a href="../contact/contact.html">
+					<div class="body">Contact Us</div>
+				</a>
+			</div>
+		</div>
+	</nav>
 
-        <!-- Landing Section -->
-        <div class="landing-with-header">
-            <div class="img">
-                <img src="../../assets/images/header/lg/cities.svg" alt="">
-                <img src="../../assets/images/header/sm/cities.jpg" alt="">
-            </div>
-            <div class="txt-container gray">
-                <div class="section-title">We Service Most Car <span>Makes & Model</span></div>
-                <div class="body">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at
-                    voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab
-                    distinctio! Accusamus doloribus fuga ducimus.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus
-                    nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates!
-                    Tenetur, fugit reprehenderit!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni
-                    consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt
-                    laboriosam distinctio aperiam ex aliquam!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a
-                    inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque
-                    eveniet ad laudantium exercitationem debitis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio
-                    at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus
-                    doloremque tenetur dicta deleniti.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum atque eligendi eos vero
-                    laudantium, recusandae expedita doloremque neque maiores iusto adipisci molestias cupiditate tempora
-                    necessitatibus, libero, asperiores quidem natus?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In eos natus sint nobis sit libero harum
-                    enim fuga est molestiae esse, dolore voluptas, commodi neque nihil corporis officia quia veritatis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi,
-                    architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores
-                    laboriosam et debitis tempora quibusdam?
-                </div>
-            </div>
-        </div>
+	<div class="wow fadeIn header first">
+		<div class="img">
+			<img src="../../assets/images/header/lg/cities.svg" alt="" />
+			<img src="../../assets/images/header/sm/cities.jpg" alt="" />
+		</div>
+		<div class="txt-container gray">
+			<div class="heading lg">
+				We Service Most <span>Car Makes & Models</span>
+			</div>
+			<div class="body">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+				rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+				ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+				takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+				amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+				kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+				amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+				erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+				et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo r
+			</div>
+		</div>
+	</div>
 
-        <!-- Cities -->
-        <div class="popular-items">
-            <div class="section-title">Most Popular Car Repair <span>Services Near Me</span></div>
-            <div class="icon-container">
-                <div class="img"><img src="../../assets/images/cities/city1.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city2.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city3.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city4.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city5.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city6.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city7.png" alt=""></div>
-                <div class="img"><img src="../../assets/images/cities/city8.png" alt=""></div>
-            </div>
-        </div>
+	<div class="section">
+		<div class="info-container center grid-4 img">
+			<div data-wow-delay="0.0s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city1.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city2.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="0.4s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city3.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="0.6s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city4.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="0.8s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city5.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="1s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city6.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="1.2s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city7.png" alt="" />
+				</div>
+			</div>
+			<div data-wow-delay="1.4s" class="wow fadeInUp info-box">
+				<div class="img">
+					<img src="../../assets/images/city/city8.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <!-- Popular Services -->
-        <div class="popular-items sm">
-            <div class="section-title">Most Popular Car Repair <span>Services Near Me</span></div>
-            <div class="icon-container">
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon9.svg" alt=""></div>
-                    <div class="txt">Replace Front Brake Pads</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon10.svg" alt=""></div>
-                    <div class="txt">Synthetic Oil Change</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon11.svg" alt=""></div>
-                    <div class="txt">Replace Starter Motor</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon12.svg" alt=""></div>
-                    <div class="txt">Replace Fuel Pump</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon13.svg" alt=""></div>
-                    <div class="txt">Replace Timing Belt</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon14.svg" alt=""></div>
-                    <div class="txt">Replace Spark Plugs</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon15.svg" alt=""></div>
-                    <div class="txt">Replace Alternator</div>
-                </div>
-                <div class="icon-box-col">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon16.svg" alt=""></div>
-                    <div class="txt">Check Engine Light Diagnosis</div>
-                </div>
-            </div>
-        </div>
+	<div class="section">
+		<div class="wow fadeIn heading lg">
+			Most Popular Car Repair <span>Services Near Me</span>
+		</div>
+		<div class="wow fadeInUp info-container center grid-4 with-shadow car-repairs">
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-brake-pads.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Front Brake Pads</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-oil-change.svg" alt="" />
+					</div>
+					<div class="body bold">Synthetic Oil Change</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-fuel-pump.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Fuel Pump</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-starter-motor.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Starter Motor</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-timing-belt.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Timing Belt</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-spark-plugs.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Spark Plugs</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-alternator.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Alternator</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-engine.svg" alt="" />
+					</div>
+					<div class="body bold">Check Engine Light Diagnosis</div>
+				</div>
+			</a>
+		</div>
+	</div>
 
-        <!-- Popular Packages -->
-        <div class="services section" style="margin-top: 6em;">
-            <div class="section-title">Our Most <span>Popular Packages</span></div>
-            <div class="box-container">
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <div class="sale">50%</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="title">Doorstep Express Car Service</div>
-                        <div class="info">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</div>
-                        <button>Book Now</button>
-                        <div class="price">Rs. 00</div>
-                    </div>
-                </div>
-            </div>
-            <a class="view-more" href="../care-package/care-package.html">
-                <div>View all </div>
-                <div class="icon"></div>
-            </a>
-        </div>
+	<div class="section package-scrollable">
+		<div class="wow fadeIn heading lg">Our Most <span>Popular Packages</span></div>
+		<div class="package-wrapper">
+			<div data-wow-delay="0.0s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+			<div data-wow-delay="0.4s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+			<div data-wow-delay="0.6s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+			<div data-wow-delay="0.8s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+			<div data-wow-delay="1s" class="wow fadeInUp package">
+				<div class="img">
+					<img src="../../assets/images/popular-packages/package.png" alt="" />
+					<img src="../../assets/images/popular-packages/sale.png" alt="" />
+				</div>
+				<div class="txt-container">
+					<div class="heading sm span-col-2">
+						Doorstep Express Car Service
+					</div>
+					<div class="body span-col-2">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.
+					</div>
+					<button class="primary-btn sm">Book Now</button>
+					<div class="heading sm price"><span>Rs. 00</span></div>
+				</div>
+			</div>
+		</div>
+		<a href="../care-package/care-package.html" class="view-all">
+			<img src="../../assets/svgs/design/red-arrow-right.svg" alt="" />
+			<div class="body"><span>View all</span></div>
+		</a>
+	</div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="logo after1024">
-                <!-- new -->
-                <div class="logo-img img-center"></div>
-                <div class="socials">
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                </div>
-            </div>
 
-            <div class="box">
-                <div class="heading">Rhetorik</div>
-                <div class="body">
-                    <a>Home</a>
-                    <a href="#">Cities</a>
-                    <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                    <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                    <a>Careers</a>
-                    <a>Contact Us</a>
-                    <a>Request a Demo</a>
-                    <a>Resources & blogs</a>
-                </div>
-            </div>
+	<footer class="wow fadeIn section">
+		<div id="footerAccordian" class="accordian">
+			<div class="card">
+				<a class="collapsed card-link" aria-expanded="true" data-toggle="collapse" href="#footerAccordian-1">
+					<div class="heading sm">CarHelpline Pages</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-1" class="collapse show card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="../car-repairs/car-repairs.html">Car Repair Landing</a>
+						<a href="../car-repairs/middle-page.html">Car Repair Middle</a>
+						<a href="../cities/cities.html">Cities</a>
+						<a href="../error-pages/404.html">404</a>
+						<a href="../download-now/download-now.html">Download</a>
+						<a href="../refer-a-friend/refer-a-friend.html">Refer a friend</a>
+						<a href="../about/about.html">About</a>
+						<a href="../roadside-assistance/roadside-assistance.html">Roadside Assistance</a>
+						<a href="../insurance/insurance.html">Insurance</a>
+						<a href="../car-model/car-model.html">Car Model</a>
+						<a href="">Gift Cards</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-2">
+					<div class="heading sm">Services</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-2" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple Music</a>
+						<a href="">Apple TV+</a>
+						<a href="">Apple Fitness+</a>
+						<a href="">Apple News+</a>
+						<a href="">Apple Arcade</a>
+						<a href="">iCloud</a>
+						<a href="">Apple One</a>
+						<a href="">Apple Card</a>
+						<a href="">Apple Books</a>
+						<a href="">App Store</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-3">
+					<div class="heading sm">Account</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-3" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Manage Your Apple ID</a>
+						<a href="">Apple Store Account</a>
+						<a href="">iCloud.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-5">
+					<div class="heading sm">Apple Store</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-5" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Find a Store</a>
+						<a href="">Shop Online</a>
+						<a href="">Genius Bar</a>
+						<a href="">Today at Apple</a>
+						<a href="">Apple Camp</a>
+						<a href="">Apple Store App</a>
+						<a href="">Refurbished and Clearance</a>
+						<a href="">Financing</a>
+						<a href="">Apple Trade In</a>
+						<a href="">Order Status</a>
+						<a href="">Shopping Help</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-6">
+					<div class="heading sm">For Business</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-6" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Business</a>
+						<a href="">Shop for Business</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-7">
+					<div class="heading sm">For Education</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-7" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Education</a>
+						<a href="">Shop for K-12</a>
+						<a href="">Shop for College</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-8">
+					<div class="heading sm">For Healthcare</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-8" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple in Healthcare</a>
+						<a href="">Health on Apple Watch</a>
+						<a href="">Health Records on iPhone</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-9">
+					<div class="heading sm">For Government</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-9" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Shop for Government</a>
+						<a href="">Shop for Veterans and Military</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-10">
+					<div class="heading sm">Apple Values</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-10" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Accessibility</a>
+						<a href="">Education</a>
+						<a href="">Environment</a>
+						<a href="">Inclusion and Diversity</a>
+						<a href="">Privacy</a>
+						<a href="">Racial Equity and Justice</a>
+						<a href="">Supplier Responsibility</a>
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="../../assets/svgs/nav/logo.svg" alt="">
+				<div class="socials">
+					<a href=""><img src="../../assets/svgs/socials/facebook.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/instagram.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/linkdin.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/twitter.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="txt-container">
+			<div class="body">More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</div>
+			<div class="body">Copyright © 2021 Apple Inc. All rights reserved.</div>
+			<div class="body">Privacy Policy <span>&#8739;</span> Terms of Use <span>&#8739;</span> Sales and Refunds <span>&#8739;</span> Legal <span>&#8739;</span> Site Map</div>
+		</div>
+	</footer>
 
-            <div class="box">
-                <div class="heading">Solutions</div>
-                <div class="body">
-                    <a>For Sales Professionals</a>
-                    <a>For Marketing Leaders</a>
-                    <a>For Marketing & Demand Gen</a>
-                    <a>Professionals</a>
-                    <a>For Recruitment Professionals</a>
-                    <a>For Sales & Marketing Operations</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Products</div>
-                <div class="body">
-                    <a>NetFinder™</a>
-                    <a>DataCliniq™</a>
-                    <a>AMP™ - <br> Action Marketing Programs</a>
-                </div>
-                <div class="hideAfter1122AndShowAfter">
-                    <div class="heading">Useful Links</div>
-                    <div class="body">
-                        <a>NetFinder Login</a>
-                        <a>Privacy Policy</a>
-                        <a>Data Privacy & GDPR</a>
-                        <a>Do not sell my personal info</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Latest Resources</div>
-                <div class="body">
-                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
-                        platform for global enterprise technology companies</div>
-                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-                </div>
-            </div>
-            <div class="box showAfter1122AndHideAfter">
-                <div class="heading">Useful Links</div>
-                <div class="body">
-                    <a>NetFinder Login</a>
-                    <a>Privacy Policy</a>
-                    <a>Data Privacy & GDPR</a>
-                    <a>Do not sell my personal info</a>
-                </div>
-            </div>
-
-            <div class="logo before1024">
-                <!-- new -->
-                <div class="logo-img img-center"></div>
-                <div class="socials">
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                </div>
-            </div>
-        </footer>
-        <!-- Page End -->
-        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
-
-        <!-- JavaScript -->
-        <script src="../../assets/js/script.min.js"></script>
-    </body>
+	<script src="../../assets/js/script.js"></script>
+</body>
 
 </html>

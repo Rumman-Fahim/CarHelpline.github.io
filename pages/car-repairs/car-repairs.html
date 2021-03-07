@@ -1,1029 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- For Responsiveness -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Bootstrap 3 Links -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Animate.js Link -->
-        <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-        <!-- WOW Animation Link -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script>
-        <title>Car Repairs</title>
-        <!-- Common Styles -->
-        <link rel="stylesheet" href="../../assets/css/style.min.css">
-    </head>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Animate.js Link -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<!-- WOW Link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- Bootstap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Car Repairs</title>
+	<!-- Common CSS -->
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
 
-    <body>
-        <!-- Modals -->
-        <div class="modal-container" id="phoneModal">
-            <div class="content-container" id="phoneModalContent">
-                <div class="heading">
-                    <span>Support</span>
-                    <div class="img img-center" onclick="closePhoneModal()"></div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"></div>
-                    <div class="txt">Privacy Policy</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon"></div>
-                    <div class="txt">Terms & Conditions</div>
-                </div>
-                <div class="gray-line"></div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">(03) 111-681-111</div>
-                </div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">0312-3952100</div>
-                </div>
-                <div class="icon-box withBorder">
-                    <div class="icon"></div>
-                    <div class="txt">support@carhelpline.pk</div>
-                </div>
-                <div class="body">Our WhatsApp number cannot be used for calls. This is a chat only number</div>
-            </div>
-        </div>
+<body>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <!-- Toggle Btn -->
-            <div class="toggle-btn" id="btn-open-navbar">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+	<div class="modal-container" id="phoneModel">
+		<div class="content" data-wow-delay="0.5s">
+			<div class="header">
+				<div class="heading md"><span>Support</span></div>
+				<img onclick="closeModal('phoneModel')" src="../../assets/svgs/modal/cross.svg" alt="" />
+			</div>
+			<div class="info-container">
+				<div class="info">
+					<img src="../../assets/svgs/modal/privacy-policy.svg" alt="" />
+					<div class="body">Privacy Policy</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/terms-conditions.svg" alt="" />
+					<div class="body">Terms & Conditions</div>
+				</div>
+			</div>
+			<div class="info-container with-border">
+				<div class="info">
+					<img src="../../assets/svgs/modal/phone.svg" alt="" />
+					<div class="body">(03) 111 - 681 - 111</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/whatsapp.svg" alt="" />
+					<div class="body">0312 - 3952100</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/email.svg" alt="" />
+					<div class="body">support@carhelpline.pk</div>
+				</div>
+			</div>
+			<div class="body">
+				Our WhatsApp number cannot be used for calls. This is a chat only
+				number
+			</div>
+		</div>
+	</div>
+	<nav>
+		<a href="../../index.html" class="logo">
+			<img src="../../assets/svgs/nav/logo.svg" alt="" />
+		</a>
+		<div class="after-1100">
+			<img onclick="openNav()" src="../../assets/svgs/nav/toggle-btn.svg" alt="" class="toggle-btn" />
+			<div class="heading sm">CarHelpline</div>
+			<img onclick="openModal('phoneModel')" src="../../assets/svgs/nav/responsive-nav-phone.svg" alt="" class="headset" />
+		</div>
+		<div class="links-container" id="nav-menu">
+			<div class="after-1100">
+				<div class="logo">
+					<div onclick="window.location.href = '../../index.html'" style="cursor: pointer;">
+						<img src="../../assets/svgs/nav/logo.svg" alt="" />
+						<div class="heading sm">CarHelpline</div>
+					</div>
+					<img onclick="closeNav()" src="../../assets/svgs/nav/cross.svg" alt="" />
+				</div>
+				<div class="info-container">
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-email.svg" alt="" />
+						<div class="body">Hello@carHelpline.com</div>
+					</div>
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-phone.svg" alt="" />
+						<div class="body">(03) 111-681-111</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Car Repair</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../car-repairs/inner-pages/page-1.html">
+								<img src="../../assets/svgs/other-icons/icon-9.svg" alt="" />
+								<div class="body">Mechanical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-2.html">
+								<img src="../../assets/svgs/other-icons/icon-22.svg" alt="" />
+								<div class="body">Electrical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-3.html">
+								<img src="../../assets/svgs/other-icons/icon-inspection.svg" alt="" />
+								<div class="body">Inspection & Diagnostic</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-4.html">
+								<img src="../../assets/svgs/other-icons/icon-20.svg" alt="" />
+								<div class="body">Heading & Air Conditioning</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-5.html">
+								<img src="../../assets/svgs/other-icons/icon-16.svg" alt="" />
+								<div class="body">General Maintenance</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-6.html">
+								<img src="../../assets/svgs/other-icons/icon-4.svg" alt="" />
+								<div class="body">Exterior & Body Parts</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Roadside Assistance</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../roadside-assistance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-mechanical-breakdown.svg" alt="" />
+								<div class="body">Mechanical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-electric-breakdown.svg" alt="" />
+								<div class="body">Electrical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-car-towing.svg" alt="" />
+								<div class="body">Car Towing</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-battery-replacement.svg" alt="" />
+								<div class="body">Battery Replacement</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-key-lockout.svg" alt="" />
+								<div class="body">Key Lockout</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-flat-tyre.svg" alt="" />
+								<div class="body">Flat Tyre</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-out-of-fuel.svg" alt="" />
+								<div class="body">Out of Fuel</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-female-scooty.svg" alt="" />
+								<div class="body">Female Scooty</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../care-package/care-package.html">
+					<div class="body">Car Care Packages</div>
+				</a>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Insurance Services</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../insurance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/insurance/icon-car-insurance.svg" alt="" />
+								<div class="body">Car Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/insurance/icon-takaful.svg" alt="" />
+								<div class="body">Takaful (Islamic)</div>
+							</a>
+							<a href="../insurance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/insurance/icon-travel-insurance.svg" alt="" />
+								<div class="body">Travel Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/insurance/icon-health-insurance.svg" alt="" />
+								<div class="body">Health Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/insurance/icon-car-tracker.svg" alt="" />
+								<div class="body">Car Tracker</div>
+							</a>
+							<a href="../insurance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/insurance/icon-corporate-insurance.svg" alt="" />
+								<div class="body">Corporate Insurancel</div>
+							</a>
+							<a href="../insurance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/insurance/icon-micro-insurance.svg" alt="" />
+								<div class="body">Microinsurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/insurance/icon-roadside-coverage.svg" alt="" />
+								<div class="body">Roadside Coverage</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../fleet-services/fleet-services.html">
+					<div class="body">Fleet Services</div>
+				</a>
+				<a href="../contact/contact.html">
+					<div class="body">Contact Us</div>
+				</a>
+			</div>
+		</div>
+	</nav>
 
-            <!-- Nav Logo -->
-            <a href="../../index.html" class="logo-container">
-                <div id="nav-logo" class="img-center" style="display: block;"></div>
-                <div id="nav-title" style="display: none;">CarHelpline</div>
-            </a>
+	<div class="wow fadeIn header first">
+		<div class="img">
+			<img src="../../assets/images/header/lg/car-repairs.svg" alt="" />
+			<img src="../../assets/images/header/sm/car-repair.jpg" alt="" />
+		</div>
+		<div class="txt-container gray">
+			<div class="heading lg">
+				We Service Most <span>Car Makes & Models</span>
+			</div>
+			<div class="body">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+				rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+				ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+				takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+				amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+				kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+				amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+				erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+				et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo r
+			</div>
+		</div>
+	</div>
 
-            <!-- Phone Icon -->
-            <a class="phone img-center" id="navPhone" onclick="openPhoneModal()"></a>
+	<div class="section">
+		<div class="wow fadeIn heading lg">
+			Most Popular Car Repair <span>Services Near Me</span>
+		</div>
+		<div class="info-container center grid-4 with-shadow">
+			<a data-wow-delay="0.0s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-brake-pads.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Front Brake Pads</div>
+				</div>
+			</a>
+			<a data-wow-delay="0.2s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-oil-change.svg" alt="" />
+					</div>
+					<div class="body bold">Synthetic Oil Change</div>
+				</div>
+			</a>
+			<a data-wow-delay="0.4s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-fuel-pump.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Fuel Pump</div>
+				</div>
+			</a>
+			<a data-wow-delay="0.6s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-starter-motor.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Starter Motor</div>
+				</div>
+			</a>
+			<a data-wow-delay="0.8s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-timing-belt.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Timing Belt</div>
+				</div>
+			</a>
+			<a data-wow-delay="1s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-spark-plugs.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Spark Plugs</div>
+				</div>
+			</a>
+			<a data-wow-delay="1.2s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-alternator.svg" alt="" />
+					</div>
+					<div class="body bold">Replace Alternator</div>
+				</div>
+			</a>
+			<a data-wow-delay="1.4s" class="wow fadeInUp" href="#">
+				<div class="info-box">
+					<div class="icon md">
+						<img src="../../assets/svgs/car-repairs/icon-engine.svg" alt="" />
+					</div>
+					<div class="body bold">Check Engine Light Diagnosis</div>
+				</div>
+			</a>
+		</div>
+	</div>
 
-            <!-- Navbar -->
-            <div class="nav-bar" id="navbar">
-                <div class="nav-bar-wrapper">
-                    <!-- Navbar Collapse State Elements -->
-                    <div class="header">
-                        <div class="title">
-                            <div class="logo-text" onclick="location.href='../../index.html'">
-                                <div class="logoImg img-center"></div>
-                                <span>CarHelpline</span>
-                            </div>
-                            <div class="close img-center" id="btn-close-navbar"></div>
-                        </div>
-                        <div class="icon-box">
-                            <div class="icon"></div>
-                            <div class="txt">Hello@carHelpline.com</div>
-                        </div>
-                        <div class="icon-box">
-                            <div class="icon"></div>
-                            <div class="txt">(03) 111-681-111</div>
-                        </div>
+	<div class="wow fadeInUp section">
+		<div class="heading lg">All Car <span>Repair Services</span></div>
+		<div id="all-accordian" class="accordian">
+			<div class="card">
+				<a aria-expanded="true" class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-1">
+					<div class="icon sm">
+						<img src="../../assets/svgs/roadside-assistance/icon-battery-replacement.svg" alt="" />
+					</div>
+					<div class="heading md">Battery</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-1" class="collapse show card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>Battery Boost</div>
+						<div>Battery Cable Replacement</div>
+						<div>Battery Replacement</div>
+						<div>Battery Temperature Sensor Replacement</div>
+						<div>Negative Battery Terminal Replacement</div>
+						<div>Positive Battery Terminal Replacement</div>
+						<div>Service Battery And Cables</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-2">
+					<div class="icon sm">
+						<img src="../../assets/svgs/car-repairs/icon-brake-pads.svg" alt="" />
+					</div>
+					<div class="heading md">Brakes</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-2" class="collapse card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>ABS Control Module Replacement</div>
+						<div>ABS Control Module System Reset</div>
+						<div>ABS Speed Sensor Replacement</div>
+						<div>Anti Lock Brake (ABS) Fluid Level Sensor Replacement</div>
+						<div>Anti Lock Fuses Or Relay Replacement</div>
+						<div>Anti Lock Pressure Switch Replacement</div>
+						<div>Brake Booster Replacement</div>
+						<div>Brake Booster Vacuum Sensor Replacement</div>
+						<div>Brake Caliper Replacement</div>
+						<div>Brake Drums Replacement</div>
+						<div>Brake Hose Replacement</div>
+						<div>Brake Line Repair</div>
+						<div>Brake Master Cylinder Replacement</div>
+						<div>Brake Pads And Rotors Replacement</div>
+						<div>Brake Pads Replacement</div>
+						<div>Brake Rotors Replacement</div>
+						<div>Brake Service</div>
+						<div>Brake Shoes (Rear) Replacement</div>
+						<div>Brake Shoes And Drums (Rear) Replacement</div>
+						<div>Brake System Flush</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-3">
+					<div class="icon sm">
+						<img src="../../assets/svgs/other-icons/icon-21.svg" alt="" />
+					</div>
+					<div class="heading md">Car Buying</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-3" class="collapse card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>Pre Purchase Car Inspection</div>
+						<div>Used Car Inspection</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-4">
+					<div class="icon sm">
+						<img src="../../assets/svgs/other-icons/icon-21.svg" alt="" />
+					</div>
+					<div class="heading md">Clutch And Transmission</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-4" class="collapse card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>Axle Shaft Seal Replacement</div>
+						<div>CV Axle Shaft Assembly Replacement</div>
+						<div>CV Axle Shaft Assembly Replacement</div>
+						<div>Clutch Cable Adjuster Replacement</div>
+						<div>Clutch Cable Replacement</div>
+						<div>Clutch Fluid Replacement</div>
+						<div>Clutch Master Cylinder Replacement</div>
+						<div>Clutch Slave Cylinder Replacement</div>
+						<div>Clutch Switch Replacement</div>
+						<div>Cruise Control Clutch Release Switch Replacement</div>
+						<div>Differential Gasket Replacement</div>
+						<div>Differential Output Seal Replacement</div>
+						<div>Downshift Solenoid Replacement</div>
+						<div>Front Axle Engagement Switch Replacement</div>
+						<div>Kick Down Cable Replacement</div>
+						<div>Pinion Seal Replacement</div>
+						<div>Shift Indicator (Automatic Transmission) Replacement</div>
+						<div>Shift Interlock Solenoid Replacement</div>
+						<div>Shift Selector Cable Replacement</div>
+						<div>Speed Sensor Replacement</div>
+						<div>Speedometer Cable Replacement</div>
+						<div>Transfer Case Fluid Replacement</div>
+						<div>Transfer Case Output Shaft Seal Replacement</div>
+						<div>Transmission Fluid Flush</div>
+						<div>Transmission Oil Pressure Switch Replacement</div>
+						<div>Transmission Position Sensor (Switch) Replacement</div>
+						<div>Transmission Speed Sensor Replacement</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-5">
+					<div class="icon sm">
+						<img src="../../assets/svgs/other-icons/icon-inspection.svg" alt="" />
+					</div>
+					<div class="heading md">Diagnostics And Inspections</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-5" class="collapse card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>Arbitration Inspection</div>
+						<div>Car Is Leaking Fluids Inspection</div>
+						<div>Car Is Not Starting Inspection</div>
+						<div>Car Is Overheating Inspection</div>
+						<div>Car Is Shaking (Vibrating) Inspection</div>
+						<div>Check Engine Light Is On Inspection</div>
+						<div>Drive Clean Test</div>
+						<div>Emissions Test</div>
+						<div>Follow Up Service</div>
+						<div>General Inspection</div>
+						<div>Pre Sale Inspection - Bottom End Check</div>
+						<div>Pre Sale Inspection - Top End Check</div>
+						<div>Safety Standards Certificate Inspection</div>
+						<div>Uber Vehicle Inspection</div>
+						<div>Vehicle Not Found</div>
+						<div>Warning Light Is On Inspection</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link grid-3" data-toggle="collapse" href="#all-accordian-6">
+					<div class="icon sm">
+						<img src="../../assets/svgs/other-icons/icon-6.svg" alt="" />
+					</div>
+					<div class="heading md">Doors</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+							<g id="circle-gray-dropdown" transform="translate(-1252.689 -7234.69)">
+								<g id="Group_6261" data-name="Group 6261" transform="translate(1252.286 7234.286)">
+									<circle id="Ellipse_137" data-name="Ellipse 137" cx="20" cy="20" r="20" transform="translate(0.405 0.405)" fill="var(--icon-circle-dropdown-color)" />
+									<path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M17.124,19.988,8.852,11.71a1.564,1.564,0,0,0-2.208,2.214L16.017,23.3a1.56,1.56,0,0,0,2.156.046l9.438-9.418A1.564,1.564,0,0,0,25.4,11.716Z" transform="translate(2.781 3.955)" fill="#fff" />
+								</g>
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="all-accordian-6" class="collapse card-body grid-3" data-parent="#all-accordian">
+					<div class="body">
+						<div>Door Latch Replacement</div>
+						<div>Door Lock Actuator Replacement</div>
+						<div>Door Lock Relay Replacement</div>
+						<div>Door Lock Switch Replacement</div>
+						<div>Door Striker Plate Replacement</div>
+						<div>Exterior Door Handle Replacement</div>
+						<div>Hatch Lock Cylinder Replacement</div>
+						<div>Hood Latc Repair</div>
+						<div>Hood Lift Support Shocks Replacement</div>
+						<div>Interior Door Handle Replacement</div>
+						<div>Lubricate Doors</div>
+						<div>Lubricate Hood Hinge</div>
+						<div>Lubricate Trunk</div>
+						<div>Sliding Door Motor Assembly Replacement</div>
+						<div>Tailgate Lock Cylinder Replacement</div>
+						<div>Tailgate Lock Solenoid Replacement</div>
+						<div>Tailgate Locking Assembly Replacement</div>
+						<div>Trunk Latch Adjustment</div>
+						<div>Trunk Latch Release Cable Replacement</div>
+						<div>Trunk Latch Replacement</div>
+						<div>Trunk Lift Support Shocks Replacement</div>
+						<div>Trunk Striker Plate Replacement</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                    </div>
-                    <!-- Links -->
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Car Repairs
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="inner-pages/car-repairs-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Mechanical System</div>
-                                </a>
-                                <a class="link" href="inner-pages/car-repairs-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Electrical System</div>
-                                </a>
-                                <a class="link" href="inner-pages/car-repairs-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Inspection & Diagnostic</div>
-                                </a>
-                                <a class="link" href="inner-pages/car-repairs-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Heading & Air Conditioning</div>
-                                </a>
-                                <a class="link" href="inner-pages/car-repairs-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">General Maintenance</div>
-                                </a>
-                                <a class="link" href="inner-pages/car-repairs-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Exterior & Body Parts</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Roadside Assistance
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Mechanical Breakdown</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Electrical Breakdown</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Towing</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Battery Replacement</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Key Lockout</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Flat Tyre</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-7.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Out of Fuel</div>
-                                </a>
-                                <a class="link" href="../roadside-assistance/inner-pages/rsa-8.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Female Scooty</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="link" href="../care-package/care-package.html">Car Care Packages</a>
-                    <div class="link navbar-dropdown">
-                        <div class="toggle-btn">
-                            Insurance Services
-                            <div class="img-center"></div>
-                        </div>
-                        <div class="sub-menu">
-                            <div class="triangle"></div>
-                            <div class="links-container">
-                                <a class="link" href="../insurance-service/inner-pages/insurance-1.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-2.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Takaful (Islamic)</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-3.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Travel Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-4.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Health Insurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-5.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Car Tracker</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-6.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Corporate Insurancel</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-7.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Microinsurance</div>
-                                </a>
-                                <a class="link" href="../insurance-service/inner-pages/insurance-8.html">
-                                    <div class="icon img-center"></div>
-                                    <div class="body">Roadside Coverage</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="link" href="../fleet-services/fleet-services.html">Fleet Services</a>
-                    <a class="link" href="../contact-us/contact-us.html">Contact Us</a>
-                </div>
-            </div>
-        </nav>
 
-        <!-- Landing Section -->
-        <div class="landing-with-header">
-            <div class="img">
-                <img src="../../assets/images/header/lg/car-repairs.svg" alt="">
-                <img src="../../assets/images/header/sm/car-repair.jpg" alt="">
-            </div>
-            <div class="txt-container gray">
-                <div class="section-title">We Service Most Car <span>Makes & Model</span></div>
-                <div class="body">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt aperiam similique at
-                    voluptates tenetur, mollitia assumenda unde debitis commodi iusto necessitatibus repellat, autem ab
-                    distinctio! Accusamus doloribus fuga ducimus.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam totam, in repellendus
-                    nulla nihil ullam labore suscipit quidem non nam, dolorem quis repellat error, magni voluptates!
-                    Tenetur, fugit reprehenderit!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi officiis dolorem iure magni
-                    consectetur iusto accusantium, reprehenderit similique harum dignissimos eos, totam est sunt
-                    laboriosam distinctio aperiam ex aliquam!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita, harum provident a
-                    inventore accusamus labore deleniti voluptatibus sint adipisci eum eaque deserunt voluptatem itaque
-                    eveniet ad laudantium exercitationem debitis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem voluptatibus ipsa distinctio
-                    at fuga molestias labore culpa, possimus expedita sequi ea? Doloribus quaerat nam voluptatibus
-                    doloremque tenetur dicta deleniti.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nostrum atque eligendi eos vero
-                    laudantium, recusandae expedita doloremque neque maiores iusto adipisci molestias cupiditate tempora
-                    necessitatibus, libero, asperiores quidem natus?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In eos natus sint nobis sit libero harum
-                    enim fuga est molestiae esse, dolore voluptas, commodi neque nihil corporis officia quia veritatis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam odit repellendus sed modi,
-                    architecto repellat odio, sint id cupiditate ipsa assumenda reprehenderit eligendi dolores
-                    laboriosam et debitis tempora quibusdam?
-                </div>
-            </div>
-        </div>
+	<footer class="wow fadeIn section">
+		<div id="footerAccordian" class="accordian">
+			<div class="card">
+				<a class="collapsed card-link" aria-expanded="true" data-toggle="collapse" href="#footerAccordian-1">
+					<div class="heading sm">CarHelpline Pages</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-1" class="collapse show card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="../car-repairs/car-repairs.html">Car Repair Landing</a>
+						<a href="../car-repairs/middle-page.html">Car Repair Middle</a>
+						<a href="../cities/cities.html">Cities</a>
+						<a href="../error-pages/404.html">404</a>
+						<a href="../download-now/download-now.html">Download</a>
+						<a href="../refer-a-friend/refer-a-friend.html">Refer a friend</a>
+						<a href="../about/about.html">About</a>
+						<a href="../roadside-assistance/roadside-assistance.html">Roadside Assistance</a>
+						<a href="../insurance/insurance.html">Insurance</a>
+						<a href="../car-model/car-model.html">Car Model</a>
+						<a href="">Gift Cards</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-2">
+					<div class="heading sm">Services</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-2" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple Music</a>
+						<a href="">Apple TV+</a>
+						<a href="">Apple Fitness+</a>
+						<a href="">Apple News+</a>
+						<a href="">Apple Arcade</a>
+						<a href="">iCloud</a>
+						<a href="">Apple One</a>
+						<a href="">Apple Card</a>
+						<a href="">Apple Books</a>
+						<a href="">App Store</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-3">
+					<div class="heading sm">Account</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-3" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Manage Your Apple ID</a>
+						<a href="">Apple Store Account</a>
+						<a href="">iCloud.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-5">
+					<div class="heading sm">Apple Store</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-5" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Find a Store</a>
+						<a href="">Shop Online</a>
+						<a href="">Genius Bar</a>
+						<a href="">Today at Apple</a>
+						<a href="">Apple Camp</a>
+						<a href="">Apple Store App</a>
+						<a href="">Refurbished and Clearance</a>
+						<a href="">Financing</a>
+						<a href="">Apple Trade In</a>
+						<a href="">Order Status</a>
+						<a href="">Shopping Help</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-6">
+					<div class="heading sm">For Business</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-6" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Business</a>
+						<a href="">Shop for Business</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-7">
+					<div class="heading sm">For Education</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-7" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Education</a>
+						<a href="">Shop for K-12</a>
+						<a href="">Shop for College</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-8">
+					<div class="heading sm">For Healthcare</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-8" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple in Healthcare</a>
+						<a href="">Health on Apple Watch</a>
+						<a href="">Health Records on iPhone</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-9">
+					<div class="heading sm">For Government</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-9" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Shop for Government</a>
+						<a href="">Shop for Veterans and Military</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-10">
+					<div class="heading sm">Apple Values</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-10" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Accessibility</a>
+						<a href="">Education</a>
+						<a href="">Environment</a>
+						<a href="">Inclusion and Diversity</a>
+						<a href="">Privacy</a>
+						<a href="">Racial Equity and Justice</a>
+						<a href="">Supplier Responsibility</a>
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="../../assets/svgs/nav/logo.svg" alt="">
+				<div class="socials">
+					<a href=""><img src="../../assets/svgs/socials/facebook.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/instagram.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/linkdin.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/twitter.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="txt-container">
+			<div class="body">More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</div>
+			<div class="body">Copyright © 2021 Apple Inc. All rights reserved.</div>
+			<div class="body">Privacy Policy <span>&#8739;</span> Terms of Use <span>&#8739;</span> Sales and Refunds <span>&#8739;</span> Legal <span>&#8739;</span> Site Map</div>
+		</div>
+	</footer>
 
-        <!-- Popular Services Section -->
-        <div class="popular-items">
-            <div class="section-title">Most Popular Car Repair <span>Services Near Me</span></div>
-            <div class="icon-container">
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon9.svg" alt=""></div>
-                    <div class="txt">Replace Front Brake Pads</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon10.svg" alt=""></div>
-                    <div class="txt">Synthetic Oil Change</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon11.svg" alt=""></div>
-                    <div class="txt">Replace Starter Motor</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon12.svg" alt=""></div>
-                    <div class="txt">Replace Fuel Pump</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon13.svg" alt=""></div>
-                    <div class="txt">Replace Timing Belt</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon14.svg" alt=""></div>
-                    <div class="txt">Replace Spark Plugs</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon15.svg" alt=""></div>
-                    <div class="txt">Replace Alternator</div>
-                </div>
-                <div class="icon-box-col withShadow">
-                    <div class="icon"><img src="../../assets/images/service-icons/icon16.svg" alt=""></div>
-                    <div class="txt">Check Engine Light Diagnosis</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accordion -->
-        <div class="section-title item-details-title">All Car <span>Repair Services</span></div>
-        <div id="all-items-accordian" class="all-items-accordian">
-            <div class="item-details">
-                <a class="heading" data-toggle="collapse" href="#s1">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all1.svg" alt=""></span>
-                    <span>Battery</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s1" class="collapse show" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Battery Boost</div>
-                        <div class="info">Battery Cable Replacement</div>
-                        <div class="info">Battery Replacement</div>
-                        <div class="info">Battery Temperature Sensor Replacement</div>
-                        <div class="info">Negative Battery Terminal Replacement</div>
-                        <div class="info">Positive Battery Terminal Replacement</div>
-                        <div class="info">Service Battery And Cables</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s2">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all2.svg" alt=""></span>
-                    <span>Belts</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s2" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Drive Belt Tensioner Replacement</div>
-                        <div class="info">Timing Belt Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s3">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all3.svg" alt=""></span>
-                    <span>Brakes</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s3" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">ABS Control Module Replacement</div>
-                        <div class="info">ABS Control Module System Reset</div>
-                        <div class="info">ABS Speed Sensor Replacement</div>
-                        <div class="info">Anti Lock Brake (ABS) Fluid Level Sensor Replacement</div>
-                        <div class="info">Anti Lock Control Relay Replacement</div>
-                        <div class="info">Anti Lock Fuses Or Relay Replacement</div>
-                        <div class="info">Anti Lock Pressure Switch Replacement</div>
-                        <div class="info">Brake Booster Replacement</div>
-                        <div class="info">Brake Booster Vacuum Sensor Replacement</div>
-                        <div class="info">Brake Caliper Replacement</div>
-                        <div class="info">Brake Drums Replacement</div>
-                        <div class="info">Brake Hose Replacement</div>
-                        <div class="info">Brake Line Repair</div>
-                        <div class="info">Brake Master Cylinder Replacement</div>
-                        <div class="info">Brake Pads And Rotors Replacement</div>
-                        <div class="info">Brake Pads Replacement</div>
-                        <div class="info">Brake Rotors Replacement</div>
-                        <div class="info">Brake Service</div>
-                        <div class="info">Brake Shoes (Rear) Replacement</div>
-                        <div class="info">Brake Shoes And Drums (Rear) Replacement</div>
-                        <div class="info">Brake System Flush</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s4">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all4.svg" alt=""></span>
-                    <span>Car Buying</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s4" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Pre Purchase Car Inspection</div>
-                        <div class="info">Used Car Inspectiont</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all5.svg" alt=""></span>
-                    <span>Clutch And Transmission</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Axle Shaft Seal Replacement</div>
-                        <div class="info">CV Axle Shaft Assembly Replacement</div>
-                        <div class="info">CV Axle Shaft Assembly Replacement</div>
-                        <div class="info">Clutch Cable Adjuster Replacement</div>
-                        <div class="info">Clutch Cable Replacement</div>
-                        <div class="info">Clutch Fluid Replacement</div>
-                        <div class="info">Clutch Master Cylinder Replacement</div>
-                        <div class="info">Clutch Slave Cylinder Replacement</div>
-                        <div class="info">Clutch Switch Replacement</div>
-                        <div class="info">Cruise Control Clutch Release Switch Replacement</div>
-                        <div class="info">Differential Gasket Replacement</div>
-                        <div class="info">Differential Output Seal Replacement</div>
-                        <div class="info">Downshift Solenoid Replacement</div>
-                        <div class="info">Front Axle Engagement Switch Replacement</div>
-                        <div class="info">Kick Down Cable Replacement</div>
-                        <div class="info">Pinion Seal Replacement</div>
-                        <div class="info">Shift Indicator (Automatic Transmission) Replacement</div>
-                        <div class="info">Shift Interlock Solenoid Replacement</div>
-                        <div class="info">Shift Selector Cable Replacement</div>
-                        <div class="info">Speed Sensor Replacement</div>
-                        <div class="info">Speedometer Cable Replacement</div>
-                        <div class="info">Transfer Case Fluid Replacement</div>
-                        <div class="info">Transfer Case Output Shaft Seal Replacement</div>
-                        <div class="info">Transmission Fluid Flush</div>
-                        <div class="info">Transmission Oil Pressure Switch Replacement</div>
-                        <div class="info">Transmission Position Sensor (Switch) Replacement</div>
-                        <div class="info">Transmission Speed Sensor Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s5">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all6.svg" alt=""></span>
-                    <span>Diagnostics And Inspections</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s5" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Arbitration Inspection</div>
-                        <div class="info">Car Is Leaking Fluids Inspection</div>
-                        <div class="info">Car Is Not Starting Inspection</div>
-                        <div class="info">Car Is Shaking (Vibrating) Inspection</div>
-                        <div class="info">Check Engine Light Is On Inspection</div>
-                        <div class="info">Drive Clean Test</div>
-                        <div class="info">Emissions Test</div>
-                        <div class="info">Follow Up Service</div>
-                        <div class="info">General Inspection</div>
-                        <div class="info">Pre Sale Inspection - Bottom End Check</div>
-                        <div class="info">Pre Sale Inspection - Top End Check</div>
-                        <div class="info">Safety Standards Certificate Inspection</div>
-                        <div class="info">Uber Vehicle Inspection</div>
-                        <div class="info">Vehicle Not Found</div>
-                        <div class="info">Warning Light Is On Inspection</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s6">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all7.svg" alt=""></span>
-                    <span>Doors</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s6" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Door Latch Replacementn</div>
-                        <div class="info">Door Lock Actuator Replacement</div>
-                        <div class="info">Door Lock Relay Replacement</div>
-                        <div class="info">Door Lock Switch Replacement</div>
-                        <div class="info">Door Striker Plate Replacement</div>
-                        <div class="info">Exterior Door Handle Replacement</div>
-                        <div class="info">Hatch Lock Cylinder Replacement</div>
-                        <div class="info">Hood Latc Repair</div>
-                        <div class="info">Hood Lift Support Shocks Replacement</div>
-                        <div class="info">Interior Door Handle Replacement</div>
-                        <div class="info">Lubricate Doors</div>
-                        <div class="info">Lubricate Hood Hinge</div>
-                        <div class="info">Lubricate Trunk</div>
-                        <div class="info">Sliding Door Motor Assembly Replacement</div>
-                        <div class="info">Tailgate Lock Cylinder Replacement</div>
-                        <div class="info">Tailgate Lock Solenoid Replacement</div>
-                        <div class="info">Tailgate Locking Assembly Replacement</div>
-                        <div class="info">Trunk Latch Adjustment</div>
-                        <div class="info">Trunk Latch Release Cable Replacement</div>
-                        <div class="info">Trunk Latch Replacement</div>
-                        <div class="info">Trunk Lift Support Shocks Replacement</div>
-                        <div class="info">Trunk Lock Actuator Replacement</div>
-                        <div class="info">Trunk Striker Plate Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s7">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all8.svg" alt=""></span>
-                    <span>Engine (Under The Hood)</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s7" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Accelerator Cable Replacement</div>
-                        <div class="info">Accelerator Pump Replacement</div>
-                        <div class="info">Air Bleed Housing Assembly Replacement</div>
-                        <div class="info">Air Diverter Valve Replacement</div>
-                        <div class="info">Air Pump Check Valve Replacement</div>
-                        <div class="info">Air Pump Replacement</div>
-                        <div class="info">Alternator Replacement</div>
-                        <div class="info">Automatic Shutdown Relay Replacement</div>
-                        <div class="info">Automatic Timing Advance Unit Replacement</div>
-                        <div class="info">Battery Terminal Ends Replacement</div>
-                        <div class="info">Camshaft Seal Replacement</div>
-                        <div class="info">Carburetor Replacement</div>
-                        <div class="info">Cold Air Intake Replacement</div>
-                        <div class="info">Cold Start Injector Replacement</div>
-                        <div class="info">Connector Hose Heater Control Valve Replacement</div>
-                        <div class="info">Coolant Reservoir Replacement</div>
-                        <div class="info">Coolant Temperature Switch (Sensor) Replacement</div>
-                        <div class="info">Coolant Tube Replacement</div>
-                        <div class="info">Coolant Vacuum Valve Switch Replacement</div>
-                        <div class="info">Cooling (Radiator) Fan Motor Replacement</div>
-                        <div class="info">Cooling Fan Relay Replacement</div>
-                        <div class="info">Cooling Fan Resistor Replacement</div>
-                        <div class="info">Cooling System Flush</div>
-                        <div class="info">Crankshaft Harmonic Balancer Replacement</div>
-                        <div class="info">Cruise Control Vacuum Reservoir Replacement</div>
-                        <div class="info">Cylinder Head Temperature Sensor Replacement</div>
-                        <div class="info">Distributor O Ring Replacement</div>
-                        <div class="info">Distributor Replacement</div>
-                        <div class="info">Distributor Rotor And Cap Replacement</div>
-                        <div class="info">ECM Power Relay Replacement</div>
-                        <div class="info">EGR Cooler Replacement</div>
-                        <div class="info">Electronic Ignition Pickup Replacement</div>
-                        <div class="info">Electronic Spark Control Replacement</div>
-                        <div class="info">Engine Cooling Fan Replacement</div>
-                        <div class="info">Engine Mount Replacement</div>
-                        <div class="info">Exhaust Flex Pipe Replacement</div>
-                        <div class="info">Exhaust Gas Recirculation (EGR) Tube Replacement</div>
-                        <div class="info">Exhaust Gas Recirculation (EGR) Valve Replacement</div>
-                        <div class="info">Exhaust Manifold Gasket Replacement</div>
-                        <div class="info">Exhaust Manifold Replacement</div>
-                        <div class="info">Fan Clutch Replacement</div>
-                        <div class="info">Front Crankshaft Seal Replacement</div>
-                        <div class="info">Fuse Replacement</div>
-                        <div class="info">Head Gasket Replacement</div>
-                        <div class="info">Heater Bypass Tube Replacement</div>
-                        <div class="info">Heater Hoses Replacement</div>
-                        <div class="info">High Pressure Safety Valve Replacement</div>
-                        <div class="info">Idle Control Valve Replacement</div>
-                        <div class="info">Idler Pulley Replacement</div>
-                        <div class="info">Intake Manifold Gaskets Replacement</div>
-                        <div class="info">Intake Manifold Runner Control Replacement</div>
-                        <div class="info">Manifold Absolute Pressure Sensor (MAP Sensor) Replacement</div>
-                        <div class="info">Oil Cooler Hose (Automatic Transmission) Replacement</div>
-                        <div class="info">Oil Cooler Lines Replacement</div>
-                        <div class="info">Oil Cooler Replacement</div>
-                        <div class="info">Oil Filter Housing Gasket Replacement</div>
-                        <div class="info">Oil Pan Gasket Replacement</div>
-                        <div class="info">Oil Pan Replacement</div>
-                        <div class="info">Oil Pressure Sensor Replacement</div>
-                        <div class="info">Oil Pump Cover Gasket Replacement</div>
-                        <div class="info">Oil Pump O Ring Replacement</div>
-                        <div class="info">Oil Return Hose Replacement</div>
-                        <div class="info">PCV Valve Hose Replacement</div>
-                        <div class="info">Points And Condenser Replacement</div>
-                        <div class="info">Positive Crankcase Ventilation (PCV) Valve Replacement</div>
-                        <div class="info">Pre Heater Hose Replacement</div>
-                        <div class="info">Pressure Test Radiator Cap Replacement</div>
-                        <div class="info">Radiator Drain Cock Replacement</div>
-                        <div class="info">Radiator Replacement</div>
-                        <div class="info">Serpentine (Drive) Belt Replacement</div>
-                        <div class="info">Speed Control Assembly Replacement</div>
-                        <div class="info">Starter Replacement</div>
-                        <div class="info">Stay Rod Replacement</div>
-                        <div class="info">Supercharger Belt Replacement</div>
-                        <div class="info">Surge Tank Hose Replacement</div>
-                        <div class="info">Thermo Coolant Fan Switch Replacement</div>
-                        <div class="info">Thermostat Replacement</div>
-                        <div class="info">Throttle Body Replacement</div>
-                        <div class="info">Throttle Kicker Actuator Replacement</div>
-                        <div class="info">Throttle Return Spring Replacement</div>
-                        <div class="info">Timing Chain Replacement</div>
-                        <div class="info">Timing Cover Gasket Replacement</div>
-                        <div class="info">Timing Cover Replacement</div>
-                        <div class="info">Timing Gears (Gear To Gear) Replacement</div>
-                        <div class="info">Top Dead Center (TDC) Sensor Replacement</div>
-                        <div class="info">Tune Up Service</div>
-                        <div class="info">Valve Cover Gasket Replacement</div>
-                        <div class="info">Variable Valve Timing (VVT) Solenoid Replacement</div>
-                        <div class="info">Vent Oil Seperator Replacement</div>
-                        <div class="info">Washer Fluid Level Switch Replacement</div>
-                        <div class="info">Wastegate Hose Replacement</div>
-                        <div class="info">Water Pump (Auxiliary) Replacement</div>
-                        <div class="info">Water Pump Pulley Replacement</div>
-                        <div class="info">Water Pump Replacement</div>
-                        <div class="info">Windshield Washer Reservoir Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s8">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all9.svg" alt=""></span>
-                    <span>Exhaust System</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s8" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Catalytic Converter Replacement</div>
-                        <div class="info">EGR Control Solenoid Replacement</div>
-                        <div class="info">EGR Pressure Feedback Sensor Replacement</div>
-                        <div class="info">EGR Temperature Sensor Replacement</div>
-                        <div class="info">EGR Vacuum Modulator Replacement</div>
-                        <div class="info">EVP Position Sensor Replacement</div>
-                        <div class="info">EVP Shut Off Solenoid Replacement</div>
-                        <div class="info">Evaporation Vent Solenoid Replacement</div>
-                        <div class="info">Evaporative Emission Control Canister Replacement</div>
-                        <div class="info">Evaporator Temperature Sensor (Switch) Replacement</div>
-                        <div class="info">Exhaust Pressure Control Valve Replacement</div>
-                        <div class="info">Exhaust Repair</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s9">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all10.svg" alt=""></span>
-                    <span>Exterior</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s9" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">License Plate Bracket Repair</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s10">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all11.svg" alt=""></span>
-                    <span>Filters</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s10" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Fan Control Module Replacement</div>
-                        <div class="info">Air Filter Replacement</div>
-                        <div class="info">Air Pump Filter Replacement</div>
-                        <div class="info">Cabin Air Filter Replacement</div>
-                        <div class="info">Crankcase Vent Filter Replacement</div>
-                        <div class="info">Fuel Filter Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s11">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all12.svg" alt=""></span>
-                    <span>Fluids</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s11" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Brake System Flush</div>
-                        <div class="info">Clutch Fluid Replacement</div>
-                        <div class="info">Cooling System Flush</div>
-                        <div class="info">Differential Fluid Replacement</div>
-                        <div class="info">Oil And Filter Change</div>
-                        <div class="info">Power Steering Fluid Service</div>
-                        <div class="info">Recharge Diesel Emissions Fluid Replacement</div>
-                        <div class="info">Top Off Coolant</div>
-                        <div class="info">Transfer Case Fluid Replacement</div>
-                        <div class="info">Transmission Fluid Service</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s12">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all13.svg" alt=""></span>
-                    <span>Fuel System</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s12" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">Carburetor Replacement</div>
-                        <div class="info">Fuel Filler Neck Replacement</div>
-                        <div class="info">Fuel Filter Replacement</div>
-                        <div class="info">Fuel Gauge Sender Replacement</div>
-                        <div class="info">Fuel Injector O Rings Replacement</div>
-                        <div class="info">Fuel Injector Replacement</div>
-                        <div class="info">Fuel Meter Assembly Replacement</div>
-                        <div class="info">Fuel Pressure Regulator Replacement</div>
-                        <div class="info">Fuel Pressure Sensor Replacement</div>
-                        <div class="info">Fuel Pump Relay Replacement</div>
-                        <div class="info">Fuel Pump Replacement</div>
-                        <div class="info">Fuel Pump Shut Off Switch Replacement</div>
-                        <div class="info">Gas Cap Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s13">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all14.svg" alt=""></span>
-                    <span>Heating And AC</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s13" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                        <div class="info">Ambient Temperature Sensor (Switch) Replacement</div>
-                        <div class="info">Blower Motor Relay Replacement</div>
-                        <div class="info">Blower Motor Switch Replacement</div>
-                        <div class="info">Condenser Fan Relay Replacement</div>
-                        <div class="info">Expansion Valve (Orifice Tube) Replacement</div>
-                        <div class="info">Heater Blower Motor Replacement</div>
-                        <div class="info">Heater Blower Motor Resistor Replacement</div>
-                        <div class="info">Heater Control Valve Replacement</div>
-                        <div class="info">Radiator Hose Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s14">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all15.svg" alt=""></span>
-                    <span>Hoses (aftet this add info)</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s14" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s15">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all16.svg" alt=""></span>
-                    <span>Ignition</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s15" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s17">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all17.svg" alt=""></span>
-                    <span>Lights</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s17" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s18">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all18.svg" alt=""></span>
-                    <span>Mirrors</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s18" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s19">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all19.svg" alt=""></span>
-                    <span>Sensors</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s19" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s20">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all20.svg" alt=""></span>
-                    <span>Switches</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s20" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s21">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all21.svg" alt=""></span>
-                    <span>Suspension And Steering</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s21" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s22">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all22.svg" alt=""></span>
-                    <span>Tires</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s22" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s23">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all23.svg" alt=""></span>
-                    <span>Windows</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s23" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-details">
-                <a class="collapsed heading" data-toggle="collapse" href="#s24">
-                    <span class="img"><img src="../../assets/images/service-icons/car-repairs/all24.svg" alt=""></span>
-                    <span>Wiper System</span>
-                    <div class="arrows img"><img src="../../assets/images/design-icons/arrow-circle-red.svg" alt="">
-                    </div>
-                </a>
-                <div id="s24" class="collapse" data-parent="#all-items-accordian">
-                    <div class="info-container">
-                        <div class="info">AC Compressor Replacement</div>
-                        <div class="info">AC Condensor Replacement</div>
-                        <div class="info">AC Evaporator Replacement</div>
-                        <div class="info">AC Freon Recharge</div>
-                        <div class="info">AC Line Leak Repair</div>
-                        <div class="info">AC Pressure Switch Replacement</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="logo after1024">
-                <!-- new -->
-                <div class="logo-img img-center"></div>
-                <div class="socials">
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Rhetorik</div>
-                <div class="body">
-                    <a>Home</a>
-                    <a href="../cities/cities.html">Cities</a>
-                    <a href="../insurance-service/landing-page/insurance-service.html">Insurance Services</a>
-                    <a href="../roadside-assistance/landing-page/roadside-assistance.html">Roadside Assistance</a>
-                    <a>Careers</a>
-                    <a>Contact Us</a>
-                    <a>Request a Demo</a>
-                    <a>Resources & blogs</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Solutions</div>
-                <div class="body">
-                    <a>For Sales Professionals</a>
-                    <a>For Marketing Leaders</a>
-                    <a>For Marketing & Demand Gen</a>
-                    <a>Professionals</a>
-                    <a>For Recruitment Professionals</a>
-                    <a>For Sales & Marketing Operations</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Products</div>
-                <div class="body">
-                    <a>NetFinder™</a>
-                    <a>DataCliniq™</a>
-                    <a>AMP™ - <br> Action Marketing Programs</a>
-                </div>
-                <div class="hideAfter1122AndShowAfter">
-                    <div class="heading">Useful Links</div>
-                    <div class="body">
-                        <a>NetFinder Login</a>
-                        <a>Privacy Policy</a>
-                        <a>Data Privacy & GDPR</a>
-                        <a>Do not sell my personal info</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="heading">Latest Resources</div>
-                <div class="body">
-                    <div>Rhetorik opens U.S. sales hub to drive growth of its European sales & marketing intelligence
-                        platform for global enterprise technology companies</div>
-                    <div>European Court rules EU-US Privacy Shield invalid. What does this mean for your data?</div>
-                    <div>UK arm of Fortune 1000 vendor use NetFinder to achieve 7 figure sales</div>
-                </div>
-            </div>
-            <div class="box showAfter1122AndHideAfter">
-                <div class="heading">Useful Links</div>
-                <div class="body">
-                    <a>NetFinder Login</a>
-                    <a>Privacy Policy</a>
-                    <a>Data Privacy & GDPR</a>
-                    <a>Do not sell my personal info</a>
-                </div>
-            </div>
-
-            <div class="logo before1024">
-                <!-- new -->
-                <div class="logo-img img-center"></div>
-                <div class="socials">
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                    <div class="img img-center"></div>
-                </div>
-            </div>
-        </footer>
-        <!-- Page End -->
-        <div class="page-end">© 2020 - Copyright Reserved CarHelpline</div>
-
-        <!-- JavaScript -->
-        <script src="../../assets/js/script.min.js"></script>
-    </body>
+	<script src="../../assets/js/script.js"></script>
+</body>
 
 </html>

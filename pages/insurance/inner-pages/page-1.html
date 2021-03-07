@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Animate.js Link -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<!-- WOW Link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- Bootstap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Insurance Services Inner Page</title>
+	<!-- Common CSS -->
+	<link rel="stylesheet" href="../../../assets/css/style.css" />
+	<style>
+		.section.gray.points-scrollable .points-wrapper {
+			margin-bottom: 5em;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="modal-container" id="phoneModel">
+		<div class="content" data-wow-delay="0.5s">
+			<div class="header">
+				<div class="heading md"><span>Support</span></div>
+				<img onclick="closeModal('phoneModel')" src="../../../assets/svgs/modal/cross.svg" alt="" />
+			</div>
+			<div class="info-container">
+				<div class="info">
+					<img src="../../../assets/svgs/modal/privacy-policy.svg" alt="" />
+					<div class="body">Privacy Policy</div>
+				</div>
+				<div class="info">
+					<img src="../../../assets/svgs/modal/terms-conditions.svg" alt="" />
+					<div class="body">Terms & Conditions</div>
+				</div>
+			</div>
+			<div class="info-container with-border">
+				<div class="info">
+					<img src="../../../assets/svgs/modal/phone.svg" alt="" />
+					<div class="body">(03) 111 - 681 - 111</div>
+				</div>
+				<div class="info">
+					<img src="../../../assets/svgs/modal/whatsapp.svg" alt="" />
+					<div class="body">0312 - 3952100</div>
+				</div>
+				<div class="info">
+					<img src="../../../assets/svgs/modal/email.svg" alt="" />
+					<div class="body">support@carhelpline.pk</div>
+				</div>
+			</div>
+			<div class="body">
+				Our WhatsApp number cannot be used for calls. This is a chat only
+				number
+			</div>
+		</div>
+	</div>
+	<nav>
+		<a href="../../../index.html" class="logo">
+			<img src="../../../assets/svgs/nav/logo.svg" alt="" />
+		</a>
+		<div class="after-1100">
+			<img onclick="openNav()" src="../../../assets/svgs/nav/toggle-btn.svg" alt="" class="toggle-btn" />
+			<div class="heading sm">CarHelpline</div>
+			<img onclick="openModal('phoneModel')" src="../../../assets/svgs/nav/responsive-nav-phone.svg" alt="" class="headset" />
+		</div>
+		<div class="links-container" id="nav-menu">
+			<div class="after-1100">
+				<div class="logo">
+					<div onclick="window.location.href = '../../../index.html'" style="cursor: pointer;">
+						<img src="../../../assets/svgs/nav/logo.svg" alt="" />
+						<div class="heading sm">CarHelpline</div>
+					</div>
+					<img onclick="closeNav()" src="../../../assets/svgs/nav/cross.svg" alt="" />
+				</div>
+				<div class="info-container">
+					<div class="info">
+						<img src="../../../assets/svgs/nav/responsive-nav-header-email.svg" alt="" />
+						<div class="body">Hello@carHelpline.com</div>
+					</div>
+					<div class="info">
+						<img src="../../../assets/svgs/nav/responsive-nav-header-phone.svg" alt="" />
+						<div class="body">(03) 111-681-111</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Car Repair</div>
+						<img src="../../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../../car-repairs/inner-pages/page-1.html">
+								<img src="../../../assets/svgs/other-icons/icon-9.svg" alt="" />
+								<div class="body">Mechanical System</div>
+							</a>
+							<a href="../../car-repairs/inner-pages/page-2.html">
+								<img src="../../../assets/svgs/other-icons/icon-22.svg" alt="" />
+								<div class="body">Electrical System</div>
+							</a>
+							<a href="../../car-repairs/inner-pages/page-3.html">
+								<img src="../../../assets/svgs/other-icons/icon-inspection.svg" alt="" />
+								<div class="body">Inspection & Diagnostic</div>
+							</a>
+							<a href="../../car-repairs/inner-pages/page-4.html">
+								<img src="../../../assets/svgs/other-icons/icon-20.svg" alt="" />
+								<div class="body">Heading & Air Conditioning</div>
+							</a>
+							<a href="../../car-repairs/inner-pages/page-5.html">
+								<img src="../../../assets/svgs/other-icons/icon-16.svg" alt="" />
+								<div class="body">General Maintenance</div>
+							</a>
+							<a href="../../car-repairs/inner-pages/page-6.html">
+								<img src="../../../assets/svgs/other-icons/icon-4.svg" alt="" />
+								<div class="body">Exterior & Body Parts</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Roadside Assistance</div>
+						<img src="../../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../../roadside-assistance/inner-pages/page-1.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-mechanical-breakdown.svg" alt="" />
+								<div class="body">Mechanical Breakdown</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-2.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-electric-breakdown.svg" alt="" />
+								<div class="body">Electrical Breakdown</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-3.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-car-towing.svg" alt="" />
+								<div class="body">Car Towing</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-4.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-battery-replacement.svg" alt="" />
+								<div class="body">Battery Replacement</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-5.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-key-lockout.svg" alt="" />
+								<div class="body">Key Lockout</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-6.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-flat-tyre.svg" alt="" />
+								<div class="body">Flat Tyre</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-7.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-out-of-fuel.svg" alt="" />
+								<div class="body">Out of Fuel</div>
+							</a>
+							<a href="../../roadside-assistance/inner-pages/page-8.html">
+								<img src="../../../assets/svgs/roadside-assistance/icon-female-scooty.svg" alt="" />
+								<div class="body">Female Scooty</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../../care-package/care-package.html">
+					<div class="body">Car Care Packages</div>
+				</a>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Insurance Services</div>
+						<img src="../../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../../insurance/inner-pages/page-1.html">
+								<img src="../../../assets/svgs/insurance/icon-car-insurance.svg" alt="" />
+								<div class="body">Car Insurance</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-2.html">
+								<img src="../../../assets/svgs/insurance/icon-takaful.svg" alt="" />
+								<div class="body">Takaful (Islamic)</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-3.html">
+								<img src="../../../assets/svgs/insurance/icon-travel-insurance.svg" alt="" />
+								<div class="body">Travel Insurance</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-4.html">
+								<img src="../../../assets/svgs/insurance/icon-health-insurance.svg" alt="" />
+								<div class="body">Health Insurance</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-5.html">
+								<img src="../../../assets/svgs/insurance/icon-car-tracker.svg" alt="" />
+								<div class="body">Car Tracker</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-6.html">
+								<img src="../../../assets/svgs/insurance/icon-corporate-insurance.svg" alt="" />
+								<div class="body">Corporate Insurancel</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-7.html">
+								<img src="../../../assets/svgs/insurance/icon-micro-insurance.svg" alt="" />
+								<div class="body">Microinsurance</div>
+							</a>
+							<a href="../../insurance/inner-pages/page-8.html">
+								<img src="../../../assets/svgs/insurance/icon-roadside-coverage.svg" alt="" />
+								<div class="body">Roadside Coverage</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../../fleet-services/fleet-services.html">
+					<div class="body">Fleet Services</div>
+				</a>
+				<a href="../../contact/contact.html">
+					<div class="body">Contact Us</div>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="wow fadeIn header first bg-img">
+		<div class="txt-container">
+			<div class="heading lg">Car <span>Insurance</span></div>
+			<div class="body">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+				rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+				ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+				takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+				amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+				kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+				amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+				erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+				et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+				sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+				et justo duo r
+			</div>
+		</div>
+	</div>
+
+	<div class="wow fadeIn section">
+		<div class="package-box">
+			<div class="wrapper">
+				<div class="colored-border-vid">
+					<video class="video" controls>
+						<source src="movie.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<div class="txt-container">
+					<div class="info-box">
+						<div class="name">
+							<div class="heading md">Car Insurance</div>
+							<div class="body">
+								<div class="icon sm">
+									<img src="../../../assets/svgs/red-circle-icons/tag.svg" alt="" />
+								</div>
+								You Save Rs. 500
+							</div>
+						</div>
+						<div class="price">
+							<div class="body">Offer Price</div>
+							<div class="heading lg"><span>Rs. 1,000</span></div>
+							<div class="body">Rs. 1,500</div>
+						</div>
+					</div>
+					<div class="expire-info">
+						<div class="body">Expires in</div>
+						<div class="body">26 days 3 hrs 33 mins 31 secs</div>
+					</div>
+					<div class="coupon body">
+						Use Coupon : BATTERY10 To Get The Offer
+					</div>
+					<div class="info-list">
+						<div class="list">
+							<div class="icon sm">
+								<img src="../../../assets/svgs/red-circle-icons/tag.svg" alt="" />
+							</div>
+							<div class="body">
+								Use Coupon <span>'BATTERY10'</span> to Get The Offer
+							</div>
+						</div>
+						<div class="list">
+							<div class="icon sm">
+								<img src="../../../assets/svgs/red-circle-icons/truck.svg" alt="" />
+							</div>
+							<div class="body">Service @ Doorstep</div>
+						</div>
+					</div>
+					<button class="primary-btn">Book Now</button>
+				</div>
+			</div>
+			<div class="package-box-lists">
+				<div class="list">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/red-tick.svg" alt="" />
+					</div>
+					<div class="body">Convenient Service at Doorstep</div>
+				</div>
+				<div class="list">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/red-tick.svg" alt="" />
+					</div>
+					<div class="body">Free Installation</div>
+				</div>
+				<div class="list">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/red-tick.svg" alt="" />
+					</div>
+					<div class="body">30 Mins Quick Service</div>
+				</div>
+				<div class="list">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/red-tick.svg" alt="" />
+					</div>
+					<div class="body">Unmatched Price</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="wow fadeIn heading lg center">
+			What’s Covered in <span>CarHelpline</span>
+		</div>
+		<div class="info-container grid-3 center with-shadow">
+			<div data-wow-delay="0.0s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-accidents.svg" alt="" />
+				</div>
+				<div class="heading sm">Accidents</div>
+				<div class="body">
+					Damages and losses that may arise out of accidents and collisions.
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-theft.svg" alt="" />
+				</div>
+				<div class="heading sm">Theft</div>
+				<div class="body">
+					Covers for the losses incurred when your car is unfortunately stolen
+				</div>
+			</div>
+			<div data-wow-delay="0.4s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-fire.svg" alt="" />
+				</div>
+				<div class="heading sm">Fire</div>
+				<div class="body">
+					Damages and losses caused to your car due to an accidental fire
+				</div>
+			</div>
+			<div data-wow-delay="0.8s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-natural-disasters.svg" alt="" />
+				</div>
+				<div class="heading sm">Natural Disasters</div>
+				<div class="body">
+					Damages and losses to your car in case of natural calamities such as
+					floods, cyclones, etc.
+				</div>
+			</div>
+			<div data-wow-delay="1.0s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-natural-disasters.svg" alt="" />
+				</div>
+				<div class="heading sm">Add later</div>
+				<div class="body">
+					If there is a car accident and unfortunately, it leads to death or
+					disability of the owner.
+				</div>
+			</div>
+			<div data-wow-delay="1.2s" class="wow fadeInUp info-box">
+				<div class="icon md">
+					<img src="../../../assets/svgs/whats-covered/icon-third-party-losses.svg" alt="" />
+				</div>
+				<div class="heading sm">Third Party Losses</div>
+				<div class="body">
+					In cases where your car causes damages and losses to someone else,
+					their car or property
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wow fadeIn section gray">
+		<div class="heading lg center">
+			Add-on Covers with <span>CarHelpline</span>
+		</div>
+		<div class="body center">
+			Car insurance add-ons which you can buy with your car insurance policy
+		</div>
+		<div class="info-container grid-3 with-shadow">
+			<div class="info-box">
+				<div class="heading sm">Zero Depreciation Cover</div>
+				<div class="body">
+					Ideal for cars less than 5 years old,
+					<span>zero depreciation cover</span> allows you to nullify the
+					depreciation charged on your car and its parts and gives you the
+					full value of repairs, costs and replacements during a claim.
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="heading sm">Return to Invoice Cover</div>
+				<div class="body">
+					In case of theft or damages beyond repair,
+					<span>return to invoice add-on</span> gives you the benefit of
+					getting back the complete amount of your car's invoice value,
+					including the cost of registering a new vehicle and its road tax
+					respectively.
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="heading sm">Return to Invoice Cover</div>
+				<div class="body">
+					In case of theft or damages beyond repair,
+					<span>return to invoice add-on</span> gives you the benefit of
+					getting back the complete amount of your car's invoice value,
+					including the cost of registering a new vehicle and its road tax
+					respectively.
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="heading sm">Tyre Protect Cover</div>
+				<div class="body">
+					Generally, tyre damage isn't covered in standard insurance unless
+					the damage takes place during an accident. That's why this
+					<span>tyre protect add-on</span> gives you the benefit to safeguard
+					and cover for tyre damages such as tyre bursts, bulges or cuts
+					during all other situations possible.
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="heading sm">Breakdown Assistance</div>
+				<div class="body">
+					We all need a little help sometimes! Our
+					<span>Breakdown Assistance Add-On</span> gives you the benefit of
+					taking help whenever required, i.e assistance during car breakdowns
+					at any time you'd like. The best part? It doesn't even count as a
+					claim!
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="heading sm">Consumable Cover</div>
+				<div class="body">
+					A <span>consumable cover</span> gives your car an additional layer
+					of protection. It covers the cost for all your car's nitty-gritties,
+					such as the engine oils, screws, nuts and bolts, grease, etc in a
+					situation of an accident.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="wow fadeIn heading lg center">What’s <span>not Covered</span></div>
+		<div class="wow fadeIn body center">
+			It is equally important to know what’s not covered in your car insurance
+			policy, so that there are no surprises when you make a claim. Here are
+			some such situations:
+		</div>
+		<div class="info-container grid-3 with-black-border">
+			<div data-wow-delay="0.0s" class="wow fadeInUp info-box">
+				<div class="heading sm">
+					Own Damages for Third-Party Policy holder
+				</div>
+				<div class="body">
+					In the case of a Third-Party or Liability Only Car Policy, damages
+					to own vehicle won’t be covered.
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInUp info-box">
+				<div class="heading sm">Drunk Driving or without a Licence</div>
+				<div class="body">
+					You were driving drunk or without a valid driving licence.
+				</div>
+			</div>
+			<div data-wow-delay="0.4s" class="wow fadeInUp info-box">
+				<div class="heading sm">
+					Driving without a valid Driving Licence holder
+				</div>
+				<div class="body">
+					You hold a learner’s licence and were driving without a valid
+					driving licence-holder in the front passenger seat.
+				</div>
+			</div>
+			<div data-wow-delay="0.8s" class="wow fadeInUp info-box">
+				<div class="heading sm">Consequential Damages</div>
+				<div class="body">
+					Any damage which is not a direct result of the accident (e.g. after
+					an accident, if the damaged car is driven incorrectly and the engine
+					gets damaged, it will not be covered)
+				</div>
+			</div>
+			<div data-wow-delay="1.0s" class="wow fadeInUp info-box">
+				<div class="heading sm">Contributory Negligences</div>
+				<div class="body">
+					Any contributory negligence(e.g. damage due to driving a car in a
+					flood, which is not recommended as per the manufacturer’s driving
+					manual, will not be covered).
+				</div>
+			</div>
+			<div data-wow-delay="1.2s" class="wow fadeInUp info-box">
+				<div class="heading sm">Add-ons not Bought</div>
+				<div class="body">
+					Some situations are covered in add-ons. If you haven’t bought those
+					add-ons, the corresponding situations will not be covered.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wow fadeIn section">
+		<div class="heading lg center">
+			Key Features of Car Insurance by <span>CarHelpline</span>
+		</div>
+		<div class="grid-tbl features-tbl all-borders">
+			<div class="grid-row">
+				<div class="grid-cell tbl-heading">Key Features</div>
+				<div class="grid-cell tbl-heading">CarHelpline Benefit</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Premium</div>
+				<div class="grid-cell tbl-body">Starting from Rs.</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">No Claim Bonus</div>
+				<div class="grid-cell tbl-body">Up to 50% Discount</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Customizable Add-Ons</div>
+				<div class="grid-cell tbl-body">7 Add-ons available</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Cashless Repairs</div>
+				<div class="grid-cell tbl-body">
+					Available at 1400+ Garages with Doorstep Pickup & Drop
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Claim Process</div>
+				<div class="grid-cell tbl-body">
+					Smartphone-enabled Claim process. Can be done online within 7
+					minutes!
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Claim Settlement Ratio</div>
+				<div class="grid-cell tbl-body">
+					96% Claims Settled for Private Cars *
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Own Damage Cover</div>
+				<div class="grid-cell tbl-body">Available</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Damages to Third-Party</div>
+				<div class="grid-cell tbl-body">
+					Unlimited Liability for Personal Damages, Up to 7.5 Lakhs for
+					Property/Vehicle Damages
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section gray points-scrollable">
+		<div class="wow fadeIn heading lg center">
+			Car Insurance plans that <span>fit your needs</span>
+		</div>
+		<div class="points-wrapper">
+			<div data-wow-delay="0.0s" class="wow fadeInUp point">
+				<img src="../../../assets/svgs/charts/car-quarter-circle-chart.svg" alt="" />
+				<div class="heading sm">Third party</div>
+				<div class="body">
+					A Third-party car insurance is one of the most common types of car
+					insurance; in which only damages & losses caused to a third-party
+					person, vehicle or property are covered.
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInUp point">
+				<img src="../../../assets/svgs/charts/car-full-circle-chart.svg" alt="" />
+				<div class="heading sm">Comprehensive</div>
+				<div class="body">
+					A Comprehensive car insurance is one of the most valuable types of
+					car insurance that covers both third-party liabilities and damages
+					to your own car as well.
+				</div>
+			</div>
+		</div>
+		<div class="wow fadeIn grid-tbl plans-tbl">
+			<div class="grid-row">
+				<div class="grid-cell tbl-heading"></div>
+				<div class="grid-cell tbl-heading center">Third-Party</div>
+				<div class="grid-cell tbl-heading center">Comprehensive</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">
+					Damages/Losses to own car due to an accident
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">
+					Damages/Losses to own car in case of fire
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">
+					Damages/Losses to own car in case of a natural calamity
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Damages to Third-Party Vehicle</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Personal Accident Cover</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">
+					injuries/Death of a Third-Party Person
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Theft of your car</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Doorstep Pick-Up & Drop</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">Customize your IDV</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body">
+					Extra protection with customized add-ons
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/wrong.svg" alt="" />
+					</div>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<div class="icon sm">
+						<img src="../../../assets/svgs/design/correct.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell tbl-body"></div>
+				<div class="grid-cell tbl-body center-icon">
+					<button class="primary-btn sm">Get Quote</button>
+				</div>
+				<div class="grid-cell tbl-body center-icon">
+					<button class="primary-btn sm">Get Quote</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="wow fadeIn heading lg center">
+			How to file a <span>Car Insurance Claim?</span>
+		</div>
+		<div class="wow fadeIn body center">
+			After you buy or renew our car insurance plan, you live tension free as
+			we have a 3-step, completely digital claims process!
+		</div>
+		<div class="steps-container">
+			<div data-wow-delay="0.0s" class="wow fadeInLeft step">
+				<div class="heading sm">01</div>
+				<div class="body bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing.
+				</div>
+				<div class="body">
+					Voluptas reprehenderit nesciunt repellat explicabo quod
+					exercitationem eaque architecto quo! Cumque.
+				</div>
+			</div>
+			<div data-wow-delay="0.2s" class="wow fadeInLeft step">
+				<div class="heading sm">02</div>
+				<div class="body bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing.
+				</div>
+				<div class="body">
+					Voluptas reprehenderit nesciunt repellat explicabo quod
+					exercitationem eaque architecto quo! Cumque.
+				</div>
+			</div>
+			<div data-wow-delay="0.4s" class="wow fadeInLeft step">
+				<div class="heading sm">03</div>
+				<div class="body bold">
+					Lorem ipsum, dolor sit amet consectetur adipisicing.
+				</div>
+				<div class="body">
+					Voluptas reprehenderit nesciunt repellat explicabo quod
+					exercitationem eaque architecto quo! Cumque.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wow fadeIn section gray">
+		<div class="heading lg center">
+			FAQ's related to buying <span>Car Insurance Online</span>
+		</div>
+		<div class="body center">
+			Of course, you may have more questions related to renewing or buying car
+			insurance only, so scroll down and find your question answered!
+		</div>
+		<div id="faqs-accordian" class="accordian grid-2">
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-1">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-1" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-2">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-2" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-3">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-3" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-4">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-4" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-5">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-5" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-6">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-6" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-7">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-7" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#faqs-accordian-8">
+					<div class="body">Why do I need car insurance?</div>
+					<div class="icon sm icon-plus">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+							<g transform="translate(17976.301 -9898.5)">
+								<path d="M18,12V28" transform="translate(-17984.801 9888)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path d="M12,18H28" transform="translate(-17986.801 9890)" fill="none" stroke="var(--icon-plus-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="faqs-accordian-8" class="collapse card-body" data-parent="#faqs-accordian">
+					<div class="body">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						beatae numquam cum aperiam adipisci tempora, iusto explicabo
+						corrupti quid.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="wow fadeIn section">
+		<div id="footerAccordian" class="accordian">
+			<div class="card">
+				<a class="collapsed card-link" aria-expanded="true" data-toggle="collapse" href="#footerAccordian-1">
+					<div class="heading sm">CarHelpline Pages</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-1" class="collapse show card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="../../car-repairs/car-repairs.html">Car Repair Landing</a>
+						<a href="../../car-repairs/middle-page.html">Car Repair Middle</a>
+						<a href="../../cities/cities.html">Cities</a>
+						<a href="../../error-pages/404.html">404</a>
+						<a href="../../download-now/download-now.html">Download</a>
+						<a href="../../refer-a-friend/refer-a-friend.html">Refer a friend</a>
+						<a href="../../about/about.html">About</a>
+						<a href="../../roadside-assistance/roadside-assistance.html">Roadside Assistance</a>
+						<a href="../../insurance/insurance.html">Insurance</a>
+						<a href="../../car-model/car-model.html">Car Model</a>
+						<a href="">Gift Cards</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-2">
+					<div class="heading sm">Services</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-2" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple Music</a>
+						<a href="">Apple TV+</a>
+						<a href="">Apple Fitness+</a>
+						<a href="">Apple News+</a>
+						<a href="">Apple Arcade</a>
+						<a href="">iCloud</a>
+						<a href="">Apple One</a>
+						<a href="">Apple Card</a>
+						<a href="">Apple Books</a>
+						<a href="">App Store</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-3">
+					<div class="heading sm">Account</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-3" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Manage Your Apple ID</a>
+						<a href="">Apple Store Account</a>
+						<a href="">iCloud.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-5">
+					<div class="heading sm">Apple Store</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-5" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Find a Store</a>
+						<a href="">Shop Online</a>
+						<a href="">Genius Bar</a>
+						<a href="">Today at Apple</a>
+						<a href="">Apple Camp</a>
+						<a href="">Apple Store App</a>
+						<a href="">Refurbished and Clearance</a>
+						<a href="">Financing</a>
+						<a href="">Apple Trade In</a>
+						<a href="">Order Status</a>
+						<a href="">Shopping Help</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-6">
+					<div class="heading sm">For Business</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-6" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Business</a>
+						<a href="">Shop for Business</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-7">
+					<div class="heading sm">For Education</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-7" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Education</a>
+						<a href="">Shop for K-12</a>
+						<a href="">Shop for College</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-8">
+					<div class="heading sm">For Healthcare</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-8" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple in Healthcare</a>
+						<a href="">Health on Apple Watch</a>
+						<a href="">Health Records on iPhone</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-9">
+					<div class="heading sm">For Government</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-9" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Shop for Government</a>
+						<a href="">Shop for Veterans and Military</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-10">
+					<div class="heading sm">Apple Values</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-10" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Accessibility</a>
+						<a href="">Education</a>
+						<a href="">Environment</a>
+						<a href="">Inclusion and Diversity</a>
+						<a href="">Privacy</a>
+						<a href="">Racial Equity and Justice</a>
+						<a href="">Supplier Responsibility</a>
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="../../../assets/svgs/nav/logo.svg" alt="">
+				<div class="socials">
+					<a href=""><img src="../../../assets/svgs/socials/facebook.svg" alt=""></a>
+					<a href=""><img src="../../../assets/svgs/socials/instagram.svg" alt=""></a>
+					<a href=""><img src="../../../assets/svgs/socials/linkdin.svg" alt=""></a>
+					<a href=""><img src="../../../assets/svgs/socials/twitter.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="txt-container">
+			<div class="body">More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</div>
+			<div class="body">Copyright © 2021 Apple Inc. All rights reserved.</div>
+			<div class="body">Privacy Policy <span>&#8739;</span> Terms of Use <span>&#8739;</span> Sales and Refunds <span>&#8739;</span> Legal <span>&#8739;</span> Site Map</div>
+		</div>
+	</footer>
+
+	<script src="../../../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="icon-11" transform="translate(9785 3358)">
+    <rect id="Rectangle_515" data-name="Rectangle 515" width="80" height="80" transform="translate(-9785 -3358)" fill="#fff"/>
+    <g id="_003-car" data-name="003-car" transform="translate(-9783.4 -3327.334)">
+      <g id="Group_5614" data-name="Group 5614" transform="translate(0 0)">
+        <g id="Group_5613" data-name="Group 5613" transform="translate(0 0)">
+          <path id="Path_6832" data-name="Path 6832" d="M75.4,118.687a11.417,11.417,0,0,1-10.224-6.262V112.3C65.18,96.87,55.4,88.02,38.341,88.02,22.421,88.014,0,95.554,0,112.3s22.421,24.283,38.341,24.283H75.4a1.278,1.278,0,0,0,1.278-1.278V119.965A1.278,1.278,0,0,0,75.4,118.687ZM2.556,112.3c0-14.825,21.354-21.727,35.785-21.727C54,90.57,62.624,98.287,62.624,112.3S54,134.023,38.341,134.023C23.91,134.023,2.556,127.122,2.556,112.3Zm71.571,21.727H52.19c7.227-3.154,11.616-9.166,12.7-17.532a14.186,14.186,0,0,0,9.236,4.693Z" transform="translate(0 -88.02)" stroke="#fff" stroke-width="0.2"/>
+        </g>
+      </g>
+      <g id="Group_5616" data-name="Group 5616" transform="translate(5.112 5.106)">
+        <g id="Group_5615" data-name="Group 5615" transform="translate(0 0)">
+          <path id="Path_6833" data-name="Path 6833" d="M64.291,119.98C50.882,119.98,32,125.928,32,139.151s18.882,19.171,32.291,19.171c14.4,0,22.665-6.987,22.665-19.171S78.695,119.98,64.291,119.98Zm0,35.785c-11.992,0-29.735-5.281-29.735-16.615S52.3,122.536,64.291,122.536c7.51,0,20.109,2.159,20.109,16.615S71.8,155.765,64.291,155.765Z" transform="translate(-32 -119.98)" fill="#ff4612" stroke="#fff" stroke-width="0.2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

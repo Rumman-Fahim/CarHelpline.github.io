@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="wrong" transform="translate(17867 -9887.999)">
+    <path id="Icon_metro-cross" data-name="Icon metro-cross" d="M23.229,18.678h0L16.9,12.352l6.325-6.325h0a.653.653,0,0,0,0-.921L20.241,2.118a.653.653,0,0,0-.921,0h0L13,8.443,6.67,2.118h0a.653.653,0,0,0-.921,0L2.761,5.106a.653.653,0,0,0,0,.921h0l6.325,6.325L2.761,18.677h0a.653.653,0,0,0,0,.921l2.988,2.988a.653.653,0,0,0,.921,0h0L13,16.262l6.325,6.325h0a.653.653,0,0,0,.921,0L23.229,19.6a.653.653,0,0,0,0-.921Z" transform="translate(-17859.57 9896.072)" fill="red"/>
+    <circle id="Ellipse_725" data-name="Ellipse 725" cx="20" cy="20" r="20" transform="translate(-17867 9887.999)" fill="none"/>
+  </g>
+</svg>

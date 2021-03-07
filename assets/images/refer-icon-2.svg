@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="99.998" height="99.999" viewBox="0 0 99.998 99.999">
-  <g id="two-people-black-circle" transform="translate(-0.024 -0.761)">
-    <path id="Path_7598" data-name="Path 7598" d="M50.024,100.76a50,50,0,1,0-50-50A50,50,0,0,0,50.024,100.76Z" fill="#ff4612" fill-rule="evenodd"/>
-    <circle id="Ellipse_702" data-name="Ellipse 702" cx="9" cy="9" r="9" transform="translate(32.524 28.761)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
-    <path id="Path_7599" data-name="Path 7599" d="M27.524,69.761v-12a4,4,0,0,1,4-4h20a4,4,0,0,1,4,4v12" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
-    <circle id="Ellipse_703" data-name="Ellipse 703" cx="7.5" cy="7.5" r="7.5" transform="translate(54.524 35.761)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
-    <path id="Path_7600" data-name="Path 7600" d="M73.524,69.761v-8a4,4,0,0,0-4-4h-9" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
-  </g>
-</svg>

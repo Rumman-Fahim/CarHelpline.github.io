@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="802" viewBox="0 0 1920 802">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_657" data-name="Rectangle 657" width="1920" height="802" transform="translate(0 227)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_7425" data-name="Group 7425" transform="translate(0 -321)">
+    <g id="Group_5129" data-name="Group 5129" transform="translate(501.332 766.156)" opacity="0.5">
+      <line id="Line_4" data-name="Line 4" x1="19.729" transform="translate(21.246)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_5" data-name="Line 5" x1="39.458" transform="translate(11.381 6.07)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_6" data-name="Line 6" x1="51.599" transform="translate(5.312 12.14)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_7" data-name="Line 7" x1="58.428" transform="translate(2.275 17.453)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_8" data-name="Line 8" x1="61.463" transform="translate(0.758 23.523)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_9" data-name="Line 9" x1="62.222" transform="translate(0 29.593)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_10" data-name="Line 10" x1="61.463" transform="translate(0.758 35.664)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_11" data-name="Line 11" x1="58.428" transform="translate(2.275 41.734)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_12" data-name="Line 12" x1="51.38" y2="0.218" transform="translate(5.312 47.586)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_13" data-name="Line 13" x1="40.975" transform="translate(10.622 53.116)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_14" data-name="Line 14" x1="20.488" transform="translate(21.246 59.187)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <g id="Group_7424" data-name="Group 7424">
+      <g id="Group_5168" data-name="Group 5168">
+        <g id="Mask_Group_15" data-name="Mask Group 15" transform="translate(0 94)" clip-path="url(#clip-path)">
+          <g id="Group_7423" data-name="Group 7423">
+            <g id="Group_5132" data-name="Group 5132" transform="translate(1859.777 227.168)" opacity="0.5">
+              <line id="Line_4-2" data-name="Line 4" x1="33.998" transform="translate(36.612)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_5-2" data-name="Line 5" x1="67.995" transform="translate(19.613 10.46)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_6-2" data-name="Line 6" x1="88.917" transform="translate(9.153 20.921)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_7-2" data-name="Line 7" x1="100.685" transform="translate(3.921 30.075)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_8-2" data-name="Line 8" x1="105.916" transform="translate(1.307 40.535)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_9-2" data-name="Line 9" x1="107.223" transform="translate(0 50.996)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_10-2" data-name="Line 10" x1="105.916" transform="translate(1.307 61.457)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_11-2" data-name="Line 11" x1="100.685" transform="translate(3.921 71.917)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_12-2" data-name="Line 12" x1="88.539" y2="0.376" transform="translate(9.153 82.002)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_13-2" data-name="Line 13" x1="70.61" transform="translate(18.305 91.532)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+              <line id="Line_14-2" data-name="Line 14" x1="35.305" transform="translate(36.612 101.993)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2.5"/>
+            </g>
+            <g id="Ellipse_69" data-name="Ellipse 69" transform="translate(-62 903)" fill="none" stroke="#ff4612" stroke-width="40" opacity="0.5">
+              <ellipse cx="62" cy="63" rx="62" ry="63" stroke="none"/>
+              <ellipse cx="62" cy="63" rx="42" ry="43" fill="none"/>
+            </g>
+            <g id="Ellipse_68" data-name="Ellipse 68" transform="translate(1768 440)" fill="none" stroke="#ff4612" stroke-width="104" opacity="0.5">
+              <circle cx="152" cy="152" r="152" stroke="none"/>
+              <circle cx="152" cy="152" r="100" fill="none"/>
+            </g>
+            <g id="Group_5124" data-name="Group 5124" transform="translate(0.559 620.441) rotate(-90)" opacity="0.5">
+              <line id="Line_9-3" data-name="Line 9" x1="141" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+              <line id="Line_10-3" data-name="Line 10" x1="139" transform="translate(1 13)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+              <line id="Line_11-3" data-name="Line 11" x1="131" y2="0.201" transform="translate(5 25.799)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+              <line id="Line_12-3" data-name="Line 12" x1="117" transform="translate(12 40)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+              <line id="Line_13-3" data-name="Line 13" x1="87.071" transform="translate(25.464 53.985)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+              <line id="Line_14-3" data-name="Line 14" x1="43.536" transform="translate(48.039 66.885)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="2"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group_5123" data-name="Group 5123" transform="translate(1505.5 768.5)" opacity="0.5">
+        <line id="Line_4-3" data-name="Line 4" x1="26" transform="translate(28)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_5-3" data-name="Line 5" x1="52" transform="translate(15 8)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_6-3" data-name="Line 6" x1="68" transform="translate(7 16)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_7-3" data-name="Line 7" x1="77" transform="translate(3 23)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_8-3" data-name="Line 8" x1="81" transform="translate(1 31)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_9-4" data-name="Line 9" x1="82" transform="translate(0 39)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_10-4" data-name="Line 10" x1="81" transform="translate(1 47)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_11-4" data-name="Line 11" x1="77" transform="translate(3 55)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_12-4" data-name="Line 12" x1="68" y1="1" transform="translate(7 63)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_13-4" data-name="Line 13" x1="54" transform="translate(14 70)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+        <line id="Line_14-4" data-name="Line 14" x1="27" transform="translate(28 78)" fill="none" stroke="#ff4612" stroke-linecap="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

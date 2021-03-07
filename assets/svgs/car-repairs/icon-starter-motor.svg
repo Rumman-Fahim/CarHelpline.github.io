@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="icon-starter-motor" transform="translate(15540 -10582)">
+    <rect id="Rectangle_614" data-name="Rectangle 614" width="80" height="80" transform="translate(-15540 10582)" fill="#fff"/>
+    <g id="Group_7367" data-name="Group 7367" transform="translate(-15531 10595.044)">
+      <g id="replace-starter-motor" transform="translate(0 0)">
+        <g id="Group_4395" data-name="Group 4395" transform="translate(0)">
+          <path id="Path_3064" data-name="Path 3064" d="M73.389,35.189V32.468a1.361,1.361,0,0,0-1.362-1.36H67.94V28.387a6.816,6.816,0,0,0-6.813-6.8H37.963V12.058A1.361,1.361,0,0,0,36.6,10.7H33.876V7.977H31.151V10.7H28.426a1.362,1.362,0,0,0-1.362,1.361v9.524H14.8a6.815,6.815,0,0,0-6.812,6.8V65.124a8.175,8.175,0,0,0,16.349,0V59.681H61.127a6.815,6.815,0,0,0,6.812-6.8V50.157h4.089a1.361,1.361,0,0,0,1.361-1.36ZM22.009,65.124c0,3.005-2.835,6.266-5.846,6.266s-5.82-3.261-5.82-6.266V59.681H22.009Zm0-7.532H10.342v-29.2A4.775,4.775,0,0,1,14.8,23.9h7.208ZM28.925,12.6h7.253v3.541H28.925Zm0,5.492h7.253v3.492H28.925Zm22.993,39.5H24.338V50.157h27.58v7.435Zm0-9.5H24.338V23.9h27.58V48.087ZM65.957,32.468V52.877c0,2.255-2.573,4.714-4.83,4.714H54.314V23.9h6.812c2.258,0,4.831,2.229,4.831,4.484Zm5.637,4.081V48.087H67.94V33.2h3.655Z" transform="translate(-7.989 -7.977)"/>
+        </g>
+      </g>
+      <g id="replace-starter-motor-2" data-name="replace-starter-motor" transform="translate(19.074 0)">
+        <g id="Group_4395-2" data-name="Group 4395" transform="translate(0)">
+          <path id="Path_3064-2" data-name="Path 3064" d="M32.908,21.584V12.058a1.362,1.362,0,0,0-1.362-1.36H28.821V7.977H26.1V10.7H23.37a1.362,1.362,0,0,0-1.362,1.361v9.524c2.029.009,1.24-.007,4.082,0,.627.006,1.895.068,4.571,0A16.743,16.743,0,0,0,32.908,21.584ZM23.869,12.6h7.253v3.541H23.869Zm0,5.492h7.253v3.492H23.869Z" transform="translate(-22.008 -7.977)" fill="#ff4612"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

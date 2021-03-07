@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="circle-red-cash" transform="translate(17566 -9606)">
+    <circle id="Ellipse_716" data-name="Ellipse 716" cx="40" cy="40" r="40" transform="translate(-17566 9606)" fill="#fd461d"/>
+    <g id="Group_7322" data-name="Group 7322" transform="translate(-531 -2276)">
+      <g id="dollar-sign-black-circle" transform="translate(-17045.414 11872.238)">
+        <circle id="Ellipse_704" data-name="Ellipse 704" cx="21" cy="21" r="21" transform="translate(29.524 29.761)" fill="none" stroke="#fff" stroke-width="2"/>
+        <path id="Path_7602" data-name="Path 7602" d="M56.524,44.761c0-2.761-2.686-5-6-5s-6,2.239-6,5" fill="none" stroke="#fff" stroke-width="2"/>
+        <path id="Path_7603" data-name="Path 7603" d="M44.524,56.761c0,2.761,2.686,5,6,5s6-2.239,6-5" fill="none" stroke="#fff" stroke-width="2"/>
+        <path id="Path_7604" data-name="Path 7604" d="M56.524,56.761c0-7.636-12-4.364-12-12" fill="none" stroke="#fff" stroke-width="2"/>
+        <path id="Path_7605" data-name="Path 7605" d="M50.524,40.761v-5" fill="none" stroke="#fff" stroke-width="2"/>
+        <path id="Path_7606" data-name="Path 7606" d="M50.524,65.761v-5" fill="none" stroke="#fff" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

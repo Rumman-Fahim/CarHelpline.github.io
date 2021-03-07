@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8.5" height="8.5" viewBox="0 0 8.5 8.5">
+  <g id="icon-plus-minus" transform="translate(0.75 0.75)">
+    <path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

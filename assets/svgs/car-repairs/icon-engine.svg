@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.047" height="80" viewBox="0 0 80.047 80">
+  <g id="icon-engine" transform="translate(15156 -10582)">
+    <rect id="Rectangle_618" data-name="Rectangle 618" width="80" height="80" transform="translate(-15156 10582)" fill="#fff"/>
+    <g id="Common-Repairs-and-Makes-Tiles" transform="translate(-15155 10616.14)">
+      <g id="Icon_Common-Repairs-and-Makes-Tile" data-name="Icon/Common-Repairs-and-Makes-Tile" transform="translate(0 0)">
+        <g id="Icon_Common-Repairs_Engine-Tune-Up-24" data-name="Icon/Common-Repairs/Engine-Tune-Up-24">
+          <g id="Group">
+            <g id="noun_Engine_1596366">
+              <g id="Group_4394" data-name="Group 4394" transform="translate(0 0)">
+                <path id="Shape" d="M71.045,16.539v4.185H67.468L55.172,8.413H40.466V5.23H52.835a2.464,2.464,0,0,0,0-4.929H22.71a2.464,2.464,0,0,0,0,4.929H35.077V8.413h-22.9l-4.1,4.54H4.627V20.3H1.371V32.124A.375.375,0,0,1,1,32.5H.466a.375.375,0,0,1-.375-.375V24.357h0V12.535a.375.375,0,0,1,.375-.375H1a.375.375,0,0,1,.375.375V24.357H4.627V31.7H8.09L20.373,44h43l4.186-4.636h3.485v4.185h2.518c3.293,0,5.071-6.947,5.076-13.494v-.026c0-4.963-1.784-13.494-5.076-13.494ZM22.71,3.95a1.183,1.183,0,0,1,0-2.366H52.834a1.183,1.183,0,0,1,0,2.366H22.71ZM36.356,5.231h2.83V8.414h-2.83Zm4.11,4.463h13.8V42.723H21.277V9.694h19.19ZM1.371,23.076V21.582H4.627v1.494Zm4.535,1.281V14.234H7.714v16.19H5.906ZM8.994,13.841l3.747-4.147H20V41.817L8.994,30.8ZM62.8,42.722H55.548V10.6l11,11.018V38.577Zm5.026-4.636V22h3.214V38.086Zm5.733,4.186h-1.24V17.819h1.24c1.8,0,3.795,5.021,3.8,12.227S75.357,42.272,73.563,42.272Z" transform="translate(-0.091 -0.301)" stroke="#000" stroke-width="1"/>
+              </g>
+              <g id="Group_4491" data-name="Group 4491" transform="translate(20.157)">
+                <path id="Shape-2" data-name="Shape" d="M49.971,5.23a2.464,2.464,0,0,0,0-4.929H19.846a2.464,2.464,0,0,0,0,4.929ZM19.846,3.95a1.183,1.183,0,0,1,0-2.366H49.97a1.183,1.183,0,0,1,0,2.366H19.846Z" transform="translate(-17.384 -0.301)" fill="#ff4612" stroke="#ff4612" stroke-width="1"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

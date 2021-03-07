@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Animate.js Link -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<!-- WOW Link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- Bootstap CDNs -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Contact Us</title>
+	<!-- Common CSS -->
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+	<!-- Related CSS -->
+	<style>
+		.txt-item-container {
+			padding: 2em;
+			margin-left: var(--mainContainerPadding);
+			margin-right: var(--mainContainerPadding);
+			box-shadow: var(--shadow);
+			border-radius: 1em;
+		}
+
+		.txt-item-container .txt-container .body:nth-child(2) {
+			margin-bottom: 1em;
+		}
+
+		.txt-item-container .txt-container .body.sm {
+			font-size: max(0.85em, 13px);
+		}
+
+		.txt-item-container .txt-container .socials {
+			margin-top: 1.5em;
+			display: flex;
+			align-items: center;
+		}
+
+		.txt-item-container .txt-container .btns-container {
+			margin-top: 1.5em;
+		}
+
+		.txt-item-container .txt-container .btns-container .heading.sm {
+			font-weight: 500;
+			margin-bottom: 0.5em;
+		}
+
+		.txt-item-container .txt-container .btns-container img:first-of-type {
+			margin-right: 0.65em;
+		}
+
+		.txt-item-container .map {
+			border: 0;
+			width: 100%;
+			height: max(25vw, 20em);
+			box-shadow: var(--shadow);
+		}
+
+		/* ! */
+		/* ! */
+		/* ! */
+
+		.options-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--grid-gap);
+			font-size: 1em;
+		}
+
+		.options-container button {
+			border: none;
+			font-size: 1em;
+			border-bottom: 0.1em solid lightgray;
+			background-color: transparent;
+			display: flex;
+			align-items: flex-end;
+			padding: 0 0 1em 0;
+			cursor: pointer;
+		}
+
+		.options-container button .icon {
+			font-size: 1.85em;
+		}
+
+		.options-container button .heading {
+			font-weight: 500;
+			margin-bottom: 0;
+			margin-left: 0.5em;
+		}
+
+		@media screen and (max-width: 768px) {
+			.options-container {
+				grid-template-columns: repeat(1, 1fr);
+			}
+
+			.options-container button .icon {
+				font-size: 2em;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="modal-container img-txt" id="contactModal">
+		<div class="content">
+			<div class="img-container" style="background-image: url('../../assets/svgs/modal/contact-us.svg');">
+				<div class="info-box" style="opacity: 0;">
+					<button class="primary-btn">Contact Us</button>
+					<div class="info">
+						<img src="./assets/svgs/modal/email-white.svg" alt="" />
+						<div class="body">Info@carHelpline.com</div>
+					</div>
+					<div class="info">
+						<img src="./assets/svgs/modal/phone-white.svg" alt="" />
+						<div class="body">(03) 111-681-111</div>
+					</div>
+				</div>
+			</div>
+			<div class="txt-container">
+				<img onclick="closeModal('contactModal')" src="../../assets/svgs/modal/cross.svg" alt="" />
+				<div class="header">
+					<div class="heading lg">Contact Us</div>
+					<div class="body">
+						Feel free to get in touch with us and our insurance agent will
+						assist you soon!
+					</div>
+				</div>
+				<form action="">
+					<div class="input-box grid-span">
+						<label>Name</label>
+						<input type="text" placeholder="Enter your full name" />
+					</div>
+					<div class="input-box grid-span">
+						<label>Email</label>
+						<input type="text" placeholder="Enter your email" />
+					</div>
+					<div class="input-box grid-span">
+						<label>Subject</label>
+						<input type="text" placeholder="Enter your subject" />
+					</div>
+					<div class="input-box grid-span">
+						<label>Message (if any)</label>
+						<textarea placeholder="Describe in detail"></textarea>
+					</div>
+					<input class="primary-btn lg grid-span" type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-container" id="phoneModel">
+		<div class="content" data-wow-delay="0.5s">
+			<div class="header">
+				<div class="heading md"><span>Support</span></div>
+				<img onclick="closeModal('phoneModel')" src="../../assets/svgs/modal/cross.svg" alt="" />
+			</div>
+			<div class="info-container">
+				<div class="info">
+					<img src="../../assets/svgs/modal/privacy-policy.svg" alt="" />
+					<div class="body">Privacy Policy</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/terms-conditions.svg" alt="" />
+					<div class="body">Terms & Conditions</div>
+				</div>
+			</div>
+			<div class="info-container with-border">
+				<div class="info">
+					<img src="../../assets/svgs/modal/phone.svg" alt="" />
+					<div class="body">(03) 111 - 681 - 111</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/whatsapp.svg" alt="" />
+					<div class="body">0312 - 3952100</div>
+				</div>
+				<div class="info">
+					<img src="../../assets/svgs/modal/email.svg" alt="" />
+					<div class="body">support@carhelpline.pk</div>
+				</div>
+			</div>
+			<div class="body">
+				Our WhatsApp number cannot be used for calls. This is a chat only
+				number
+			</div>
+		</div>
+	</div>
+	<nav>
+		<a href="../../index.html" class="logo">
+			<img src="../../assets/svgs/nav/logo.svg" alt="" />
+		</a>
+		<div class="after-1100">
+			<img onclick="openNav()" src="../../assets/svgs/nav/toggle-btn.svg" alt="" class="toggle-btn" />
+			<div class="heading sm">CarHelpline</div>
+			<img onclick="openModal('phoneModel')" src="../../assets/svgs/nav/responsive-nav-phone.svg" alt="" class="headset" />
+		</div>
+		<div class="links-container" id="nav-menu">
+			<div class="after-1100">
+				<div class="logo">
+					<div onclick="window.location.href = '../../index.html'" style="cursor: pointer;">
+						<img src="../../assets/svgs/nav/logo.svg" alt="" />
+						<div class="heading sm">CarHelpline</div>
+					</div>
+					<img onclick="closeNav()" src="../../assets/svgs/nav/cross.svg" alt="" />
+				</div>
+				<div class="info-container">
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-email.svg" alt="" />
+						<div class="body">Hello@carHelpline.com</div>
+					</div>
+					<div class="info">
+						<img src="../../assets/svgs/nav/responsive-nav-header-phone.svg" alt="" />
+						<div class="body">(03) 111-681-111</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Car Repair</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../car-repairs/inner-pages/page-1.html">
+								<img src="../../assets/svgs/other-icons/icon-9.svg" alt="" />
+								<div class="body">Mechanical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-2.html">
+								<img src="../../assets/svgs/other-icons/icon-22.svg" alt="" />
+								<div class="body">Electrical System</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-3.html">
+								<img src="../../assets/svgs/other-icons/icon-inspection.svg" alt="" />
+								<div class="body">Inspection & Diagnostic</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-4.html">
+								<img src="../../assets/svgs/other-icons/icon-20.svg" alt="" />
+								<div class="body">Heading & Air Conditioning</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-5.html">
+								<img src="../../assets/svgs/other-icons/icon-16.svg" alt="" />
+								<div class="body">General Maintenance</div>
+							</a>
+							<a href="../car-repairs/inner-pages/page-6.html">
+								<img src="../../assets/svgs/other-icons/icon-4.svg" alt="" />
+								<div class="body">Exterior & Body Parts</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Roadside Assistance</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../roadside-assistance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-mechanical-breakdown.svg" alt="" />
+								<div class="body">Mechanical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-electric-breakdown.svg" alt="" />
+								<div class="body">Electrical Breakdown</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-car-towing.svg" alt="" />
+								<div class="body">Car Towing</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-battery-replacement.svg" alt="" />
+								<div class="body">Battery Replacement</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-key-lockout.svg" alt="" />
+								<div class="body">Key Lockout</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-flat-tyre.svg" alt="" />
+								<div class="body">Flat Tyre</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-out-of-fuel.svg" alt="" />
+								<div class="body">Out of Fuel</div>
+							</a>
+							<a href="../roadside-assistance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/roadside-assistance/icon-female-scooty.svg" alt="" />
+								<div class="body">Female Scooty</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../care-package/care-package.html">
+					<div class="body">Car Care Packages</div>
+				</a>
+				<div class="dropdown-box">
+					<div class="btn">
+						<div class="body">Insurance Services</div>
+						<img src="../../assets/svgs/design/white-dropdown.svg" alt="" />
+					</div>
+					<div class="menu nav-menu">
+						<div class="triangle"></div>
+						<div class="wrapper">
+							<a href="../insurance/inner-pages/page-1.html">
+								<img src="../../assets/svgs/insurance/icon-car-insurance.svg" alt="" />
+								<div class="body">Car Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-2.html">
+								<img src="../../assets/svgs/insurance/icon-takaful.svg" alt="" />
+								<div class="body">Takaful (Islamic)</div>
+							</a>
+							<a href="../insurance/inner-pages/page-3.html">
+								<img src="../../assets/svgs/insurance/icon-travel-insurance.svg" alt="" />
+								<div class="body">Travel Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-4.html">
+								<img src="../../assets/svgs/insurance/icon-health-insurance.svg" alt="" />
+								<div class="body">Health Insurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-5.html">
+								<img src="../../assets/svgs/insurance/icon-car-tracker.svg" alt="" />
+								<div class="body">Car Tracker</div>
+							</a>
+							<a href="../insurance/inner-pages/page-6.html">
+								<img src="../../assets/svgs/insurance/icon-corporate-insurance.svg" alt="" />
+								<div class="body">Corporate Insurancel</div>
+							</a>
+							<a href="../insurance/inner-pages/page-7.html">
+								<img src="../../assets/svgs/insurance/icon-micro-insurance.svg" alt="" />
+								<div class="body">Microinsurance</div>
+							</a>
+							<a href="../insurance/inner-pages/page-8.html">
+								<img src="../../assets/svgs/insurance/icon-roadside-coverage.svg" alt="" />
+								<div class="body">Roadside Coverage</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="../fleet-services/fleet-services.html">
+					<div class="body">Fleet Services</div>
+				</a>
+				<a href="../contact/contact.html">
+					<div class="body">Contact Us</div>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="wow fadeIn header first">
+		<div class="img">
+			<img src="../../assets/images/header/lg/contact-us.jpg" alt="" />
+			<img src="../../assets/images/header/sm/contact-us.jpg" alt="" />
+		</div>
+	</div>
+
+	<div class="wow fadeInUp section">
+		<div class="heading lg">
+			I want to contact <span>CarHelpline</span> about…
+		</div>
+		<div class="options-container">
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/roadside-assistance/icon-electric-breakdown.svg" alt="" />
+				</div>
+				<div class="heading sm">Roadside Assistance</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-car-repairs.svg" alt="" />
+				</div>
+				<div class="heading sm">Car Repairs</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-fleet-services.svg" alt="" />
+				</div>
+				<div class="heading sm">Fleet Services</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-car-maintaince.svg" alt="" />
+				</div>
+				<div class="heading sm">Preventive Car Maintaince</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/insurance/icon-car-insurance.svg" alt="" />
+				</div>
+				<div class="heading sm">Car Insurance</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-travel-insurance.svg" alt="" />
+				</div>
+				<div class="heading sm">Travel Insurance</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-car-tracker.svg" alt="" />
+				</div>
+				<div class="heading sm">Car Tracker</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-partnership.svg" alt="" />
+				</div>
+				<div class="heading sm">Strategic Partnership</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-dispute-resolution.svg" alt="" />
+				</div>
+				<div class="heading sm">Dispute Resolution</div>
+			</button>
+			<button onclick="openModal('contactModal')">
+				<div class="icon sm">
+					<img src="../../assets/svgs/contact/icon-media-enquiry.svg" alt="" />
+				</div>
+				<div class="heading sm">Media Enquiry</div>
+			</button>
+		</div>
+	</div>
+
+	<div class="wow fadeIn header">
+		<div class="txt-container">
+			<div class="heading lg">We’re here to <span>help</span></div>
+			<div class="body">
+				<p>
+					Whether you need to make a claim or ask a question, we’re only a
+					quick message or phone call away. Manage your Home & Property, Car &
+					Vehicle, and Business Insurance plus loads more online, anytime.
+					Need help with your insurance nitty gritty? We can help you find
+					your policy number and check what you’re covered for, or we can put
+					you in touch with a specialist AAMI insurance consultant today.
+				</p>
+				<p>
+					Got further questions? The AAMI Help Centre has you covered. Just
+					enter your query and away you go! Quickly pay your excess, renew
+					your policy, and make or track your claim online. It’s that easy.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="wow fadeInUp section txt-item-container">
+		<div class="txt-container">
+			<div class="heading md">CarHelpline (Pvt) Limited</div>
+			<div class="body">
+				Al-Qadir Heights, Office # 312, 1 Babar Block, New Garden Town,
+				Lahore, Pakistan
+			</div>
+			<div class="body sm">
+				Technical Support: <span>support@carhelpline.pk</span>
+			</div>
+			<div class="body sm">
+				General Inquiries: <span>support@carhelpline.pk</span>
+			</div>
+			<div class="body sm">Helpline: <span>(03) 111-681-111</span></div>
+			<div class="socials">
+				<a href="">
+					<div class="icon sm">
+						<img src="../../assets/svgs/socials/facebook.svg" alt="" />
+					</div>
+				</a>
+				<a href="">
+					<div class="icon sm">
+						<img src="../../assets/svgs/socials/instagram.svg" alt="" />
+					</div>
+				</a>
+				<a href="">
+					<div class="icon sm">
+						<img src="../../assets/svgs/socials/linkdin.svg" alt="" />
+					</div>
+				</a>
+				<a href="">
+					<div class="icon sm">
+						<img src="../../assets/svgs/socials/twitter.svg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="btns-container">
+				<div class="heading sm">Download Now</div>
+				<a href="">
+					<img src="../../assets/svgs/design/apple-btn.svg" alt="" />
+				</a>
+				<a href="">
+					<img src="../../assets/svgs/design/android-btn.svg" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="item">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.8000731725037!2d74.32438991554318!3d31.502178755191323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919046eff8ceb97%3A0x937fbbcf4fde7385!2sAl-Qadir%20Heights%2C%20Babar%20Block%20Garden%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1613476251065!5m2!1sen!2s" frameborder="0" class="map" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
+
+	<footer class="wow fadeIn section">
+		<div id="footerAccordian" class="accordian">
+			<div class="card">
+				<a class="collapsed card-link" aria-expanded="true" data-toggle="collapse" href="#footerAccordian-1">
+					<div class="heading sm">CarHelpline Pages</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-1" class="collapse show card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="../car-repairs/car-repairs.html">Car Repair Landing</a>
+						<a href="../car-repairs/middle-page.html">Car Repair Middle</a>
+						<a href="../cities/cities.html">Cities</a>
+						<a href="../error-pages/404.html">404</a>
+						<a href="../download-now/download-now.html">Download</a>
+						<a href="../refer-a-friend/refer-a-friend.html">Refer a friend</a>
+						<a href="../about/about.html">About</a>
+						<a href="../roadside-assistance/roadside-assistance.html">Roadside Assistance</a>
+						<a href="../insurance/insurance.html">Insurance</a>
+						<a href="../car-model/car-model.html">Car Model</a>
+						<a href="">Gift Cards</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-2">
+					<div class="heading sm">Services</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-2" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple Music</a>
+						<a href="">Apple TV+</a>
+						<a href="">Apple Fitness+</a>
+						<a href="">Apple News+</a>
+						<a href="">Apple Arcade</a>
+						<a href="">iCloud</a>
+						<a href="">Apple One</a>
+						<a href="">Apple Card</a>
+						<a href="">Apple Books</a>
+						<a href="">App Store</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-3">
+					<div class="heading sm">Account</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-3" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Manage Your Apple ID</a>
+						<a href="">Apple Store Account</a>
+						<a href="">iCloud.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-5">
+					<div class="heading sm">Apple Store</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-5" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Find a Store</a>
+						<a href="">Shop Online</a>
+						<a href="">Genius Bar</a>
+						<a href="">Today at Apple</a>
+						<a href="">Apple Camp</a>
+						<a href="">Apple Store App</a>
+						<a href="">Refurbished and Clearance</a>
+						<a href="">Financing</a>
+						<a href="">Apple Trade In</a>
+						<a href="">Order Status</a>
+						<a href="">Shopping Help</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-6">
+					<div class="heading sm">For Business</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-6" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Business</a>
+						<a href="">Shop for Business</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-7">
+					<div class="heading sm">For Education</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-7" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple and Education</a>
+						<a href="">Shop for K-12</a>
+						<a href="">Shop for College</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-8">
+					<div class="heading sm">For Healthcare</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-8" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Apple in Healthcare</a>
+						<a href="">Health on Apple Watch</a>
+						<a href="">Health Records on iPhone</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-9">
+					<div class="heading sm">For Government</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-9" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Shop for Government</a>
+						<a href="">Shop for Veterans and Military</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<a class="collapsed card-link" data-toggle="collapse" href="#footerAccordian-10">
+					<div class="heading sm">Apple Values</div>
+					<div class="icon sm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 8.5 8.5">
+							<g id="icon-plus-minus" transform="translate(0.75 0.75)">
+								<path id="vertical" d="M18,7.5v7" transform="translate(-14.5 -7.5)" fill="none" stroke="var(--icon-footer-minus)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path id="horizontal" d="M7.5,18h7" transform="translate(-7.5 -14.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</g>
+						</svg>
+					</div>
+				</a>
+				<div id="footerAccordian-10" class="collapse card-body" data-parent="#footerAccordian">
+					<div class="body">
+						<a href="">Accessibility</a>
+						<a href="">Education</a>
+						<a href="">Environment</a>
+						<a href="">Inclusion and Diversity</a>
+						<a href="">Privacy</a>
+						<a href="">Racial Equity and Justice</a>
+						<a href="">Supplier Responsibility</a>
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="../../assets/svgs/nav/logo.svg" alt="">
+				<div class="socials">
+					<a href=""><img src="../../assets/svgs/socials/facebook.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/instagram.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/linkdin.svg" alt=""></a>
+					<a href=""><img src="../../assets/svgs/socials/twitter.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="txt-container">
+			<div class="body">More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</div>
+			<div class="body">Copyright © 2021 Apple Inc. All rights reserved.</div>
+			<div class="body">Privacy Policy <span>&#8739;</span> Terms of Use <span>&#8739;</span> Sales and Refunds <span>&#8739;</span> Legal <span>&#8739;</span> Site Map</div>
+		</div>
+	</footer>
+
+	<script src="../../assets/js/script.js"></script>
+</body>
+
+</html>
