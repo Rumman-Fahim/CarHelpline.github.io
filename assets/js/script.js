@@ -643,8 +643,9 @@ for (let i = 0; i < dropdownsNavMenus.length; i++) {
 	].style.transition = `max-height ${transitionTime}s ease-out`;
 }
 
+let navbarCollapsePoint = 1100;
+
 if (document.getElementById('nav-logo') != null) {
-	let navbarCollapsePoint = 1100;
 	let scrollNavLogo = false;
 	let getLastItem = (thePath) =>
 		thePath.substring(thePath.lastIndexOf('/') + 1);

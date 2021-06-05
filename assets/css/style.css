@@ -1,4 +1,3 @@
-
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap);
 :root {
 	--mainContainerPadding: 14vw;
@@ -353,6 +352,11 @@ footer > .txt-container .body:nth-child(3) span {
 	footer > .txt-container .body:nth-child(3) {
 		width: 100%;
 		padding-top: 1.25em;
+	}
+}
+@media screen and (max-width: 768px) {
+	footer {
+		background-image: none;
 	}
 }
 /* ============================================================================ Nav */
