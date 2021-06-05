@@ -2925,12 +2925,17 @@ nav > .after-1100 img {
 .modal-container {
 	width: 100vw;
 	height: 100vh;
+	min-height: 100vh;
 	position: fixed;
 	z-index: 999999;
 	background-color: rgba(0, 0, 0, 0.37);
 	opacity: 0;
 	display: none;
 	font-size: var(--ratio);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 .modal-container.open {
 	animation: openModal 0.5s ease-out 0s 1 forwards;
@@ -2989,12 +2994,14 @@ nav > .after-1100 img {
 	}
 }
 .modal-container#phoneModel .content {
-	border-top-right-radius: 1em;
-	border-top-left-radius: 1em;
+	border-top-right-radius: 1.5em;
+	border-top-left-radius: 1.5em;
 	justify-self: flex-end;
 	align-self: flex-end !important;
 	width: 100%;
-	overflow-y: scroll;
+	position: relative;
+	bottom: 0;
+	left: 0;
 }
 .modal-container#phoneModel .content > * {
 	margin-bottom: 1rem !important;
