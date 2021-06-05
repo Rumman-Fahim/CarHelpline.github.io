@@ -305,9 +305,11 @@ let spaceOccupiedByAllCardsPerSlide;
 let spaceLeft;
 let divideLeftoverSpaceBtwAllBoxes;
 let currentSlideNum = 0;
+let carouselContainerWidth;
+let cardContainerWidth;
 if (btnPrev != null) {
-	let cardContainerWidth = cardContainer.offsetWidth;
-	let carouselContainerWidth = document.querySelector(
+	cardContainerWidth = cardContainer.offsetWidth;
+	carouselContainerWidth = document.querySelector(
 		'.multi-content-carousel'
 	).offsetWidth;
 	setCarContainerWidth();
