@@ -30,7 +30,7 @@
 			.review-container {
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-areas: "busi csl csl";
+				grid-template-areas: 'busi csl csl';
 				gap: 2em;
 				box-shadow: var(--shadow);
 				padding: 3em;
@@ -67,7 +67,7 @@
 			.review-container .business-box .icon-container .icon {
 				height: max(8vw, 5em);
 				font-size: 1em;
-				background-image: url("./assets/images/sponsers/sponser-1.png");
+				background-image: url('./assets/images/sponsers/sponser-1.png');
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: center;
@@ -165,7 +165,7 @@
 				height: 1.2em;
 				font-size: 1em;
 				margin-right: 0.5em;
-				background-image: url("./assets/svgs/design/star.svg");
+				background-image: url('./assets/svgs/design/star.svg');
 				background-repeat: no-repeat;
 				background-size: contain;
 			}
@@ -180,7 +180,7 @@
 			@media screen and (max-width: 1200px) {
 				.review-container {
 					grid-template-columns: 1fr;
-					grid-template-areas: "busi" "csl";
+					grid-template-areas: 'busi' 'csl';
 				}
 
 				.review-container .business-box .icon-container {
@@ -531,10 +531,11 @@
 			.section.first.landing {
 				margin-top: 8em;
 				margin-bottom: 1em;
+				max-height: calc(100vh - 8em);
 			}
 
 			.landing {
-				background-image: url("./assets/images/design/circles.svg");
+				background-image: url('./assets/images/design/circles.svg');
 				background-size: 100vw 100vh;
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -578,7 +579,7 @@
 				width: 5em;
 				height: 5em;
 				font-size: 1em;
-				background-image: url("./assets/svgs/nav/logo.svg");
+				background-image: url('./assets/svgs/nav/logo.svg');
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -2794,8 +2795,8 @@
 		</footer>
 		<script src="./assets/js/script.js"></script>
 		<script>
-			window.addEventListener("scroll", handleNavLogoImgOnScroll, false);
-			window.addEventListener("load", handleNavLogoImgOnScroll);
+			window.addEventListener('scroll', handleNavLogoImgOnScroll, false);
+			window.addEventListener('load', handleNavLogoImgOnScroll);
 		</script>
 	</body>
 </html>

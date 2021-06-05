@@ -711,11 +711,13 @@ if (document.getElementById('contactModal') != null) {
 }
 
 function openModal(id) {
+	disableScrolling();
 	document.getElementById(id).style.display = 'flex';
 	document.getElementById(id).classList.remove('close');
 	document.getElementById(id).classList.add('open');
 }
 function closeModal(id) {
+	enableScrolling();
 	document.getElementById(id).classList.remove('open');
 	document.getElementById(id).classList.add('close');
 	setTimeout(() => {
@@ -724,4 +726,16 @@ function closeModal(id) {
 }
 function setOption(id, data) {
 	document.getElementById(id).innerHTML = data;
+}
+
+function disableScrolling() {
+	var x = window.scrollX;
+	var y = window.scrollY;
+	window.onscroll = function () {
+		window.scrollTo(x, y);
+	};
+}
+
+function enableScrolling() {
+	window.onscroll = function () {};
 }
