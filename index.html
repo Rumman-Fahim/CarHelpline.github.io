@@ -532,9 +532,10 @@
 				display: flex;
 				position: relative;
 				margin-bottom: 0;
-				height: 90vh;
-				background-color: red;
-				padding-top: 2em;
+				min-height: fit-content;
+				height: calc(90vh - var(--nav-height));
+				background-color: green;
+				padding-top: 3em;
 			}
 
 			.landing {
@@ -543,7 +544,7 @@
 				background-repeat: no-repeat;
 				background-position: center center;
 				width: 100%;
-				min-height: calc(100vh - var(--nav-height));
+
 				display: flex;
 				align-items: center;
 				justify-content: space-evenly;
@@ -551,7 +552,7 @@
 			}
 
 			@media screen and (max-width: 768px) {
-				.landing {
+				.section.first.landing {
 					justify-content: center;
 				}
 			}
