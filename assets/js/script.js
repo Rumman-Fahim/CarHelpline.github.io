@@ -714,13 +714,11 @@ if (document.getElementById('contactModal') != null) {
 }
 
 function openModal(id) {
-	disableScrolling();
 	document.getElementById(id).style.display = 'flex';
 	document.getElementById(id).classList.remove('close');
 	document.getElementById(id).classList.add('open');
 }
 function closeModal(id) {
-	enableScrolling();
 	document.getElementById(id).classList.remove('open');
 	document.getElementById(id).classList.add('close');
 	setTimeout(() => {
