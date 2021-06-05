@@ -2925,8 +2925,7 @@ nav > .after-1100 img {
 
 .modal-container {
 	width: 100vw;
-	height: 100vh;
-	min-height: 100vh;
+	height: 100%;
 	position: fixed;
 	z-index: 999999;
 	background-color: rgba(0, 0, 0, 0.37);
@@ -3003,6 +3002,19 @@ nav > .after-1100 img {
 	position: relative;
 	bottom: 0;
 	left: 0;
+	font-size: 1em;
+	background-color: white;
+	width: 100%;
+	height: fit-content;
+	min-height: fit-content;
+	display: flex;
+	flex-direction: column;
+	border-top-left-radius: 1.5em;
+	border-top-right-radius: 1.5em;
+	padding: 3em;
+	bottom: 0;
+	transition: 0.5s;
+	position: relative;
 }
 .modal-container#phoneModel .content > * {
 	margin-bottom: 1rem !important;
