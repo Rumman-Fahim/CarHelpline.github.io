@@ -730,13 +730,30 @@ function setOption(id, data) {
 }
 
 function disableScrolling() {
-	var x = window.scrollX;
-	var y = window.scrollY;
+	x = window.scrollX;
+	y = window.scrollY;
 	window.onscroll = function () {
 		window.scrollTo(x, y);
 	};
+	document.querySelector('body').setAttribute('scroll', 'no');
+	if (document.getElementById('phoneModel') != null) {
+		document
+			.getElementById('phoneModel')
+			.addEventListener('touchmove', preventDefault, { passive: false });
+	}
 }
-
 function enableScrolling() {
 	window.onscroll = function () {};
+	document.querySelector('body').setAttribute('scroll', 'yes');
+	if (document.getElementById('phoneModel') != null) {
+		document
+			.getElementById('phoneModel')
+			.removeEventListener('touchmove', preventDefault, {
+				passive: false,
+			});
+	}
+}
+
+function preventDefault(e) {
+	e.preventDefault();
 }

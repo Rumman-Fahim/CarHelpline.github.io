@@ -529,9 +529,11 @@
 			/* ! ============================================================================================ */
 			/* ! ============================================================================================ */
 			.section.first.landing {
-				margin-top: 8em;
-				margin-bottom: 1em;
-				max-height: calc(100vh - 8em);
+				display: flex;
+				position: relative;
+				margin-bottom: 0;
+				height: 95vh;
+				padding-top: 2em;
 			}
 
 			.landing {
@@ -548,10 +550,13 @@
 			}
 
 			.landing .img {
-				width: min(50em, 100%);
 				height: fit-content;
 				justify-self: flex-end;
 				margin-top: 2rem;
+				font-size: 1em;
+				width: min(45em, 100%);
+				position: relative;
+				z-index: 3;
 			}
 
 			.landing .heading {
